@@ -13,6 +13,14 @@ BepInEx 5 плагин (`CastleStoryOptimizer.dll`, GUID `castlestory.optimizer`
 - Пользователь всегда тестирует **одно и то же сохранение, не пересохраняя его**; логи сравнимы между сессиями.
 - Инструменты пользователь ставит сам («дай ссылку — скачаю»).
 
+## Порт Castle Story Plus (Unity 6) — основная версия с 0.17.0
+- github.com/Tricky12321/CastleStoryPlus (**GPL v3 — код не копировать**). Порт в `<Игра>\CastleStoryPlus-Unity6\`
+  (свой BepInEx 5.4.23.5: плагины/конфиг/`LogOutput.log` там). Doorstop игры → `CastleStoryPlus.PortLauncher.dll`.
+  Оригинальный `doorstop_config.ini` — в `backup_before_port/`.
+- `PortCompat` (обнаружение, `On(cfg, keepOnPort)`, клавиши замерщика с Shift). Всё, что дублирует CSP, на порте выключено.
+- Клавиши CSP: F6 рентген, F7 производительность, F8 отладка, F9 системный лог. Наши — Shift+F7/F8/F9.
+- Меню на порте частично на C# (не Lua) — перевод их новых строк не покрыт.
+
 ## Пути
 - Игра: `C:\Program Files (x86)\Steam\steamapps\common\Castle Story`
   - мод: `BepInEx\plugins\CastleStoryOptimizer\`, конфиг: `BepInEx\config\castlestory.optimizer.cfg`

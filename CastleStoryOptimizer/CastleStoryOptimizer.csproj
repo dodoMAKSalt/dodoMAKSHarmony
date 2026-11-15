@@ -5,7 +5,7 @@
     <TargetFramework>net35</TargetFramework>
     <AssemblyName>CastleStoryOptimizer</AssemblyName>
     <RootNamespace>CastleStoryOptimizer</RootNamespace>
-    <Version>0.16.6</Version>
+    <Version>0.17.0</Version>
     <LangVersion>latest</LangVersion>
     <Nullable>disable</Nullable>
     <GenerateDocumentationFile>false</GenerateDocumentationFile>
@@ -40,6 +40,9 @@
     <MakeDir Directories="$(GameDir)\BepInEx\plugins\CastleStoryOptimizer" />
     <!-- Если игра запущена, DLL занята — не валим сборку, просто предупреждаем -->
     <Copy SourceFiles="$(TargetPath)" DestinationFolder="$(GameDir)\BepInEx\plugins\CastleStoryOptimizer" ContinueOnError="WarnAndContinue" Retries="0" />
+    <!-- Порт Castle Story Plus (Unity 6): свой BepInEx в CastleStoryPlus-Unity6 -->
+    <MakeDir Directories="$(GameDir)\CastleStoryPlus-Unity6\BepInEx\plugins\CastleStoryOptimizer" Condition="Exists('$(GameDir)\CastleStoryPlus-Unity6\BepInEx\plugins')" />
+    <Copy SourceFiles="$(TargetPath)" DestinationFolder="$(GameDir)\CastleStoryPlus-Unity6\BepInEx\plugins\CastleStoryOptimizer" Condition="Exists('$(GameDir)\CastleStoryPlus-Unity6\BepInEx\plugins')" ContinueOnError="WarnAndContinue" Retries="0" />
   </Target>
 
 </Project>

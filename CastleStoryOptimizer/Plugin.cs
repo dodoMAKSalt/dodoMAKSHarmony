@@ -11,7 +11,7 @@ namespace CastleStoryOptimizer
     {
         public const string Guid = "castlestory.optimizer";
         public const string Name = "dodoMAKSharmony";
-        public const string Version = "0.16.6";
+        public const string Version = "0.17.0";
 
         internal static Plugin Instance;
         internal static BepInEx.Logging.ManualLogSource Log;
@@ -41,6 +41,7 @@ namespace CastleStoryOptimizer
                 "Каждые N секунд дописывать сводку в отчёт (0 = выкл).");
 
             _harmony = new Harmony(Guid);
+            PortCompat.Detect();
 
             if (_disableAnalytics.Value)
                 AnalyticsPatches.Apply(_harmony);
@@ -51,16 +52,17 @@ namespace CastleStoryOptimizer
             LoadingPatches.CollectGarbageAfterLoad = Config.Bind("Fixes", "CollectGarbageAfterLoad", true,
                 "Убрать мусор в конце загрузки катки (на экране загрузки), чтобы первый фриз сборщика в игре был намного позже.").Value;
             if (BtcCompat.Present) LoadingPatches.CollectGarbageAfterLoad = false; // их мод сам убирает мусор в конце загрузки
-            LoadingPatches.Apply(_harmony, fastLoading.Value);
+            if (PortCompat.Active) LoadingPatches.CollectGarbageAfterLoad = false;
+            LoadingPatches.Apply(_harmony, PortCompat.On(fastLoading.Value, false));
 
             var chunkMul = Config.Bind("Fixes", "LoadChunkMultiplier", 10,
                 "Во сколько раз крупнее порции работы при загрузке катки (1 = как в оригинале, макс. 100).");
             var fastWaits = Config.Bind("Fixes", "FastLoadWaits", true,
                 "Убрать паузы по 1 с и искусственное «догоняние» полосы прогресса при загрузке.");
             // опрос «раз в секунду» в загрузчике BetterThanCastle заменяет умнее (с учётом ожидания хоста в мультиплеере)
-            FastLoadPatches.Apply(_harmony, chunkMul.Value, fastWaits.Value && !BtcCompat.Present);
+            if (!PortCompat.Active) FastLoadPatches.Apply(_harmony, chunkMul.Value, fastWaits.Value && !BtcCompat.Present);
 
-            if (Config.Bind("Fixes", "FixHostFreeze", true,
+            if (!PortCompat.Active && Config.Bind("Fixes", "FixHostFreeze", true,
                     "Убрать фриз ~11 с при создании хоста/подключении (мёртвый DNS NAT-фасилитатора).").Value)
                 NetworkPatches.Apply(_harmony);
 
@@ -79,18 +81,18 @@ namespace CastleStoryOptimizer
                     "Кнопка «Приоритет» в круговом меню мастерской (ПКМ).").Value)
                 PieMenuPriority.Apply(_harmony);
 
-            if (Config.Bind("Menu", "ShowModName", true, "Надпись dodoMAKSharmony под логотипом в главном меню.").Value)
+            if (!PortCompat.Active && Config.Bind("Menu", "ShowModName", true, "Надпись dodoMAKSharmony под логотипом в главном меню.").Value)
                 _branding = new MenuBranding();
 
-            if (Config.Bind("Performance", "CullHiddenAnimators", true,
+            if (!PortCompat.Active && Config.Bind("Performance", "CullHiddenAnimators", true,
                     "Не обновлять положения у анимаций реквизита за кадром (двери, мастерские и т.п.). Логика анимаций работает.").Value)
                 _animCulling = new AnimatorCulling();
 
-            if (Config.Bind("Fixes", "LuaChunkCache", true,
+            if (!PortCompat.Active && Config.Bind("Fixes", "LuaChunkCache", true,
                     "Компилировать каждый Lua-файл один раз (игра перекомпилирует ButtonPanel.lua ~200 раз за загрузку).").Value)
                 LuaCompileCache.Apply(_harmony);
 
-            LoadingDiagnostics.Apply(_harmony,
+            LoadingDiagnostics.Apply(_harmony, !PortCompat.Active &&
                 Config.Bind("Fixes", "FastLuaMenus", true,
                     "Строить Lua-меню несколькими шагами за кадр (ускоряет загрузку на ~71%).").Value,
                 _enableProfiler.Value);
@@ -101,12 +103,12 @@ namespace CastleStoryOptimizer
 
             AiFastDecisions = Config.Bind("AI", "FastDecisions", true,
                 "Бриктроны быстрее выбирают работу (очередь раздумий 17 → 5 тиков, бюджет поиска пути 100 → 250).").Value;
-            AiFixes.Apply(_harmony,
+            if (!PortCompat.Active) AiFixes.Apply(_harmony,
                 Config.Bind("AI", "OneCarrierPerBlock", true,
                     "На один блок стройки несёт материал один бриктрон (а не несколько, которые потом несут обратно).").Value,
                 AiFastDecisions);
 
-            GcControl.Enabled = Config.Bind("Performance", "PauseGcWhileLoading", true,
+            GcControl.Enabled = !PortCompat.Active && Config.Bind("Performance", "PauseGcWhileLoading", true,
                 "Не запускать сборщик мусора во время загрузки мира (у нас было ~10 сборок по 1 с подряд). Снимается в конце загрузки.").Value
                 && !BtcCompat.Present; // BetterThanCastle делает то же самое сам
             if (Config.Bind("Performance", "LessGarbage", true,
@@ -115,18 +117,18 @@ namespace CastleStoryOptimizer
             if (Config.Bind("Performance", "OverheadSortOnlyOnChange", true,
                     "Плашки над головами меняют порядок отрисовки только когда он реально изменился (меньше пересортировки интерфейса).").Value)
                 UiTweaks.Apply(_harmony);
-            if (Config.Bind("Performance", "ThrottleStaticSounds", true,
+            if (!PortCompat.Active && Config.Bind("Performance", "ThrottleStaticSounds", true,
                     "Неподвижные звуковые объекты (хранилища, постройки) сверяют позицию раз в 15 кадров, а не каждый кадр.").Value)
                 SoundThrottle.Apply(_harmony);
-            if (Config.Bind("AI", "StorageReservations", true,
+            if (!PortCompat.Active && Config.Bind("AI", "StorageReservations", true,
                     "Бронь места в хранилище: двое не бегут сложить ресурсы туда, где места хватит одному.").Value)
                 StorageReservations.Apply(_harmony);
-            _fastExit = Config.Bind("Compat", "FastExit", true,
+            _fastExit = !PortCompat.Active && Config.Bind("Compat", "FastExit", true,
                 "При выходе из игры (Alt+F4, «Выход») сразу завершать процесс: без зависания и аварийного падения старого Mono.").Value;
             if (Config.Bind("AI", "FasterGoalCounting", true,
                     "Быстрый подсчёт целей добычи (без мусора) — бриктроны дешевле выбирают работу.").Value)
                 AiPerf.Apply(_harmony);
-            if (Config.Bind("AI", "StuckDetection", true, "Уведомлять о застрявших бриктронах.").Value)
+            if (!PortCompat.Active && Config.Bind("AI", "StuckDetection", true, "Уведомлять о застрявших бриктронах.").Value)
             {
                 StuckWatcher.Register(_harmony);
                 _stuck = new StuckWatcher(Config.Bind("AI", "StuckAutoDig", true,
@@ -142,7 +144,7 @@ namespace CastleStoryOptimizer
                 PhysicsPatches.Apply(_harmony);
 
             Logger.LogInfo(Compat.SystemSummary());
-            Compat.Apply(_harmony,
+            if (!PortCompat.Active) Compat.Apply(_harmony,
                 Config.Bind("Compat", "HighResTimer", true,
                     "Точность таймера Windows 1 мс: ровнее ограничитель FPS (Windows 11 по умолчанию даёт игре 15.6 мс).").Value,
                 Config.Bind("Compat", "MaxRefreshRate", true,
@@ -241,9 +243,9 @@ namespace CastleStoryOptimizer
             }
             if (_stationPriorities) { StationPriorities.Tick(); t = Stamp(MStations, t); }
             if (_profiler == null) return;
-            if (Input.GetKeyDown(_overlayKey.Value)) _profiler.ShowOverlay = !_profiler.ShowOverlay;
-            if (Input.GetKeyDown(_dumpKey.Value)) _profiler.WriteReport("ручной отчёт (F9)");
-            if (Input.GetKeyDown(KeyCode.F7))
+            if (PortCompat.KeyDown(_overlayKey.Value)) _profiler.ShowOverlay = !_profiler.ShowOverlay;
+            if (PortCompat.KeyDown(_dumpKey.Value)) _profiler.WriteReport("ручной отчёт (F9)");
+            if (PortCompat.KeyDown(KeyCode.F7))
             {
                 ProfilerPatches.Active = !ProfilerPatches.Active;
                 Logger.LogInfo("Подробный замер " + (ProfilerPatches.Active ? "ВКЛ" : "ВЫКЛ") + " (F7)");
