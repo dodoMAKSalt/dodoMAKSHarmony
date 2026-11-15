@@ -141,12 +141,20 @@ namespace CastleStoryOptimizer
             catch { }
         }
 
+        private static readonly MethodInfo ConcatStr = AccessTools.Method(typeof(string), nameof(string.Concat), new[] { typeof(string), typeof(string) });
+        private static readonly MethodInfo IntToString = AccessTools.Method(typeof(int), nameof(int.ToString), Type.EmptyTypes);
+
         private static bool HasBoxConcat(MethodBase m)
         {
             var ins = PatchProcessor.ReadMethodBody(m).ToList();
             for (int i = 0; i + 1 < ins.Count; i++)
+            {
                 if (ins[i].Key == System.Reflection.Emit.OpCodes.Box && (ins[i].Value as Type) == typeof(int)
                     && ins[i + 1].Value as MethodInfo == ConcatObj) return true;
+                // новый компилятор: ldloca tmp; call Int32.ToString(); call Concat(string, string)
+                if (i > 0 && ins[i].Value as MethodInfo == IntToString && ins[i + 1].Value as MethodInfo == ConcatStr
+                    && (ins[i - 1].Key == System.Reflection.Emit.OpCodes.Ldloca || ins[i - 1].Key == System.Reflection.Emit.OpCodes.Ldloca_S)) return true;
+            }
             return false;
         }
 
@@ -160,6 +168,16 @@ namespace CastleStoryOptimizer
                 if (list[i].opcode == System.Reflection.Emit.OpCodes.Box && (list[i].operand as Type) == typeof(int)
                     && list[i + 1].operand as MethodInfo == ConcatObj)
                 {
+                    list[i].opcode = System.Reflection.Emit.OpCodes.Nop;
+                    list[i].operand = null;
+                    list[i + 1].opcode = System.Reflection.Emit.OpCodes.Call;
+                    list[i + 1].operand = keyName;
+                }
+                else if (i > 0 && list[i].operand as MethodInfo == IntToString && list[i + 1].operand as MethodInfo == ConcatStr
+                    && (list[i - 1].opcode == System.Reflection.Emit.OpCodes.Ldloca || list[i - 1].opcode == System.Reflection.Emit.OpCodes.Ldloca_S))
+                {
+                    // адрес числа → само число; ToString убираем; Concat(string,string) → KeyName(object,int)
+                    list[i - 1].opcode = list[i - 1].opcode == System.Reflection.Emit.OpCodes.Ldloca_S ? System.Reflection.Emit.OpCodes.Ldloc_S : System.Reflection.Emit.OpCodes.Ldloc;
                     list[i].opcode = System.Reflection.Emit.OpCodes.Nop;
                     list[i].operand = null;
                     list[i + 1].opcode = System.Reflection.Emit.OpCodes.Call;

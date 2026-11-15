@@ -43,8 +43,14 @@ namespace CastleStoryOptimizer
         private static int _mainThread = -1;
         public static long LastMem;
 
+        /// <summary>F7: подробный замер вкл/выкл без перезапуска (выкл — перехваты почти ничего не делают).</summary>
+        public static bool Active = true;
+        /// <summary>Подсчёт мусора по методам (2 вызова GC.GetTotalMemory на каждый перехват — дорого). Конфиг TrackGarbage.</summary>
+        public static bool TrackGarbage;
+
         internal static void MemPush()
         {
+            if (!TrackGarbage) return;
             if (_mainThread < 0) _mainThread = Thread.CurrentThread.ManagedThreadId;
             else if (Thread.CurrentThread.ManagedThreadId != _mainThread) return;
             if (_memDepth < MemStack.Length) MemStack[_memDepth] = GC.GetTotalMemory(false);
@@ -53,6 +59,7 @@ namespace CastleStoryOptimizer
 
         internal static void MemPop(Entry e)
         {
+            if (!TrackGarbage) return;
             if (Thread.CurrentThread.ManagedThreadId != _mainThread || _memDepth <= 0) return;
             _memDepth--;
             if (_memDepth >= MemStack.Length) return;
@@ -252,6 +259,7 @@ namespace CastleStoryOptimizer
 
         private static void Record(MethodBase original, long start)
         {
+            if (!Active) return;
             Entry e;
             if (!Map.TryGetValue(original, out e)) { MemPop(null); return; }
             MemPop(e);

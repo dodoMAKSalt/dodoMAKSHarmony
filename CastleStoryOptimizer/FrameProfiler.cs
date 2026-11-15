@@ -431,7 +431,7 @@ namespace CastleStoryOptimizer
             GUI.DrawTexture(rect, Texture2D.whiteTexture);
             GUI.color = Color.white;
             // Строку собираем раз в секунду, а не дважды за кадр (было ~0.7 МБ мусора в секунду → частые сборки мусора).
-            if (!ReferenceEquals(_overlayFor, _last)) { _overlayFor = _last; _overlayText = _last.Text + "F8 — скрыть, F9 — записать отчёт"; }
+            if (!ReferenceEquals(_overlayFor, _last)) { _overlayFor = _last; _overlayText = _last.Text + "F8 — скрыть, F9 — отчёт, F7 — подробный замер: " + (ProfilerPatches.Active ? "ВКЛ" : "ВЫКЛ"); }
             GUI.Label(new Rect(rect.x + 6, rect.y + 4, rect.width - 12, rect.height - 8), _overlayText, _style);
         }
     }

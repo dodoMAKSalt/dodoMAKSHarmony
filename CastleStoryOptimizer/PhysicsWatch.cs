@@ -81,6 +81,7 @@ namespace CastleStoryOptimizer
 
         private static void TickPostfix(object __instance, long __state)
         {
+            if (!ProfilerPatches.Active) return;
             long dt = Stopwatch.GetTimestamp() - __state;
             var t = __instance.GetType();
             Entry e;

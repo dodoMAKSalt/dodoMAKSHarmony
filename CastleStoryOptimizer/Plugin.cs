@@ -11,7 +11,7 @@ namespace CastleStoryOptimizer
     {
         public const string Guid = "castlestory.optimizer";
         public const string Name = "dodoMAKSharmony";
-        public const string Version = "0.16.5";
+        public const string Version = "0.16.6";
 
         internal static Plugin Instance;
         internal static BepInEx.Logging.ManualLogSource Log;
@@ -112,6 +112,9 @@ namespace CastleStoryOptimizer
             if (Config.Bind("Performance", "LessGarbage", true,
                     "Убрать лишние выделения памяти в частых местах игры (реже сборка мусора).").Value)
                 GcFixes.Apply(_harmony);
+            if (Config.Bind("Performance", "OverheadSortOnlyOnChange", true,
+                    "Плашки над головами меняют порядок отрисовки только когда он реально изменился (меньше пересортировки интерфейса).").Value)
+                UiTweaks.Apply(_harmony);
             if (Config.Bind("Performance", "ThrottleStaticSounds", true,
                     "Неподвижные звуковые объекты (хранилища, постройки) сверяют позицию раз в 15 кадров, а не каждый кадр.").Value)
                 SoundThrottle.Apply(_harmony);
@@ -151,6 +154,8 @@ namespace CastleStoryOptimizer
                     "Показывать оверлей сразу при запуске (иначе — по клавише).");
                 _profiler = new FrameProfiler(Paths.BepInExRootPath, _autoReportSeconds.Value);
                 _profiler.ShowOverlay = showOnStart.Value;
+                ProfilerPatches.TrackGarbage = Config.Bind("Profiler", "TrackGarbage", false,
+                    "Считать мусор по каждому методу (раздел «Мусор» в отчёте). Дорого: +1–2 мс на кадр. Включать для расследований.").Value;
                 var detailed = Config.Bind("Profiler", "DetailedHooks", true,
                     "Подробные замеры каждого Update/Lua/путей (~1300 перехватов за кадр, стоят ~0.5–1 мс). " +
                     "false — только FPS, рендер и фризы, почти бесплатно.");
@@ -238,6 +243,11 @@ namespace CastleStoryOptimizer
             if (_profiler == null) return;
             if (Input.GetKeyDown(_overlayKey.Value)) _profiler.ShowOverlay = !_profiler.ShowOverlay;
             if (Input.GetKeyDown(_dumpKey.Value)) _profiler.WriteReport("ручной отчёт (F9)");
+            if (Input.GetKeyDown(KeyCode.F7))
+            {
+                ProfilerPatches.Active = !ProfilerPatches.Active;
+                Logger.LogInfo("Подробный замер " + (ProfilerPatches.Active ? "ВКЛ" : "ВЫКЛ") + " (F7)");
+            }
             _profiler.Tick();
             Stamp(MProfiler, t); // попадёт в следующий кадр: Tick обнуляет покадровые счётчики
         }

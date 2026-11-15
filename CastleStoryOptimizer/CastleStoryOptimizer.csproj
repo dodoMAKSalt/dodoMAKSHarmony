@@ -5,7 +5,7 @@
     <TargetFramework>net35</TargetFramework>
     <AssemblyName>CastleStoryOptimizer</AssemblyName>
     <RootNamespace>CastleStoryOptimizer</RootNamespace>
-    <Version>0.16.5</Version>
+    <Version>0.16.6</Version>
     <LangVersion>latest</LangVersion>
     <Nullable>disable</Nullable>
     <GenerateDocumentationFile>false</GenerateDocumentationFile>
