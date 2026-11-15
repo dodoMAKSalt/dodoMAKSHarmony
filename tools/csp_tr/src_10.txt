@@ -1,0 +1,123 @@
+{0}\n\nBUTTON PlusBuildPriority\nName : Top priority\nLabel : Condition_PlusBuildPriorityLabel\nCondition : Condition_PlusBuildPriority\nEffect : Event_PlusBuildPriority\nIcon : UI_Star\nSize : Native\nTooltip : Build this blueprint before everything else (or again to build it as usual).\n
+{0}\n\nBUTTON PlusEmptyStockpile\nName : Empty stockpile\nLabel : Condition_PlusEmptyStockpileLabel\nCondition : Condition_PlusEmptyStockpile\nEffect : Event_PlusEmptyStockpile\nIcon : _Stockpile_Empty\nSize : Native\nTooltip : Take nothing new and have the workers carry everything to other storages (or again to use it as usual). It stays empty until switched off.\n
+{0}\nClick to research it for {1}.
+{0}\nCosts {1}, after tier {2}.
+{0}\nCosts {1}: the stockpiles do not hold that much that is not reserved.
+{0}\nTier {1} is 
+{0}\nstack 
+{0}  <color=#999999>Lv {1}/{2}</color>
+{0}  <size=11><color={1}>{2}</color></size>
+{0} (Autosave)
+{0} (base {1}, with exclusions {2}, current {3}, holds {4})
+{0} (beast soul)
+{0} (default {1})
+{0} (max missing support {1})
+{0} ({1} children)
+{0} ({1} left to build)
+{0} ({1} now)
+{0} Click it in the queue below to cancel it.
+{0} HZ
+{0} MB, lines every 256 MB
+{0} MB, top 
+{0} MIN
+{0} Restart to apply.
+{0} Stored on weapon stands; a bricktron that equips it unpacks it.
+{0} [{1}] (scene {2}, frame {3})
+{0} [{1}] repeated {2} times: 
+{0} after 
+{0} applies when its feature is switched on.
+{0} armour {1}
+{0} at 
+{0} at the home crystal.
+{0} at {1}.
+{0} blocks
+{0} blueprint {1}
+{0} bricktrons (
+{0} bricktrons: {1} working, {2} idle, {3} fighting
+{0} can't start {1}: {2}
+{0} chunks read; {1} empty under the ground; ore: orange {2}, blue {3}, iron {4}, coal {5}
+{0} crystals. Share code: 
+{0} entries: {1} errors, {2} warnings. Click one for details.
+{0} fps   
+{0} fps, lines at 30 and 60
+{0} frame {1}, loading {2}, frozen {3} s\n{4}\n
+{0} helm {1}
+{0} icon
+{0} is now a giant bricktron.
+{0} matches
+{0} min
+{0} minutes (half way). You always get less value back than you give.
+{0} minutes), so trades further down the queue can cost a little more.
+{0} ms
+{0} ms ({1}x)
+{0} ms)
+{0} of 
+{0} of this task no bricktron can get to; what rests on them waits for them.
+{0} on 
+{0} rally point. Right click or Esc cancels.
+{0} result={1} after 
+{0} returns
+{0} s, it was stopped
+{0} s, yielded 
+{0} set to {1}.
+{0} sets
+{0} shield {1}
+{0} spawn points, {1} far enough ({2} blocks). Click a pillar, then the ground, to move it.
+{0} starting points (numbered on the picture), {1} {2}.
+{0} starts, 
+{0} switched 
+{0} tier {1} ({2})
+{0} voters, {1} chunks, {2} differing once, {3} out of sync
+{0} with the blueprint at 
+{0} within {1} blocks of where the camera looks.
+{0} world differed from the other players' in {1} area(s) and was corrected ({2} voxels and blocks).
+{0} {1} for {2} {3} right now (the stockpiles hold {4} {5}). Every trade costs a {6}% fee, and a good gets dearer the more it is traded (back to normal over about 
+{0} {1} s ago
+{0} {1} {2} trees {3} boulders {4} surface ore {5} deep ore {6} seed {7}
+{0} {1}/{2} open ({3} not valid, {4} demolish, {5} stale workers, {6} blueprints not buildable), {7} crew
+{0} | holds 
+{0} | own stockpiles {1}, with room {2}: 
+{0} | project=
+{0} | projects: 
+{0} | queue={1} | 
+{0} | task=
+{0} | worker {1} can carry it: {2}, best storage: 
+{0}, Castle Story Plus 0.8.12, Unity {1}
+{0}, block {1}, centre offset 
+{0}, cells 
+{0}, {1} blocks away{2}
+{0}, {1}, {2}, {3} trees, {4} boulders, {5} surface ore, {6} deep ore, seed {7}
+{0}. Each tier is researched once and works at once.
+{0}.{1} not found
+{0}: click to cancel it; its price is released.
+{0}: click to take it out of the queue
+{0}: coarse {1} nodes, straightened {2}, walked {3} voxels
+{0}: item {1} holds 
+{0}: its feature is off in this session, so the mod has not read it; the value is kept as text and applies when the feature is switched on.
+{0}: its hits do Damage times its base unit's.
+{0}: no route node
+{0}: repath 
+{0}: route of {1} voxels
+{0}: takes 1/Health of the damage its base unit would.
+{0}: the recipe waits while there is enough.
+{0}: the stockpiles hold {1}.
+{0}: walk blocked at 
+{0}: walks and runs Speed times as fast as its base unit.
+{0}: {1} failed: {2}
+{0}; no way round within {1} blocks
+{0}Button: ExclusionDarkCrystal
+{0}Castle Story Plus
+{0}Condition : Condition_{1}\nEffect : Event_{2}\nIcon : {3}\nSize : Native\nTooltip : {4}\n
+{0}KeepBlueCrystal
+{0}KeepBrimstone
+{0}KeepCoal
+{0}Label : {1}\n
+{0}Visuals
+{0}_Piece
+{0}_t:Add(Resource.{1},\t{Name = ||"{2}",\tInfo = ||"{3}",\tIcon = ||{4},\tStockpiledIcon = ||{5}})\n
+{0}csp1:
+{0}vx
+||(CastleStoryPlus.BuildIcon("
+||(CastleStoryPlus.BuildIcon("{0}") or IconKeys.{1}:Get64())
+||CastleStoryPlus.ResourceIcon("coal")
+||IconKeys._Raw_Blue_Crystal:Get64()

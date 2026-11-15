@@ -1,0 +1,212 @@
+A worker reserves the task it chooses, so idle workers no longer walk to the same task together.
+A worker that finishes a task of a quarry, tunnel, dig, flatten, harvest, cleanup or build area, or a step at its workshop, or takes what it dug or felled there to storage, goes on to the area's next task at once, chosen by the game's own choice, instead of standing 1 to 1.5 seconds while the game searches every project.
+A worker that has not moved this long in a walking task has the task cancelled and puts down what it carries (0: off).
+A worker with a job that has had no task this long is written to BepInEx/idle.log, with why (0: off).
+A worker's "Can't reach my destination" says what it could not reach and how far it is ("Can't reach my destination: Log, 12 blocks away"). Host and single player; multiplayer clients see the plain text.
+A workshop worker whose recipe did not progress this long has its task cancelled (0: off).
+A workshop's looping queue can loop until a stock limit per product ("-  20  +" on every recipe row): a recipe waits while the stockpiles hold enough of what it makes and starts again when the stock drops.
+A workshop's priority (research station, smithy, furnace...) can be set like a task's in its menu: locked, low, medium or high, picked side by side under the recipes, and at the bottom of the market's, research station's, smithy's and armoury's windows (the game keeps every workshop at high).
+A workshop's workers fetch its ingredients only from stockpiles and loose items within its range (counted from the workshop), instead of anywhere on the map; with nothing in range the workshop waits. Set per workshop under its recipes ("Fetch within", - and +, Shift 25 at a time, past 250 no limit); workshops not set use [WorkshopFetchRange] Default (40 blocks). While a workshop is selected, a ring on the ground around it shows its range. The range goes along with "Copy setup", with copied areas and blueprints (also the blueprint library), and a workshop built from such a blueprint starts with it.
+A* distance weight for enemies (AI factions). Lower finds better ways around cliffs and walls, but their searches take more steps.
+A* distance weight. A flat step costs 12: close to 12 gives the shortest routes, higher searches faster but takes detours (the game used 45).
+AAA#
+AI ticks a player's worker waits after a failed task before looking for the next (the game: 30).
+AI ticks a player's worker waits after a task before looking for the next (the game: 10).
+ALL SETTINGS
+ALL WORKERS
+AUTO CLEANUP
+AUTO REPAIR
+Accessories
+Activity
+Add
+Add to queue
+Adept
+Adjectives
+Alchemist
+Alchemist kit
+All
+All bricktrons
+All factions
+All settings (every value in the config file)...
+Allow the debug windows: performance (F7), debug menu (F8) and system log (F9). Can be switched in Settings > Castle Story Plus settings or in Options > Gameplay.
+Already queued here.
+Already researched.
+Altar
+Amount: {0}
+An alchemist's backpack and bonnet in one bundle.
+An arbalist's crossbow, pouch and kepi in one bundle.
+An archer's bow, quiver and cap in one bundle.
+An artificer's staff, satchel and hat in one bundle.
+An explosive barrel: ammunition for the catapult.
+Arbalist
+Arbalist kit
+Arbalists
+Archer
+Archer kit
+Archers
+Archers and other ranged fighters on the edge of a wall lean out over it, so they can shoot enemies at the foot of the wall and all along it ([WallLean] Distance).
+Archery
+Archery drill. Shots that are not straight at a visible target spread less.
+Archipelago (many floating islands), Continent (one big island) or Highlands (one island with mountains).
+Armour upgrades for the whole team. Each tier is researched once and works for every soldier at once.
+Armoury
+Arrow
+Article
+Article {0}
+Artificer
+Artificer kit
+Artificers heal the most wounded team mate in attack range with green healing bolts: 10% health per bolt, one at a time, before attacking.
+Attacks enemies near it.
+Auto
+Auto cleanup
+Auto cleanup range (blocks)
+Auto repair
+Auto repair range (blocks)
+Auto spawn bricktrons
+Autosave
+Autosave every
+Axe work to remove a tree stump, compared to felling a tree.
+BUTTON Back To Work
+Back to post
+Banner
+Bar
+Barrel
+Barrels
+Beast bar
+Being researched now.
+Better arrowheads and feathers. Arrows deal more damage.
+Better ways to break rock. Digging out terrain and mining rocks and ore deposits gives more.
+Better ways to stack goods. Every stockpile and warehouse holds more.
+Biome
+Block
+Blocking
+Blocks
+Blocks (across the ground) a corruptron wave spawns at least from the nearest block a player has built, when the map has a spawn point that far; 0: off.
+Blocks between the saplings a tree farm plants (trees need 2 at least).
+Blue
+Blue cr.
+Blue crystal
+Blue crystal veins in the deep rock of every map (the game leaves them out), so blue crystal can be mined, carried and stored.
+Blue crystals: 
+BlueCrystalDeposits: blue crystal
+Blueprints
+Blueprints go to
+Blueprints marked for deconstruction stay dark orange, also while their build task is not selected.
+Body
+Bomb
+Bonus
+Both workers must be alive.
+Both workers must be yours.
+Boulderback
+Boulders
+Box
+Brick
+Bricks
+Bricktron
+Bricktron archers always hit a target they can see, and arrows never hurt allies.
+Bricktrons
+Bricktrons dig out quarries 30% faster ([QuarrySpeed] Speed): every swing of the pick counts as 1.3 swings, so a block takes fewer swings; the swing itself is not quicker.
+Bricktrons per giant bricktron
+Bricktrons put on a task (right-click the task with them selected) start on it at once instead of finishing what they do (storing what their bag holds from the old task first), also when they are in its crew already; one that has not started within 4 seconds is reported on screen with the reason (cannot reach it, no storage room, nothing to do, paused...).
+Bricktrons walk straight lines across flat open ground instead of the route graph's voxel-by-voxel staircase.
+Bricktrons walk through each other (allies never block a path; enemies still do), and a bricktron in a doorway no longer makes the area behind it unreachable.
+Bricktrons with a job that stand without a task for 15 seconds or more are written to BepInEx/idle.log: how long, where, their job, their last task and why they turned tasks down ([Debug] IdleLogSeconds).
+Brix.Game.AI.Navigation+NavigateOrderData
+Brix.Game.Locomotion.{0}
+Brix.Game.SharedFactionVision+RefreshActiveCollisionsEnumerator
+Brix.Game.SharedFactionVision+RefreshActiveTrackingGroupsEnumerator
+Build free blueprint
+Build tasks
+Build this blueprint before everything else (or again to build it as usual).
+BuildGoal.GetWorkNode Sequence
+Building
+Building terrain meshes
+Building that waits for material says so: a table at the bottom right (foldable to a strip of icons with the missing counts) lists each resource the build tasks need more of than the stockpiles hold (with what it is made from, e.g. logs for planks), and every blueprint still waiting for material shows the resource on red (not enough in stock), green (enough in stock) or blue (a worker is bringing it).
+Building the interface (
+Building the interface ({0} menus left
+Busy
+Button
+Button: ExclusionDarkCrystal
+Button: ExclusionOrangeCrystal
+Button: PlusBaseRanges
+Button: PlusBuildPriority
+Button: PlusEmptyStockpile
+Button: PlusRangedGuard
+Button: PlusSetPost
+Buttons
+CALL TO ARMS
+CASTLE STORY PLUS 0.8.12
+CONTINUE button on the title screen that loads the latest save.
+CS armoury
+CS help
+CS left bar
+CS market
+CS panel {0}
+CS paused
+CS rack filter
+CS research
+CS resource list
+CS right bar
+CS sidebar
+CS smithy
+CS task list
+CS task popup
+CS tooltip {0}
+CS top bar
+CS world editor home
+CS world editor tabs
+Call
+Call to arms settings
+Call to arms with soldiers per class, ranged/melee rally points and a role per worker (settings button next to the call to arms button).
+Camera
+Can't pay
+Cancel
+Card {0}
+Carries
+Carry
+Carrying
+Castle Story Plus
+Castle Story Plus logo on the splash screen, main menu and loading screen, with the mod's version under it on the main menu and loading screen.
+Castle Story Plus settings
+Castle Story Plus: 
+Castle Story Plus: {0} Further corrections are only written to the log.
+CastleStoryPlus Random World
+CastleStoryPlus armour
+CastleStoryPlus armour rune glow
+CastleStoryPlus armour {0}
+CastleStoryPlus autoplay
+CastleStoryPlus world generator
+CastleStoryPlus.MenuRecorder("menu_leftBar")
+CastleStoryPlus.MenuRecorder("menu_rightBar")
+CastleStoryPlus.MenuRecorder("menu_top")
+CastleStoryPlus.MenuStub()
+CastleStoryPlus_{0}
+Catapult
+Chainmail
+Chance
+Chance that a corruptron hired into a raid is a Healtron.
+Charcoal
+Chat
+Check
+Check now
+Checking terrain stability
+Chip
+Choice {0}
+Choices
+Choose
+Choose this trade: give 
+Choose this trade: give {0}, get {1}.
+Choose two goods
+Cindermane
+Cinemachine
+Clay
+Cleaning up and repairing round the base are two fixed tasks in the task list (a cleanup and a repair zone on the home crystal, as wide as the AutoCleanup / AutoRepair range) with their own priority and crew, instead of chores every idle worker does; they cannot be deleted.
+Cleanup
+Clear
+Clear post
+Click an entry to see all of it here.
+Click to take it out of the queue
+Close
+Closure
+Coal
+Coal (mined from veins in the deep rock of every map, or burnt from logs in the furnace) and steel (iron and coal at the forge), used by the steel tier of the upgrades. The furnace burns coal as well as orange crystal, coal first.

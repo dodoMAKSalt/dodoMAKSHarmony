@@ -1,0 +1,132 @@
+The home crystal shapes new bricktrons from less energy.
+The host's
+The last trades queued at a market ("give>get" asset keys, newest first), offered again in the market's window.
+The minimap shows the island (terrain colours, height, slopes, walls and buildings) under the units; dug and filled ground shows within 2 s, walls and buildings within a minute.
+The mouse over a resource lying on the ground shows a small label at the cursor with its icon and name.
+The pick up order on a loose item: each selected bricktron takes an item of that kind no other one is after, then goes on picking up that kind lying round it until its hands are full.
+The queue is empty. Pick what to give and what to get, then add the trade.
+The queue is full
+The referenced script on this Behaviour
+The same for any other task (building, digging...), which may stand still longer (0: off).
+The sun moves again.
+The sun stands still.
+The trades marked as favourites in the market's window ("give>get" asset keys).
+The ward range spheres (shown while a ward is hovered or placed) are drawn fainter, so the ground under them can be seen ([WardRange] Strength).
+The wave timer has not started yet.
+Third game speed
+This map has no corruptron spawn points.
+This queue repeats (standing trades from an older save).
+Thumbnail
+Tier 
+Tier {0}
+Tier {0} 
+Tier {0} ({1}): 
+Tile {0}
+Time
+Time of day
+Time of day: 
+Time of day: {0}.
+Times
+Title
+Toggle
+Toggle {0}
+Toolrack
+Tooltip
+Tooltip and help articles get their panels the first time they are shown instead of while a map loads (shorter loading, a tooltip's first showing builds it).
+Tooltips
+Top priority
+Track
+Trade
+Trade 
+Trade {0} times
+Trades any resource for another. Prices rise with trading and recover over time.
+Trading 
+Trading {0} for {1}
+Trapped
+Treasure
+Treasure chests in every world (3-4 small, 5-7 medium, 8-10 large map), away from the starting points, each guarded by a pack of 2 to 10 beasts (the bigger the pack, the better the loot): Spirestalker (giraffe), Cindermane (lion), Boulderback (gorilla) and Ironhorn (rhino), voxel models over enemy units with their own health, damage and speed. The guards are peaceful until attacked, then the whole pack fights back. Kill them (or lure them away) and walk a bricktron up to the chest to open it: iron ingots, crystals, cogs, purified brimstone, dark crystals, soldier kits, bombs and explosive barrels spill out.
+Treasure guards
+Treasure.{0}
+Treasure: Stone_DoubleBrick's second cell per quarter turn: 
+Tree farm
+Tree harvest areas also remove the stumps of felled trees: more axe work than a tree, fewer logs (see [TreeStumps]).
+Tree sapling
+TreeFarm: made the tree harvest task for the farm at 
+Trees
+Trees and terrain only cast a shadow when it can land on the screen, instead of every one within the shadow distance being drawn into the shadow maps.
+Tries
+Tunnel
+Turn the trade round: give what you would get.
+Two workers
+Type or paste a seed or share code...
+Under a dead worker's firefly: what is left before it respawns (travel time, absorption time, missing energy).
+Under way
+Units see 10% further through the fog of war ([FogOfWar] VisionMultiplier).
+Unity
+Unity 6 port only, needs NavMeshExperiment: routes of the player's own units are found on Unity's navigation mesh (well under a millisecond, in one go) instead of the game's search over the voxel graph, and turned back into the voxels the walk needs. Enemies, and any route the mesh cannot give, keep the game's search.
+Unity 6 port only: builds Unity's navigation mesh from the route graph next to it and keeps it up to date; NavMeshRoutes routes the player's units over it (DevTools: /api/navmesh).
+Unity 6 port, multiplayer: material delivered to a blueprint the other player's game does not have (an ally's blueprint, which only its own faction is sent) is hidden there, as it is in the blueprint, instead of lying in a heap that cannot be picked up.
+Unity 6 port, multiplayer: once the host has pressed start, a client's "not ready" (pressed as the loading screen came up) is kept ready, the lobby's "everyone not ready" waits, a player joining in that moment is turned away and one leaving no longer holds up the others; host and clients sat at 0 % loaded for good before.
+Unity 6 port, multiplayer: the players' worlds (terrain and placed blocks) are compared every [Multiplayer] DesyncCheckSeconds. Where they differ twice in a row, the majority's world is taken (the host's when the vote is even) and the others are corrected; the chat says so. Each peer works out by itself what falls when a structure loses its support, so the worlds could drift apart and stay apart.
+Unity 6 port, multiplayer: up to 8 players in a hosted game (the game: 4, and at 4 its lobby left the online list); [Multiplayer] MaxPlayers, the host's setting applies. The map still decides how many factions there are; extra players share them.
+Unity 6 port: a storage's pallet animation (the second after its content changed) is worked out by Unity's animation pass on its worker threads instead of on the main thread. Off: stepped on the main thread as the game does.
+Unity 6 port: multiplayer over the internet through Steam without opening a port. A hosted game is listed in the online list at once (the game waited for Castle Story's NAT server, which is gone), the list shows games from all regions, and joining one (from the list or a friend's invitation) connects over Steam's peer-to-peer networking through Valve's relays. LAN games and typed-in addresses connect directly.
+Unity 6 port: text boxes in the game's menus (the lobby's player name, ...) take what was typed on Enter or when left; the port's menus had lost that link, so the name could not be changed. What a player is typing in the lobby's name box is kept when the player list changes (another player's name, faction or team), so several players can rename themselves at once.
+Unity 6 port: the faction vision's scan runs as a Burst job of the player on worker threads instead of on the main thread (the results are the same). Off: on the main thread.
+Unity Log
+UnknownBlocks: block type 
+Unlock
+Unlocked
+Unstack
+Update
+Update to {0}
+Upgrade
+Upgrade cost with the DarkCrystals feature: dark crystals taken from the stockpiles (plus one sacrificed worker).
+Upgrade cost without the DarkCrystals feature: the energy of this many new bricktrons, paid from the home crystal (plus one sacrificed worker).
+Upgraded: 
+Upgrades
+Vertical
+Viewport
+Visible
+Visuals
+Vulkan
+WAVE {0} CLEARED!
+Waiting
+Waiting for a worker
+Waiting for materials
+Waiting for support: what it rests on or hangs from has to be built first.
+Waiting for the terrain engine
+Waiting in the queue.
+Walk
+Walking
+Warded Plate
+Warehouse
+Warehouse in the build menu: a 9 x 6 hall that holds 4500 resources of any kind, workers walk inside, and its brick works turns stored stone into bricks.
+Warning
+Wave timer: +
+Wave timer: +{0} min.
+Wave timer: freeze / resume.
+Waves every
+Waves every 
+Waves every {0} min.
+Weapon stand
+Weapon upgrades for the whole team. Each tier is researched once and works for every bricktron at once.
+Weapons, props (shields, quivers...) and hats a weapon stand holds of each, all classes together; 0 = the stand's own room for one item (as many kits as before).
+What allocates the most (average per frame since measuring or the last reset)
+What takes the time (since measuring or the last reset): one call's average, per frame, the longest frame
+What the market gives back. Click to choose.
+What the market takes from the stockpiles. Click to choose.
+When the firefly of a killed enemy or worker reaches your home crystal, the energy it brings rises above the crystal.
+When the icons over blueprints waiting for material show: Toggle (a press of Alt on its own shows and hides them), Hold (while Alt is held) or Always.
+Whether the box of missing building materials is folded to a small strip of icons with the missing counts.
+Whether the resource list in the top-right corner is shown (the "Resources" button on the right-hand bar toggles it).
+Which of the C# menus' default changes this config has had (set by the mod; do not change).
+While a map loads, a Lua file loaded again into the same script reuses its compiled code instead of parsing it again.
+While placing one of the mod's bricks or slabs: choose the next corner of the block to place it by.
+While systems are measured, also measure each of the mod's gameplay patches on its own (several hundred more measured methods, some of them called very often).
+While systems are measured, also measure how much memory each one allocates (every allocation leads towards a garbage collection, which stops the game).
+Winch
+Window
+With Ctrl held: paste the copied area as blueprints.
+With Ctrl held: start copying an area (drag it with the left mouse button).
+With debug mode on (Castle Story Plus settings, or Options > Gameplay), F7 opens a performance window: frame rate, frame times (1% low, p95, p99), garbage collections, graphs of the last frames, what takes the time each frame, the last spikes and a switch for an FPS counter at the top of the screen; frames over 100 ms are logged with what took their time.

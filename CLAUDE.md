@@ -19,7 +19,11 @@ BepInEx 5 плагин (`CastleStoryOptimizer.dll`, GUID `castlestory.optimizer`
   Оригинальный `doorstop_config.ini` — в `backup_before_port/`.
 - `PortCompat` (обнаружение, `On(cfg, keepOnPort)`, клавиши замерщика с Shift). Всё, что дублирует CSP, на порте выключено.
 - Клавиши CSP: F6 рентген, F7 производительность, F8 отладка, F9 системный лог. Наши — Shift+F7/F8/F9.
-- Меню на порте частично на C# (не Lua) — перевод их новых строк не покрыт.
+- Перевод CSP: `CspTranslator` (перехват `UI.Text.text`, словарь `Lang/csp_ru.txt`: точные строки, шаблоны {0}, куски склеек,
+  по словам). Обновить под новую версию CSP: декомпилировать их DLL в `decompiled/csp`, `decompiled/cspui` →
+  `tools/csp_strings.py` → `tools/csp_split.py` → перевести новые `tools/csp_tr/ru_NN.txt` (строка в строку, `=` — оставить)
+  → `tools/csp_check.py` → `tools/csp_build.py`; проверка — `tools/csp_test.py "строка"`.
+- Сундуки/звери CSP выключены у пользователя: `[Features] Treasure = false` в их конфиге.
 
 ## Пути
 - Игра: `C:\Program Files (x86)\Steam\steamapps\common\Castle Story`

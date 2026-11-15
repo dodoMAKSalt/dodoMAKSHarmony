@@ -1,0 +1,164 @@
+Seconds before the next wave the arrow to its spawn point shows.
+Seconds between two comparisons of the players' worlds in a multiplayer game (the host asks; 0: no comparisons). A chunk is corrected after it differed in two comparisons in a row.
+Seconds between two healing pulses of a Healtron.
+Seconds the arrow stays after the wave has arrived.
+Section
+Seed
+Seed (click to copy the share code)
+Seed of the random world: a UUID (or any text); the same seed and settings always make the same world. Empty: a new UUID.
+Select
+Select 2 workers. The one with the most experience becomes a giant bricktron: 
+Select 2 workers. The one with the most experience becomes a giant bricktron: {0}x as big, everything it does {1}x as fast, {2}x health, carries {3}x as much, and it still counts as one bricktron. The other worker is sacrificed and does not come back.
+Select bricktrons and right-click a task (blueprint, tree or block of an area...): they start that task at once and join that task's crew, staying on it until its work is done.
+Select exactly 2 workers (
+Select exactly 2 workers ({0} selected).
+Select exactly 2 workers.
+Select workers to set their role.
+Semi: caves
+Send the selected units to their posts.
+Separate
+Session started 
+Set
+Set post
+Set the call to arms role of each worker with < and >. Classes without a free weapon/armour set are skipped.
+Set when MaxDistance was moved from the old default 8 to 5.
+Setup
+Shadow cascades: 1 (none), 2 or 4 (the game's quality level uses 4; more is sharper near the camera and costs a drawing of the shadow casters each). 0 keeps the game's value.
+Share code copied
+Share code copied: 
+Share of an ally's maximum health that one pulse heals (0.08 = 8%).
+Share of the coal from coal veins and coal deposits that is lost (0.3: 30% less on average).
+Share of the target's maximum health the beam heals per second (0.05 = 5%).
+Share of the value lost on every trade.
+Sharpened Blades
+Shield Rims
+Shorter and fewer garbage collection pauses: each Lua script and coroutine gets stacks of 8,192 calls and 32,768 values (under 2 MB) instead of 131,072 of each (18 MB, made at once).
+Shorter garbage collection pauses: the Lua value heap (10 million slots, 280 MB, read by every collection) starts at 1 million slots and grows only when needed.
+Shorter routes, nearby stairs found from walls, bigger search budgets, no pause after picking something up, stairs usable under walkways, route searches limited to a time budget per frame, long bricks and slabs update the route graph over their whole length, allies walk past rope bridge posts, a route node left inside ground that has become solid is rebuilt when a bricktron is pushed out of it, and, in the Unity 6 port, bricktrons walk straight lines across flat open ground instead of a staircase ([Pathfinding] StraightPaths) and the player's own units get their routes from Unity's navigation mesh, the game's search staying for enemies and as the fallback ([Pathfinding] NavMeshExperiment, NavMeshRoutes).
+Show a frame rate counter at the top centre of the screen (switched in the performance window, F7).
+Show ranges
+Show the auto repair (green) and auto cleanup (blue) ranges around the crystal all the time, or again only while its task is selected.
+Show the auto repair / auto cleanup rings around the home crystal (true: all the time, false: never). Also toggled on the crystal's context wheel.
+Show the chat box in a game. Off: no chat box, no chat messages or their sound, and the chat key does nothing (the lobby's chat stays).
+Show the update notice again
+Shown
+Siege weapon worked by a bricktron. Throws explosive barrels (crafted at the laboratory) at a target.
+Single player: the starting point to begin at, as numbered on the map's picture (0: a random one, as the gamemode picks).
+Size
+Skip the logo screens at startup (same as the -faststartup launch option).
+Slain enemies drop dark crystals (5 with a 1 in 3 chance, biftrons 15 with a 1 in 2 chance). The crystal tier of the upgrades costs dark crystals instead of blue crystal, and a giant bricktron costs 50 dark crystals instead of energy.
+Slider
+Slider {0}
+Slot
+Small, Medium or Large.
+Smelts raw iron into iron ingots and makes glass, and burns logs into coal.
+Smelts raw iron into iron ingots and makes glass.
+Smithy
+Smithy, armoury and research station buildings (build menu, crafting): research weapon and armour upgrades in three tiers (iron, steel, crystal), and colony upgrades for dark crystals (more bricktrons, work speed, storage room (+33% per tier, stockpiles stack up to 4 layers high), cheaper bricktrons, walking speed, firefly energy, giant bricktrons, time between waves, more yield from digging and mining), for the whole team. Researched tiers show on the soldiers' gear, and soldiers wear the researched chainmail, gambeson, plate, great helm and heater shield. Starting a research reserves its whole cost from the stockpiles at once and locks that upgrade at the team's other stations until it is finished or cancelled. Workers walk inside. A stockpile only piles as high as there is room over it, and nothing can be built where its goods stand.
+Soldiers
+Something that is no trade
+Sort: ms/call
+Sort: ms/frame
+Source
+Space
+Spacer
+Spacing
+Spawn 
+Spawn points (invasion)
+Spawn points hidden.
+Spawn points shown: click a pillar, then the ground, to move it.
+Spawn points: off
+Spawn points: on
+Spawn {0}\n
+Speed
+Speed keys 4 and 5 for very fast game speeds ([GameSpeed] Speed4 and Speed5, 10x and 20x) in single player. Switched in the debug menu.
+Speed of everything a giant bricktron does (work, walking, climbing, attacks).
+Speed of everything it does
+Speed of the second speed key
+Speed of the third speed key
+Spikes (over 
+Spins plant fibre into fabric and rope.
+Spirestalker
+Splitter
+Sprites
+Stacking
+Standard
+Start
+Starting a research reserves its price from the stockpiles at once; a worker brings it here and works on it, one at a time. Each tier needs the one before and works for the whole 
+Starting a research reserves its whole cost from the stockpiles at once (the numbers in brackets are what is not reserved), and the same upgrade cannot be started at another station meanwhile; cancelling releases both. A worker brings the materials here and works on the research, one at a time. Higher tiers need the tier before. Upgrades are kept in the save.
+Starting the game
+Startup
+Status
+Status {0}
+Stay at work
+Stay on this place and shoot every enemy in range from here: no running out to the enemy or to a better shot (or again to stop guarding).
+Steady Aim
+Steel
+Steel ingot
+Step
+Stepper {0}
+Stepping
+Steps
+Steps (fading with the half life) on a grass column that wear it down to earth.
+Stockpile
+Stockpiles
+Stone
+Stones
+Stop
+Stop emptying
+Stop guarding
+Stop measuring (
+Stop measuring ({0})
+Storage free
+Storage used
+Store elsewhere
+Store if full
+Store in fullest stockpile
+Store loose item
+Stores resources. The workers bring what they gather here and fetch from it for building and crafting.
+Stores tools, weapons and unit kits for the bricktrons to take.
+Strength
+Striking
+Strip
+Studied ways to dig, chop, build and craft. Every bricktron works faster.
+Studies that improve the whole colony, paid in 
+Style
+Submenu: StockpileExclusivityHub
+Subtitle
+Sun: moving
+Sun: stopped
+Swap
+Sword
+System log
+Systems are not measured yet.\n
+THE WAVE IS HERE!
+TREE STUMPS
+Tab {0}
+Table
+Tail
+Take nothing new and have the workers carry everything to other storages (or again to use it as usual). It stays empty until switched off.
+Take these 
+Take these {0} trades out of the queue.
+Take this trade out of the list.
+Take this trade out of the queue.
+Tall brick 1x1x2
+Task
+Task areas can be dragged 50% larger than the game allows: harvest and base circles and quarries ([LargerTasks] AreaScale), and flatten tasks twice as large ([LargerTasks] FlattenScale).
+Task {0}
+Tasks and things no worker can walk to (blueprints, dig voxels, trees and plants to harvest, repairs, loose items) are marked unreachable: blueprints turn red, the rest get a red ring, and workers try them only when no task before them (10 places further up the list they pick from) can be done, instead of walking there again and again. A mark is only lifted when something is built, removed or dug within 3 blocks.
+Tasks have six priority levels, 0 (locked) to 5 (high), instead of four: two new levels lie half way between low and medium and between medium and high; the task list shows the level as five pips.
+Terracotta
+Terrain
+Tex
+Text
+Text = ||GetLocalized("##task_
+Text = ||GetLocalized("##task_{0}_info"),\n\t},\n
+Texts
+The building has no blueprint to move it with
+The building is already being moved
+The camera zooms further out than the game allows ([Camera] MaxZoomOut, 250 blocks by default).
+The colony
+The context wheel over a blueprint (e.g. a warehouse being built) has a Top priority button: builders work on it before everything else; a yellow ring marks it; saved with the blueprint.
+The game refused the move (not the player's building, or no room for the blueprint)
+The game will be saved and Castle Story will close.\nAre you sure?
+The game's launcher remembers its resolution, monitor and "Launch in fullscreen" (its script is fixed when the game starts, from the next launch on).

@@ -1,0 +1,228 @@
+Coal deposit
+Cog
+Cogs
+Colony
+Color
+Color.New(
+Color.New({0}, {1}, {2}, 1)
+Columns tried each game minute for a new plant (more: meadows fill up faster); 0: no new plants.
+Compound
+Condition : Condition_
+Connect
+Consolidate stockpiles
+Content
+Continue
+Copy an area
+Copy setup
+Copy setup: remember this workshop's queue, looping, stock limits and fetch range, to paste them into another workshop
+Core
+Corruptron Spawn
+Corruptron Spawn Point
+Corruptron waves spawn at least 60 blocks from the nearest block a player has built, when the map has a spawn point that far, and the farther a spawn point is from the players' blocks the likelier it is picked; otherwise a random one as before ([SpawnDistance] MinBlocks).
+Corruptrons
+Cost (dark crystals)
+Cost (energy of new bricktrons)
+Cost: 
+Cost: no home crystal
+Cost: {0} dark crystals ({1} free in the stockpiles) + the sacrificed worker
+Cost: {0} energy ({1} in the crystal) + the sacrificed worker
+Could not make a firefly.
+Could not restart (see the log); the choice applies at the next start.
+Count
+Counter
+Crafting
+Crafts anything explosive: bombs, explosive barrels and alchemist kits.
+Crafts halberdier kits, archer kits and lantern wards.
+Crafts items drawing on the crystals' energy: artificer kits and the sentinel, healing, capture and pylon wards.
+Crafts mechanical contraptions: arbalist kits and bear traps.
+Crew
+Critical hits by level again.
+Crystal
+Crystal - Neutral
+Crystal - Player Spawn
+Crystal Attunement
+CsGameMenu blueprint thumbnail
+CsScoreboard gems
+CsScoreboard next wave
+Ctrl+
+Ctrl+C, then drag an area to copy its blocks, buildings and blueprints. Ctrl+V pastes the copy as blueprints into the selected build project (right-click rotates).
+Ctrl+F opens a search bar: everything in the world matching the text (bricktrons by name or job, enemies, buildings, blueprints, resources) gets a yellow ring under it; several searches separated by commas.
+DEEP ORE
+Damage
+Damage of a Healtron's own attacks, times a corruptron's.
+Damaged doors are repaired like damaged blocks: a repair zone (and the base's repair task) repairs the doors inside it, and with AutoRepair idle builders repair the team's damaged doors near the base.
+Dark cr.
+Dark crystal
+Dark crystals: 
+DarkCrystals: dark crystal
+Data
+Data.Project:IsSelectedOfType{0}()
+Dawn 06:00
+Debug
+Debug menu
+Debug mode (F7, F8 and F9 windows)
+Debug: show a C# copy of the in-game right bar below the game's own, to check the C# menus.
+DebugModeOption: "Enable debug mode" added to 
+Decoration: a big painting.
+Decoration: a double window to set into a wall.
+Decoration: a knight statue.
+Decoration: a small painting.
+Decoration: a tall painting.
+Decoration: a wide painting.
+Decoration: a window to set into a wall.
+Default
+Defeat the animals guarding this chest first
+Depth
+Deselect
+Details
+Developer
+Diagnostics
+Dialogs
+Diffuse
+Dig 
+Dig until: 
+Dig {0} until {1} ({2} now
+Dig {0}: no limit
+Diggers
+Direct3D 11
+Display
+Distance
+Divider
+Done
+Door
+Draw the blueprint library in C#.
+Draw the gamemode's top-right panel (wave timer, kills, crystals, players) in C#.
+Draw the gamemodes' dialogs (intro, victory, defeat) in C#.
+Draw the in-game settings sidebar and the paused overlay in C#.
+Draw the in-game tooltips and help articles in C#.
+Draw the in-game top, left and right bars in C#.
+Draw the new-task sidebar and the building and block catalogues in C#.
+Draw the selected task's popup (options, recipes, queue) in C#.
+Draw the task list in C#.
+Draw the title screen's menu buttons (main menu, play, multiplayer, options) in C#.
+Draw the whole in-game menu (bars, build menus, task popup, task list, settings) in C# and do not load the game's Lua GameMenu at all.
+Draw the world editor's menu in C# and do not load the game's Lua world editor menu (not every tab is done yet).
+Drawn size of a giant bricktron. It still walks in one voxel.
+Dropped 
+Dropped by slain enemies. Used by the crystal tier of the upgrades and to make giant bricktrons.
+Dropped {0} {1}.
+Dusk 18:00
+Each selected unit keeps the place it stands on as its post. A call to arms sends it there, and Back to post too.
+Economy
+Edge
+Efficient Mining
+Empty
+Empty stockpile
+End
+Enemies (where the camera looks)
+Enemy route search (12 shortest, 45 game)
+Enemy search steps per update (game 20)
+Enemy waves are no longer shut out by trees (planted rows of them included): enemies that break their way may route through trees and fell a tree only when it blocks their way (stuck on their route, the tree towards their next step); trees they walk past, fight or wait beside stay standing.
+Energy (home crystal)
+Energy carried by each brewed firefly, relative to the blue crystal it costs. 1.3 = new workers arrive 30% faster.
+Energy per brewed firefly
+Every hit and shot of your bricktrons is a critical hit.
+Every soldier kit is one item (Knight kit, Archer kit, ...): the kit recipes make one bundle with the summed cost and work instead of separate pieces, a soldier that equips a bundle unpacks it, one that hands in a whole kit packs it again, and loose whole kits on a weapon stand are packed into a bundle. Saves with kit bundles need the mod (bundles already made are still unpacked with this switched off).
+Exit (main menu or in a game) closes the game at once, instead of destroying every object one by one and then shutting the engine down in full.
+Experience
+Extra blocks round each tree and piece of terrain for that test, so shadows do not pop in when the camera turns fast.
+Extra price halves every (minutes)
+Extra raw iron from iron ore and iron deposits, on average (0.25: a quarter more).
+Eyedropper
+FEATURES (APPLY AFTER A RESTART)
+FPS  now 
+FPS counter at the top: off
+FPS counter at the top: on
+Fabric
+Face {0}
+Failed: {0}
+Failsafe for a hanging worker: one that has not moved for 10 seconds in a walking task (60 in any other) has its task cancelled and puts down what it carries, then starts afresh ([StuckReset] Seconds, LongSeconds).
+Faster map loading that keeps the window responsive (background file reading, time-budgeted loading loops, big Lua files compiled once and cached).
+Fav
+Features
+Fee
+Fee per trade
+Fetch ingredients within (blocks, 0 no limit)
+Fetch within
+Fibre
+Fight again at health
+Fighting
+Fill
+Fill Area
+Finalizer
+Find
+Firefly
+Firefly Lore
+Fixes memory leaks in the game itself, so memory no longer climbs during long games or after playing several games.
+Flag
+Flailing
+Fletching
+Flush
+Fog of war
+Fog of war off: everything is visible.
+Fog of war on.
+Fog of war: off
+Fog of war: on
+Forge
+Forget the posts of the selected units: a call to arms sends them to the rally point of their class again.
+Frame
+Frame ms  now 
+Frame time (ms), last 
+Frame time (ms), last {0} frames: lines at 16.7 / 33.3 / 100 ms; yellow over 33 ms, red a spike, blue mark a garbage collection
+Frames per second
+Freeze / resume
+From combat level 3 a sword strike or shot can be a critical hit for double damage (5% at level 3, 10% at 5, 15% at 8, 20% at 10): a red "2x damage" rises over the bricktron and its weapon glows red for that hit.
+Full: ore
+Fully researched.
+Furnace
+GAME SPEED (SINGLE PLAYER)
+GIANT BRICKTRON
+GS_Scoreboard:LoadMenuFromClosure(LoadScoreboardMenu)\n
+Game menus drawn in C# instead of the game's Lua menus, which take long to build when a map loads. Each menu is switched on on its own in [LuaUi]; all are off by default except the gamemodes' dialogs (CsModals) and the title screen's buttons (CsMainMenu).
+Game minutes (on average) in which bare earth beside grass that nobody walks grows over; 0: grass does not spread.
+Game minutes a plant takes from nothing to full size; 0: plants keep their size.
+Game minutes in which the steps on a column fade to half; worn paths nobody walks grow over in about five half lives.
+Game speed 
+Game speed (single player)
+Game speed keys in single player: 1 = normal, 2 = 2x, 3 = 3x (see [GameSpeed]). With the debug menu's fast speed keys on: 4 = 10x, 5 = 20x.
+Game speed of the fifth speed key (only with the debug menu's fast speed keys on).
+Game speed of the fourth speed key (only with the debug menu's fast speed keys on).
+Game speed of the second speed key.
+Game speed of the third speed key.
+GameUi hotkey {0}
+GameUi item {0}
+GameUi sidebar spacer
+GameUi sound {0}
+GameUi task list
+Garbage collections  
+Gather, then store a full bag
+Gear the stand takes (click a class to let it in or leave it out; what is on the stand stays):
+Get
+Giant Bricktrons
+Giant bricktron
+Giant bricktrons: select two workers and upgrade one (1.25x size, 2x speed for everything it does, 2x health, 2.5x carrying) for 50 dark crystals (with DarkCrystals; otherwise 1.5x the energy of a new bricktron); the other is sacrificed. One giant bricktron per 5 bricktrons. With Upgrades, Giant Bricktrons must first be researched at the research station.
+Give
+Glass
+Go
+Go to a place with a clear shot
+Good
+Grabbing
+Graph
+Graphics
+Graphics API of the Unity 6 port (Linux): Default (the player's first, OpenGL Core), OpenGL or Vulkan. Applies when the game starts; Settings > Castle Story Plus settings can restart it at once.
+Green
+Green, Winter or Desert.
+Grid
+Grounded
+Groupes
+Groups
+Guard here
+Halberdier
+Halberdier kit
+Handle
+Handle Area
+Head
+Header
+Heal all mine
+Healed 
+Healed {0} bricktrons.

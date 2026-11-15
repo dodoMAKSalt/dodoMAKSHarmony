@@ -43,6 +43,39 @@ namespace CastleStoryOptimizer
             return cfg && (!Active || keepOnPort);
         }
 
+        private static System.Reflection.PropertyInfo[] _savingProps;
+        private static System.Reflection.FieldInfo[] _savingFields;
+
+        /// <summary>Castle Story Plus сейчас пишет сохранение (FastSave.Writing / AutoSave.IsSaving).</summary>
+        public static bool CspSaving()
+        {
+            if (!Csp) return false;
+            try
+            {
+                if (_savingProps == null)
+                {
+                    var props = new System.Collections.Generic.List<System.Reflection.PropertyInfo>();
+                    var fields = new System.Collections.Generic.List<System.Reflection.FieldInfo>();
+                    const System.Reflection.BindingFlags F = System.Reflection.BindingFlags.Static | System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.NonPublic;
+                    foreach (var pair in new[] { new[] { "CastleStoryPlus.Saving.FastSave", "Writing" }, new[] { "CastleStoryPlus.Saving.AutoSave", "IsSaving" } })
+                    {
+                        var t = HarmonyLib.AccessTools.TypeByName(pair[0]);
+                        if (t == null) continue;
+                        var p = t.GetProperty(pair[1], F);
+                        if (p != null && p.PropertyType == typeof(bool)) { props.Add(p); continue; }
+                        var f = t.GetField(pair[1], F);
+                        if (f != null && f.FieldType == typeof(bool)) fields.Add(f);
+                    }
+                    _savingFields = fields.ToArray();
+                    _savingProps = props.ToArray();
+                }
+                foreach (var p in _savingProps) if ((bool)p.GetValue(null, null)) return true;
+                foreach (var f in _savingFields) if ((bool)f.GetValue(null)) return true;
+            }
+            catch { }
+            return false;
+        }
+
         /// <summary>Клавиши замерщика: на порте с Shift (F7/F8/F9 заняты окнами Castle Story Plus).</summary>
         public static bool KeyDown(KeyCode k)
         {

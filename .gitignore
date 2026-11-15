@@ -18,3 +18,4 @@ __pycache__/
 # Логи и отчёты из игры
 /reports/
 /backup_before_port/
+/tools/csp_strings.json

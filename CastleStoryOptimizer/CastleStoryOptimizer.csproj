@@ -5,7 +5,7 @@
     <TargetFramework>net35</TargetFramework>
     <AssemblyName>CastleStoryOptimizer</AssemblyName>
     <RootNamespace>CastleStoryOptimizer</RootNamespace>
-    <Version>0.17.1</Version>
+    <Version>0.18.0</Version>
     <LangVersion>latest</LangVersion>
     <Nullable>disable</Nullable>
     <GenerateDocumentationFile>false</GenerateDocumentationFile>
@@ -33,6 +33,7 @@
   <ItemGroup>
     <EmbeddedResource Include="Lang\language.csv" LogicalName="lang/language.csv" />
     <EmbeddedResource Include="Lang\meta.json" LogicalName="lang/meta.json" />
+    <EmbeddedResource Include="Lang\csp_ru.txt" LogicalName="lang/csp_ru.txt" />
   </ItemGroup>
 
   <!-- После сборки кладём мод прямо в игру -->

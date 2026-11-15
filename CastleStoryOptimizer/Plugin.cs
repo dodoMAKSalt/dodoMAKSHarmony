@@ -11,7 +11,7 @@ namespace CastleStoryOptimizer
     {
         public const string Guid = "castlestory.optimizer";
         public const string Name = "dodoMAKSharmony";
-        public const string Version = "0.17.1";
+        public const string Version = "0.18.0";
 
         internal static Plugin Instance;
         internal static BepInEx.Logging.ManualLogSource Log;
@@ -69,6 +69,9 @@ namespace CastleStoryOptimizer
             var forceRu = Config.Bind("Language", "ForceRussian", true,
                 "Всегда включать русский перевод dodoMAKSharmony при запуске (false — язык из настроек игры).");
             RussianLanguage.Apply(_harmony, forceRu.Value);
+            if (PortCompat.Csp && Config.Bind("Language", "TranslateCastleStoryPlus", true,
+                    "Переводить на русский мод Castle Story Plus (их меню, подсказки, настройки, новые предметы).").Value)
+                CspTranslator.Apply(_harmony);
 
             _stationPriorities = Config.Bind("Workshops", "Enabled", true,
                 "Приоритеты мастерских: выделить печь/верстак и т.п. → клавиши ниже.").Value;
@@ -123,7 +126,7 @@ namespace CastleStoryOptimizer
             if (!PortCompat.Active && Config.Bind("AI", "StorageReservations", true,
                     "Бронь места в хранилище: двое не бегут сложить ресурсы туда, где места хватит одному.").Value)
                 StorageReservations.Apply(_harmony);
-            _fastExit = !PortCompat.Active && Config.Bind("Compat", "FastExit", true,
+            _fastExit = Config.Bind("Compat", "FastExit", true,
                 "При выходе из игры (Alt+F4, «Выход») сразу завершать процесс: без зависания и аварийного падения старого Mono.").Value;
             if (Config.Bind("AI", "FasterGoalCounting", true,
                     "Быстрый подсчёт целей добычи (без мусора) — бриктроны дешевле выбирают работу.").Value)
@@ -281,9 +284,13 @@ namespace CastleStoryOptimizer
             // затем завершаем процесс сами: дальше Unity 5.6 при выгрузке зависает и падает в финализаторе Mono.
             try { PlayerPrefs.Save(); } catch { }
             Logger.LogInfo("Быстрый выход: процесс будет завершён через 0.5 с.");
+            PortCompat.CspSaving(); // поиск типов — в главном потоке
             var t = new System.Threading.Thread(() =>
             {
                 System.Threading.Thread.Sleep(500);
+                // Castle Story Plus дописывает сохранение в своём потоке — ждём его (до 30 с), иначе файл обрежется.
+                var sw = System.Diagnostics.Stopwatch.StartNew();
+                while (PortCompat.CspSaving() && sw.ElapsedMilliseconds < 30000) System.Threading.Thread.Sleep(100);
                 try { System.Diagnostics.Process.GetCurrentProcess().Kill(); } catch { }
             });
             t.IsBackground = true;

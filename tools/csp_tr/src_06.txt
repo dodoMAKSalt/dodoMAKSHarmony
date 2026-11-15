@@ -1,0 +1,221 @@
+No duplicate build jobs; a worker takes as much material as it can carry for a blueprint and the blueprints near it, and delivers to them on one trip; builders also build blueprints that cost nothing (saplings); a building of several floors is built floor by floor (no blueprint is taken two or more levels above an unfinished one nearby that the builder could do now).
+No enemy faction in this game.
+No frames measured yet.
+No free sets for any class.
+No home crystal found.
+No home crystal.
+No invasion wave timer (invasion games only, host only).
+No invasion wave timer in this game.
+No item for 
+No item for {0}.
+No limit
+No problems so far.
+No save game found.
+No setting matches "
+No setting matches "{0}".
+No settings.
+No spawn points: {0}
+No spikes since the last reset.
+No team.
+No trade between these
+No trades available.
+Nodes the fine search may visit to straighten a coarse route (the game used 100). Higher finds the nearby stairs instead of a detour, at a little more CPU per search.
+None
+Noon 12:00
+Normal game speed
+Normal priority
+Not a placed building that can be moved (no MovableVolume)
+Not being built
+Not drawn in C# yet. Switch [LuaUi] CsWorldEditor off to use this tab.
+Not enough dark crystals in the stockpiles.
+Not enough energy in the crystal: 
+Not enough energy in the crystal: {0}/{1}.
+Not enough free 
+Not enough free dark crystals in the stockpiles: 
+Not enough free dark crystals in the stockpiles: {0}/{1} (research reserves its cost at once).
+Not enough free {0}: {1}/
+Nothing is being researched. Pick an upgrade above.
+Nothing queued
+Nothing queued. Choose what to give and what to get, then Trade.
+Nothing to trade
+Nothing under way
+Novice
+Now 
+Off
+Off ([Performance] MeasureAllocations).
+Off: idle workers ask every task for work as the game does. Shadow: the same, and the performance window counts the asks the job board would skip (jobboard: ...). On: an ask that came to nothing is not repeated until something it depends on changes or a few seconds have passed.
+One build task per team: every placed blueprint goes into it and other build tasks are merged into it. Off: build tasks stay separate (the build button makes a new one).
+One giant bricktron allowed per this many bricktrons.
+One task
+Only 
+Only dark crystal is brought to this stockpile.
+Only the host can move buildings
+Only the host can upgrade.
+Only {0} of {1} got {2}: not enough sets.
+OpenGL Core
+Operable
+Option {0}
+Orange cr.
+Orange crystal
+Ore mine
+Ore mine (new task menu, harvest tasks, after Brimstone): placed and sized like a harvest task (a sphere), its bricktrons dig only the ore they can get at in it (orange crystal, iron, blue crystal, coal touching a tunnel, quarry wall or cave), following a vein into the rock, no stone. Unmodded players see a harvest task that harvests nothing.
+Ore mine: bricktrons dig the ore in the sphere they can get at (in tunnel and quarry walls, caves), no stone
+Output Text
+Padded Gambeson
+Palette
+Pallet
+Panel
+Paste setup
+Paste setup: copy a workshop's setup first
+Paste setup: replace this workshop's queue with the copied one (
+Paste setup: replace this workshop's queue with the copied one ({0} of {1} queued recipes fit
+Paste setup: this is the workshop the setup was copied from
+Paste setup: this workshop makes none of the copied recipes
+Paste the copy
+Path
+Pathfinding
+Pathfinding: route node at 
+Paths wear into the grass: grass the players' units walk much turns to earth, and worn ground nobody walks any more grows its grass back over time; grass also spreads slowly onto bare earth beside it (steps, half life and spread time in [WornPaths]).
+Pause task
+Pending blueprints are always visible, not only in build mode.
+Performance
+Performance  <size=13><color=#999999>
+Performance  <size=13><color=#999999>{0}</color></size>
+Pick a recipe below
+Pick up
+Pick up 
+Pick up from emptying stockpile
+Pick up from small stockpile
+Pick up loose item
+Pick up loose item from below
+Pick up loose items within (blocks)
+Pick up {0} from 
+Picture
+Picture {0}
+Pip
+Pip 
+Pips
+Placed beside a crystal shard, it captures the shard.
+Placing trees and plants
+Placing with the idle group or the repair task selected no longer fails, and a new build task no longer takes over the others. With [Building] CombineBuildTasks (in-game: Settings > Build tasks) every blueprint goes into one build task per team and other build tasks are merged into it.
+Plank
+Planks
+Plans for denser living quarters. The home crystal keeps more bricktrons.
+Plant
+Plant fibre
+Plant trees: a tree sapling in the build menu (structures), free, planted by a builder. It grows slowly from a tiny tree to a full tree over 30 minutes of game time (see [Saplings]) and can then be felled like any tree. A tree farm (new task menu, next to Landscape) is a box dragged out like a landscape task: builders plant saplings in it and a harvest task fells them when full grown, and replants.
+Plants seed themselves in open grass: now and then a young plant (fibre) grows where a 5x5 square of grass is free of blocks, trees and paths, thinly, so meadows fill up slowly and stop ([WildPlants] Tries); plants below full size grow to full size in 10 minutes ([WildPlants] GrowMinutes).
+Player Starting Point
+Players a hosted multiplayer game lets in, the host included (the game: 4). The host's setting applies.
+Postfix
+Prefix
+Preparing pathfinding
+Preparing the map
+Press "Measure systems" (or set [Performance] MeasureAtStart). Measuring costs some 1.5 ms a frame while it runs.
+Press "Measure systems".
+Press a key...
+Price level: 
+Price level: {0}, 
+Priority
+Priority: 
+Problems
+Problems (
+Problems ({0})
+Progress
+Project
+Projects
+QUEUE (
+QUEUE ({0}/{1})
+Quarries can dig each resource (stone as bricks, iron, brimstone, coal, blue crystal) until the team has a set amount: small + and - over each resource button.
+Quarry
+Queue
+Queued
+Quicksave
+Quilted layers that catch arrows, bolts and thrown stones.
+RALLY POINTS
+RANDOM WORLD
+RESEARCH STATION
+RETREAT (MELEE)
+ROLE OF SELECTED WORKERS
+Radius
+Radius of the healing pulse in voxels.
+Raise priority
+Random World
+RandomWorld: made 
+Range
+Range of the healing beam in voxels.
+Ranged
+Ranged: not set (crystal)
+Ranged: set
+Raw iron
+Raw stone
+Recipe
+Red
+Reduction
+Refresh rate picked in Options > Graphics > Refresh rate, as numerator/denominator (e.g. 240000/1000). Empty: the system's.
+Reinforced Helmet
+Relays power from a crystal to other wards.
+Reload UI
+Renderer
+Renderer (now 
+Renderer (now {0})
+Repair
+Repair damaged blocks within (blocks)
+Repeat: 
+Repeat: off
+Research
+Research Giant Bricktrons at the research station first.
+Research Station
+Researches armour upgrades for the soldiers: less melee, arrow and magic damage taken, more health and better shields, in three tiers.
+Researches colony upgrades paid in dark crystals: more bricktrons, work and walking speed, storage room, cheaper bricktrons and more.
+Researches weapon upgrades for the whole team: melee, block and arrow damage, archer aim and crossbow reload, in three tiers.
+Reserve Until
+Reserved for the team's research: 
+Reset
+Resource list (icon, name, count) in the top-right corner instead of the icon grid under the minimap; a resource stays listed from the first time it is stocked (saved with the world), with storage used and free (also as a percentage); a "Resources" button on the right-hand bar shows and hides it.
+Resources
+Resources (dropped where the camera looks)
+Resources that always get a pallet of their own, comma separated (names as in the log line 'MixedStockpiles: pallet capacity').
+Restart the game to apply the feature changes.
+Resume task
+Retreat
+Retreat below health
+Retreating fighters return to normal at this fraction of their health.
+Riveted rings under the tabard. Takes the edge off sword and axe hits.
+Rope
+Ropes
+Route search (12 shortest, 45 game)
+Route search cost of one block of ladder (a step of stairs is about 10, climbing a ledge 250): the higher, the more bricktrons prefer stairs.
+Route straightening nodes (game 100)
+Routes (all your bricktrons)
+Routes off.
+Routes on: every route your bricktrons search from now on is drawn.
+Routes: off
+Routes: on
+Row
+Row {0}
+Rows
+Run
+Running
+SAVE AND QUIT GAME
+SAVE AND RETURN TO MAIN MENU and SAVE AND QUIT GAME (with a confirmation) buttons in the Quit Game dialog.
+SOLDIERS PER CLASS
+SURFACE ORE
+Sacrificed: 
+Sapling
+Saplings
+Save
+Save and restart now
+Save the game automatically every few minutes of play (see [Saving] AutosaveMinutes, or Settings > Castle Story Plus settings in the game). One autosave per map.
+Saved game objects are not a JSON array.
+Saving
+Saving no longer freezes the game: the quicksave and save menu write game objects over several frames like the autosave, the save files are written in the background and swapped in at once (the old save is kept if writing fails), and game objects are written compact.
+Saws logs into planks, the main resource for wooden structures.
+Scouting
+Scouts watch the corruptron spawn points and warn the colony early. More time between waves.
+Search
+Search all settings
+Search steps per update for each enemy's route search (the game used 20). Higher finds routes sooner, at more CPU per enemy.
+Second game speed
+Seconds
+Seconds a chat message stays in the chat box of a game; while the chat is open for typing the recent messages show again (0: messages stay, as in the game).

@@ -1,0 +1,142 @@
+Heals your bricktrons in its radius over time.
+Health
+Health of a giant bricktron (it takes 1/Health of the damage).
+Healtron
+Healtron: a green corruptron that heals its allies. Raids sometimes bring one (15% per corruptron, at most 2 per raid, in invasion from wave 3): every 4 seconds a pulse heals every ally within 6 voxels by 8% of their health, and a green beam heals the most wounded ally within 10 voxels by 5% per second. Its own attacks do only 40% damage ([Healtron]).
+Heap  
+Heavier heads for breaking walls, gates and buildings.
+Heavy Blades
+Height
+Helm and shield
+Help
+Hide ranges
+High
+Highlight
+Hint
+Hold this key and left-click a building to move it.
+Holds any enemy that steps on it in place for a while.
+Hole
+Home crystal
+Hooks
+Horizontal
+Host only: these commands run on the host.
+Hotkey
+Housing
+Hover
+Hovering a blueprint shows the resources it still needs (icon and count); a block of a build task shows what the whole task still needs.
+Hovering a blueprint that is not being built says why: its task is not committed, paused or has no workers, something is in the way, it waits for support, or no bricktron can get to it.
+Hovering a stockpile or weapon stand shows a list of what it holds next to the mouse: icon, name and count of each resource; a warehouse also shows how full it is in percent. The game's own line of icons and counts above the storage is hidden, as the list shows the same.
+How far (blocks) a ranged fighter on a wall's edge leans out over it to shoot down.
+How far from the camera shadows are drawn, in blocks (the game's quality level uses 400). 0 keeps the game's value.
+How far from this building, in blocks, its workers go for what it needs, to stockpiles and loose items (Shift: 25 at a time). Past 
+How far from this building, in blocks, its workers go for what it needs, to stockpiles and loose items (Shift: 25 at a time). Past {0}: no limit.
+How far from this workshop, in blocks, its workers go for its ingredients, to stockpiles and loose items (Shift: 
+How far from this workshop, in blocks, its workers go for its ingredients, to stockpiles and loose items (Shift: {0} at a time). Past {1}: no limit.
+How far out the camera can zoom, in blocks from the point it looks at (the game's own limit is used when it is higher).
+How far units see through the fog of war, times the game's distance for the map size.
+How far, in blocks along the sun's light, a tree or piece of terrain outside the screen may be and still cast a shadow onto it. Too short: long shadows at sunrise and sunset end at the screen's edge.
+How far, in blocks from the workshop, its workers go for its ingredients (stockpiles and loose items), for every workshop not set in its own menu. 0: no limit.
+How far, in blocks walked, a ranged fighter whose shots would hit the castle or rock may go to find a place with a clear shot.
+How fast bricktrons climb a ladder, in blocks per second (walking is about 3).
+How many boulders (stone on the surface): None, Few, Normal, Many or Lots.
+How many bricktrons work on a task at a time (e.g. a quarry with 4): a Workers at a time button among the task's actions with + and -; All when there is no limit; saved with the task.
+How many times Ctrl+click on a recipe in the workshop menu queues it (1 to 20).
+How many times faster than the game's bricktrons dig out a quarry (1.3 = 30% faster): how many swings of the pick each swing counts as.
+How many times larger than the game's a flatten (landscape) task's area may be dragged.
+How many times larger than the game's a task's area may be dragged (radius of a circle, side of a quarry or landscape).
+How many times to make the trade (one queue slot each, 
+How many times to make the trade (one queue slot each, {0} at most).
+How many trees: None, Few, Normal, Many or Lots.
+How many wood blocks may hang out sideways into the air from a supported wood block.
+How much a giant bricktron carries, times what a worker carries.
+How much iron and pyrite on the surface: None, Few, Normal, Many or Lots.
+How much iron, crystal and coal in the deep rock: None, Few, Normal, Many or Lots.
+How strongly the ward range spheres are drawn (0.05 to 1; 1 = as the game draws them).
+How to merge two workers into one giant bricktron. Needed before any giant can be made.
+Icon
+IconKeys.{0}:Get64()
+Icons
+Icons over blueprints (Alt)
+Idle builders repair damaged blocks near the base (home crystal and stockpiles, see [AutoRepair] Radius), without a repair zone. No materials; blocks under attack are left alone. The range is also set on the home crystal's task (+ and -, Shift 5 at a time), with a green ring around the crystal, shown or hidden with "Show ranges" / "Hide ranges" on the crystal's context wheel ([BaseRanges] ShowRings).
+Idle builders repair damaged blocks within this many blocks of the home crystal or a stockpile (
+Idle builders repair damaged blocks within this many blocks of the home crystal or a stockpile ({0} to {1}; also set on the home crystal's task).
+Idle workers move resources out of small stockpiles into the fullest one.
+Idle workers pick up loose items near the base or near themselves and store them, without a cleanup zone (see [AutoCleanup] Radius). Items on top of a building or stockpile are taken from its foot. The range is also set on the home crystal's task (+ and -, Shift 5 at a time), with a blue ring around the crystal, shown or hidden with "Show ranges" / "Hide ranges" on the crystal's context wheel ([BaseRanges] ShowRings).
+Idle workers pick up loose items within this many blocks of the home crystal or a stockpile (
+Idle workers pick up loose items within this many blocks of the home crystal or a stockpile ({0} to {1}; also set on the home crystal's task).
+Idle workers remember which tasks just had nothing for them and skip asking those again until something there changes (a new goal, a worker leaving, storage or routes changing) or a few seconds have passed. [JobBoard] JobBoardMode: Off, Shadow (only counts what would be skipped, for the performance window) or On.
+Ignores the build-mode key (Tab) for half a second after the game window regains focus, so alt+tab no longer opens the construction menu.
+Image
+In build mode X picks which cell of the held block goes where the mouse points (Shift+X the other way round), through all of the block's cells; choosing another block starts again.
+In build mode: place the held block by its next cell (Shift: the one before). Choosing another block starts again.
+In progress at 
+In progress at {0}.
+In stock {0}
+In the way (marked red): 
+Ingots
+Installed v0.8.12: {0}
+Instant build off.
+Instant build on: what you place is built at once, what you remove goes at once.
+Instant build: off
+Instant build: on
+Invasion
+Invasion waves
+Invasion: Healtrons come from this wave on (raids without a wave number, e.g. in conquest, always may have them).
+Invasion: big warning before the next wave at 1 minute, 30 and 15 seconds, and a countdown for the last 5 seconds.
+Invasion: the next wave's spawn point is picked ahead, and from 30 seconds before the wave an arrow on the screen points where it will come from.
+Invoke
+Iron
+Iron forged with coal at the forge. Used by the steel tier of the smithy and armoury upgrades.
+Iron in the ground gives 25% more raw iron on average: iron ore dug out and iron deposits mined ([RichIron] Bonus).
+Iron,RawIron,PurifiedBrimstone,OrangeCrystal,BlueCrystal,BlueCrystalChunck,PurifiedBlueCrystal,Glass,Terracotta,Cog,Bomb,ExplosiveBarrel,StoneBlock,WoodBlock,PlankBlock,Clay,Plant
+Ironhorn
+It cannot stand here: nothing holds it up and nothing it rests on is planned.
+Its task has no bricktrons: add some to it.
+Its task is paused (locked priority).
+Its task is still being edited: click away from the task to start it.
+Job
+Keener edges on swords and axes. Every melee hit deals more damage.
+Keep blue crystal
+Keep coal
+Keep the fog of war on in every game mode (the sandbox switches it off otherwise).
+Key for game speed Speed2.
+Key for game speed Speed3.
+Key for game speed Speed4.
+Key for game speed Speed5.
+Key for normal game speed.
+Key that opens the debug menu (energy, bricktrons, resources, enemies, waves). Host only.
+Key that opens the performance window (frame rate, frame times, garbage collections, what takes the time, spikes).
+Key that opens the system log window (what every bricktron is doing, problems, the mod's log).
+Key that turns the semi x-ray (the tunnels and shafts under the ground) on and off, also without debug mode. Not while placing blocks or typing.
+Keybindings
+Keys 4 and 5 off.
+Keys 4 and 5: 10x and 20x speed.
+Keys 4/5 = 10x/20x: off
+Keys 4/5 = 10x/20x: on
+Kill enemies near
+Killed 
+Killed {0} enemies within {1} blocks.
+KitBundles: kit bundle
+Knight
+Knight kit
+Knights
+Knowledge of fireflies. Each brewed firefly carries more energy.
+LEVEL UP! Combat {0}
+LEVEL UP! Work 
+LEVEL UP! Work {0}
+LEVEL UP! Work {0} / Combat {1}
+LOAD GAME
+LUI/{0}
+Lab
+Label
+Label : 
+Ladder
+Ladders
+Ladders: 
+Large brick 2x2
+Large stockpile
+Large stockpile in the build menu: 3 x 3 blocks, holds three times as much as the 2 x 2 stockpile.
+Last collection  
+Last spikes
+Last: 
+Launch option -faststartup skips the logo screens at startup and goes straight to the main menu.

@@ -1,0 +1,250 @@
+With debug mode on (Castle Story Plus settings, or Options > Gameplay), F8 opens a debug menu (host only): instant build (what is placed is built at once), add energy, spawn builders, heal, drop resources, spawn or kill enemies, move, start or freeze the next invasion wave, change the time between waves, and draw the selected bricktrons' routes (coarse, straightened, walked), and make every hit of your bricktrons critical (100% critrate).
+With debug mode on (Castle Story Plus settings, or Options > Gameplay), F9 opens a system log window: what every bricktron is doing, problems (errors, warnings, failed bricktron tasks) and the mod's log.
+Wood blocks and wooden slabs can be built out sideways from other wood (a slab in line with a slab walkway holds): up to 5 blocks may hang into the air from a supported wood block (see [WoodOverhang]).
+Wood ladder
+Wood ladder in the build menu (wood group): bricktrons climb it straight up and down, slower than stairs ([Ladders] ClimbSpeed, RouteCost) and only with free hands or a bag.
+Wood slab 1x1
+Wood slab 1x3
+Wood slab 1x5
+Wood slab 2x1
+Wood slab 2x2
+Wood slab 2x3
+Wood slab 2x4
+Work
+Work Methods
+Work and combat XP and levels (+5% per level), shown in the name tag with XP bars and a level-up effect.
+Work to remove, compared to a tree
+Workbench
+Worker trace off.
+Worker trace on: BepInEx/workertrace.log
+Worker trace: off
+Worker trace: on
+Workers
+Workers at a time
+Workers besides the market's own who may fetch goods for its current trade at the same time.
+Workers called when the alarm sounds. Limited by the weapon/armour sets you own. All 0 = everyone takes any kit.
+Workers do not stand frozen with a load nothing can store: "store or drop" stores what has room kind by kind and puts the rest down near the gather point at once; a loaded worker that idles or fails tasks for 20 seconds is sent to do that; a workshop worker whose recipe makes no progress for 90 seconds starts afresh ([LoadRelief] Seconds, RecipeSeconds, DropWalk).
+Workers find their next task faster in big task areas (mining, digging, many trees): the search uses a real-time budget per frame instead of pausing every few tasks.
+Workers go on to their next task sooner: the wait after a task is 2 AI ticks instead of 10, after a failed one 10 instead of 30 ([QuickNextTask] TicksAfterTask, TicksAfterFailure).
+Workers prefer the nearest stockpile instead of walking to fuller ones far away.
+Workers start their next task right away, fetch materials from the stockpile that makes the shortest trip to where they are needed, and store a full bag straight after digging, felling or harvesting.
+Workers start work on their own, help other task groups when theirs is done, react faster, only dig, harvest or clean up what they can store all of, and pick the log, tree or loose item to go for by the walk to it, not the straight line; a quarry keeps its stair steps (never dug away) and a step's task is no longer thrown away and remade while a worker walks to it.
+Workers without a soldier's gear no longer go to fight enemies that come close on their own; they leave them to the soldiers. An order to attack still sends them.
+Workshop blueprints (forge, workbench, lab, smithy, armoury, market, research station) also claim the spot their worker stands on, which the finished building claims: a blueprint placed there before was blocked for good once the workshop was done.
+World check: 
+World check: {0} area(s) of the world differed
+WorldEditorMarker (
+WorldEditorMarker ({0})
+Write all errors and exceptions with stack traces to BepInEx/errors.log (modding aid).
+X-ray (this machine's view only)
+X-ray off.
+X-ray: only the ore
+X-ray: the walls of mines, tunnels and caves
+XRay block {0}
+XRay blocks
+XRay surface {0}
+Your
+Zoom
+] (scene 
+] repeated 
+^(?:\\|\\|)?\\s*GetLocalized\\(\\s*"([^"]*)"\\s*\\)$
+^\\s*([A-Za-z_][A-Za-z0-9_]*)\\s*=\\s*(.*?)\\s*$
+a bricktron
+a building or blueprint near
+a door, or an obstacle the route search would avoid, in it
+a felled tree
+a sapling near
+a spot
+a stockpile's goods
+a tree
+a worker could not get to it; left alone for 
+a worker could not get to it; left alone for {0} s more
+ai: Knowledge.
+ai: Landscape.
+ai: Regions.
+ai: Tunnel.
+ai: VoxelGoalProvider.
+another blueprint
+another station
+another task
+article helpers
+article image
+article {0}
+belongs to another player
+blue crystal
+blueprint cost
+blueprint library save
+blueprint library select
+bricktron, job, building, resource ...
+chainmail {0}
+claimed by another worker's cleanup
+close {0}
+csp1:{0},{1},{2},{3},{4},{5},{6}:{7}
+dark crystal
+dark crystals
+dark iron
+dark steel
+dark wood
+dialog button
+dialog cancel
+drawn last
+enemy killed
+event listener
+find failed
+flying home
+flying home, ~
+flying home, ~{0} s
+giant bricktron
+giant bricktrons can be made
+giant bricktrons: 
+goal not on the mesh
+group changed
+h.TooltipPath = ||Data.Resource:GetTooltipPath(GetResourceAtSlotIndex(i))\nh.Count = ||string.format("{0}/{1}", Data.Operable:GetContentResourceCount(Data.Operable:GetSelected(), GetResourceAtSlotIndex(i)), Data.Recipe:GetInputResourceCount(Data.Operable:GetActiveRecipe(), GetResourceAtSlotIndex(i)))\nh.CountColor = ||CastleYellow\nh.Label = ||Data.Resource:GetName(GetResourceAtSlotIndex(i))\nh.LabelColor = ||CastleYellow\nh.Icon = ||Data.Resource:GetIcon(GetResourceAtSlotIndex(i))\n
+have <b>
+have <b>{0}</b>
+hook listener
+idle while work: 
+idleTaskActions{0}Range
+if DisconnectLTD and CastleStoryPlus_LtdConnected then CastleStoryPlus_LtdConnected = false DisconnectLTD() end
+if mHandle.Step then\n
+if mHandle.Step then\n{0}end\n
+if not CastleStoryPlus.CsScoreboard("
+if not CastleStoryPlus.CsScoreboard("{0}", GS_Scoreboard) then GS_Scoreboard:LoadMenuFromClosure(LoadScoreboardMenu) end\n
+in all <color=
+in all <color={0}><b>{1}</b></color> → <b>{2}</b>
+in progress
+inside the Auto cleanup task's zone: its crew picks it up
+it found nothing in the task it could do (see the problems log, F9)
+it is still busy with 
+knowledge: excluder.
+knowledge: recepteur.
+knowledge: vision.
+labor work: 
+line leaves the graph at 
+load finished
+load started
+local p_arrow = _m.AddArrow(p)\n
+loco: LayerActivator.
+loco: TargetMatcher.
+loco: {0}.
+loose item with no place to stand by it
+lua -> C# {0}
+lua closure menu {0}
+lua file {0}
+lua fn 
+lua menu build {0}
+lua menu step 
+lua menu {0}
+may spawn
+maybe reachable: 
+mesh not ready
+moved to another task
+near a tree
+needs {0} energy
+next task
+next task predicted: 
+next task: 
+no C# view for article items of type "
+no C# view for article items of type "{0}"
+no C# view for the panel {0}
+no C# view for {0}
+no article at 
+no game component
+no navigation graph
+no place reaches the target
+no plain step to it from the voxel before
+no player for the task's team
+no room
+no room above
+no route
+no route on the map
+no route on the mesh
+no storage with room for it
+no task area
+no team build task
+not clear
+not flat ground at the line's height and surface
+not loading
+not loose
+not started
+nothing built
+nothing under the mouse
+only the host answered
+open {0}
+operableRecipe{0}
+orange crystal
+origin not a place of the graph
+origin not on the mesh
+out of reach (marked unreachable)
+path failed: 
+plant fibre
+player {0}
+popup section
+project: Idle.
+project: Landscape.
+project: Raid.
+project_QueueSlot{0}
+project_TaskActionSlot{0}
+raw iron
+reachable again: 
+reload {0}: {1} (built {2}); old copy: {3} features disabled, {4} components destroyed, {5} swapped
+reserved by a task
+reserved by another worker
+respawn in 
+respawn in {0} s
+rm -f "$0"; while kill -0 
+rm -f "$0"; while kill -0 {0} 2>/dev/null; do sleep 0.2; done; exec
+route ends at 
+route ends at {0}, not at the goal 
+route not walkable
+route too long
+search not set up
+shield blue
+sidebar {0}
+signal {0} -> 
+step {0} for 
+still waiting
+target kind 
+target not reached
+target too big: 
+task end: 
+task list row
+task list {0}
+task popup
+task popup section
+the ground or a block
+the host
+the map reaches it now
+the route's presence test refuses it (a unit or blocker)
+the task cannot take it
+the task has nothing to do right now
+the task is paused
+the task never started, let go: {0}
+the worker cannot reach it and there is no place to stand right below it
+the worker cannot reach it, nor pick it up from the foot of it
+the worker's hands are not free
+the {0}
+the {0} {1} m away
+too close
+typeless operable
+under way
+unit returns
+view update
+waited, now 
+walk failed: 
+we_tab_{0}
+we_{0}
+work cond: 
+work cond: BuildStairs.
+work cond: Crafting.
+work cond: Dig.
+work cond: Landscape.
+work cond: NatureHarvest.
+work cond: Transform.
+work cond: Tree.
+x as big, everything it does 
+x as fast, 
+x as much, and it still counts as one bricktron. The other worker is sacrificed and does not come back.
+x health, carries 
+{0}\n\nBUTTON ExclusionDarkCrystal\nName : Dark crystal\nEffect: Event_Stockpile_Exclude_PurifiedBlueCrystal\nCondition : Condition_CanChangeSettings\nIcon : {1}\nTooltip : Only dark crystal is brought to this stockpile.\n
+{0}\n\nBUTTON PlusBaseRanges\nName : Show ranges\nLabel : Condition_PlusBaseRangesLabel\nCondition : Condition_PlusBaseRanges\nEffect : Event_PlusBaseRanges\nIcon : _Defend_Area\nSize : Native\nTooltip : Show the auto repair (green) and auto cleanup (blue) ranges around the crystal all the time, or again only while its task is selected.\n

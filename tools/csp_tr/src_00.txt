@@ -1,0 +1,341 @@
+\tButton: PlusBaseRanges
+\tButton: PlusBuildPriority
+\tButton: PlusEmptyStockpile
+\tButton: {0}
+\t{\n\t\ttype = "Spacer",\n\t\theight = 4,\n\t},\n\t{\n\t\ttype = "MiniLabel",\n\t\tText = ||CastleStoryPlus.QuarryLimitsText(Data.Project:IsSelectedOfTypeQuarry() and Data.Project:GetSelected() or nil),\n\t\tColor = ||CastleYellow,\n\t},\n
+\n\nBUTTON ExclusionDarkCrystal\nName : Dark crystal\nEffect: Event_Stockpile_Exclude_PurifiedBlueCrystal\nCondition : Condition_CanChangeSettings\nIcon : 
+\n\nBUTTON PlusBaseRanges\nName : Show ranges\nLabel : Condition_PlusBaseRangesLabel\nCondition : Condition_PlusBaseRanges\nEffect : Event_PlusBaseRanges\nIcon : _Defend_Area\nSize : Native\nTooltip : Show the auto repair (green) and auto cleanup (blue) ranges around the crystal all the time, or again only while its task is selected.\n
+\n\nBUTTON PlusBuildPriority\nName : Top priority\nLabel : Condition_PlusBuildPriorityLabel\nCondition : Condition_PlusBuildPriority\nEffect : Event_PlusBuildPriority\nIcon : UI_Star\nSize : Native\nTooltip : Build this blueprint before everything else (or again to build it as usual).\n
+\n\nBUTTON PlusEmptyStockpile\nName : Empty stockpile\nLabel : Condition_PlusEmptyStockpileLabel\nCondition : Condition_PlusEmptyStockpile\nEffect : Event_PlusEmptyStockpile\nIcon : _Stockpile_Empty\nSize : Native\nTooltip : Take nothing new and have the workers carry everything to other storages (or again to use it as usual). It stays empty until switched off.\n
+\n\nBUTTON {0}\nName : {1}\n
+\n  Lua files: 
+\n  Lua menus: 
+\n  host loaded: 
+\n  loading progress: 
+\n  lua menu coroutines: 
+\n  server active: 
+\n  state failed: 
+\n Garbage collections during the load: 
+\n Slowest parts (total, longest single call, calls):
+\nClick to research it for 
+\nCosts 
+\nEffect : Event_
+\nIcon : 
+\nName : 
+\nSize : Native\nTooltip : 
+\nThe queue is full.
+\nTier 
+\nTooltip : Only dark crystal is brought to this stockpile.\n
+\nh.Icon = 
+\nh.IconColor = ||White\nh.IconSize = ||64\nh.Label = ||"Keep 
+    var app = require('electron').remote.app\n    wait(1000);\n    app.quit();
+   (last 
+   1% low 
+   ms/call   ms/frame   max ms   calls/frame   system\n
+  (Emptying)
+  <color=
+  <color=#999999>Lv 
+  <color=#999999>next</color>
+  <color=#999999>now</color>
+  <color={0}>({1} reserved)</color>
+  <size=11><color=
+  KB/frame   KB/call   system\n
+  init();\n  loadData();
+  {0}% full
+ (Autosave)
+ (Castle Story Plus)\n
+ (a door, building or unit)
+ (base 
+ (beast soul)
+ (blocked by reservations: 
+ (built 
+ (cpu 
+ (day)
+ (default 
+ (frozen)
+ (last: 
+ (last: {0})
+ (longest 
+ (max missing support 
+ (next task)
+ (night)
+ (no Lua stack: 
+ (no Lua stack: {0})
+ (no room in the bag for it)
+ (off)
+ (one per 
+ (paused)
+ (queued)
+ (radius 
+ (research reserves its cost at once).
+ (see BepInEx/LogOutput.log)
+ (under way)
+ (voxel 
+ (wanted: unknown)
+ (where they come from is in the log)
+ ({0} now)
+ ({0} reserved)
+ - command sent
+ / Combat 
+ 2>/dev/null; do sleep 0.2; done; exec
+ <color=#999999>(
+ = m\nend\n
+ CLEARED!
+ Click it in the queue below to cancel it.
+ Further corrections are only written to the log.
+ Head
+ KB/frame (peak 
+ L Clavicle
+ L UpperArm
+ MB (
+ MB used
+ MB, frame 
+ MB, lines every 256 MB
+ MB, top 
+ MB/s since reset\n
+ Neck
+ Pelvis
+ R Clavicle
+ R UpperArm
+ Restart to apply.
+ Spine
+ Stored on weapon stands; a bricktron that equips it unpacks it.
+ [Lv 
+ [Lv {0}/{1}]
+ added to it
+ and not Data.Project:GetSelected():GetResourceTypeFlag(
+ applies when its feature is switched on.
+ area(s) and was corrected (
+ area(s) of the world differed
+ at a time). Past 
+ at most).
+ at the home crystal.
+ big ones copied from the compile cache, 
+ blocks away
+ blocks of where the camera looks.
+ blocks out to 
+ blocks). Click a pillar, then the ground, to move it.
+ blueprints not buildable), 
+ boulders, 
+ branch from 
+ bricktrons (
+ bricktrons)
+ bricktrons).
+ can carry it: 
+ can't start 
+ changed)
+ children)
+ chunks read; 
+ chunks, 
+ compiled, 
+ components destroyed, 
+ crystals. Share code: 
+ dark crystals (
+ deep ore 
+ deep ore, seed 
+ demolish, 
+ differing once, 
+ empty under the ground; ore: orange 
+ enemies within 
+ energy (
+ error=
+ errors, 
+ far enough (
+ features disabled, 
+ finished recipe 
+ for it, the game searches
+ fps, lines at 30 and 60
+ frames)\n
+ frames, 
+ frames. Own time per step (cpu = its code, wait = frames it waited):
+ free (
+ free ({0} reserved)
+ free in the stockpiles) + the sacrificed worker
+ garbage collections
+ goes first
+ has no work for it
+ has one
+ idle, 
+ in stock
+ in the crystal) + the sacrificed worker
+ in the crystal).
+ is inside solid ground (
+ is now a giant bricktron.
+ is shut in at 
+ is unknown (first at 
+ lands on 
+ left to build)
+ m away
+ made no headway climbing to 
+ markers)
+ menus left
+ minutes (half way). You always get less value back than you give.
+ minutes), so trades further down the queue can cost a little more.
+ ms (
+ ms (avg 
+ ms avg, of which unmeasured (rendering, Unity, coroutines, Lua) 
+ ms over 
+ ms)
+ ms)  
+ ms, written in 
+ needs work 
+ needs work {0}, heat {1}
+ nodes, straightened 
+ not found
+ not valid, 
+ now)
+ of this task no bricktron can get to; what rests on them waits for them.
+ off the mesh
+ on layer 
+ on the same task for over 2 min
+ open (
+ out of sync
+ pending=
+ per minute), 
+ queued recipes fit
+ queued)
+ rally point. Right click or Esc cancels.
+ read, 
+ refused by the sapling's placing rules
+ repeat {0}
+ reserved)
+ reserved)</color>
+ result=
+ resumes, 
+ right now (the stockpiles hold 
+ s ago
+ s more
+ s, it was stopped
+ s, yielded 
+ selected).
+ set to 
+ since reset\n
+ spawn points, 
+ spots looked at in box 
+ stale workers, 
+ starting points (numbered on the picture), 
+ starts, 
+ surface ore 
+ surface ore, 
+ taken (
+ takes too long (
+ tasks checked), the game searches
+ tasks checked, 
+ tasks in 
+ then Data.Project:GetSelected():ToggleResourceTypeFlag(
+ trades out of the queue.
+ trees, 
+ voters, 
+ voxels and blocks).
+ waits for ingredients of recipe 
+ warnings. Click one for details.
+ was pushed out of it); rebuilding it
+ with ground), meshes 
+ with the blueprint at 
+ without ground, 
+ working, 
+ world differed from the other players' in 
+ would not take it on
+ | activity 
+ | at 
+ | bag 
+ | holds 
+ | idle 
+ | job 
+ | last task 
+ | own stockpiles 
+ | project=
+ | projects: 
+ | queue=
+ | recipe 
+ | rejected:
+ | task=
+ | worker 
+"\nh.Icon = ||IconKeys.
+" is not a value 
+") or IconKeys.
+"),\t\t{ Name = ||"
+",\t\tIcon = 
+",\tIcon = ||
+",\tInfo = ||"
+", GS_Scoreboard) then GS_Scoreboard:LoadMenuFromClosure(LoadScoreboardMenu) end\n
+"Copy setup" and "Paste setup" in a workshop's menu: copies its queue, looping, stock limits and fetch range to another workshop of the same kind (only the recipes it can make).
+"Empty stockpile" on the context wheel of a stockpile, large stockpile or warehouse: it takes nothing new and idle workers carry what it holds to other storages; it stays empty until switched off.
+"Guard here" in the action wheel of ranged soldiers: they stay on the place they stand on and shoot every enemy in range from there, never leaving it for an enemy or a better shot, and walk back to it when pushed off.
+"{0}" is not a value {1} takes.
+#AA#
+#AAAAA##.
+#AAAAA#.#
+#AAAAA#..
+#OAA
+#waves_survived
+$values
+% fee, and a good gets dearer the more it is traded (back to normal over about 
+% fee, and a resource gets more expensive the more it is traded, back to normal over about 
+% full
+&&CONTINUE
+&&Castle Story Plus
+&&Enable debug mode
+&&Every setting of the mod
+&&F7 performance, F8 debug menu, F9 system log
+&&LOAD GAME
+&&OK
+&&Refresh rate
+&&SAVE AND QUIT
+&&SAVE AND QUIT GAME
+&&SAVE AND RETURN TO MAIN MENU
+&&Set your screen's refresh rate (full screen)
+&&Warehouse
+&&Wayland: your desktop sets the rate, only its own is listed
+(Clone)
+(\\w+), (\\w+), (\\w+), (\\w+) trees, (\\w+) boulders, (\\w+) surface ore, (\\w+) deep ore, seed ([^\\s]+?)\\.(\\s|$)
+(host only)
+(task)
+) and mHandle.StepChanged then mHandle.StepChanged:Invoke() end end)\n.SetWidgetHandle(Widgets.LayoutElement, Handles.IgnoreLayout, ||true, true)\n.SetWidgetHandle(Widgets.LayoutElement, Handles.AnchoredWidth, ||22, true)\n.SetWidgetHandle(Widgets.LayoutElement, Handles.AnchoredHeight, ||22, true)\n.SetWidgetHandle(Widgets.LayoutElement, Handles.AnchorMin, ||Vector2.New(0.5, 1), true)\n.SetWidgetHandle(Widgets.LayoutElement, Handles.AnchorMax, ||Vector2.New(0.5, 1), true)\n.SetWidgetHandle(Widgets.LayoutElement, Handles.Pivot, ||Vector2.New(0.5, 0), true)\n.SetWidgetHandle(Widgets.LayoutElement, Handles.AnchoredPosition, ||Vector2.New(
+) and steel (
+) registered
+),\t\t{ Name = ||
+), digging 
+), skipped until something changes within 
+). Every trade costs a 
+): its blocks are left out of the world
+); old copy: 
+)</color>
++1 builder
++1 corruptron
++1 min
++10 min
++15 min
++5 builders
++5 corruptrons
++5 min
++{0} builder
++{0} corruptron
++{0} energy
++{0} energy ({1} in the crystal).
++{0}% arrow damage
++{0}% damage to blocks and buildings
++{0}% energy per firefly
++{0}% max health
++{0}% melee damage
++{0}% stone, ore and crystal from digging and mining
++{0}% storage room
++{0}% time between waves
++{0}% walking speed
++{0}% work speed
++{2} bricktrons
+,\tHotkey = "",\tgroupId = 
+,\tIcon = ||CastleStoryPlus.ResourceIcon(
+,\tStockpiledIcon = ||
+,\t{Name = ||"
+, 2), true)\np.AddPanel(step) end\n
+, Castle Story Plus 0.8.12, Unity 
+, GC x
+, UnityEngine
+, UnityEngine\\.[A-Za-z0-9]+Module\\b
+, after tier 
+, best storage: 
+, block 
+, blue 
+, busy with '
+, busy with '{0}'

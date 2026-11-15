@@ -1,0 +1,1827 @@
+\n  Lua files: 	\n  Lua-файлы: 
+\n  Lua menus: 	\n  Lua-меню: 
+\n  host loaded: 	\n  хост загружен: 
+\n  loading progress: 	\n  ход загрузки: 
+\n  lua menu coroutines: 	\n  корутины Lua-меню: 
+\n  server active: 	\n  сервер активен: 
+\n  state failed: 	\n  ошибка состояния: 
+\n Garbage collections during the load: 	\n Сборок мусора за загрузку: 
+\n Slowest parts (total, longest single call, calls):	\n Самые медленные части (всего, самый долгий вызов, вызовов):
+\nClick to research it for 	\nНажмите, чтобы исследовать за 
+\nCosts 	\nСтоит 
+\nThe queue is full.	\nОчередь заполнена.
+\nTier 	\nУровень 
+\nTooltip : Only dark crystal is brought to this stockpile.\n	\nTooltip : На этот склад носят только тёмные кристаллы.\n
+   (last 	   (последние 
+   1% low 	   1% худших 
+   ms/call   ms/frame   max ms   calls/frame   system\n	   мс/вызов   мс/кадр   макс. мс   вызовов/кадр   система\n
+  (Emptying)	  (опустошается)
+  <color=#999999>Lv 	  <color=#999999>Ур. 
+  <color=#999999>next</color>	  <color=#999999>далее</color>
+  <color=#999999>now</color>	  <color=#999999>сейчас</color>
+  <color={0}>({1} reserved)</color>	  <color={0}>({1} в брони)</color>
+  KB/frame   KB/call   system\n	  КБ/кадр   КБ/вызов   система\n
+  {0}% full	  заполнено на {0}%
+ (Autosave)	 (автосохранение)
+ (a door, building or unit)	 (дверь, здание или юнит)
+ (base 	 (база 
+ (beast soul)	 (душа зверя)
+ (blocked by reservations: 	 (мешает бронь: 
+ (built 	 (собрано 
+ (cpu 	 (процессор 
+ (day)	 (день)
+ (default 	 (по умолчанию 
+ (frozen)	 (заморожен)
+ (last: 	 (последний: 
+ (last: {0})	 (последний: {0})
+ (longest 	 (дольше всего 
+ (max missing support 	 (макс. нехватка опоры 
+ (next task)	 (следующая задача)
+ (night)	 (ночь)
+ (no Lua stack: 	 (нет стека Lua: 
+ (no Lua stack: {0})	 (нет стека Lua: {0})
+ (no room in the bag for it)	 (нет места в сумке)
+ (off)	 (выкл.)
+ (one per 	 (один на 
+ (paused)	 (пауза)
+ (queued)	 (в очереди)
+ (radius 	 (радиус 
+ (research reserves its cost at once).	 (исследование сразу бронирует стоимость).
+ (see BepInEx/LogOutput.log)	 (см. BepInEx/LogOutput.log)
+ (under way)	 (в процессе)
+ (voxel 	 (воксель 
+ (wanted: unknown)	 (нужно: неизвестно)
+ (where they come from is in the log)	 (откуда они — смотрите лог)
+ ({0} now)	 (сейчас {0})
+ ({0} reserved)	 ({0} в брони)
+ - command sent	 — команда отправлена
+ / Combat 	 / Бой 
+ CLEARED!	 ЗАЧИЩЕНО!
+ Click it in the queue below to cancel it.	 Нажмите на него в очереди ниже, чтобы отменить.
+ Further corrections are only written to the log.	 Дальнейшие исправления пишутся только в лог.
+ Head	 Голова
+ KB/frame (peak 	 КБ/кадр (пик 
+ L Clavicle	 Л. ключица
+ L UpperArm	 Л. плечо
+ MB (	 МБ (
+ MB used	 МБ занято
+ MB, frame 	 МБ, кадр 
+ MB, lines every 256 MB	 МБ, линии каждые 256 МБ
+ MB, top 	 МБ, топ 
+ MB/s since reset\n	 МБ/с с момента сброса\n
+ Neck	 Шея
+ Pelvis	 Таз
+ R Clavicle	 П. ключица
+ R UpperArm	 П. плечо
+ Restart to apply.	 Нужен перезапуск.
+ Spine	 Позвоночник
+ Stored on weapon stands; a bricktron that equips it unpacks it.	 Хранится на оружейных стойках; бриктрон, взявший его, распаковывает набор.
+ [Lv 	 [Ур. 
+ [Lv {0}/{1}]	 [Ур. {0}/{1}]
+ added to it	 добавлено
+ applies when its feature is switched on.	 действует, когда включена её функция.
+ area(s) and was corrected (	 зон(ы), исправлено (
+ area(s) of the world differed	 зон(ы) мира отличались
+ at a time). Past 	 одновременно). Больше 
+ at most).	 максимум).
+ at the home crystal.	 у домашнего кристалла.
+ big ones copied from the compile cache, 	 крупных взято из кэша компиляции, 
+ blocks away	 блоков отсюда
+ blocks of where the camera looks.	 блоков от точки взгляда камеры.
+ blocks out to 	 блоков, до 
+ blocks). Click a pillar, then the ground, to move it.	 блоков). Нажмите на столб, затем на землю, чтобы передвинуть его.
+ blueprints not buildable), 	 чертежей нельзя построить), 
+ boulders, 	 валунов, 
+ branch from 	 ветка от 
+ bricktrons (	 бриктронов (
+ bricktrons)	 бриктронов)
+ bricktrons).	 бриктронов).
+ can carry it: 	 могут унести: 
+ can't start 	 не может начать 
+ changed)	 изменено)
+ children)	 потомков)
+ chunks read; 	 кусков прочитано; 
+ chunks, 	 кусков, 
+ compiled, 	 скомпилировано, 
+ components destroyed, 	 компонентов уничтожено, 
+ crystals. Share code: 	 кристаллов. Код для обмена: 
+ dark crystals (	 тёмных кристаллов (
+ deep ore 	 глубинной руды 
+ deep ore, seed 	 глубинной руды, сид 
+ demolish, 	 снос, 
+ differing once, 	 отличались один раз, 
+ empty under the ground; ore: orange 	 пусто под землёй; руда: оранжевая 
+ enemies within 	 врагов в пределах 
+ energy (	 энергии (
+ error=	 ошибка=
+ errors, 	 ошибок, 
+ far enough (	 достаточно далеко (
+ features disabled, 	 функций отключено, 
+ finished recipe 	 закончен рецепт 
+ for it, the game searches	 для неё игра ищет
+ fps, lines at 30 and 60	 FPS, линии на 30 и 60
+ frames)\n	 кадров)\n
+ frames, 	 кадров, 
+ frames. Own time per step (cpu = its code, wait = frames it waited):	 кадров. Собственное время по шагам (cpu — свой код, wait — кадры ожидания):
+ free (	 свободно (
+ free ({0} reserved)	 свободно ({0} в брони)
+ free in the stockpiles) + the sacrificed worker	 свободно на складах) + принесённый в жертву рабочий
+ garbage collections	 сборок мусора
+ goes first	 идёт первым
+ has no work for it	 нет для него работы
+ has one	 есть один
+ idle, 	 без дела, 
+ in stock	 на складе
+ in the crystal) + the sacrificed worker	 в кристалле) + принесённый в жертву рабочий
+ in the crystal).	 в кристалле).
+ is inside solid ground (	 внутри сплошной земли (
+ is now a giant bricktron.	 теперь бриктрон-великан.
+ is shut in at 	 заперт в 
+ is unknown (first at 	 неизвестно (впервые в 
+ lands on 	 приземляется на 
+ left to build)	 осталось построить)
+ m away	 м отсюда
+ made no headway climbing to 	 не продвинулся, взбираясь к 
+ markers)	 меток)
+ menus left	 меню осталось
+ minutes (half way). You always get less value back than you give.	 минут (половина). Назад всегда получаете меньше, чем отдали.
+ minutes), so trades further down the queue can cost a little more.	 минут), поэтому сделки дальше в очереди могут стоить чуть дороже.
+ ms (	 мс (
+ ms (avg 	 мс (в среднем 
+ ms avg, of which unmeasured (rendering, Unity, coroutines, Lua) 	 мс в среднем, из них не измерено (рендер, Unity, корутины, Lua) 
+ ms over 	 мс за 
+ ms)	 мс)
+ ms)  	 мс)  
+ ms, written in 	 мс, записано за 
+ needs work 	 нужна работа 
+ needs work {0}, heat {1}	 нужна работа {0}, жар {1}
+ nodes, straightened 	 узлов, выпрямлено 
+ not found	 не найдено
+ not valid, 	 недопустимо, 
+ now)	 сейчас)
+ of this task no bricktron can get to; what rests on them waits for them.	 этой задачи, до которых не добраться ни одному бриктрону; то, что на них опирается, ждёт их.
+ off the mesh	 вне навигационной сетки
+ on layer 	 на слое 
+ on the same task for over 2 min	 на одной задаче больше 2 мин
+ open (	 открыто (
+ out of sync	 рассинхронизирован
+ pending=	 ожидает=
+ per minute), 	 в минуту), 
+ queued recipes fit	 рецептов в очереди помещается
+ queued)	 в очереди)
+ rally point. Right click or Esc cancels.	 точку сбора. ПКМ или Esc — отмена.
+ read, 	 прочитано, 
+ refused by the sapling's placing rules	 отклонено правилами посадки саженца
+ repeat {0}	 повтор {0}
+ reserved)	 в брони)
+ reserved)</color>	 в брони)</color>
+ result=	 результат=
+ resumes, 	 продолжает, 
+ right now (the stockpiles hold 	 прямо сейчас (на складах 
+ s ago	 с назад
+ s more	 с ещё
+ s, it was stopped	 с, остановлено
+ s, yielded 	 с, отдал 
+ selected).	 выбрано).
+ set to 	 назначен(о): 
+ since reset\n	 с момента сброса\n
+ spawn points, 	 точек появления, 
+ spots looked at in box 	 мест проверено в области 
+ stale workers, 	 устаревших рабочих, 
+ starting points (numbered on the picture), 	 стартовых точек (номера на картинке), 
+ starts, 	 запусков, 
+ surface ore 	 поверхностной руды 
+ surface ore, 	 поверхностной руды, 
+ taken (	 занято (
+ takes too long (	 занимает слишком долго (
+ tasks checked), the game searches	 задач проверено), игра ищет
+ tasks checked, 	 задач проверено, 
+ tasks in 	 задач за 
+ trades out of the queue.	 сделок вне очереди.
+ trees, 	 деревьев, 
+ voters, 	 голосов, 
+ voxels and blocks).	 вокселей и блоков).
+ waits for ingredients of recipe 	 ждёт ингредиентов для рецепта 
+ warnings. Click one for details.	 предупреждений. Нажмите на одно для подробностей.
+ was pushed out of it); rebuilding it	 вытолкнут из неё); перестраиваю
+ with ground), meshes 	 с землёй), меши 
+ with the blueprint at 	 с чертежом в 
+ without ground, 	 без земли, 
+ working, 	 работают, 
+ world differed from the other players' in 	 мир отличался от мира других игроков в 
+ would not take it on	 не взялся бы за это
+ | activity 	 | занятие 
+ | at 	 | в 
+ | bag 	 | сумка 
+ | holds 	 | держит 
+ | idle 	 | без дела 
+ | job 	 | работа 
+ | last task 	 | последняя задача 
+ | own stockpiles 	 | свои склады 
+ | project=	 | проект=
+ | projects: 	 | проекты: 
+ | queue=	 | очередь=
+ | recipe 	 | рецепт 
+ | rejected:	 | отклонено:
+ | task=	 | задача=
+ | worker 	 | рабочий 
+" is not a value 	" — недопустимое значение 
+"Copy setup" and "Paste setup" in a workshop's menu: copies its queue, looping, stock limits and fetch range to another workshop of the same kind (only the recipes it can make).	«Копировать настройку» и «Вставить настройку» в меню мастерской: переносят очередь, повтор, лимиты запаса и дальность доставки на другую мастерскую того же типа (только рецепты, которые она умеет делать).
+"Empty stockpile" on the context wheel of a stockpile, large stockpile or warehouse: it takes nothing new and idle workers carry what it holds to other storages; it stays empty until switched off.	«Опустошить склад» в круговом меню склада, большого склада или хранилища: туда больше ничего не носят, а свободные рабочие относят его содержимое на другие склады; остаётся пустым, пока не выключите.
+"Guard here" in the action wheel of ranged soldiers: they stay on the place they stand on and shoot every enemy in range from there, never leaving it for an enemy or a better shot, and walk back to it when pushed off.	«Стоять здесь» в меню стрелков: они остаются на месте и стреляют по всем врагам в радиусе, не уходя за врагом или ради лучшего выстрела, и возвращаются, если их сдвинули.
+"{0}" is not a value {1} takes.	"{0}" — недопустимое значение для {1}.
+% fee, and a good gets dearer the more it is traded (back to normal over about 	% комиссии, и товар дорожает, чем больше им торгуют (возвращается к норме примерно за 
+% fee, and a resource gets more expensive the more it is traded, back to normal over about 	% комиссии, и ресурс дорожает, чем больше им торгуют; возвращается к норме примерно за 
+% full	% заполнено
+&&CONTINUE	&&ПРОДОЛЖИТЬ
+&&Enable debug mode	&&Включить режим отладки
+&&Every setting of the mod	&&Все настройки мода
+&&F7 performance, F8 debug menu, F9 system log	&&F7 — производительность, F8 — меню отладки, F9 — системный лог
+&&LOAD GAME	&&ЗАГРУЗИТЬ ИГРУ
+&&OK	&&ОК
+&&Refresh rate	&&Частота обновления
+&&SAVE AND QUIT	&&СОХРАНИТЬ И ВЫЙТИ
+&&SAVE AND QUIT GAME	&&СОХРАНИТЬ И ВЫЙТИ ИЗ ИГРЫ
+&&SAVE AND RETURN TO MAIN MENU	&&СОХРАНИТЬ И ВЫЙТИ В ГЛАВНОЕ МЕНЮ
+&&Set your screen's refresh rate (full screen)	&&Частота обновления экрана (полный экран)
+&&Warehouse	&&Хранилище
+&&Wayland: your desktop sets the rate, only its own is listed	&&Wayland: частоту задаёт рабочий стол, в списке только она
+(host only)	(только хост)
+(task)	(задача)
+) and steel (	) и сталь (
+) registered	) зарегистрировано
+), digging 	), копание 
+), skipped until something changes within 	), пропуск, пока что-то не изменится в пределах 
+). Every trade costs a 	). Каждая сделка стоит 
+): its blocks are left out of the world	): его блоки не попадут в мир
+); old copy: 	); старая копия: 
++1 builder	+1 строитель
++1 corruptron	+1 корруптрон
++1 min	+1 мин
++10 min	+10 мин
++15 min	+15 мин
++5 builders	+5 строителей
++5 corruptrons	+5 корруптронов
++5 min	+5 мин
++{0} builder	+{0} строит.
++{0} corruptron	+{0} корруптронов
++{0} energy	+{0} энергии
++{0} energy ({1} in the crystal).	+{0} энергии ({1} в кристалле).
++{0}% arrow damage	+{0}% урона стрелами
++{0}% damage to blocks and buildings	+{0}% урона по блокам и зданиям
++{0}% energy per firefly	+{0}% энергии за светлячка
++{0}% max health	+{0}% к макс. здоровью
++{0}% melee damage	+{0}% урона в ближнем бою
++{0}% stone, ore and crystal from digging and mining	+{0}% камня, руды и кристаллов при копании и добыче
++{0}% storage room	+{0}% места на складе
++{0}% time between waves	+{0}% времени между волнами
++{0}% walking speed	+{0}% к скорости ходьбы
++{0}% work speed	+{0}% к скорости работы
++{2} bricktrons	+{2} бриктронов
+, after tier 	, после уровня 
+, best storage: 	, лучший склад: 
+, block 	, блок 
+, blue 	, синяя 
+, busy with '	, занят «
+, busy with '{0}'	, занят «{0}»
+, carries 	, несёт 
+, cells 	, клеток 
+, centre offset 	, смещение центра 
+, coal 	, уголь 
+, corrected for 	, исправлено для 
+, current 	, сейчас 
+, descriptor block 	, блок описания 
+, faction ready 	, фракция готова 
+, frame 	, кадр 
+, from 	, из 
+, from {0} ({1})	, из {0} ({1})
+, frozen 	, заморожено 
+, get 	, получить 
+, gives up	, сдаётся
+, heat 	, жар 
+, hidden renderers 	, скрытых рендереров 
+, holds 	, держит 
+, host ready: 	, железо 
+, iron 	, хост готов: 
+, its queue entry was another object; removed by id	, его запись в очереди была другим объектом; удалено по id
+, last rejects: {0}	, последние отказы: {0}
+, left to the game	, оставлено игре
+, level ready 	, уровень готов 
+, loading 	, загрузка 
+, looping	, по кругу
+, menu opened again	, меню открыто снова
+, missing scripts x	, скриптов нет x
+, multithreaded	, многопоточно
+, not at the goal 	, не у цели 
+, not one of its cells	, не одна из его клеток
+, not pulled:	, не тянется:
+, paused	, пауза
+, pieces 	, частей 
+, pulled:	, тянется:
+, reachable source 	, доступный источник 
+, recipe 	, рецепт 
+, render target 	, цель рендера 
+, terrain loaded 	, рельеф загружен 
+, the game searches	, игра ищет
+, under 	, под 
+, unmeasured 	, не измерено 
+, wait 	, ожидание 
+, walked 	, прошёл 
+, waves every 	, волны каждые 
+, waves every {0} min	, волны каждые {0} мин
+, which is not in its queue	, которого нет в его очереди
+, with exclusions 	, с исключениями 
+, with room 	, с местом 
+, work steps 	, шагов работы 
+, {0} down	, {0} вниз
+, {0} garbage collections	, {0} сборок мусора
+, {0} on the same task for over 2 min	, {0} на одной задаче больше 2 мин
+, {0} up	, {0} вверх
+-{0}% arrow and bolt damage taken	-{0}% урона от стрел и болтов
+-{0}% arrow spread	-{0}% разброса стрел
+-{0}% energy for a new bricktron	-{0}% энергии на нового бриктрона
+-{0}% magic and explosion damage taken	-{0}% урона от магии и взрывов
+-{0}% melee damage taken	-{0}% урона в ближнем бою
+-{0}% reload time	-{0}% времени перезарядки
+-{0}% stamina per block, +{1} degrees block arc	-{0}% выносливости за блок, +{1}° угол блока
+. Each tier is researched once and works at once.	. Каждый уровень исследуется один раз и действует сразу.
+1 match	1 совпадение
+100% critrate: off	100% крит: выкл.
+100% critrate: on	100% крит: вкл.
+2x damage	2× урон
+: click to cancel it; its price is released.	: нажмите, чтобы отменить; цена возвращается.
+: click to take it out of the queue	: нажмите, чтобы убрать из очереди
+: coarse 	: грубо 
+: connection ready 	: соединение готово 
+: item 	: предмет 
+: its feature is off in this session, so the mod has not read it; the value is kept as text and applies when the feature is switched on.	: её функция выключена в этой сессии, поэтому мод не прочитал значение; оно хранится как текст и применится, когда функцию включат.
+: its hits do Damage times its base unit's.	: его удары наносят урон (Damage) × урон базового юнита.
+: no limit	: без ограничения
+: no limit.	: без ограничения.
+: no route node	: нет узла маршрута
+: not enough sets.	: не хватает комплектов.
+: repath 	: перерасчёт пути 
+: route of 	: маршрут из 
+: stock 	: запас 
+: takes 1/Health of the damage its base unit would.	: получает 1/Health от урона, который получил бы базовый юнит.
+: the recipe waits while there is enough.	: рецепт ждёт, пока запаса хватает.
+: the stockpiles do not hold that much that is not reserved.	: на складах нет столько незабронированного.
+: the stockpiles hold 	: на складах 
+: walk blocked at 	: путь перекрыт в 
+: walks and runs Speed times as fast as its base unit.	: ходит и бегает в Speed раз быстрее базового юнита.
+; also set on the home crystal's task).	; также задаётся задачей домашнего кристалла).
+; most allocated by 	; больше всего выделил 
+; no way round within 	; нет обхода в пределах 
+<color=#999999>not researched</color>	<color=#999999>не исследовано</color>
+<color=#ffcc40>Tier 	<color=#ffcc40>Уровень 
+<color=#ffcc40>Tier {0} {1}</color>	<color=#ffcc40>Уровень {0} {1}</color>
+A "Random World" map in the new game list, made from a seed with noise: choose archipelago, continent or highlands, small to large, forest, winter or desert, how many trees, boulders, surface and deep ore, and a seed (UUID) on the new game screen, and the map's picture shows the world. Floating islands joined by grass routes (land bridges over the sky), with forests, plants, boulders, iron and pyrite, starting points, neutral crystals and corruptron spawn points (all gamemodes).	Карта «Случайный мир» в списке новой игры, создаётся из сида с шумом: на экране новой игры выберите архипелаг, континент или нагорье, размер от малого до большого, лес, зиму или пустыню, количество деревьев, валунов, поверхностной и глубинной руды и сид (UUID), а картинка карты покажет мир. Летающие острова, соединённые травяными дорогами (мостами по небу), с лесами, растениями, валунами, железом и пиритом, стартовыми точками, нейтральными кристаллами и точками появления корруптронов (все режимы).
+A 3 x 3 stockpile holding three times as much as the normal one.	Склад 3 × 3, вмещает втрое больше обычного.
+A big storage hall holding 4500 resources of any kind; workers store and fetch inside. Can turn stored stone into bricks (a switch in its menu).	Большой складской зал на 4500 ресурсов любого вида; рабочие кладут и берут внутри. Может превращать хранимый камень в кирпичи (переключатель в его меню).
+A breastplate with a warding rune against magic and blasts.	Нагрудник с защитной руной от магии и взрывов.
+A bricktron reserves the kit (or the free place for its kit) on the weapon stand it sets out for, so others go to another stand instead of running to the same last kit or place.	Бриктрон бронирует набор (или свободное место для своего набора) на оружейной стойке, к которой идёт, поэтому другие идут к другой стойке, а не бегут к тому же последнему набору или месту.
+A bricktron shut in a hole (a pit dug too deep, a closed-off pocket) digs its own way out to the nearest place on its team's routes, also while it keeps trying tasks it cannot reach from there: steps one block up or down at most, terrain only, without drops (needs UnreachableTasks for the route map).	Бриктрон, запертый в яме (слишком глубокий котлован, закрытый карман), сам прокапывает выход к ближайшему месту на маршрутах своей команды, даже пока пытается взять недоступные оттуда задачи: шагает максимум на блок вверх или вниз, только по рельефу, без спрыгиваний (нужна функция UnreachableTasks для карты маршрутов).
+A build task with blueprints and workers that has not finished a block this long is reset: blueprints tried again, its workers look for work afresh (0: off).	Стройка с чертежами и рабочими, где столько времени не достроено ни одного блока, сбрасывается: чертежи пробуются снова, рабочие ищут работу заново (0 — выкл.).
+A cheap, weak door. Your bricktrons walk through, enemies have to break it.	Дешёвая слабая дверь. Ваши бриктроны проходят, врагам придётся её сломать.
+A dead worker's firefly respawns for a flat 100 energy instead of the price of a new bricktron; it carries no refund, so the respawn costs exactly that.	Светлячок погибшего рабочего возрождается за фиксированные 100 энергии вместо цены нового бриктрона; возврата нет, так что возрождение стоит ровно столько.
+A demolished or deconstructed stockpile (also the large one), warehouse, workshop or weapon stand drops what it holds on the ground instead of destroying it.	Снесённый или разобранный склад (и большой), хранилище, мастерская или оружейная стойка роняют содержимое на землю, а не уничтожают его.
+A door in a wall. Your bricktrons walk through, enemies have to break it.	Дверь в стене. Ваши бриктроны проходят, врагам придётся её сломать.
+A drag build (a row of blocks) stops when the mouse button is no longer held, also when it was let go over the interface or outside the window.	Стройка протяжкой (ряд блоков) останавливается, когда кнопку мыши отпустили, даже над интерфейсом или за пределами окна.
+A dying bricktron drops its gear (weapons, shields, hats, bags) on the ground instead of losing it with the corpse.	Умирающий бриктрон роняет снаряжение (оружие, щиты, шапки, сумки) на землю, а не теряет его вместе с телом.
+A favourite: it stays in this list. Click to take the mark off.	Избранное: остаётся в этом списке. Нажмите, чтобы снять отметку.
+A finished order always leaves the workshop's queue: the game removed it by object, and an entry read again from the synced queue was another object, so a queue that did not loop made the same order again and again. It is now matched by recipe id.	Выполненный заказ всегда покидает очередь мастерской: игра удаляла его по объекту, а запись, прочитанная заново из синхронизированной очереди, была другим объектом, поэтому неповторяющаяся очередь делала один заказ снова и снова. Теперь сверяется по id рецепта.
+A frame longer than this many milliseconds is a spike: logged with what took the time.	Кадр дольше стольких миллисекунд — пик: пишется в лог с тем, что заняло время.
+A geared crank on the crossbow. Faster reload between bolts.	Зубчатый ворот на арбалете. Быстрее перезарядка между болтами.
+A giant bricktron cannot be upgraded or sacrificed.	Бриктрона-великана нельзя улучшить или принести в жертву.
+A halberdier's poleaxe and kettle hat in one bundle.	Секира и шлем алебардщика одним набором.
+A knight's sword, shield and helmet in one bundle.	Меч, щит и шлем рыцаря одним набором.
+A load nothing can store is put down near the gather point when that is at most this many blocks away, else where the worker stands.	Груз, который некуда сложить, кладётся у точки сбора, если она не дальше стольких блоков, иначе — там, где стоит рабочий.
+A loaded worker that stood without work, idled or failed tasks this long without getting rid of any of its load is sent to store it or put it down (0: off).	Нагруженного рабочего, который столько времени стоял без работы, бездельничал или проваливал задачи, так и не избавившись от груза, отправляют сложить его или положить на землю (0 — выкл.).
+A looping workshop queue with several recipes takes turns: a recipe that has waited 20 seconds for an ingredient no stockpile holds goes to the back, and a recipe whose ingredients are in stock starts instead.	Повторяющаяся очередь мастерской с несколькими рецептами работает по очереди: рецепт, который 20 секунд ждал ингредиента, которого нет ни на одном складе, уходит в конец, а начинается рецепт, чьи ингредиенты есть.
+A new Invasion world can have its enemy waves come every 5, 10 (default), 15, 20 or 30 minutes, chosen under the difficulty on the new game screen; saved with the world.	В новом мире «Вторжение» волны врагов могут идти каждые 5, 10 (по умолчанию), 15, 20 или 30 минут — выбирается под сложностью на экране новой игры; сохраняется с миром.
+A player's order always wins: while it waits or runs, the bricktron's instinct does not send it to fight and its own or its task's orders do not replace it, and a stroke or shot that may not be interrupted is broken off so the order starts at once.	Приказ игрока всегда главнее: пока он ждёт или выполняется, инстинкт бриктрона не посылает его в бой, его собственные приказы или приказы задачи его не заменяют, а удар или выстрел, который нельзя прерывать, обрывается, чтобы приказ начался сразу.
+A post of its own for each unit: "Set post" in the action wheel keeps the place each selected unit stands on, "Back to post" sends them there, and a call to arms sends units with a post there instead of to their class's rally point.	Свой пост у каждого юнита: «Поставить пост» в меню действий запоминает место, где стоит каждый выбранный юнит, «Вернуться на пост» отправляет их туда, а сбор по тревоге отправляет юнитов с постом туда, а не на точку сбора их класса.
+A quarry's depth can be changed at any time, also while it is being dug, with + and - over a depth button in the quarry menu; quarries can go 3 times as deep as before.	Глубину карьера можно менять в любой момент, даже пока его копают, кнопками + и − над кнопкой глубины в меню карьера; карьеры могут быть в 3 раза глубже, чем раньше.
+A ranged fighter (archer, arbalist, slinger, alchemist, artificer) whose shots at an enemy in range would hit the castle or rock in between walks to a nearby place with a clear shot (the wall's edge) and shoots from there, instead of standing still or running out; holding its place, it does not climb or drop down to fight an enemy hand to hand.	Стрелок (лучник, арбалетчик, пращник, алхимик, механик), чьи выстрелы по врагу в радиусе попали бы в замок или скалу по пути, переходит в ближайшее место с чистым выстрелом (край стены) и стреляет оттуда, а не стоит на месте и не выбегает; держа позицию, он не залезает и не спрыгивает, чтобы драться врукопашную.
+A rope bridge between two points, so bricktrons can walk across gaps.	Верёвочный мост между двумя точками, чтобы бриктроны могли переходить пропасти.
+A stockpile holds several resources at once: each of its four columns holds one resource type.	Склад держит несколько ресурсов сразу: в каждом из четырёх столбцов — свой тип ресурса.
+A strong door that holds out longest against enemies. Your bricktrons walk through.	Прочная дверь, дольше всех держится против врагов. Ваши бриктроны проходят.
+A task can be paused instead of deleted (pause button next to delete): no bricktron works on it until it is resumed, and it keeps its blueprints and zones; its crew are released and put back when it is resumed; saved with the task.	Задачу можно поставить на паузу вместо удаления (кнопка паузы рядом с удалением): никто над ней не работает, пока её не продолжат, а чертежи и зоны сохраняются; её бригада освобождается и возвращается при продолжении; сохраняется с задачей.
+A thicker helm. Soldiers have more health.	Шлем толще. У солдат больше здоровья.
+A weapon stand can be limited to some soldier classes: select the stand and pick the classes whose gear may be put on it (knight, archer, arbalist, alchemist, artificer, halberdier). Gear of the other classes is no longer brought there; what is already on it stays. Saved with the stand and synced to the other players.	Оружейную стойку можно ограничить классами солдат: выберите стойку и отметьте классы, чьё снаряжение можно на неё класть (рыцарь, лучник, арбалетчик, алхимик, механик, алебардщик). Снаряжение других классов туда больше не носят; то, что уже лежит, остаётся. Сохраняется со стойкой и синхронизируется с другими игроками.
+A weapon stand holds the weapons and armour of all soldier classes at once (as many weapons, props and hats as before, any classes mixed); equipping takes one whole kit of a single class (see [MixedRacks]).	Оружейная стойка держит оружие и броню всех классов солдат сразу (столько же оружия, реквизита и шапок, как раньше, классы вперемешку); снаряжение берётся целым набором одного класса (см. [MixedRacks]).
+A wooden slab is also held from the side, by a plank right next to it that the game's rule holds (one step out, no endless chains), so a slab laid beside a finished walkway can be built.	Деревянная плита держится и сбоку — доской прямо рядом с ней, которую держит правило игры (на шаг вперёд, без бесконечных цепочек), так что плиту рядом с готовым настилом можно построить.
+A worker brings what you give to the market and trades it. Every trade costs a 	Рабочий несёт на рынок то, что вы отдаёте, и торгует. Каждая сделка стоит 
+A worker brings what you give to the market and trades it. Every trade costs a {0}% fee, and a resource gets more expensive the more it is traded, back to normal over about 	Рабочий несёт на рынок то, что вы отдаёте, и торгует. Каждая сделка стоит {0}% комиссии, и ресурс дорожает, чем больше им торгуют; возвращается к норме примерно за 
+A worker fetching from a stockpile takes any item of the kind there, instead of failing when the one item the game picked was taken by another worker first.	Рабочий, берущий со склада, берёт любой предмет этого вида, а не сдаётся, когда единственный выбранный игрой предмет уже забрал другой рабочий.
+A worker reserves the resources it sets out to fetch (a loose item, or as many items of a stockpile as it will take), so other workers fetch elsewhere instead of walking to the same ones.	Рабочий бронирует ресурсы, за которыми идёт (лежащий предмет или столько предметов склада, сколько возьмёт), поэтому другие рабочие идут за другими, а не к тем же.
+A worker reserves the task it chooses, so idle workers no longer walk to the same task together.	Рабочий бронирует выбранную задачу, поэтому свободные рабочие больше не идут к одной задаче вместе.
+A worker that finishes a task of a quarry, tunnel, dig, flatten, harvest, cleanup or build area, or a step at its workshop, or takes what it dug or felled there to storage, goes on to the area's next task at once, chosen by the game's own choice, instead of standing 1 to 1.5 seconds while the game searches every project.	Рабочий, закончивший задачу в карьере, туннеле, раскопе, выравнивании, сборе урожая, уборке или стройке, или шаг в своей мастерской, или отнёсший выкопанное или срубленное на склад, сразу берёт следующую задачу этой зоны (выбор самой игры), а не стоит 1–1,5 секунды, пока игра перебирает все проекты.
+A worker that has not moved this long in a walking task has the task cancelled and puts down what it carries (0: off).	Рабочему, который столько времени не сдвинулся в задаче с ходьбой, задачу отменяют, и он кладёт то, что несёт (0 — выкл.).
+A worker with a job that has had no task this long is written to BepInEx/idle.log, with why (0: off).	Рабочий с профессией, у которого столько времени нет задачи, записывается в BepInEx/idle.log с причиной (0 — выкл.).
+A worker's "Can't reach my destination" says what it could not reach and how far it is ("Can't reach my destination: Log, 12 blocks away"). Host and single player; multiplayer clients see the plain text.	«Не могу добраться до цели» у рабочего говорит, до чего он не может добраться и как далеко («Не могу добраться до цели: бревно, 12 блоков»). Хост и одиночная игра; клиенты в сетевой игре видят обычный текст.
+A workshop worker whose recipe did not progress this long has its task cancelled (0: off).	Рабочему мастерской, чей рецепт столько времени не продвинулся, задачу отменяют (0 — выкл.).
+A workshop's looping queue can loop until a stock limit per product ("-  20  +" on every recipe row): a recipe waits while the stockpiles hold enough of what it makes and starts again when the stock drops.	Повторяющаяся очередь мастерской может работать до лимита запаса по каждому продукту («−  20  +» в каждой строке рецепта): рецепт ждёт, пока на складах достаточно его продукции, и снова начинается, когда запас падает.
+A workshop's priority (research station, smithy, furnace...) can be set like a task's in its menu: locked, low, medium or high, picked side by side under the recipes, and at the bottom of the market's, research station's, smithy's and armoury's windows (the game keeps every workshop at high).	Приоритет мастерской (станция исследований, кузница, плавильня…) можно задать, как у задачи, в её меню: заблокирован, низкий, средний или высокий — выбирается рядом под рецептами и внизу окон рынка, станции исследований, кузницы и оружейной (игра держит все мастерские на высоком).
+A workshop's workers fetch its ingredients only from stockpiles and loose items within its range (counted from the workshop), instead of anywhere on the map; with nothing in range the workshop waits. Set per workshop under its recipes ("Fetch within", - and +, Shift 25 at a time, past 250 no limit); workshops not set use [WorkshopFetchRange] Default (40 blocks). While a workshop is selected, a ring on the ground around it shows its range. The range goes along with "Copy setup", with copied areas and blueprints (also the blueprint library), and a workshop built from such a blueprint starts with it.	Рабочие мастерской берут ингредиенты только со складов и с земли в её радиусе (от мастерской), а не со всей карты; если в радиусе ничего нет, мастерская ждёт. Задаётся для каждой мастерской под рецептами («Брать в радиусе», − и +, с Shift по 25, больше 250 — без ограничения); для остальных — [WorkshopFetchRange] Default (40 блоков). Пока мастерская выбрана, кольцо на земле показывает радиус. Радиус переносится через «Копировать настройку», с копиями зон и чертежей (и через библиотеку чертежей), и мастерская, построенная по такому чертежу, начинает с ним.
+A* distance weight for enemies (AI factions). Lower finds better ways around cliffs and walls, but their searches take more steps.	Вес расстояния в A* для врагов (ИИ-фракций). Меньше — лучше находят обходы скал и стен, но поиск занимает больше шагов.
+A* distance weight. A flat step costs 12: close to 12 gives the shortest routes, higher searches faster but takes detours (the game used 45).	Вес расстояния в A*. Ровный шаг стоит 12: около 12 — самые короткие пути, больше — поиск быстрее, но с обходами (в игре было 45).
+AI ticks a player's worker waits after a failed task before looking for the next (the game: 30).	Тиков ИИ, которые рабочий игрока ждёт после проваленной задачи, прежде чем искать следующую (в игре: 30).
+AI ticks a player's worker waits after a task before looking for the next (the game: 10).	Тиков ИИ, которые рабочий игрока ждёт после задачи, прежде чем искать следующую (в игре: 10).
+ALL SETTINGS	ВСЕ НАСТРОЙКИ
+ALL WORKERS	ВСЕ РАБОЧИЕ
+AUTO CLEANUP	АВТОУБОРКА
+AUTO REPAIR	АВТОРЕМОНТ
+Accessories	Аксессуары
+Activity	Занятие
+Add	Добавить
+Add to queue	Добавить в очередь
+Adept	Адепт
+Adjectives	Прилагательные
+Alchemist	Алхимик
+Alchemist kit	Набор алхимика
+All	Все
+All bricktrons	Все бриктроны
+All factions	Все фракции
+All settings (every value in the config file)...	Все настройки (каждое значение в файле конфигурации)...
+Allow the debug windows: performance (F7), debug menu (F8) and system log (F9). Can be switched in Settings > Castle Story Plus settings or in Options > Gameplay.	Разрешить окна отладки: производительность (F7), меню отладки (F8) и системный лог (F9). Переключается в Настройки > Настройки Castle Story Plus или в Параметры > Игровой процесс.
+Already queued here.	Уже в очереди здесь.
+Already researched.	Уже исследовано.
+Altar	Алтарь
+Amount: {0}	Количество: {0}
+An alchemist's backpack and bonnet in one bundle.	Рюкзак и чепец алхимика одним набором.
+An arbalist's crossbow, pouch and kepi in one bundle.	Арбалет, подсумок и кепи арбалетчика одним набором.
+An archer's bow, quiver and cap in one bundle.	Лук, колчан и шапка лучника одним набором.
+An artificer's staff, satchel and hat in one bundle.	Посох, сумка и шляпа механика одним набором.
+An explosive barrel: ammunition for the catapult.	Взрывная бочка: снаряд для катапульты.
+Arbalist	Арбалетчик
+Arbalist kit	Набор арбалетчика
+Arbalists	Арбалетчики
+Archer	Лучник
+Archer kit	Набор лучника
+Archers	Лучники
+Archers and other ranged fighters on the edge of a wall lean out over it, so they can shoot enemies at the foot of the wall and all along it ([WallLean] Distance).	Лучники и другие стрелки на краю стены высовываются за неё и могут стрелять по врагам у подножия и вдоль всей стены ([WallLean] Distance).
+Archery	Стрельба
+Archery drill. Shots that are not straight at a visible target spread less.	Учения лучников. Выстрелы не прямо по видимой цели разлетаются меньше.
+Archipelago (many floating islands), Continent (one big island) or Highlands (one island with mountains).	Архипелаг (много летающих островов), Континент (один большой остров) или Нагорье (один остров с горами).
+Armour upgrades for the whole team. Each tier is researched once and works for every soldier at once.	Улучшения брони для всей команды. Каждый уровень исследуется один раз и сразу действует на всех солдат.
+Armoury	Оружейная
+Arrow	Стрела
+Article	Статья
+Article {0}	Статья {0}
+Artificer	Механик
+Artificer kit	Набор механика
+Artificers heal the most wounded team mate in attack range with green healing bolts: 10% health per bolt, one at a time, before attacking.	Механики лечат самого раненого союзника в радиусе атаки зелёными лечебными зарядами: 10% здоровья за заряд, по одному, прежде чем атаковать.
+Attacks enemies near it.	Атакует врагов рядом.
+Auto	Авто
+Auto cleanup	Автоуборка
+Auto cleanup range (blocks)	Радиус автоуборки (блоки)
+Auto repair	Авторемонт
+Auto repair range (blocks)	Радиус авторемонта (блоки)
+Auto spawn bricktrons	Автопоявление бриктронов
+Autosave	Автосохранение
+Autosave every	Автосохранение каждые
+Axe work to remove a tree stump, compared to felling a tree.	Работа топором, чтобы убрать пень, по сравнению с рубкой дерева.
+Back to post	Вернуться на пост
+Banner	Знамя
+Bar	Полоса
+Barrel	Бочка
+Barrels	Бочки
+Beast bar	Полоса зверя
+Being researched now.	Сейчас исследуется.
+Better arrowheads and feathers. Arrows deal more damage.	Лучшие наконечники и оперение. Стрелы наносят больше урона.
+Better ways to break rock. Digging out terrain and mining rocks and ore deposits gives more.	Лучшие способы ломать камень. Копание рельефа и добыча камня и руды дают больше.
+Better ways to stack goods. Every stockpile and warehouse holds more.	Лучшие способы складывать товары. Каждый склад и хранилище вмещают больше.
+Biome	Биом
+Block	Блок
+Blocking	Блокирование
+Blocks	Блоки
+Blocks (across the ground) a corruptron wave spawns at least from the nearest block a player has built, when the map has a spawn point that far; 0: off.	Минимум блоков (по земле) от ближайшего построенного игроком блока, где появляется волна корруптронов, если на карте есть такая далёкая точка появления; 0 — выкл.
+Blocks between the saplings a tree farm plants (trees need 2 at least).	Блоков между саженцами, которые сажает лесная ферма (деревьям нужно минимум 2).
+Blue	Синий
+Blue cr.	Син. кр.
+Blue crystal	Синий кристалл
+Blue crystal veins in the deep rock of every map (the game leaves them out), so blue crystal can be mined, carried and stored.	Жилы синего кристалла в глубинной породе на каждой карте (игра их пропускает), так что синий кристалл можно добывать, носить и хранить.
+Blue crystals: 	Синие кристаллы: 
+Blueprints	Чертежи
+Blueprints go to	Чертежи отправлять в
+Blueprints marked for deconstruction stay dark orange, also while their build task is not selected.	Чертежи, отмеченные на разбор, остаются тёмно-оранжевыми, даже когда их стройка не выбрана.
+Body	Тело
+Bomb	Бомба
+Bonus	Бонус
+Both workers must be alive.	Оба рабочих должны быть живы.
+Both workers must be yours.	Оба рабочих должны быть вашими.
+Boulderback	Валуноспин
+Boulders	Валуны
+Box	Коробка
+Brick	Кирпич
+Bricks	Кирпичи
+Bricktron	Бриктрон
+Bricktron archers always hit a target they can see, and arrows never hurt allies.	Лучники-бриктроны всегда попадают в видимую цель, а стрелы никогда не ранят союзников.
+Bricktrons	Бриктроны
+Bricktrons dig out quarries 30% faster ([QuarrySpeed] Speed): every swing of the pick counts as 1.3 swings, so a block takes fewer swings; the swing itself is not quicker.	Бриктроны копают карьеры на 30% быстрее ([QuarrySpeed] Speed): каждый взмах кирки считается за 1,3, поэтому на блок нужно меньше взмахов; сам взмах не быстрее.
+Bricktrons per giant bricktron	Бриктронов на одного великана
+Bricktrons put on a task (right-click the task with them selected) start on it at once instead of finishing what they do (storing what their bag holds from the old task first), also when they are in its crew already; one that has not started within 4 seconds is reported on screen with the reason (cannot reach it, no storage room, nothing to do, paused...).	Бриктроны, поставленные на задачу (ПКМ по задаче, когда они выбраны), сразу берутся за неё, а не доделывают своё (сначала сложив то, что в сумке от старой задачи), даже если уже в её бригаде; кто не начал за 4 секунды, о том пишется на экране с причиной (не добраться, нет места на складе, нечего делать, пауза…).
+Bricktrons walk straight lines across flat open ground instead of the route graph's voxel-by-voxel staircase.	Бриктроны ходят по прямой по ровной открытой земле, а не лесенкой по вокселям графа маршрутов.
+Bricktrons walk through each other (allies never block a path; enemies still do), and a bricktron in a doorway no longer makes the area behind it unreachable.	Бриктроны проходят сквозь друг друга (союзники не перекрывают путь, враги — да), и бриктрон в дверном проёме больше не делает область за ним недоступной.
+Bricktrons with a job that stand without a task for 15 seconds or more are written to BepInEx/idle.log: how long, where, their job, their last task and why they turned tasks down ([Debug] IdleLogSeconds).	Бриктроны с профессией, простоявшие без задачи 15 секунд и больше, записываются в BepInEx/idle.log: сколько, где, профессия, последняя задача и почему отказывались от задач ([Debug] IdleLogSeconds).
+Build free blueprint	Построить бесплатный чертёж
+Build tasks	Стройки
+Build this blueprint before everything else (or again to build it as usual).	Построить этот чертёж раньше всего остального (или ещё раз — строить как обычно).
+Building	Строительство
+Building terrain meshes	Построение мешей рельефа
+Building that waits for material says so: a table at the bottom right (foldable to a strip of icons with the missing counts) lists each resource the build tasks need more of than the stockpiles hold (with what it is made from, e.g. logs for planks), and every blueprint still waiting for material shows the resource on red (not enough in stock), green (enough in stock) or blue (a worker is bringing it).	Стройка, ждущая материала, сообщает об этом: таблица справа внизу (сворачивается в полоску значков с нехваткой) перечисляет каждый ресурс, которого стройкам нужно больше, чем есть на складах (и из чего он делается, например брёвна для досок), а каждый ожидающий материала чертёж показывает ресурс на красном (не хватает на складе), зелёном (хватает) или синем (рабочий уже несёт).
+Building the interface (	Построение интерфейса (
+Building the interface ({0} menus left	Построение интерфейса (осталось меню: {0}
+Busy	Занят
+Button	Кнопка
+Buttons	Кнопки
+CALL TO ARMS	СБОР ПО ТРЕВОГЕ
+CONTINUE	ПРОДОЛЖИТЬ
+CONTINUE button on the title screen that loads the latest save.	Кнопка ПРОДОЛЖИТЬ на титульном экране — загружает последнее сохранение.
+Call	Вызвать
+Call to arms settings	Настройки сбора по тревоге
+Call to arms with soldiers per class, ranged/melee rally points and a role per worker (settings button next to the call to arms button).	Сбор по тревоге с числом солдат по классам, точками сбора для стрелков и ближнего боя и ролью для каждого рабочего (кнопка настроек рядом с кнопкой тревоги).
+Camera	Камера
+Can't pay	Не хватает
+Cancel	Отмена
+Card {0}	Карточка {0}
+Carries	Несёт
+Carry	Нести
+Carrying	Несёт
+Castle Story Plus logo on the splash screen, main menu and loading screen, with the mod's version under it on the main menu and loading screen.	Логотип Castle Story Plus на заставке, в главном меню и на экране загрузки, с версией мода под ним в главном меню и на экране загрузки.
+Castle Story Plus settings	Настройки Castle Story Plus
+Castle Story Plus: {0} Further corrections are only written to the log.	Castle Story Plus: {0} Дальнейшие исправления пишутся только в лог.
+Catapult	Катапульта
+Chainmail	Кольчуга
+Chance	Шанс
+Chance that a corruptron hired into a raid is a Healtron.	Шанс, что корруптрон, нанятый в набег, окажется хилтроном.
+Charcoal	Древесный уголь
+Chat	Чат
+Check	Проверить
+Check now	Проверить сейчас
+Checking terrain stability	Проверка устойчивости рельефа
+Chip	Фишка
+Choice {0}	Вариант {0}
+Choices	Варианты
+Choose	Выбрать
+Choose this trade: give 	Выбрать сделку: отдать 
+Choose this trade: give {0}, get {1}.	Выбрать сделку: отдать {0}, получить {1}.
+Choose two goods	Выберите два товара
+Cindermane	Огнегрив
+Clay	Глина
+Cleaning up and repairing round the base are two fixed tasks in the task list (a cleanup and a repair zone on the home crystal, as wide as the AutoCleanup / AutoRepair range) with their own priority and crew, instead of chores every idle worker does; they cannot be deleted.	Уборка и ремонт вокруг базы — две постоянные задачи в списке задач (зона уборки и зона ремонта у домашнего кристалла шириной с радиус AutoCleanup / AutoRepair) со своим приоритетом и бригадой, а не дела, которые делает каждый свободный рабочий; их нельзя удалить.
+Cleanup	Уборка
+Clear	Очистить
+Clear post	Снять пост
+Click an entry to see all of it here.	Нажмите на запись, чтобы увидеть её здесь целиком.
+Click to take it out of the queue	Нажмите, чтобы убрать из очереди
+Close	Закрыть
+Closure	Замыкание
+Coal	Уголь
+Coal (mined from veins in the deep rock of every map, or burnt from logs in the furnace) and steel (iron and coal at the forge), used by the steel tier of the upgrades. The furnace burns coal as well as orange crystal, coal first.	Уголь (добывается из жил в глубинной породе на каждой карте или выжигается из брёвен в плавильне) и сталь (железо и уголь в кузне) — нужны для стального уровня улучшений. Плавильня жжёт и уголь, и оранжевый кристалл, сначала уголь.
+Coal deposit	Угольная жила
+Cog	Шестерня
+Cogs	Шестерни
+Colony	Колония
+Color	Цвет
+Columns tried each game minute for a new plant (more: meadows fill up faster); 0: no new plants.	Столбцов в игровую минуту проверяется на новое растение (больше — луга зарастают быстрее); 0 — новых растений нет.
+Compound	Состав
+Connect	Подключиться
+Consolidate stockpiles	Объединять склады
+Content	Содержимое
+Continue	Продолжить
+Copy an area	Копировать зону
+Copy setup	Копировать настройку
+Copy setup: remember this workshop's queue, looping, stock limits and fetch range, to paste them into another workshop	Копировать настройку: запомнить очередь, повтор, лимиты запаса и радиус доставки этой мастерской, чтобы вставить их в другую
+Core	Ядро
+Corruptron Spawn	Появление корруптронов
+Corruptron Spawn Point	Точка появления корруптронов
+Corruptron waves spawn at least 60 blocks from the nearest block a player has built, when the map has a spawn point that far, and the farther a spawn point is from the players' blocks the likelier it is picked; otherwise a random one as before ([SpawnDistance] MinBlocks).	Волны корруптронов появляются не ближе 60 блоков от ближайшего построенного игроком блока, если на карте есть такая далёкая точка, и чем дальше точка от блоков игроков, тем вероятнее её выбор; иначе — случайная, как раньше ([SpawnDistance] MinBlocks).
+Corruptrons	Корруптроны
+Cost (dark crystals)	Цена (тёмные кристаллы)
+Cost (energy of new bricktrons)	Цена (энергия новых бриктронов)
+Cost: 	Цена: 
+Cost: no home crystal	Цена: нет домашнего кристалла
+Cost: {0} dark crystals ({1} free in the stockpiles) + the sacrificed worker	Цена: {0} тёмных кристаллов ({1} свободно на складах) + принесённый в жертву рабочий
+Cost: {0} energy ({1} in the crystal) + the sacrificed worker	Цена: {0} энергии ({1} в кристалле) + принесённый в жертву рабочий
+Could not make a firefly.	Не удалось создать светлячка.
+Could not restart (see the log); the choice applies at the next start.	Не удалось перезапустить (см. лог); выбор применится при следующем запуске.
+Count	Количество
+Counter	Счётчик
+Crafting	Ремесло
+Crafts anything explosive: bombs, explosive barrels and alchemist kits.	Делает всё взрывчатое: бомбы, взрывные бочки и наборы алхимика.
+Crafts halberdier kits, archer kits and lantern wards.	Делает наборы алебардщика, лучника и обереги-фонари.
+Crafts items drawing on the crystals' energy: artificer kits and the sentinel, healing, capture and pylon wards.	Делает предметы на энергии кристаллов: наборы механика и обереги — часовой, лечебный, захвата и пилон.
+Crafts mechanical contraptions: arbalist kits and bear traps.	Делает механические устройства: наборы арбалетчика и капканы.
+Crew	Бригада
+Critical hits by level again.	Критические удары снова по уровню.
+Crystal	Кристалл
+Crystal - Neutral	Кристалл — нейтральный
+Crystal - Player Spawn	Кристалл — точка появления игрока
+Crystal Attunement	Настройка кристалла
+Ctrl+C, then drag an area to copy its blocks, buildings and blueprints. Ctrl+V pastes the copy as blueprints into the selected build project (right-click rotates).	Ctrl+C, затем протяните область, чтобы скопировать её блоки, здания и чертежи. Ctrl+V вставляет копию чертежами в выбранную стройку (ПКМ — поворот).
+Ctrl+F opens a search bar: everything in the world matching the text (bricktrons by name or job, enemies, buildings, blueprints, resources) gets a yellow ring under it; several searches separated by commas.	Ctrl+F открывает поиск: всё в мире, что совпадает с текстом (бриктроны по имени или профессии, враги, здания, чертежи, ресурсы), получает жёлтое кольцо; несколько запросов — через запятую.
+DEEP ORE	ГЛУБИННАЯ РУДА
+Damage	Урон
+Damage of a Healtron's own attacks, times a corruptron's.	Урон собственных атак хилтрона, во сколько раз больше, чем у корруптрона.
+Damaged doors are repaired like damaged blocks: a repair zone (and the base's repair task) repairs the doors inside it, and with AutoRepair idle builders repair the team's damaged doors near the base.	Повреждённые двери чинятся как повреждённые блоки: зона ремонта (и задача ремонта базы) чинит двери внутри неё, а с AutoRepair свободные строители чинят повреждённые двери команды у базы.
+Dark cr.	Тёмн. кр.
+Dark crystal	Тёмный кристалл
+Dark crystals: 	Тёмные кристаллы: 
+Data	Данные
+Dawn 06:00	Рассвет 06:00
+Debug	Отладка
+Debug menu	Меню отладки
+Debug mode (F7, F8 and F9 windows)	Режим отладки (окна F7, F8 и F9)
+Debug: show a C# copy of the in-game right bar below the game's own, to check the C# menus.	Отладка: показывать C#-копию правой панели под игровой, чтобы проверить C#-меню.
+Decoration: a big painting.	Украшение: большая картина.
+Decoration: a double window to set into a wall.	Украшение: двойное окно, встраивается в стену.
+Decoration: a knight statue.	Украшение: статуя рыцаря.
+Decoration: a small painting.	Украшение: маленькая картина.
+Decoration: a tall painting.	Украшение: высокая картина.
+Decoration: a wide painting.	Украшение: широкая картина.
+Decoration: a window to set into a wall.	Украшение: окно, встраивается в стену.
+Default	По умолчанию
+Defeat the animals guarding this chest first	Сначала победите зверей, охраняющих этот сундук
+Depth	Глубина
+Deselect	Снять выбор
+Details	Подробности
+Developer	Разработчик
+Diagnostics	Диагностика
+Dialogs	Диалоги
+Dig 	Копать 
+Dig until: 	Копать до: 
+Dig {0} until {1} ({2} now	Копать {0} до {1} (сейчас {2}
+Dig {0}: no limit	Копать {0}: без ограничения
+Diggers	Копатели
+Display	Экран
+Distance	Расстояние
+Divider	Разделитель
+Done	Готово
+Door	Дверь
+Draw the blueprint library in C#.	Рисовать библиотеку чертежей на C#.
+Draw the gamemode's top-right panel (wave timer, kills, crystals, players) in C#.	Рисовать верхнюю правую панель режима (таймер волны, убийства, кристаллы, игроки) на C#.
+Draw the gamemodes' dialogs (intro, victory, defeat) in C#.	Рисовать диалоги режимов (вступление, победа, поражение) на C#.
+Draw the in-game settings sidebar and the paused overlay in C#.	Рисовать боковую панель настроек и экран паузы на C#.
+Draw the in-game tooltips and help articles in C#.	Рисовать подсказки и справочные статьи на C#.
+Draw the in-game top, left and right bars in C#.	Рисовать верхнюю, левую и правую панели игры на C#.
+Draw the new-task sidebar and the building and block catalogues in C#.	Рисовать панель новой задачи и каталоги зданий и блоков на C#.
+Draw the selected task's popup (options, recipes, queue) in C#.	Рисовать всплывающее окно выбранной задачи (параметры, рецепты, очередь) на C#.
+Draw the task list in C#.	Рисовать список задач на C#.
+Draw the title screen's menu buttons (main menu, play, multiplayer, options) in C#.	Рисовать кнопки меню титульного экрана (главное меню, играть, сетевая игра, параметры) на C#.
+Draw the whole in-game menu (bars, build menus, task popup, task list, settings) in C# and do not load the game's Lua GameMenu at all.	Рисовать всё игровое меню (панели, меню стройки, окно задачи, список задач, настройки) на C# и вообще не загружать Lua GameMenu игры.
+Draw the world editor's menu in C# and do not load the game's Lua world editor menu (not every tab is done yet).	Рисовать меню редактора мира на C# и не загружать Lua-меню редактора мира игры (готовы ещё не все вкладки).
+Drawn size of a giant bricktron. It still walks in one voxel.	Видимый размер бриктрона-великана. Ходит он всё равно в одном вокселе.
+Dropped 	Выронено 
+Dropped by slain enemies. Used by the crystal tier of the upgrades and to make giant bricktrons.	Выпадает из убитых врагов. Нужен для кристального уровня улучшений и для создания бриктронов-великанов.
+Dropped {0} {1}.	Выронено: {0} {1}.
+Dusk 18:00	Закат 18:00
+Each selected unit keeps the place it stands on as its post. A call to arms sends it there, and Back to post too.	Каждый выбранный юнит запоминает место, где стоит, как свой пост. Сбор по тревоге отправляет его туда, как и «Вернуться на пост».
+Economy	Экономика
+Edge	Край
+Efficient Mining	Эффективная добыча
+Empty	Пусто
+Empty stockpile	Опустошить склад
+Enable debug mode	Включить режим отладки
+End	Конец
+Enemies (where the camera looks)	Враги (куда смотрит камера)
+Enemy route search (12 shortest, 45 game)	Поиск пути врагов (12 — кратчайший, 45 — игра)
+Enemy search steps per update (game 20)	Шагов поиска врагов за обновление (игра: 20)
+Enemy waves are no longer shut out by trees (planted rows of them included): enemies that break their way may route through trees and fell a tree only when it blocks their way (stuck on their route, the tree towards their next step); trees they walk past, fight or wait beside stay standing.	Деревья (и посаженные ряды тоже) больше не отрезают волны врагов: враги, прорубающие путь, могут идти через деревья и рубят дерево, только когда оно мешает (застряли на маршруте, дерево по пути к следующему шагу); деревья, мимо которых они проходят, у которых дерутся или ждут, остаются стоять.
+Energy (home crystal)	Энергия (домашний кристалл)
+Energy carried by each brewed firefly, relative to the blue crystal it costs. 1.3 = new workers arrive 30% faster.	Энергия каждого сваренного светлячка относительно синего кристалла, который он стоит. 1.3 — новые рабочие появляются на 30% быстрее.
+Energy per brewed firefly	Энергия на сваренного светлячка
+Every hit and shot of your bricktrons is a critical hit.	Каждый удар и выстрел ваших бриктронов — критический.
+Every setting of the mod	Все настройки мода
+Every soldier kit is one item (Knight kit, Archer kit, ...): the kit recipes make one bundle with the summed cost and work instead of separate pieces, a soldier that equips a bundle unpacks it, one that hands in a whole kit packs it again, and loose whole kits on a weapon stand are packed into a bundle. Saves with kit bundles need the mod (bundles already made are still unpacked with this switched off).	Каждый набор солдата — один предмет (набор рыцаря, набор лучника…): рецепты наборов делают одну связку с суммарной ценой и работой вместо отдельных частей; солдат, взявший связку, распаковывает её, сдавший целый набор — упаковывает обратно, а целые наборы на оружейной стойке упаковываются в связку. Сохранениям со связками нужен мод (уже сделанные связки распаковываются и при выключенной опции).
+Exit (main menu or in a game) closes the game at once, instead of destroying every object one by one and then shutting the engine down in full.	«Выход» (из главного меню или из игры) закрывает игру сразу, а не уничтожает каждый объект по одному и не выключает движок полностью.
+Experience	Опыт
+Extra blocks round each tree and piece of terrain for that test, so shadows do not pop in when the camera turns fast.	Дополнительные блоки вокруг каждого дерева и куска рельефа для этой проверки, чтобы тени не появлялись рывком при быстром повороте камеры.
+Extra price halves every (minutes)	Наценка уменьшается вдвое каждые (минут)
+Extra raw iron from iron ore and iron deposits, on average (0.25: a quarter more).	Дополнительное сырое железо из железной руды и залежей, в среднем (0.25 — на четверть больше).
+Eyedropper	Пипетка
+F7 performance, F8 debug menu, F9 system log	F7 — производительность, F8 — меню отладки, F9 — системный лог
+FEATURES (APPLY AFTER A RESTART)	ФУНКЦИИ (ПРИМЕНЯЮТСЯ ПОСЛЕ ПЕРЕЗАПУСКА)
+FPS  now 	FPS  сейчас 
+FPS counter at the top: off	Счётчик FPS вверху: выкл.
+FPS counter at the top: on	Счётчик FPS вверху: вкл.
+Fabric	Ткань
+Face {0}	Грань {0}
+Failed: {0}	Ошибка: {0}
+Failsafe for a hanging worker: one that has not moved for 10 seconds in a walking task (60 in any other) has its task cancelled and puts down what it carries, then starts afresh ([StuckReset] Seconds, LongSeconds).	Защита от зависшего рабочего: если он 10 секунд не двигается в задаче с ходьбой (60 — в любой другой), задача отменяется, он кладёт то, что несёт, и начинает заново ([StuckReset] Seconds, LongSeconds).
+Faster map loading that keeps the window responsive (background file reading, time-budgeted loading loops, big Lua files compiled once and cached).	Более быстрая загрузка карт без зависания окна (чтение файлов в фоне, циклы загрузки с бюджетом времени, большие Lua-файлы компилируются один раз и кэшируются).
+Fav	Избр.
+Features	Функции
+Fee	Комиссия
+Fee per trade	Комиссия за сделку
+Fetch ingredients within (blocks, 0 no limit)	Брать ингредиенты в радиусе (блоки, 0 — без ограничения)
+Fetch within	Брать в радиусе
+Fibre	Волокно
+Fight again at health	Снова в бой при здоровье
+Fighting	Бой
+Fill	Заполнить
+Fill Area	Заполнить зону
+Find	Найти
+Firefly	Светлячок
+Firefly Lore	Знание светлячков
+Fixes memory leaks in the game itself, so memory no longer climbs during long games or after playing several games.	Исправляет утечки памяти самой игры, чтобы память не росла в долгих партиях или после нескольких игр подряд.
+Flag	Флаг
+Flailing	Удары цепом
+Fletching	Оперение
+Flush	Сбросить
+Fog of war	Туман войны
+Fog of war off: everything is visible.	Туман войны выключен: всё видно.
+Fog of war on.	Туман войны включён.
+Fog of war: off	Туман войны: выкл.
+Fog of war: on	Туман войны: вкл.
+Forge	Кузня
+Forget the posts of the selected units: a call to arms sends them to the rally point of their class again.	Забыть посты выбранных юнитов: сбор по тревоге снова отправит их на точку сбора их класса.
+Frame	Кадр
+Frame ms  now 	Кадр, мс  сейчас 
+Frame time (ms), last 	Время кадра (мс), последние 
+Frame time (ms), last {0} frames: lines at 16.7 / 33.3 / 100 ms; yellow over 33 ms, red a spike, blue mark a garbage collection	Время кадра (мс), последние {0} кадров: линии на 16.7 / 33.3 / 100 мс; жёлтый — больше 33 мс, красный — пик, синяя метка — сборка мусора
+Frames per second	Кадров в секунду
+Freeze / resume	Заморозить / продолжить
+From combat level 3 a sword strike or shot can be a critical hit for double damage (5% at level 3, 10% at 5, 15% at 8, 20% at 10): a red "2x damage" rises over the bricktron and its weapon glows red for that hit.	С 3-го боевого уровня удар мечом или выстрел может быть критическим — двойной урон (5% на 3-м уровне, 10% на 5-м, 15% на 8-м, 20% на 10-м): над бриктроном поднимается красное «2× урон», а его оружие светится красным при этом ударе.
+Full: ore	Полон: руда
+Fully researched.	Полностью исследовано.
+Furnace	Плавильня
+GAME SPEED (SINGLE PLAYER)	СКОРОСТЬ ИГРЫ (ОДИНОЧНАЯ ИГРА)
+GIANT BRICKTRON	БРИКТРОН-ВЕЛИКАН
+Game menus drawn in C# instead of the game's Lua menus, which take long to build when a map loads. Each menu is switched on on its own in [LuaUi]; all are off by default except the gamemodes' dialogs (CsModals) and the title screen's buttons (CsMainMenu).	Игровые меню рисуются на C# вместо Lua-меню игры, которые долго строятся при загрузке карты. Каждое меню включается отдельно в [LuaUi]; по умолчанию все выключены, кроме диалогов режимов (CsModals) и кнопок титульного экрана (CsMainMenu).
+Game minutes (on average) in which bare earth beside grass that nobody walks grows over; 0: grass does not spread.	Игровых минут (в среднем), за которые голая земля рядом с травой, где никто не ходит, зарастает; 0 — трава не разрастается.
+Game minutes a plant takes from nothing to full size; 0: plants keep their size.	Игровых минут, за которые растение вырастает с нуля до полного размера; 0 — растения не растут.
+Game minutes in which the steps on a column fade to half; worn paths nobody walks grow over in about five half lives.	Игровых минут, за которые следы на столбце бледнеют вдвое; тропы, где никто не ходит, зарастают примерно за пять таких периодов.
+Game speed 	Скорость игры 
+Game speed (single player)	Скорость игры (одиночная игра)
+Game speed keys in single player: 1 = normal, 2 = 2x, 3 = 3x (see [GameSpeed]). With the debug menu's fast speed keys on: 4 = 10x, 5 = 20x.	Клавиши скорости в одиночной игре: 1 — обычная, 2 — 2×, 3 — 3× (см. [GameSpeed]). С быстрыми клавишами из меню отладки: 4 — 10×, 5 — 20×.
+Game speed of the fifth speed key (only with the debug menu's fast speed keys on).	Скорость игры для пятой клавиши (только с быстрыми клавишами из меню отладки).
+Game speed of the fourth speed key (only with the debug menu's fast speed keys on).	Скорость игры для четвёртой клавиши (только с быстрыми клавишами из меню отладки).
+Game speed of the second speed key.	Скорость игры для второй клавиши.
+Game speed of the third speed key.	Скорость игры для третьей клавиши.
+Garbage collections  	Сборок мусора  
+Gather, then store a full bag	Собирать, затем отнести полную сумку
+Gear the stand takes (click a class to let it in or leave it out; what is on the stand stays):	Снаряжение, которое берёт стойка (нажмите на класс, чтобы разрешить или запретить; то, что уже на стойке, остаётся):
+Get	Получить
+Giant Bricktrons	Бриктроны-великаны
+Giant bricktron	Бриктрон-великан
+Giant bricktrons: select two workers and upgrade one (1.25x size, 2x speed for everything it does, 2x health, 2.5x carrying) for 50 dark crystals (with DarkCrystals; otherwise 1.5x the energy of a new bricktron); the other is sacrificed. One giant bricktron per 5 bricktrons. With Upgrades, Giant Bricktrons must first be researched at the research station.	Бриктроны-великаны: выберите двух рабочих и улучшите одного (размер ×1.25, всё делает в 2 раза быстрее, здоровье ×2, носит ×2.5) за 50 тёмных кристаллов (с DarkCrystals; иначе — 1.5 цены нового бриктрона в энергии); второго приносят в жертву. Один великан на 5 бриктронов. С Upgrades великанов сначала нужно исследовать на станции исследований.
+Give	Отдать
+Glass	Стекло
+Go	Идти
+Go to a place with a clear shot	Перейти в место с чистым выстрелом
+Good	Товар
+Grabbing	Захват
+Graph	График
+Graphics	Графика
+Graphics API of the Unity 6 port (Linux): Default (the player's first, OpenGL Core), OpenGL or Vulkan. Applies when the game starts; Settings > Castle Story Plus settings can restart it at once.	Графический API порта на Unity 6 (Linux): Default (первый у плеера, OpenGL Core), OpenGL или Vulkan. Применяется при запуске игры; Настройки > Настройки Castle Story Plus могут сразу перезапустить её.
+Green	Зелёный
+Green, Winter or Desert.	Зелёный, зима или пустыня.
+Grid	Сетка
+Grounded	На земле
+Groupes	Группы
+Groups	Группы
+Guard here	Стоять здесь
+Halberdier	Алебардщик
+Halberdier kit	Набор алебардщика
+Handle	Рукоять
+Handle Area	Ручка зоны
+Head	Голова
+Header	Заголовок
+Heal all mine	Вылечить всех моих
+Healed 	Вылечено 
+Healed {0} bricktrons.	Вылечено бриктронов: {0}.
+Heals your bricktrons in its radius over time.	Со временем лечит ваших бриктронов в своём радиусе.
+Health	Здоровье
+Health of a giant bricktron (it takes 1/Health of the damage).	Здоровье бриктрона-великана (получает 1/Health от урона).
+Healtron	Хилтрон
+Healtron: a green corruptron that heals its allies. Raids sometimes bring one (15% per corruptron, at most 2 per raid, in invasion from wave 3): every 4 seconds a pulse heals every ally within 6 voxels by 8% of their health, and a green beam heals the most wounded ally within 10 voxels by 5% per second. Its own attacks do only 40% damage ([Healtron]).	Хилтрон: зелёный корруптрон, лечащий союзников. Иногда приходит с набегом (15% на корруптрона, не больше 2 за набег, во вторжении — с 3-й волны): каждые 4 секунды импульс лечит всех союзников в 6 вокселях на 8% здоровья, а зелёный луч лечит самого раненого союзника в 10 вокселях на 5% в секунду. Его собственные атаки наносят лишь 40% урона ([Healtron]).
+Heap  	Куча  
+Heavier heads for breaking walls, gates and buildings.	Тяжёлые бойки, чтобы ломать стены, ворота и здания.
+Heavy Blades	Тяжёлые клинки
+Height	Высота
+Helm and shield	Шлем и щит
+Help	Справка
+Hide ranges	Скрыть радиусы
+High	Высокий
+Highlight	Подсветка
+Hint	Подсказка
+Hold this key and left-click a building to move it.	Удерживайте эту клавишу и щёлкните по зданию, чтобы передвинуть его.
+Holds any enemy that steps on it in place for a while.	Удерживает на месте на время любого врага, наступившего на него.
+Hole	Проём
+Home crystal	Домашний кристалл
+Hooks	Крючья
+Horizontal	Горизонтально
+Host only: these commands run on the host.	Только хост: эти команды выполняются на хосте.
+Hotkey	Клавиша
+Housing	Жильё
+Hover	Наведение
+Hovering a blueprint shows the resources it still needs (icon and count); a block of a build task shows what the whole task still needs.	При наведении на чертёж видно, каких ресурсов ему ещё не хватает (значок и число); на блоке стройки — что нужно всей стройке.
+Hovering a blueprint that is not being built says why: its task is not committed, paused or has no workers, something is in the way, it waits for support, or no bricktron can get to it.	При наведении на непостроенный чертёж видно почему: задача не подтверждена, на паузе или без рабочих, что-то мешает, ждёт опоры или ни один бриктрон не может до него добраться.
+Hovering a stockpile or weapon stand shows a list of what it holds next to the mouse: icon, name and count of each resource; a warehouse also shows how full it is in percent. The game's own line of icons and counts above the storage is hidden, as the list shows the same.	При наведении на склад или оружейную стойку рядом с мышью виден список содержимого: значок, название и количество каждого ресурса; у хранилища ещё и заполненность в процентах. Игровая строка значков над складом скрыта, так как список показывает то же самое.
+How far (blocks) a ranged fighter on a wall's edge leans out over it to shoot down.	Насколько (в блоках) стрелок на краю стены высовывается, чтобы стрелять вниз.
+How far from the camera shadows are drawn, in blocks (the game's quality level uses 400). 0 keeps the game's value.	На каком расстоянии от камеры рисуются тени, в блоках (уровень качества игры — 400). 0 — оставить значение игры.
+How far from this building, in blocks, its workers go for what it needs, to stockpiles and loose items (Shift: 25 at a time). Past 	Как далеко от здания (в блоках) его рабочие ходят за нужным — к складам и предметам на земле (Shift — по 25). Больше 
+How far from this building, in blocks, its workers go for what it needs, to stockpiles and loose items (Shift: 25 at a time). Past {0}: no limit.	Как далеко от здания (в блоках) его рабочие ходят за нужным — к складам и предметам на земле (Shift — по 25). Больше {0} — без ограничения.
+How far from this workshop, in blocks, its workers go for its ingredients, to stockpiles and loose items (Shift: 	Как далеко от мастерской (в блоках) её рабочие ходят за ингредиентами — к складам и предметам на земле (Shift — по 
+How far from this workshop, in blocks, its workers go for its ingredients, to stockpiles and loose items (Shift: {0} at a time). Past {1}: no limit.	Как далеко от мастерской (в блоках) её рабочие ходят за ингредиентами — к складам и предметам на земле (Shift — по {0}). Больше {1} — без ограничения.
+How far out the camera can zoom, in blocks from the point it looks at (the game's own limit is used when it is higher).	Насколько далеко камера может отъехать, в блоках от точки взгляда (если у игры предел больше — используется он).
+How far units see through the fog of war, times the game's distance for the map size.	Насколько далеко юниты видят сквозь туман войны, во сколько раз больше расстояния игры для этого размера карты.
+How far, in blocks along the sun's light, a tree or piece of terrain outside the screen may be and still cast a shadow onto it. Too short: long shadows at sunrise and sunset end at the screen's edge.	Как далеко (в блоках вдоль солнечного света) дерево или рельеф за пределами экрана ещё могут отбрасывать на него тень. Слишком мало — длинные тени на рассвете и закате обрываются у края экрана.
+How far, in blocks from the workshop, its workers go for its ingredients (stockpiles and loose items), for every workshop not set in its own menu. 0: no limit.	Как далеко (в блоках от мастерской) её рабочие ходят за ингредиентами (склады и предметы на земле) — для всех мастерских, у которых это не задано в меню. 0 — без ограничения.
+How far, in blocks walked, a ranged fighter whose shots would hit the castle or rock may go to find a place with a clear shot.	Как далеко (в блоках пути) может отойти стрелок, чьи выстрелы попали бы в замок или скалу, чтобы найти место с чистым выстрелом.
+How fast bricktrons climb a ladder, in blocks per second (walking is about 3).	Как быстро бриктроны лезут по лестнице, блоков в секунду (ходьба — около 3).
+How many boulders (stone on the surface): None, Few, Normal, Many or Lots.	Сколько валунов (камня на поверхности): нет, мало, норма, много или очень много.
+How many bricktrons work on a task at a time (e.g. a quarry with 4): a Workers at a time button among the task's actions with + and -; All when there is no limit; saved with the task.	Сколько бриктронов работают на задаче одновременно (например, карьер на 4): кнопка «Рабочих одновременно» среди действий задачи с + и −; «Все» — без ограничения; сохраняется с задачей.
+How many times Ctrl+click on a recipe in the workshop menu queues it (1 to 20).	Сколько раз Ctrl+клик по рецепту в меню мастерской ставит его в очередь (от 1 до 20).
+How many times faster than the game's bricktrons dig out a quarry (1.3 = 30% faster): how many swings of the pick each swing counts as.	Во сколько раз быстрее игры бриктроны копают карьер (1.3 — на 30% быстрее): за сколько взмахов считается каждый взмах кирки.
+How many times larger than the game's a flatten (landscape) task's area may be dragged.	Во сколько раз больше, чем в игре, можно протянуть зону выравнивания (ландшафта).
+How many times larger than the game's a task's area may be dragged (radius of a circle, side of a quarry or landscape).	Во сколько раз больше, чем в игре, можно протянуть зону задачи (радиус круга, сторона карьера или ландшафта).
+How many times to make the trade (one queue slot each, 	Сколько раз выполнить сделку (каждая — место в очереди, 
+How many times to make the trade (one queue slot each, {0} at most).	Сколько раз выполнить сделку (каждая — место в очереди, не больше {0}).
+How many trees: None, Few, Normal, Many or Lots.	Сколько деревьев: нет, мало, норма, много или очень много.
+How many wood blocks may hang out sideways into the air from a supported wood block.	Сколько деревянных блоков может свисать вбок в воздух от опёртого деревянного блока.
+How much a giant bricktron carries, times what a worker carries.	Сколько несёт бриктрон-великан, во сколько раз больше рабочего.
+How much iron and pyrite on the surface: None, Few, Normal, Many or Lots.	Сколько железа и пирита на поверхности: нет, мало, норма, много или очень много.
+How much iron, crystal and coal in the deep rock: None, Few, Normal, Many or Lots.	Сколько железа, кристаллов и угля в глубинной породе: нет, мало, норма, много или очень много.
+How strongly the ward range spheres are drawn (0.05 to 1; 1 = as the game draws them).	Насколько ярко рисуются сферы радиуса оберегов (от 0.05 до 1; 1 — как в игре).
+How to merge two workers into one giant bricktron. Needed before any giant can be made.	Как слить двух рабочих в одного бриктрона-великана. Нужно, чтобы вообще делать великанов.
+Icon	Значок
+Icons	Значки
+Icons over blueprints (Alt)	Значки над чертежами (Alt)
+Idle builders repair damaged blocks near the base (home crystal and stockpiles, see [AutoRepair] Radius), without a repair zone. No materials; blocks under attack are left alone. The range is also set on the home crystal's task (+ and -, Shift 5 at a time), with a green ring around the crystal, shown or hidden with "Show ranges" / "Hide ranges" on the crystal's context wheel ([BaseRanges] ShowRings).	Свободные строители чинят повреждённые блоки у базы (домашний кристалл и склады, см. [AutoRepair] Radius) без зоны ремонта. Без материалов; блоки под атакой не трогают. Радиус задаётся и в задаче домашнего кристалла (+ и −, Shift — по 5), с зелёным кольцом вокруг кристалла, которое показывается или скрывается кнопкой «Показать радиусы» / «Скрыть радиусы» в круговом меню кристалла ([BaseRanges] ShowRings).
+Idle builders repair damaged blocks within this many blocks of the home crystal or a stockpile (	Свободные строители чинят повреждённые блоки в пределах стольких блоков от домашнего кристалла или склада (
+Idle builders repair damaged blocks within this many blocks of the home crystal or a stockpile ({0} to {1}; also set on the home crystal's task).	Свободные строители чинят повреждённые блоки в пределах стольких блоков от домашнего кристалла или склада (от {0} до {1}; также задаётся задачей домашнего кристалла).
+Idle workers move resources out of small stockpiles into the fullest one.	Свободные рабочие переносят ресурсы из маленьких складов в самый полный.
+Idle workers pick up loose items near the base or near themselves and store them, without a cleanup zone (see [AutoCleanup] Radius). Items on top of a building or stockpile are taken from its foot. The range is also set on the home crystal's task (+ and -, Shift 5 at a time), with a blue ring around the crystal, shown or hidden with "Show ranges" / "Hide ranges" on the crystal's context wheel ([BaseRanges] ShowRings).	Свободные рабочие подбирают предметы с земли у базы или рядом с собой и относят на склад без зоны уборки (см. [AutoCleanup] Radius). Предметы на здании или складе берутся у его подножия. Радиус задаётся и в задаче домашнего кристалла (+ и −, Shift — по 5), с синим кольцом вокруг кристалла, которое показывается или скрывается кнопкой «Показать радиусы» / «Скрыть радиусы» в круговом меню кристалла ([BaseRanges] ShowRings).
+Idle workers pick up loose items within this many blocks of the home crystal or a stockpile (	Свободные рабочие подбирают предметы с земли в пределах стольких блоков от домашнего кристалла или склада (
+Idle workers pick up loose items within this many blocks of the home crystal or a stockpile ({0} to {1}; also set on the home crystal's task).	Свободные рабочие подбирают предметы с земли в пределах стольких блоков от домашнего кристалла или склада (от {0} до {1}; также задаётся задачей домашнего кристалла).
+Idle workers remember which tasks just had nothing for them and skip asking those again until something there changes (a new goal, a worker leaving, storage or routes changing) or a few seconds have passed. [JobBoard] JobBoardMode: Off, Shadow (only counts what would be skipped, for the performance window) or On.	Свободные рабочие запоминают задачи, где для них только что ничего не было, и не спрашивают их снова, пока там что-то не изменится (новая цель, ушёл рабочий, изменились склады или маршруты) или не пройдёт несколько секунд. [JobBoard] JobBoardMode: Off, Shadow (только считает, что было бы пропущено, — для окна производительности) или On.
+Ignores the build-mode key (Tab) for half a second after the game window regains focus, so alt+tab no longer opens the construction menu.	Игнорирует клавишу режима стройки (Tab) полсекунды после того, как окно игры снова получило фокус, — Alt+Tab больше не открывает меню строительства.
+Image	Картинка
+In build mode X picks which cell of the held block goes where the mouse points (Shift+X the other way round), through all of the block's cells; choosing another block starts again.	В режиме стройки X выбирает, какая клетка удерживаемого блока встанет под мышь (Shift+X — в обратную сторону), по всем клеткам блока; выбор другого блока начинает заново.
+In build mode: place the held block by its next cell (Shift: the one before). Choosing another block starts again.	В режиме стройки: ставить блок следующей клеткой (Shift — предыдущей). Выбор другого блока начинает заново.
+In progress at 	Идёт в 
+In progress at {0}.	Идёт в {0}.
+In stock {0}	На складе {0}
+In the way (marked red): 	Мешает (отмечено красным): 
+Ingots	Слитки
+Installed v0.8.12: {0}	Установлена v0.8.12: {0}
+Instant build off.	Мгновенная стройка выключена.
+Instant build on: what you place is built at once, what you remove goes at once.	Мгновенная стройка включена: поставленное строится сразу, убранное исчезает сразу.
+Instant build: off	Мгновенная стройка: выкл.
+Instant build: on	Мгновенная стройка: вкл.
+Invasion	Вторжение
+Invasion waves	Волны вторжения
+Invasion: Healtrons come from this wave on (raids without a wave number, e.g. in conquest, always may have them).	Вторжение: хилтроны приходят с этой волны (набеги без номера волны, например в завоевании, могут их приводить всегда).
+Invasion: big warning before the next wave at 1 minute, 30 and 15 seconds, and a countdown for the last 5 seconds.	Вторжение: крупное предупреждение перед следующей волной за 1 минуту, 30 и 15 секунд и обратный отсчёт последних 5 секунд.
+Invasion: the next wave's spawn point is picked ahead, and from 30 seconds before the wave an arrow on the screen points where it will come from.	Вторжение: точка появления следующей волны выбирается заранее, и за 30 секунд до волны стрелка на экране показывает, откуда она придёт.
+Iron	Железо
+Iron forged with coal at the forge. Used by the steel tier of the smithy and armoury upgrades.	Железо, прокованное с углём в кузне. Нужно для стального уровня улучшений кузницы и оружейной.
+Iron in the ground gives 25% more raw iron on average: iron ore dug out and iron deposits mined ([RichIron] Bonus).	Железо в земле даёт в среднем на 25% больше сырого железа: выкопанная железная руда и добытые залежи ([RichIron] Bonus).
+Ironhorn	Железнорог
+It cannot stand here: nothing holds it up and nothing it rests on is planned.	Здесь стоять нельзя: его ничто не держит и под ним ничего не запланировано.
+Its task has no bricktrons: add some to it.	В его задаче нет бриктронов: добавьте их.
+Its task is paused (locked priority).	Его задача на паузе (заблокированный приоритет).
+Its task is still being edited: click away from the task to start it.	Его задача ещё редактируется: щёлкните мимо задачи, чтобы начать её.
+Job	Профессия
+Keener edges on swords and axes. Every melee hit deals more damage.	Острее мечи и топоры. Каждый удар в ближнем бою наносит больше урона.
+Keep blue crystal	Оставлять синий кристалл
+Keep coal	Оставлять уголь
+Keep the fog of war on in every game mode (the sandbox switches it off otherwise).	Туман войны включён во всех режимах (иначе песочница его выключает).
+Key for game speed Speed2.	Клавиша скорости Speed2.
+Key for game speed Speed3.	Клавиша скорости Speed3.
+Key for game speed Speed4.	Клавиша скорости Speed4.
+Key for game speed Speed5.	Клавиша скорости Speed5.
+Key for normal game speed.	Клавиша обычной скорости игры.
+Key that opens the debug menu (energy, bricktrons, resources, enemies, waves). Host only.	Клавиша меню отладки (энергия, бриктроны, ресурсы, враги, волны). Только хост.
+Key that opens the performance window (frame rate, frame times, garbage collections, what takes the time, spikes).	Клавиша окна производительности (частота кадров, время кадров, сборки мусора, что занимает время, пики).
+Key that opens the system log window (what every bricktron is doing, problems, the mod's log).	Клавиша окна системного лога (что делает каждый бриктрон, проблемы, лог мода).
+Key that turns the semi x-ray (the tunnels and shafts under the ground) on and off, also without debug mode. Not while placing blocks or typing.	Клавиша полу-рентгена (туннели и шахты под землёй), вкл./выкл., работает и без режима отладки. Не во время постройки блоков или ввода текста.
+Keybindings	Клавиши
+Keys 4 and 5 off.	Клавиши 4 и 5 выключены.
+Keys 4 and 5: 10x and 20x speed.	Клавиши 4 и 5: скорость 10× и 20×.
+Keys 4/5 = 10x/20x: off	Клавиши 4/5 = 10×/20×: выкл.
+Keys 4/5 = 10x/20x: on	Клавиши 4/5 = 10×/20×: вкл.
+Kill enemies near	Убить врагов рядом
+Killed 	Убито 
+Killed {0} enemies within {1} blocks.	Убито врагов: {0} в пределах {1} блоков.
+Knight	Рыцарь
+Knight kit	Набор рыцаря
+Knights	Рыцари
+Knowledge of fireflies. Each brewed firefly carries more energy.	Знание светлячков. Каждый сваренный светлячок несёт больше энергии.
+LEVEL UP! Combat {0}	НОВЫЙ УРОВЕНЬ! Бой {0}
+LEVEL UP! Work 	НОВЫЙ УРОВЕНЬ! Работа 
+LEVEL UP! Work {0}	НОВЫЙ УРОВЕНЬ! Работа {0}
+LEVEL UP! Work {0} / Combat {1}	НОВЫЙ УРОВЕНЬ! Работа {0} / Бой {1}
+LOAD GAME	ЗАГРУЗИТЬ ИГРУ
+Lab	Лаборатория
+Label	Подпись
+Ladder	Лестница
+Ladders	Лестницы
+Ladders: 	Лестницы: 
+Large brick 2x2	Большой кирпич 2×2
+Large stockpile	Большой склад
+Large stockpile in the build menu: 3 x 3 blocks, holds three times as much as the 2 x 2 stockpile.	Большой склад в меню стройки: 3 × 3 блока, вмещает втрое больше склада 2 × 2.
+Last collection  	Последняя сборка  
+Last spikes	Последние пики
+Last: 	Последний: 
+Launch option -faststartup skips the logo screens at startup and goes straight to the main menu.	Параметр запуска -faststartup пропускает логотипы при запуске и сразу открывает главное меню.
+Left click the ground to move the spawn point there. Right click or Esc cancels.	Щёлкните по земле, чтобы перенести туда точку появления. ПКМ или Esc — отмена.
+Left click to place the 	Щёлкните ЛКМ, чтобы поставить 
+Left: 	Слева: 
+Less CPU time per frame: hidden icons over bricktrons and things no longer have their canvas rebuilt every frame, stockpile shelf displays only update when what they hold changes, a worker's resource search that found nothing is not repeated for 2 seconds, bricktrons off the screen are not posed, a unit's animation states are checked against its animator once per update instead of once per state, the animators of decoration (stockpile planks, beacon handles, furnace fires) and the overhead icons' unused test scripts and idle animators no longer run off the screen or at all, a unit standing still does not look up the floor under it every frame, who sees whom is refreshed at most as often as at 60 frames a second, a tunnel task's look for work and the map's reach regions are spread over several ticks, sound objects tell Wwise their position with fewer calls, and when the frame rate drops below 25 the units' AI runs in at most 2 of a frame's catch-up fixed updates ([Performance] AiTicksPerFrame), so a slow frame no longer makes the next one slower. Icons sorted by distance set their sorting order only when it changed. A game signal that nothing has connected to yet no longer keeps two empty lists of its own, so each garbage collection has less to look at. Overhead icons read the camera's position once per frame, and how a unit holds what it carries is remembered instead of looked up every frame. A faction's vision pass puts its bricktrons and buildings in buckets by place, so most tracking groups are settled for a whole bucket at once (the worst frame of the pass was up to 9 ms), and reads their positions once per step. Storage fill animations wait while the storage is off the screen. Mouse picking casts each identical ray once per frame. A task's check whether a worker can store or fetch its things stops once the answer is decided (several ms in one frame per asking worker), and a harvest task counts its goals with a plain loop.	Меньше нагрузки на процессор за кадр: у скрытых значков над бриктронами и предметами холст больше не перестраивается каждый кадр, полки складов обновляются только при изменении содержимого, неудачный поиск ресурса рабочим не повторяется 2 секунды, бриктроны за экраном не позируются, состояния анимации юнита сверяются с аниматором раз за обновление, а не за каждое состояние, аниматоры декора (доски складов, ручки маяков, огонь плавилен) и неиспользуемые тестовые скрипты и простаивающие аниматоры значков больше не работают за экраном или вообще, стоящий юнит не ищет пол под собой каждый кадр, кто кого видит, обновляется не чаще, чем при 60 кадрах в секунду, поиск работы туннелем и области досягаемости карты распределены на несколько тиков, звуковые объекты сообщают Wwise позицию меньшим числом вызовов, а когда частота кадров падает ниже 25, ИИ юнитов работает не больше чем в 2 догоняющих фиксированных обновлениях кадра ([Performance] AiTicksPerFrame), так что медленный кадр больше не замедляет следующий. Значки, сортируемые по расстоянию, задают порядок отрисовки только при изменении. Сигнал игры, к которому ещё никто не подключился, больше не держит два своих пустых списка, и каждой сборке мусора меньше работы. Значки над головами читают позицию камеры раз за кадр, а то, как юнит держит груз, запоминается, а не ищется каждый кадр. Проход видимости фракции раскладывает бриктронов и здания по ячейкам места, так что большинство групп отслеживания решается сразу на всю ячейку (худший кадр прохода был до 9 мс), и читает их позиции раз за шаг. Анимации заполнения складов ждут, пока склад за экраном. Выбор мышью пускает каждый одинаковый луч раз за кадр. Проверка задачи, может ли рабочий сложить или взять свои вещи, останавливается, как только ответ ясен (несколько мс в кадре на каждого спрашивающего), а сбор урожая считает цели простым циклом.
+Level	Уровень
+Light Boots	Лёгкие сапоги
+Lighter boots with better soles. Bricktrons walk and run faster.	Лёгкие сапоги с хорошей подошвой. Бриктроны ходят и бегают быстрее.
+Lights up its surroundings; brighter when connected to a power source.	Освещает всё вокруг; ярче, когда подключён к источнику энергии.
+Limit reached: 	Достигнут предел: 
+Limit reached: {0}/{1} (one per {2} bricktrons).	Достигнут предел: {0}/{1} (один на {2} бриктронов).
+Line	Строка
+Load game	Загрузить игру
+Load timing: total 	Время загрузки: всего 
+Load watchdog: the load coroutine has not been resumed for 	Сторож загрузки: корутина загрузки не продолжалась уже 
+Load watchdog: the same step has run for 	Сторож загрузки: один и тот же шаг идёт уже 
+Loading	Загрузка
+Loading buildings, units and items	Загрузка зданий, юнитов и предметов
+Loading failed: 	Ошибка загрузки: 
+Loading failed: {0}: {1} (see BepInEx/LogOutput.log)	Ошибка загрузки: {0}: {1} (см. BepInEx/LogOutput.log)
+Loading the grid guide	Загрузка сетки-подсказки
+Loading the terrain	Загрузка рельефа
+Locked	Заблокирован
+Log	Лог
+Log every worker state change, and why workers reject or fail tasks, to BepInEx/workertrace.log (modding aid; can also be switched on in the debug menu, F8).	Записывать каждую смену состояния рабочего и почему рабочие отклоняют или проваливают задачи в BepInEx/workertrace.log (для моддинга; включается и в меню отладки, F8).
+Logs	Брёвна
+Logs a removed tree stump gives (a felled tree gives 3).	Сколько брёвен даёт убранный пень (срубленное дерево даёт 3).
+Logs from a stump (a tree gives 3)	Брёвен с пня (дерево даёт 3)
+Long brick 1x3	Длинный кирпич 1×3
+Long brick 1x4	Длинный кирпич 1×4
+Long brick 2x4	Длинный кирпич 2×4
+Loom	Ткацкий станок
+Loop	По кругу
+Loop until 	Повторять до 
+Loop until stock: 	Повторять до запаса: 
+Loop until stock: off (	Повторять до запаса: выкл. (
+Loop until stock: off ({0})	Повторять до запаса: выкл. ({0})
+Loop until stock: off. "+" keeps this many in stock while the queue loops.	Повторять до запаса: выкл. «+» держит столько в запасе, пока очередь повторяется.
+Loop until stock: {0}	Повторять до запаса: {0}
+Loop until stock: {0} ({1} now)	Повторять до запаса: {0} (сейчас {1})
+Loop until {0} in stock	Повторять, пока на складе не будет {0}
+Low	Низкий
+Lower priority	Понизить приоритет
+MAKING THE WORLD	СОЗДАНИЕ МИРА
+MISSING MATERIAL ICONS	ЗНАЧКИ НЕХВАТКИ МАТЕРИАЛА
+Make a new bricktron whenever the home crystal has the energy for one (the home crystal's "Auto spawn bricktrons").	Создавать нового бриктрона, как только у домашнего кристалла хватает энергии («Автопоявление бриктронов» домашнего кристалла).
+Make it a favourite: it stays at the top of this list.	Сделать избранным: останется вверху этого списка.
+Making	Изготовление
+Making now	Сейчас делается
+Making the world...	Создание мира...
+Managed memory, last 10 minutes: blue in use, yellow average over 30 s	Управляемая память, последние 10 минут: синий — занято, жёлтый — среднее за 30 с
+Map	Карта
+Margin	Отступ
+Market	Рынок
+Market building (build menu, crafting): trade any resource for any other. Prices rise with trading and recover over time (a trade then asks more for the same lot), with a fee, so trading never makes resources (see [Market]). Coal and steel can be traded too (steel only given). In the C# menu the market keeps goods in stock: up to 20 standing trades (as many as any workshop queues), each with how many to keep and what to pay with. The window lists the trades made before and favourites to choose again with one click. Up to 3 more workers help fetch for the current trade. Workers walk inside.	Рынок (меню стройки, ремесло): обменивайте любой ресурс на любой другой. Цены растут от торговли и со временем восстанавливаются (сделка тогда просит больше за ту же партию), есть комиссия, так что торговля никогда не создаёт ресурсы (см. [Market]). Уголь и сталь тоже можно продавать (сталь — только отдавать). В C#-меню рынок держит товары в запасе: до 20 постоянных сделок (как очередь любой мастерской), у каждой — сколько держать и чем платить. В окне — прошлые сделки и избранные, чтобы выбрать снова одним щелчком. До 3 рабочих дополнительно помогают носить для текущей сделки. Рабочие ходят внутри.
+Market fetch	Доставка на рынок
+Master	Мастер
+Measure systems	Замер систем
+Measure what takes the time in each frame (every Update of the game and the mod) from the start, rather than when the performance window (F7) or the developer API first asks. Costs a little time every frame.	Замерять, что занимает время в каждом кадре (каждый Update игры и мода), с самого начала, а не когда впервые откроют окно производительности (F7) или спросит API разработчика. Немного стоит каждый кадр.
+Measured since reset  	Замерено с момента сброса  
+Medium	Средний
+Melee	Ближний бой
+Melee fighters	Бойцы ближнего боя
+Melee fighters low on health run to a healing ward or the home crystal and heal before fighting again (see [Retreat]).	Бойцы ближнего боя с малым здоровьем бегут к лечебному оберегу или домашнему кристаллу и лечатся, прежде чем снова драться (см. [Retreat]).
+Melee fighters retreat when their health drops below this fraction (0.3 = 30 %).	Бойцы ближнего боя отступают, когда здоровье падает ниже этой доли (0.3 = 30 %).
+Melee: not set (crystal)	Ближний бой: не задано (кристалл)
+Melee: set	Ближний бой: задано
+Menu: Scoreboard (Lua)	Меню: таблица счёта (Lua)
+Menus	Меню
+Message	Сообщение
+Metal rims and bosses. Blocks cost less stamina and cover a wider arc.	Металлические ободья и умбоны. Блоки стоят меньше выносливости и прикрывают больший угол.
+Metallurgy	Металлургия
+Metallurgy: coal and steel	Металлургия: уголь и сталь
+Metallurgy: recipes charcoal (	Металлургия: рецепты — древесный уголь (
+Metalworking: turns iron ingots into knight kits and cogs, and iron with coal into steel.	Металлообработка: превращает железные слитки в наборы рыцаря и шестерни, а железо с углём — в сталь.
+Metalworking: turns iron ingots into knight kits and cogs.	Металлообработка: превращает железные слитки в наборы рыцаря и шестерни.
+Middle-click (without dragging) a block, structure or blueprint to select it for building a copy.	Щелчок средней кнопкой (без протяжки) по блоку, зданию или чертежу выбирает его, чтобы построить копию.
+Midnight	Полночь
+Milliseconds per frame all route searches together may take; the rest wait for the next frame. Lower keeps the frame rate even when many search at once, higher finds their routes a few frames sooner.	Миллисекунд за кадр на все поиски пути вместе; остальные ждут следующего кадра. Меньше — ровнее частота кадров, когда ищут многие сразу, больше — пути находятся на несколько кадров раньше.
+Mine shafts: 2 to 4 big lodes of ore in the deep rock of every map, showing on an island's cliff face. A lode holds about 1000 to 1500 blocks of orange crystal, iron, blue crystal (with BlueCrystalDeposits) and coal (with Metallurgy) and no stone, but its blocks take 3 times as long to dig.	Шахты: от 2 до 4 больших рудных жил в глубинной породе каждой карты, видны на обрыве острова. В жиле около 1000–1500 блоков оранжевого кристалла, железа, синего кристалла (с BlueCrystalDeposits) и угля (с Metallurgy) и нет камня, но её блоки копаются в 3 раза дольше.
+Mined from black veins in the deep rock, or burnt from logs in the furnace. Forged with iron into steel.	Добывается из чёрных жил в глубинной породе или выжигается из брёвен в плавильне. С железом проковывается в сталь.
+Minimap	Мини-карта
+Minimap zoom (1 = the whole island; 1.5, 2, 3, 4 or 6). Changed with the mouse wheel over the minimap.	Масштаб мини-карты (1 — весь остров; 1.5, 2, 3, 4 или 6). Меняется колёсиком мыши над мини-картой.
+Mining gives 30% less coal on average: each coal from a coal vein dug out or a coal deposit mined is lost with a 30% chance ([LeanCoal] Reduction).	Добыча даёт в среднем на 30% меньше угля: каждый уголь из выкопанной жилы или добытой залежи теряется с шансом 30% ([LeanCoal] Reduction).
+Minutes (game time) for the extra price of a traded resource to fall by half.	Минут (игрового времени), за которые наценка на проданный ресурс падает вдвое.
+Minutes of game time a planted sapling takes to grow into a full tree.	Минут игрового времени, за которые посаженный саженец вырастает в полное дерево.
+Minutes of play between autosaves (0 = off). Can also be changed in the game: Settings > Castle Story Plus settings.	Минут игры между автосохранениями (0 — выкл.). Меняется и в игре: Настройки > Настройки Castle Story Plus.
+Missing-script warnings  	Предупреждения о пропавших скриптах  
+Modal	Модальное
+Module	Модуль
+More frames per second: shadows are drawn out to 150 blocks in 2 cascades instead of 400 in 4, and trees and terrain outside the screen only cast a shadow when it can land on the screen.	Больше кадров в секунду: тени рисуются до 150 блоков в 2 каскадах вместо 400 в 4, а деревья и рельеф за экраном отбрасывают тень, только если она может попасть на экран.
+Most Healtrons in one raid.	Максимум хилтронов в одном набеге.
+Most fixed updates in one frame in which the units' AI runs (0: all of them, as the original game). When the frame rate drops below 50 a second Unity runs several fixed updates a frame to catch up; the AI running in all of them made the frame slower still.	Максимум фиксированных обновлений в одном кадре, в которых работает ИИ юнитов (0 — все, как в игре). Когда частота кадров падает ниже 50, Unity делает несколько фиксированных обновлений за кадр, чтобы догнать; ИИ во всех них делал кадр ещё медленнее.
+Most frames a second outside a running game (menus, loading). 0: no cap.	Максимум кадров в секунду вне идущей игры (меню, загрузка). 0 — без ограничения.
+Most idle workers that look for a task in one AI tick; the others are put off to their next round and served first then. Many workers searching in the same tick made single slow frames. 0: no limit, as the game.	Максимум свободных рабочих, ищущих задачу за один тик ИИ; остальные откладываются до своего следующего раунда и тогда обслуживаются первыми. Много рабочих, ищущих в одном тике, давали одиночные медленные кадры. 0 — без ограничения, как в игре.
+Mouse wheel over the minimap zooms it (1x to 6x, kept in [Minimap] Zoom); zoomed in, it follows the camera.	Колёсико мыши над мини-картой меняет масштаб (от 1× до 6×, хранится в [Minimap] Zoom); при увеличении она следует за камерой.
+Move a building (hold + click)	Передвинуть здание (удерживать + щелчок)
+Move buildings (workshops, stockpiles, racks...): hold the move key and click a building, then place it. Workers demolish the old one (materials and contents are dropped for re-use) and build the new one.	Перенос зданий (мастерские, склады, стойки…): удерживайте клавишу переноса и щёлкните по зданию, затем поставьте его. Рабочие сносят старое (материалы и содержимое выпадают для повторного использования) и строят новое.
+Multiplayer	Сетевая игра
+Multiplayer: a save remembers which players were on the same team; in the lobby of a loaded save every player is put in the team their faction had, so allies no longer start as enemies whose turrets and bricktrons fight (the game saves no teams and put each player in a new one). Host only.	Сетевая игра: сохранение помнит, какие игроки были в одной команде; в лобби загруженного сохранения каждый игрок попадает в команду своей фракции, так что союзники больше не начинают врагами, чьи турели и бриктроны дерутся (игра не сохраняет команды и ставила каждого игрока в новую). Только хост.
+Multiplayer: an ally's bricktron on a task shows no task icon in your game instead of an error on every refresh (its task's beacon is only sent to its own faction). The error broke off the network update of what the bricktron carried, so material delivered to the ally's buildings lay on the ground in your game.	Сетевая игра: бриктрон союзника на задаче не показывает в вашей игре значок задачи вместо ошибки при каждом обновлении (маяк его задачи отправляется только его фракции). Ошибка обрывала сетевое обновление того, что нёс бриктрон, поэтому материал, доставленный к зданиям союзника, лежал у вас на земле.
+Multiplayer: chat messages in a game go away after [Multiplayer] ChatFadeSeconds (12; 0: they stay) and show again while the chat is open for typing; [Multiplayer] Chat = false switches the chat box in a game off (the lobby's chat stays).	Сетевая игра: сообщения чата в игре исчезают через [Multiplayer] ChatFadeSeconds (12; 0 — остаются) и снова видны, пока чат открыт для ввода; [Multiplayer] Chat = false выключает окно чата в игре (чат лобби остаётся).
+My faction	Моя фракция
+NEW SEED	НОВЫЙ СИД
+NEXT WAVE 	СЛЕДУЮЩАЯ ВОЛНА 
+NEXT WAVE IN 	СЛЕДУЮЩАЯ ВОЛНА ЧЕРЕЗ 
+NEXT WAVE IN 1 MINUTE	СЛЕДУЮЩАЯ ВОЛНА ЧЕРЕЗ 1 МИНУТУ
+NEXT WAVE IN {0} SECONDS	СЛЕДУЮЩАЯ ВОЛНА ЧЕРЕЗ {0} СЕКУНД
+NEXT WAVE {0}s	СЛЕДУЮЩАЯ ВОЛНА {0} с
+Name	Имя
+Names	Имена
+Nature	Природа
+Need more	Нужно больше
+New Map Desert	Новая карта: пустыня
+New Map Forest	Новая карта: лес
+New Map Winter	Новая карта: зима
+New blocks in the brick wheel: stone bricks of 2 x 2, 2 x 4, 1 x 3 and 1 x 4 that stand on one supported block (the long ones can bridge a gap between two walls), a brick on end (1 x 1, 2 high), wooden slabs (half a block high) of 1 x 1, 2 x 1, 2 x 2, 2 x 4, 1 x 3, 1 x 5 and 2 x 3 that also hold on to the side of stone, and a wood ladder.	Новые блоки в меню кирпичей: каменные кирпичи 2×2, 2×4, 1×3 и 1×4, которые стоят на одном опёртом блоке (длинные могут перекрыть проём между двумя стенами), кирпич на торце (1×1, высотой 2), деревянные плиты (высотой в полблока) 1×1, 2×1, 2×2, 2×4, 1×3, 1×5 и 2×3, которые держатся и сбоку камня, и деревянная лестница.
+New workers arrive faster (see [Economy] EnergyMultiplier).	Новые рабочие появляются быстрее (см. [Economy] EnergyMultiplier).
+Next  (	Далее  (
+Next  ({0} queued)	Далее  ({0} в очереди)
+Next wave in 	Следующая волна через 
+Next wave in {0}:	Следующая волна через {0}:
+Next wave now	Следующая волна — сейчас
+Next wave: starting.	Следующая волна: начинается.
+Next: 	Далее: 
+Night 21:00	Ночь 21:00
+No bricktron can get to it: a builder has to stand right next to it, so it needs stairs, a ramp, a ladder or a floor to stand on.	Ни один бриктрон не может до него добраться: строитель должен стоять вплотную, так что нужны ступени, пандус, лестница или пол.
+No day cycle	Нет смены дня и ночи
+No day cycle in this game.	В этой игре нет смены дня и ночи.
+No dig limits (- and + by each resource)	Без пределов копания (− и + у каждого ресурса)
+No duplicate build jobs; a worker takes as much material as it can carry for a blueprint and the blueprints near it, and delivers to them on one trip; builders also build blueprints that cost nothing (saplings); a building of several floors is built floor by floor (no blueprint is taken two or more levels above an unfinished one nearby that the builder could do now).	Нет повторных заданий стройки; рабочий берёт столько материала, сколько может унести, для чертежа и соседних чертежей и доставляет их за один заход; строители строят и бесплатные чертежи (саженцы); многоэтажное здание строится этаж за этажом (чертёж не берут, если на два уровня и больше ниже рядом есть недостроенный, который строитель мог бы сделать сейчас).
+No enemy faction in this game.	В этой игре нет вражеской фракции.
+No frames measured yet.	Кадры ещё не замерены.
+No free sets for any class.	Свободных комплектов нет ни для одного класса.
+No home crystal found.	Домашний кристалл не найден.
+No home crystal.	Нет домашнего кристалла.
+No invasion wave timer (invasion games only, host only).	Нет таймера волн вторжения (только в игре «Вторжение», только хост).
+No invasion wave timer in this game.	В этой игре нет таймера волн вторжения.
+No item for 	Нет предмета для 
+No item for {0}.	Нет предмета для {0}.
+No limit	Без ограничения
+No problems so far.	Проблем пока нет.
+No save game found.	Сохранений не найдено.
+No setting matches "	Нет настроек по запросу «
+No setting matches "{0}".	Нет настроек по запросу «{0}».
+No settings.	Нет настроек.
+No spawn points: {0}	Нет точек появления: {0}
+No spikes since the last reset.	Пиков с последнего сброса не было.
+No team.	Нет команды.
+No trade between these	Нет обмена между этими
+No trades available.	Нет доступных сделок.
+Nodes the fine search may visit to straighten a coarse route (the game used 100). Higher finds the nearby stairs instead of a detour, at a little more CPU per search.	Узлов, которые точный поиск может пройти, чтобы выпрямить грубый маршрут (в игре было 100). Больше — находит ближайшую лестницу вместо обхода, чуть дороже по процессору на поиск.
+None	Нет
+Noon 12:00	Полдень 12:00
+Normal game speed	Обычная скорость игры
+Normal priority	Обычный приоритет
+Not a placed building that can be moved (no MovableVolume)	Это не поставленное здание, которое можно передвинуть (нет MovableVolume)
+Not being built	Не строится
+Not drawn in C# yet. Switch [LuaUi] CsWorldEditor off to use this tab.	Ещё не нарисовано на C#. Выключите [LuaUi] CsWorldEditor, чтобы пользоваться этой вкладкой.
+Not enough dark crystals in the stockpiles.	Не хватает тёмных кристаллов на складах.
+Not enough energy in the crystal: 	Не хватает энергии в кристалле: 
+Not enough energy in the crystal: {0}/{1}.	Не хватает энергии в кристалле: {0}/{1}.
+Not enough free 	Не хватает свободного: 
+Not enough free dark crystals in the stockpiles: 	Не хватает свободных тёмных кристаллов на складах: 
+Not enough free dark crystals in the stockpiles: {0}/{1} (research reserves its cost at once).	Не хватает свободных тёмных кристаллов на складах: {0}/{1} (исследование сразу бронирует стоимость).
+Not enough free {0}: {1}/	Не хватает свободного «{0}»: {1}/
+Nothing is being researched. Pick an upgrade above.	Ничего не исследуется. Выберите улучшение выше.
+Nothing queued	Очередь пуста
+Nothing queued. Choose what to give and what to get, then Trade.	Очередь пуста. Выберите, что отдать и что получить, затем «Обменять».
+Nothing to trade	Нечем торговать
+Nothing under way	Ничего не выполняется
+Novice	Новичок
+Now 	Сейчас 
+OK	ОК
+Off	Выкл.
+Off ([Performance] MeasureAllocations).	Выкл. ([Performance] MeasureAllocations).
+Off: idle workers ask every task for work as the game does. Shadow: the same, and the performance window counts the asks the job board would skip (jobboard: ...). On: an ask that came to nothing is not repeated until something it depends on changes or a few seconds have passed.	Off: свободные рабочие спрашивают работу у каждой задачи, как в игре. Shadow: так же, а окно производительности считает запросы, которые доска работ пропустила бы (jobboard: ...). On: безрезультатный запрос не повторяется, пока не изменится то, от чего он зависит, или не пройдёт несколько секунд.
+One build task per team: every placed blueprint goes into it and other build tasks are merged into it. Off: build tasks stay separate (the build button makes a new one).	Одна стройка на команду: каждый поставленный чертёж идёт в неё, а другие стройки сливаются в неё. Выкл.: стройки остаются отдельными (кнопка стройки создаёт новую).
+One giant bricktron allowed per this many bricktrons.	Один бриктрон-великан на столько бриктронов.
+One task	Одна задача
+Only 	Только 
+Only dark crystal is brought to this stockpile.	На этот склад носят только тёмные кристаллы.
+Only the host can move buildings	Передвигать здания может только хост
+Only the host can upgrade.	Улучшать может только хост.
+Only {0} of {1} got {2}: not enough sets.	Только {0} из {1} получили «{2}»: не хватает комплектов.
+Operable	Работает
+Option {0}	Вариант {0}
+Orange cr.	Оранж. кр.
+Orange crystal	Оранжевый кристалл
+Ore mine	Рудник
+Ore mine (new task menu, harvest tasks, after Brimstone): placed and sized like a harvest task (a sphere), its bricktrons dig only the ore they can get at in it (orange crystal, iron, blue crystal, coal touching a tunnel, quarry wall or cave), following a vein into the rock, no stone. Unmodded players see a harvest task that harvests nothing.	Рудник (меню новой задачи, задачи сбора, после серы): ставится и задаётся размером как сбор урожая (сфера), его бриктроны копают только доступную в нём руду (оранжевый кристалл, железо, синий кристалл, уголь у стенки туннеля, карьера или пещеры), следуя жиле вглубь, без камня. Игроки без мода видят задачу сбора, которая ничего не собирает.
+Ore mine: bricktrons dig the ore in the sphere they can get at (in tunnel and quarry walls, caves), no stone	Рудник: бриктроны копают доступную руду в сфере (в стенах туннелей и карьеров, в пещерах), без камня
+Output Text	Текст вывода
+Padded Gambeson	Стёганый гамбезон
+Palette	Палитра
+Pallet	Поддон
+Panel	Панель
+Paste setup	Вставить настройку
+Paste setup: copy a workshop's setup first	Вставить настройку: сначала скопируйте настройку мастерской
+Paste setup: replace this workshop's queue with the copied one (	Вставить настройку: заменить очередь этой мастерской скопированной (
+Paste setup: replace this workshop's queue with the copied one ({0} of {1} queued recipes fit	Вставить настройку: заменить очередь этой мастерской скопированной (помещается {0} из {1} рецептов очереди
+Paste setup: this is the workshop the setup was copied from	Вставить настройку: настройка скопирована с этой же мастерской
+Paste setup: this workshop makes none of the copied recipes	Вставить настройку: эта мастерская не делает ни одного из скопированных рецептов
+Paste the copy	Вставить копию
+Path	Путь
+Pathfinding	Поиск пути
+Pathfinding: route node at 	Поиск пути: узел маршрута в 
+Paths wear into the grass: grass the players' units walk much turns to earth, and worn ground nobody walks any more grows its grass back over time; grass also spreads slowly onto bare earth beside it (steps, half life and spread time in [WornPaths]).	Тропы протаптываются в траве: трава, по которой много ходят юниты игроков, превращается в землю, а протоптанная земля, где больше никто не ходит, со временем снова зарастает; трава также медленно разрастается на голую землю рядом (шаги, период полураспада и время разрастания в [WornPaths]).
+Pause task	Пауза задачи
+Pending blueprints are always visible, not only in build mode.	Ожидающие чертежи видны всегда, а не только в режиме стройки.
+Performance	Производительность
+Performance  <size=13><color=#999999>	Производительность  <size=13><color=#999999>
+Performance  <size=13><color=#999999>{0}</color></size>	Производительность  <size=13><color=#999999>{0}</color></size>
+Pick a recipe below	Выберите рецепт ниже
+Pick up	Подобрать
+Pick up 	Подобрать 
+Pick up from emptying stockpile	Взять с опустошаемого склада
+Pick up from small stockpile	Взять с маленького склада
+Pick up loose item	Подобрать предмет с земли
+Pick up loose item from below	Подобрать предмет снизу
+Pick up loose items within (blocks)	Подбирать предметы в пределах (блоки)
+Pick up {0} from 	Подобрать {0} из 
+Picture	Картина
+Picture {0}	Картина {0}
+Placed beside a crystal shard, it captures the shard.	Поставленный рядом с осколком кристалла, захватывает осколок.
+Placing trees and plants	Размещение деревьев и растений
+Placing with the idle group or the repair task selected no longer fails, and a new build task no longer takes over the others. With [Building] CombineBuildTasks (in-game: Settings > Build tasks) every blueprint goes into one build task per team and other build tasks are merged into it.	Стройка при выбранной группе бездельников или задаче ремонта больше не ломается, и новая стройка больше не забирает остальные. С [Building] CombineBuildTasks (в игре: Настройки > Стройки) каждый чертёж идёт в одну стройку на команду, а остальные стройки сливаются в неё.
+Plank	Доска
+Planks	Доски
+Plans for denser living quarters. The home crystal keeps more bricktrons.	Планы более плотного жилья. Домашний кристалл держит больше бриктронов.
+Plant	Растение
+Plant fibre	Растительное волокно
+Plant trees: a tree sapling in the build menu (structures), free, planted by a builder. It grows slowly from a tiny tree to a full tree over 30 minutes of game time (see [Saplings]) and can then be felled like any tree. A tree farm (new task menu, next to Landscape) is a box dragged out like a landscape task: builders plant saplings in it and a harvest task fells them when full grown, and replants.	Сажайте деревья: саженец в меню стройки (сооружения), бесплатный, сажает строитель. Медленно растёт из крошечного деревца в полное дерево за 30 минут игрового времени (см. [Saplings]), потом его можно рубить как любое дерево. Лесная ферма (меню новой задачи, рядом с «Ландшафтом») — прямоугольник, протягиваемый как задача ландшафта: строители сажают в ней саженцы, а задача сбора рубит их, когда вырастут, и сажает снова.
+Plants seed themselves in open grass: now and then a young plant (fibre) grows where a 5x5 square of grass is free of blocks, trees and paths, thinly, so meadows fill up slowly and stop ([WildPlants] Tries); plants below full size grow to full size in 10 minutes ([WildPlants] GrowMinutes).	Растения сами засеваются в открытой траве: время от времени молодое растение (волокно) вырастает там, где квадрат травы 5×5 свободен от блоков, деревьев и троп, редко, так что луга медленно заполняются и останавливаются ([WildPlants] Tries); растения не полного размера дорастают за 10 минут ([WildPlants] GrowMinutes).
+Player Starting Point	Стартовая точка игрока
+Players a hosted multiplayer game lets in, the host included (the game: 4). The host's setting applies.	Сколько игроков пускает сетевая игра, включая хоста (в игре: 4). Действует настройка хоста.
+Preparing pathfinding	Подготовка поиска пути
+Preparing the map	Подготовка карты
+Press "Measure systems" (or set [Performance] MeasureAtStart). Measuring costs some 1.5 ms a frame while it runs.	Нажмите «Замер систем» (или включите [Performance] MeasureAtStart). Пока идёт замер, он стоит около 1.5 мс за кадр.
+Press "Measure systems".	Нажмите «Замер систем».
+Press a key...	Нажмите клавишу...
+Price level: 	Уровень цен: 
+Price level: {0}, 	Уровень цен: {0}, 
+Priority	Приоритет
+Priority: 	Приоритет: 
+Problems	Проблемы
+Problems (	Проблемы (
+Problems ({0})	Проблемы ({0})
+Progress	Прогресс
+Project	Проект
+Projects	Проекты
+QUEUE (	ОЧЕРЕДЬ (
+QUEUE ({0}/{1})	ОЧЕРЕДЬ ({0}/{1})
+Quarries can dig each resource (stone as bricks, iron, brimstone, coal, blue crystal) until the team has a set amount: small + and - over each resource button.	Карьеры могут копать каждый ресурс (камень кирпичами, железо, серу, уголь, синий кристалл), пока у команды не наберётся заданное количество: маленькие + и − над кнопкой каждого ресурса.
+Quarry	Карьер
+Queue	Очередь
+Queued	В очереди
+Quicksave	Быстрое сохранение
+Quilted layers that catch arrows, bolts and thrown stones.	Стёганые слои, которые задерживают стрелы, болты и брошенные камни.
+RALLY POINTS	ТОЧКИ СБОРА
+RANDOM WORLD	СЛУЧАЙНЫЙ МИР
+RESEARCH STATION	СТАНЦИЯ ИССЛЕДОВАНИЙ
+RETREAT (MELEE)	ОТСТУПЛЕНИЕ (БЛИЖНИЙ БОЙ)
+ROLE OF SELECTED WORKERS	РОЛЬ ВЫБРАННЫХ РАБОЧИХ
+Radius	Радиус
+Radius of the healing pulse in voxels.	Радиус лечебного импульса в вокселях.
+Raise priority	Повысить приоритет
+Random World	Случайный мир
+Range	Радиус
+Range of the healing beam in voxels.	Радиус лечебного луча в вокселях.
+Ranged	Стрелки
+Ranged: not set (crystal)	Стрелки: не задано (кристалл)
+Ranged: set	Стрелки: задано
+Raw iron	Сырое железо
+Raw stone	Сырой камень
+Recipe	Рецепт
+Red	Красный
+Reduction	Снижение
+Refresh rate	Частота обновления
+Refresh rate picked in Options > Graphics > Refresh rate, as numerator/denominator (e.g. 240000/1000). Empty: the system's.	Частота обновления из Параметры > Графика > Частота обновления, как числитель/знаменатель (например, 240000/1000). Пусто — системная.
+Reinforced Helmet	Укреплённый шлем
+Relays power from a crystal to other wards.	Передаёт энергию от кристалла другим оберегам.
+Reload UI	Перезагрузить интерфейс
+Renderer	Рендерер
+Renderer (now 	Рендерер (сейчас 
+Renderer (now {0})	Рендерер (сейчас {0})
+Repair	Ремонт
+Repair damaged blocks within (blocks)	Чинить повреждённые блоки в пределах (блоки)
+Repeat: 	Повтор: 
+Repeat: off	Повтор: выкл.
+Research	Исследования
+Research Giant Bricktrons at the research station first.	Сначала исследуйте бриктронов-великанов на станции исследований.
+Research Station	Станция исследований
+Researches armour upgrades for the soldiers: less melee, arrow and magic damage taken, more health and better shields, in three tiers.	Исследует улучшения брони солдат: меньше урона в ближнем бою, от стрел и магии, больше здоровья и лучше щиты — в три уровня.
+Researches colony upgrades paid in dark crystals: more bricktrons, work and walking speed, storage room, cheaper bricktrons and more.	Исследует улучшения колонии за тёмные кристаллы: больше бриктронов, скорость работы и ходьбы, место на складах, дешевле бриктроны и другое.
+Researches weapon upgrades for the whole team: melee, block and arrow damage, archer aim and crossbow reload, in three tiers.	Исследует улучшения оружия для всей команды: урон в ближнем бою, по блокам и стрелами, меткость лучников и перезарядка арбалетов — в три уровня.
+Reserve Until	Бронировать до
+Reserved for the team's research: 	Забронировано для исследований команды: 
+Reset	Сброс
+Resource list (icon, name, count) in the top-right corner instead of the icon grid under the minimap; a resource stays listed from the first time it is stocked (saved with the world), with storage used and free (also as a percentage); a "Resources" button on the right-hand bar shows and hides it.	Список ресурсов (значок, название, количество) в правом верхнем углу вместо сетки значков под мини-картой; ресурс остаётся в списке с первого раза, как попал на склад (сохраняется с миром), с занятым и свободным местом (и в процентах); кнопка «Ресурсы» на правой панели показывает и прячет его.
+Resources	Ресурсы
+Resources (dropped where the camera looks)	Ресурсы (выпадают туда, куда смотрит камера)
+Resources that always get a pallet of their own, comma separated (names as in the log line 'MixedStockpiles: pallet capacity').	Ресурсы, которым всегда достаётся свой поддон, через запятую (названия как в строке лога 'MixedStockpiles: pallet capacity').
+Restart the game to apply the feature changes.	Перезапустите игру, чтобы применить изменения функций.
+Resume task	Продолжить задачу
+Retreat	Отступление
+Retreat below health	Отступать при здоровье ниже
+Retreating fighters return to normal at this fraction of their health.	Отступившие бойцы возвращаются к обычному режиму при такой доле здоровья.
+Riveted rings under the tabard. Takes the edge off sword and axe hits.	Клёпаные кольца под накидкой. Смягчают удары мечей и топоров.
+Rope	Верёвка
+Ropes	Верёвки
+Route search (12 shortest, 45 game)	Поиск пути (12 — кратчайший, 45 — игра)
+Route search cost of one block of ladder (a step of stairs is about 10, climbing a ledge 250): the higher, the more bricktrons prefer stairs.	Цена одного блока лестницы в поиске пути (ступенька — около 10, подъём на уступ — 250): чем выше, тем больше бриктроны предпочитают ступени.
+Route straightening nodes (game 100)	Узлов выпрямления маршрута (игра: 100)
+Routes (all your bricktrons)	Маршруты (все ваши бриктроны)
+Routes off.	Маршруты выкл.
+Routes on: every route your bricktrons search from now on is drawn.	Маршруты вкл.: каждый маршрут, который ваши бриктроны ищут отныне, рисуется.
+Routes: off	Маршруты: выкл.
+Routes: on	Маршруты: вкл.
+Row	Ряд
+Row {0}	Ряд {0}
+Rows	Ряды
+Run	Запустить
+Running	Работает
+SAVE AND QUIT	СОХРАНИТЬ И ВЫЙТИ
+SAVE AND QUIT GAME	СОХРАНИТЬ И ВЫЙТИ ИЗ ИГРЫ
+SAVE AND RETURN TO MAIN MENU	СОХРАНИТЬ И ВЫЙТИ В ГЛАВНОЕ МЕНЮ
+SAVE AND RETURN TO MAIN MENU and SAVE AND QUIT GAME (with a confirmation) buttons in the Quit Game dialog.	Кнопки СОХРАНИТЬ И ВЫЙТИ В ГЛАВНОЕ МЕНЮ и СОХРАНИТЬ И ВЫЙТИ ИЗ ИГРЫ (с подтверждением) в окне выхода из игры.
+SOLDIERS PER CLASS	СОЛДАТ ПО КЛАССАМ
+SURFACE ORE	ПОВЕРХНОСТНАЯ РУДА
+Sacrificed: 	Принесён в жертву: 
+Sapling	Саженец
+Saplings	Саженцы
+Save	Сохранить
+Save and restart now	Сохранить и перезапустить
+Save the game automatically every few minutes of play (see [Saving] AutosaveMinutes, or Settings > Castle Story Plus settings in the game). One autosave per map.	Автоматически сохранять игру каждые несколько минут игры (см. [Saving] AutosaveMinutes или Настройки > Настройки Castle Story Plus в игре). Одно автосохранение на карту.
+Saved game objects are not a JSON array.	Сохранённые объекты игры — не массив JSON.
+Saving	Сохранение
+Saving no longer freezes the game: the quicksave and save menu write game objects over several frames like the autosave, the save files are written in the background and swapped in at once (the old save is kept if writing fails), and game objects are written compact.	Сохранение больше не замораживает игру: быстрое сохранение и меню сохранения записывают объекты игры за несколько кадров, как автосохранение, файлы пишутся в фоне и подменяются разом (если запись не удалась, старое сохранение остаётся), а объекты пишутся компактно.
+Saws logs into planks, the main resource for wooden structures.	Пилит брёвна на доски — главный ресурс деревянных построек.
+Scouting	Разведка
+Scouts watch the corruptron spawn points and warn the colony early. More time between waves.	Разведчики следят за точками появления корруптронов и заранее предупреждают колонию. Больше времени между волнами.
+Search	Поиск
+Search all settings	Искать во всех настройках
+Search steps per update for each enemy's route search (the game used 20). Higher finds routes sooner, at more CPU per enemy.	Шагов поиска за обновление для маршрута каждого врага (в игре было 20). Больше — пути находятся раньше, дороже по процессору на врага.
+Second game speed	Вторая скорость игры
+Seconds	Секунды
+Seconds a chat message stays in the chat box of a game; while the chat is open for typing the recent messages show again (0: messages stay, as in the game).	Сколько секунд сообщение чата остаётся в окне чата в игре; пока чат открыт для ввода, недавние сообщения видны снова (0 — сообщения остаются, как в игре).
+Seconds before the next wave the arrow to its spawn point shows.	За сколько секунд до следующей волны появляется стрелка на её точку появления.
+Seconds between two comparisons of the players' worlds in a multiplayer game (the host asks; 0: no comparisons). A chunk is corrected after it differed in two comparisons in a row.	Секунд между двумя сравнениями миров игроков в сетевой игре (спрашивает хост; 0 — без сравнений). Кусок исправляется после того, как отличался в двух сравнениях подряд.
+Seconds between two healing pulses of a Healtron.	Секунд между двумя лечебными импульсами хилтрона.
+Seconds the arrow stays after the wave has arrived.	Сколько секунд стрелка остаётся после прихода волны.
+Section	Раздел
+Seed	Сид
+Seed (click to copy the share code)	Сид (нажмите, чтобы скопировать код для обмена)
+Seed of the random world: a UUID (or any text); the same seed and settings always make the same world. Empty: a new UUID.	Сид случайного мира: UUID (или любой текст); одинаковые сид и настройки всегда дают один и тот же мир. Пусто — новый UUID.
+Select	Выбрать
+Select 2 workers. The one with the most experience becomes a giant bricktron: 	Выберите 2 рабочих. Самый опытный станет бриктроном-великаном: 
+Select 2 workers. The one with the most experience becomes a giant bricktron: {0}x as big, everything it does {1}x as fast, {2}x health, carries {3}x as much, and it still counts as one bricktron. The other worker is sacrificed and does not come back.	Выберите 2 рабочих. Самый опытный станет бриктроном-великаном: больше в {0} раза, всё делает в {1} раза быстрее, здоровье ×{2}, несёт в {3} раза больше и всё равно считается одним бриктроном. Второго рабочего приносят в жертву, он не вернётся.
+Select bricktrons and right-click a task (blueprint, tree or block of an area...): they start that task at once and join that task's crew, staying on it until its work is done.	Выберите бриктронов и щёлкните ПКМ по задаче (чертёж, дерево или блок зоны…): они сразу начинают эту задачу и входят в её бригаду, оставаясь на ней, пока работа не закончится.
+Select exactly 2 workers (	Выберите ровно 2 рабочих (
+Select exactly 2 workers ({0} selected).	Выберите ровно 2 рабочих (выбрано: {0}).
+Select exactly 2 workers.	Выберите ровно 2 рабочих.
+Select workers to set their role.	Выберите рабочих, чтобы задать им роль.
+Semi: caves	Полу: пещеры
+Send the selected units to their posts.	Отправить выбранных юнитов на их посты.
+Separate	Отдельно
+Session started 	Сессия начата 
+Set	Задать
+Set post	Поставить пост
+Set the call to arms role of each worker with < and >. Classes without a free weapon/armour set are skipped.	Задайте роль каждого рабочего при сборе по тревоге кнопками < и >. Классы без свободного комплекта оружия/брони пропускаются.
+Set when MaxDistance was moved from the old default 8 to 5.	Задаётся, когда MaxDistance перенесли со старого значения по умолчанию 8 на 5.
+Set your screen's refresh rate (full screen)	Частота обновления экрана (полный экран)
+Setup	Настройка
+Shadow cascades: 1 (none), 2 or 4 (the game's quality level uses 4; more is sharper near the camera and costs a drawing of the shadow casters each). 0 keeps the game's value.	Каскады теней: 1 (нет), 2 или 4 (уровень качества игры — 4; больше — резче у камеры, но каждый стоит отдельной отрисовки теней). 0 — оставить значение игры.
+Share code copied	Код для обмена скопирован
+Share code copied: 	Код для обмена скопирован: 
+Share of an ally's maximum health that one pulse heals (0.08 = 8%).	Доля максимального здоровья союзника, которую лечит один импульс (0.08 = 8%).
+Share of the coal from coal veins and coal deposits that is lost (0.3: 30% less on average).	Доля угля из жил и залежей, которая теряется (0.3 — в среднем на 30% меньше).
+Share of the target's maximum health the beam heals per second (0.05 = 5%).	Доля максимального здоровья цели, которую луч лечит в секунду (0.05 = 5%).
+Share of the value lost on every trade.	Доля стоимости, теряемая на каждой сделке.
+Sharpened Blades	Заточенные клинки
+Shield Rims	Ободья щитов
+Shorter and fewer garbage collection pauses: each Lua script and coroutine gets stacks of 8,192 calls and 32,768 values (under 2 MB) instead of 131,072 of each (18 MB, made at once).	Короче и реже паузы сборки мусора: каждый Lua-скрипт и корутина получают стеки на 8 192 вызова и 32 768 значений (меньше 2 МБ) вместо 131 072 каждого (18 МБ сразу).
+Shorter garbage collection pauses: the Lua value heap (10 million slots, 280 MB, read by every collection) starts at 1 million slots and grows only when needed.	Короче паузы сборки мусора: куча значений Lua (10 млн ячеек, 280 МБ, читается каждой сборкой) начинается с 1 млн ячеек и растёт только при необходимости.
+Shorter routes, nearby stairs found from walls, bigger search budgets, no pause after picking something up, stairs usable under walkways, route searches limited to a time budget per frame, long bricks and slabs update the route graph over their whole length, allies walk past rope bridge posts, a route node left inside ground that has become solid is rebuilt when a bricktron is pushed out of it, and, in the Unity 6 port, bricktrons walk straight lines across flat open ground instead of a staircase ([Pathfinding] StraightPaths) and the player's own units get their routes from Unity's navigation mesh, the game's search staying for enemies and as the fallback ([Pathfinding] NavMeshExperiment, NavMeshRoutes).	Короче маршруты, ближняя лестница находится от стен, больше бюджеты поиска, нет паузы после подбора предмета, лестницы под настилами работают, поиск пути ограничен бюджетом времени на кадр, длинные кирпичи и плиты обновляют граф маршрутов по всей длине, союзники проходят мимо столбов верёвочных мостов, узел маршрута, оставшийся внутри затвердевшей земли, перестраивается, когда бриктрона выталкивает из него, а в порте на Unity 6 бриктроны ходят по прямой по ровной открытой земле, а не лесенкой ([Pathfinding] StraightPaths), и свои юниты игрока получают маршруты из навигационной сетки Unity, а поиск игры остаётся для врагов и как запасной ([Pathfinding] NavMeshExperiment, NavMeshRoutes).
+Show a frame rate counter at the top centre of the screen (switched in the performance window, F7).	Показывать счётчик частоты кадров вверху по центру экрана (переключается в окне производительности, F7).
+Show ranges	Показать радиусы
+Show the auto repair (green) and auto cleanup (blue) ranges around the crystal all the time, or again only while its task is selected.	Показывать радиусы авторемонта (зелёный) и автоуборки (синий) вокруг кристалла всё время, или снова только когда выбрана его задача.
+Show the auto repair / auto cleanup rings around the home crystal (true: all the time, false: never). Also toggled on the crystal's context wheel.	Показывать кольца авторемонта / автоуборки вокруг домашнего кристалла (true — всё время, false — никогда). Переключается и в круговом меню кристалла.
+Show the chat box in a game. Off: no chat box, no chat messages or their sound, and the chat key does nothing (the lobby's chat stays).	Показывать окно чата в игре. Выкл.: нет окна чата, сообщений и их звука, клавиша чата ничего не делает (чат лобби остаётся).
+Show the update notice again	Снова показать уведомление об обновлении
+Shown	Показано
+Siege weapon worked by a bricktron. Throws explosive barrels (crafted at the laboratory) at a target.	Осадное орудие, которым управляет бриктрон. Бросает взрывные бочки (делаются в лаборатории) в цель.
+Single player: the starting point to begin at, as numbered on the map's picture (0: a random one, as the gamemode picks).	Одиночная игра: стартовая точка, с которой начать, по номеру на картинке карты (0 — случайная, как выбирает режим).
+Size	Размер
+Skip the logo screens at startup (same as the -faststartup launch option).	Пропускать логотипы при запуске (как параметр запуска -faststartup).
+Slain enemies drop dark crystals (5 with a 1 in 3 chance, biftrons 15 with a 1 in 2 chance). The crystal tier of the upgrades costs dark crystals instead of blue crystal, and a giant bricktron costs 50 dark crystals instead of energy.	Из убитых врагов выпадают тёмные кристаллы (5 с шансом 1 к 3, у бифтронов 15 с шансом 1 к 2). Кристальный уровень улучшений стоит тёмных кристаллов вместо синего кристалла, а бриктрон-великан — 50 тёмных кристаллов вместо энергии.
+Slider	Ползунок
+Slider {0}	Ползунок {0}
+Slot	Ячейка
+Small, Medium or Large.	Малый, средний или большой.
+Smelts raw iron into iron ingots and makes glass, and burns logs into coal.	Плавит сырое железо в слитки, делает стекло и выжигает брёвна в уголь.
+Smelts raw iron into iron ingots and makes glass.	Плавит сырое железо в слитки и делает стекло.
+Smithy	Кузница
+Smithy, armoury and research station buildings (build menu, crafting): research weapon and armour upgrades in three tiers (iron, steel, crystal), and colony upgrades for dark crystals (more bricktrons, work speed, storage room (+33% per tier, stockpiles stack up to 4 layers high), cheaper bricktrons, walking speed, firefly energy, giant bricktrons, time between waves, more yield from digging and mining), for the whole team. Researched tiers show on the soldiers' gear, and soldiers wear the researched chainmail, gambeson, plate, great helm and heater shield. Starting a research reserves its whole cost from the stockpiles at once and locks that upgrade at the team's other stations until it is finished or cancelled. Workers walk inside. A stockpile only piles as high as there is room over it, and nothing can be built where its goods stand.	Кузница, оружейная и станция исследований (меню стройки, ремесло): исследуйте улучшения оружия и брони в три уровня (железо, сталь, кристалл) и улучшения колонии за тёмные кристаллы (больше бриктронов, скорость работы, место на складах (+33% за уровень, склады складываются до 4 слоёв в высоту), дешевле бриктроны, скорость ходьбы, энергия светлячков, бриктроны-великаны, время между волнами, больше добычи при копании и рудном деле) для всей команды. Исследованные уровни видны на снаряжении солдат, и солдаты носят исследованные кольчугу, гамбезон, латы, большой шлем и треугольный щит. Начало исследования сразу бронирует всю его стоимость на складах и блокирует это улучшение на других станциях команды, пока оно не закончится или не будет отменено. Рабочие ходят внутри. Склад складывает товары только на столько, сколько есть места над ним, и там, где стоят его товары, ничего нельзя построить.
+Soldiers	Солдаты
+Something that is no trade	Это не сделка
+Sort: ms/call	Сортировка: мс/вызов
+Sort: ms/frame	Сортировка: мс/кадр
+Source	Источник
+Space	Пробел
+Spacer	Распорка
+Spacing	Интервал
+Spawn 	Появление 
+Spawn points (invasion)	Точки появления (вторжение)
+Spawn points hidden.	Точки появления скрыты.
+Spawn points shown: click a pillar, then the ground, to move it.	Точки появления показаны: щёлкните по столбу, затем по земле, чтобы передвинуть его.
+Spawn points: off	Точки появления: выкл.
+Spawn points: on	Точки появления: вкл.
+Spawn {0}\n	Появление {0}\n
+Speed	Скорость
+Speed keys 4 and 5 for very fast game speeds ([GameSpeed] Speed4 and Speed5, 10x and 20x) in single player. Switched in the debug menu.	Клавиши скорости 4 и 5 для очень быстрой игры ([GameSpeed] Speed4 и Speed5, 10× и 20×) в одиночной игре. Переключается в меню отладки.
+Speed of everything a giant bricktron does (work, walking, climbing, attacks).	Скорость всего, что делает бриктрон-великан (работа, ходьба, лазание, атаки).
+Speed of everything it does	Скорость всего, что он делает
+Speed of the second speed key	Скорость второй клавиши скорости
+Speed of the third speed key	Скорость третьей клавиши скорости
+Spikes (over 	Пики (больше 
+Spins plant fibre into fabric and rope.	Прядёт растительное волокно в ткань и верёвку.
+Spirestalker	Шпилеход
+Splitter	Разделитель
+Sprites	Спрайты
+Stacking	Укладка
+Standard	Стандарт
+Start	Старт
+Starting a research reserves its price from the stockpiles at once; a worker brings it here and works on it, one at a time. Each tier needs the one before and works for the whole 	Начало исследования сразу бронирует его цену на складах; рабочий приносит её сюда и работает над ним, по одному. Каждый уровень требует предыдущего и действует на всю 
+Starting a research reserves its whole cost from the stockpiles at once (the numbers in brackets are what is not reserved), and the same upgrade cannot be started at another station meanwhile; cancelling releases both. A worker brings the materials here and works on the research, one at a time. Higher tiers need the tier before. Upgrades are kept in the save.	Начало исследования сразу бронирует всю его стоимость на складах (в скобках — незабронированное), и то же улучшение нельзя начать на другой станции; отмена освобождает и то, и другое. Рабочий приносит материалы сюда и работает над исследованием, по одному. Высшие уровни требуют предыдущего. Улучшения хранятся в сохранении.
+Starting the game	Запуск игры
+Startup	Запуск
+Status	Состояние
+Status {0}	Состояние {0}
+Stay at work	Остаться на работе
+Stay on this place and shoot every enemy in range from here: no running out to the enemy or to a better shot (or again to stop guarding).	Стоять на этом месте и стрелять отсюда по всем врагам в радиусе: не выбегать к врагу или ради лучшего выстрела (или ещё раз — перестать охранять).
+Steady Aim	Твёрдая рука
+Steel	Сталь
+Steel ingot	Стальной слиток
+Step	Шаг
+Stepper {0}	Счётчик {0}
+Stepping	Шаги
+Steps	Шаги
+Steps (fading with the half life) on a grass column that wear it down to earth.	Шаги (затухающие с периодом полураспада) по столбцу травы, которые протаптывают его до земли.
+Stockpile	Склад
+Stockpiles	Склады
+Stone	Камень
+Stones	Камни
+Stop	Стоп
+Stop emptying	Перестать опустошать
+Stop guarding	Перестать охранять
+Stop measuring (	Остановить замер (
+Stop measuring ({0})	Остановить замер ({0})
+Storage free	Свободно на складах
+Storage used	Занято на складах
+Store elsewhere	Сложить в другом месте
+Store if full	Сложить, если полон
+Store in fullest stockpile	Сложить в самый полный склад
+Store loose item	Сложить предмет с земли
+Stores resources. The workers bring what they gather here and fetch from it for building and crafting.	Хранит ресурсы. Рабочие приносят сюда собранное и берут отсюда для стройки и ремесла.
+Stores tools, weapons and unit kits for the bricktrons to take.	Хранит инструменты, оружие и наборы юнитов, которые берут бриктроны.
+Strength	Сила
+Striking	Удары
+Strip	Полоса
+Studied ways to dig, chop, build and craft. Every bricktron works faster.	Изученные способы копать, рубить, строить и мастерить. Каждый бриктрон работает быстрее.
+Studies that improve the whole colony, paid in 	Исследования, улучшающие всю колонию, за 
+Style	Стиль
+Subtitle	Подзаголовок
+Sun: moving	Солнце: движется
+Sun: stopped	Солнце: остановлено
+Swap	Поменять
+Sword	Меч
+System log	Системный лог
+Systems are not measured yet.\n	Системы ещё не замерены.\n
+THE WAVE IS HERE!	ВОЛНА ПРИШЛА!
+TREE STUMPS	ПНИ
+Tab {0}	Вкладка {0}
+Table	Таблица
+Tail	Хвост
+Take nothing new and have the workers carry everything to other storages (or again to use it as usual). It stays empty until switched off.	Ничего нового не принимать, а рабочие относят всё на другие склады (или ещё раз — пользоваться как обычно). Остаётся пустым, пока не выключите.
+Take these 	Убрать эти 
+Take these {0} trades out of the queue.	Убрать эти сделки из очереди: {0}.
+Take this trade out of the list.	Убрать эту сделку из списка.
+Take this trade out of the queue.	Убрать эту сделку из очереди.
+Tall brick 1x1x2	Высокий кирпич 1×1×2
+Task	Задача
+Task areas can be dragged 50% larger than the game allows: harvest and base circles and quarries ([LargerTasks] AreaScale), and flatten tasks twice as large ([LargerTasks] FlattenScale).	Зоны задач можно протягивать на 50% больше, чем позволяет игра: круги сбора и базы и карьеры ([LargerTasks] AreaScale), а выравнивание — вдвое больше ([LargerTasks] FlattenScale).
+Task {0}	Задача {0}
+Tasks and things no worker can walk to (blueprints, dig voxels, trees and plants to harvest, repairs, loose items) are marked unreachable: blueprints turn red, the rest get a red ring, and workers try them only when no task before them (10 places further up the list they pick from) can be done, instead of walking there again and again. A mark is only lifted when something is built, removed or dug within 3 blocks.	Задачи и вещи, до которых не может дойти ни один рабочий (чертежи, воксели для копания, деревья и растения для сбора, ремонт, предметы на земле), отмечаются недоступными: чертежи краснеют, остальное получает красное кольцо, и рабочие пробуют их, только когда ни одну задачу перед ними (на 10 мест выше в списке, из которого они выбирают) нельзя выполнить, а не ходят туда снова и снова. Отметка снимается, только когда в пределах 3 блоков что-то построят, уберут или выкопают.
+Tasks have six priority levels, 0 (locked) to 5 (high), instead of four: two new levels lie half way between low and medium and between medium and high; the task list shows the level as five pips.	У задач шесть уровней приоритета, от 0 (заблокирован) до 5 (высокий), вместо четырёх: два новых уровня — посередине между низким и средним и между средним и высоким; список задач показывает уровень пятью точками.
+Terracotta	Терракота
+Terrain	Рельеф
+Text	Текст
+Texts	Тексты
+The building has no blueprint to move it with	У здания нет чертежа, чтобы его передвинуть
+The building is already being moved	Здание уже переносится
+The camera zooms further out than the game allows ([Camera] MaxZoomOut, 250 blocks by default).	Камера отъезжает дальше, чем позволяет игра ([Camera] MaxZoomOut, по умолчанию 250 блоков).
+The colony	Колония
+The context wheel over a blueprint (e.g. a warehouse being built) has a Top priority button: builders work on it before everything else; a yellow ring marks it; saved with the blueprint.	В круговом меню над чертежом (например, строящимся хранилищем) есть кнопка «Высший приоритет»: строители работают над ним раньше всего остального; его отмечает жёлтое кольцо; сохраняется с чертежом.
+The game refused the move (not the player's building, or no room for the blueprint)	Игра отказалась переносить (не здание игрока или нет места для чертежа)
+The game will be saved and Castle Story will close.\nAre you sure?	Игра будет сохранена, и Castle Story закроется.\nВы уверены?
+The game's launcher remembers its resolution, monitor and "Launch in fullscreen" (its script is fixed when the game starts, from the next launch on).	Лаунчер игры запоминает разрешение, монитор и «Запуск в полноэкранном режиме» (его скрипт исправляется при запуске игры — со следующего запуска).
+The home crystal shapes new bricktrons from less energy.	Домашний кристалл создаёт новых бриктронов из меньшего количества энергии.
+The host's	Хоста
+The last trades queued at a market ("give>get" asset keys, newest first), offered again in the market's window.	Последние сделки в очереди рынка (ключи «отдать>получить», сначала новые), предлагаются снова в окне рынка.
+The minimap shows the island (terrain colours, height, slopes, walls and buildings) under the units; dug and filled ground shows within 2 s, walls and buildings within a minute.	Мини-карта показывает остров (цвета рельефа, высоту, склоны, стены и здания) под юнитами; выкопанная и засыпанная земля видна в течение 2 с, стены и здания — в течение минуты.
+The mouse over a resource lying on the ground shows a small label at the cursor with its icon and name.	Если навести мышь на ресурс, лежащий на земле, у курсора появится маленькая подпись со значком и названием.
+The pick up order on a loose item: each selected bricktron takes an item of that kind no other one is after, then goes on picking up that kind lying round it until its hands are full.	Приказ подобрать предмет: каждый выбранный бриктрон берёт предмет этого вида, за которым больше никто не идёт, а потом подбирает лежащее вокруг того же вида, пока руки не заполнятся.
+The queue is empty. Pick what to give and what to get, then add the trade.	Очередь пуста. Выберите, что отдать и что получить, затем добавьте сделку.
+The queue is full	Очередь заполнена
+The same for any other task (building, digging...), which may stand still longer (0: off).	То же для любой другой задачи (стройка, копание…), где можно стоять дольше (0 — выкл.).
+The sun moves again.	Солнце снова движется.
+The sun stands still.	Солнце стоит на месте.
+The trades marked as favourites in the market's window ("give>get" asset keys).	Сделки, отмеченные избранными в окне рынка (ключи «отдать>получить»).
+The ward range spheres (shown while a ward is hovered or placed) are drawn fainter, so the ground under them can be seen ([WardRange] Strength).	Сферы радиуса оберегов (видны при наведении или установке оберега) рисуются бледнее, чтобы под ними была видна земля ([WardRange] Strength).
+The wave timer has not started yet.	Таймер волн ещё не запущен.
+Third game speed	Третья скорость игры
+This map has no corruptron spawn points.	На этой карте нет точек появления корруптронов.
+This queue repeats (standing trades from an older save).	Эта очередь повторяется (постоянные сделки из старого сохранения).
+Thumbnail	Миниатюра
+Tier 	Уровень 
+Tier {0}	Уровень {0}
+Tier {0} 	Уровень {0} 
+Tier {0} ({1}): 	Уровень {0} ({1}): 
+Tile {0}	Плитка {0}
+Time	Время
+Time of day	Время суток
+Time of day: 	Время суток: 
+Time of day: {0}.	Время суток: {0}.
+Times	Раз
+Title	Заголовок
+Toggle	Переключить
+Toggle {0}	Переключить {0}
+Toolrack	Стойка для инструментов
+Tooltip	Подсказка
+Tooltip and help articles get their panels the first time they are shown instead of while a map loads (shorter loading, a tooltip's first showing builds it).	Подсказки и справочные статьи создают панели при первом показе, а не во время загрузки карты (загрузка короче, первый показ подсказки её строит).
+Tooltips	Подсказки
+Top priority	Высший приоритет
+Track	Дорожка
+Trade	Обменять
+Trade 	Обмен 
+Trade {0} times	Обменять {0} раз
+Trades any resource for another. Prices rise with trading and recover over time.	Обменивает любой ресурс на другой. Цены растут от торговли и со временем восстанавливаются.
+Trading 	Обмен 
+Trading {0} for {1}	Обмен: {0} на {1}
+Trapped	В ловушке
+Treasure	Сокровища
+Treasure chests in every world (3-4 small, 5-7 medium, 8-10 large map), away from the starting points, each guarded by a pack of 2 to 10 beasts (the bigger the pack, the better the loot): Spirestalker (giraffe), Cindermane (lion), Boulderback (gorilla) and Ironhorn (rhino), voxel models over enemy units with their own health, damage and speed. The guards are peaceful until attacked, then the whole pack fights back. Kill them (or lure them away) and walk a bricktron up to the chest to open it: iron ingots, crystals, cogs, purified brimstone, dark crystals, soldier kits, bombs and explosive barrels spill out.	Сундуки с сокровищами в каждом мире (3–4 на малой, 5–7 на средней, 8–10 на большой карте) вдали от стартовых точек, каждый охраняет стая из 2–10 зверей (чем больше стая, тем лучше добыча): шпилеход (жираф), огнегрив (лев), валуноспин (горилла) и железнорог (носорог) — воксельные модели поверх вражеских юнитов со своими здоровьем, уроном и скоростью. Стражи мирные, пока их не атакуют, тогда отбивается вся стая. Убейте их (или отманите) и подведите бриктрона к сундуку, чтобы открыть: высыпаются железные слитки, кристаллы, шестерни, очищенная сера, тёмные кристаллы, наборы солдат, бомбы и взрывные бочки.
+Treasure guards	Стражи сокровищ
+Tree farm	Лесная ферма
+Tree harvest areas also remove the stumps of felled trees: more axe work than a tree, fewer logs (see [TreeStumps]).	Зоны рубки деревьев убирают и пни срубленных деревьев: работы топором больше, чем с деревом, брёвен меньше (см. [TreeStumps]).
+Tree sapling	Саженец дерева
+Trees	Деревья
+Trees and terrain only cast a shadow when it can land on the screen, instead of every one within the shadow distance being drawn into the shadow maps.	Деревья и рельеф отбрасывают тень, только если она может попасть на экран, а не все в пределах дальности теней рисуются в карты теней.
+Tries	Попыток
+Tunnel	Туннель
+Turn the trade round: give what you would get.	Развернуть сделку: отдать то, что получили бы.
+Two workers	Два рабочих
+Type or paste a seed or share code...	Введите или вставьте сид или код для обмена...
+Under a dead worker's firefly: what is left before it respawns (travel time, absorption time, missing energy).	Под светлячком погибшего рабочего: сколько осталось до возрождения (время полёта, время поглощения, нехватка энергии).
+Under way	В процессе
+Units see 10% further through the fog of war ([FogOfWar] VisionMultiplier).	Юниты видят сквозь туман войны на 10% дальше ([FogOfWar] VisionMultiplier).
+Unity 6 port only, needs NavMeshExperiment: routes of the player's own units are found on Unity's navigation mesh (well under a millisecond, in one go) instead of the game's search over the voxel graph, and turned back into the voxels the walk needs. Enemies, and any route the mesh cannot give, keep the game's search.	Только порт на Unity 6, нужен NavMeshExperiment: маршруты своих юнитов игрока ищутся по навигационной сетке Unity (намного меньше миллисекунды, за раз), а не поиском игры по графу вокселей, и переводятся обратно в воксели, нужные для ходьбы. Враги и маршруты, которые сетка дать не может, остаются на поиске игры.
+Unity 6 port only: builds Unity's navigation mesh from the route graph next to it and keeps it up to date; NavMeshRoutes routes the player's units over it (DevTools: /api/navmesh).	Только порт на Unity 6: строит навигационную сетку Unity по графу маршрутов рядом и держит её в актуальном виде; NavMeshRoutes ведёт по ней юнитов игрока (DevTools: /api/navmesh).
+Unity 6 port, multiplayer: material delivered to a blueprint the other player's game does not have (an ally's blueprint, which only its own faction is sent) is hidden there, as it is in the blueprint, instead of lying in a heap that cannot be picked up.	Порт на Unity 6, сетевая игра: материал, доставленный к чертежу, которого нет в игре другого игрока (чертёж союзника, отправляемый только его фракции), там скрыт, как и в чертеже, а не лежит кучей, которую нельзя подобрать.
+Unity 6 port, multiplayer: once the host has pressed start, a client's "not ready" (pressed as the loading screen came up) is kept ready, the lobby's "everyone not ready" waits, a player joining in that moment is turned away and one leaving no longer holds up the others; host and clients sat at 0 % loaded for good before.	Порт на Unity 6, сетевая игра: после того как хост нажал «Старт», «не готов» клиента (нажатое при появлении экрана загрузки) считается готовым, «все не готовы» лобби ждёт, игрок, подключающийся в этот момент, получает отказ, а уходящий больше не задерживает остальных; раньше хост и клиенты навсегда застревали на 0% загрузки.
+Unity 6 port, multiplayer: the players' worlds (terrain and placed blocks) are compared every [Multiplayer] DesyncCheckSeconds. Where they differ twice in a row, the majority's world is taken (the host's when the vote is even) and the others are corrected; the chat says so. Each peer works out by itself what falls when a structure loses its support, so the worlds could drift apart and stay apart.	Порт на Unity 6, сетевая игра: миры игроков (рельеф и поставленные блоки) сравниваются каждые [Multiplayer] DesyncCheckSeconds. Где они дважды подряд отличаются, берётся мир большинства (при равенстве голосов — хоста), а остальные исправляются; об этом пишется в чат. Каждый участник сам рассчитывает, что падает, когда постройка теряет опору, поэтому миры могли разойтись и так и остаться.
+Unity 6 port, multiplayer: up to 8 players in a hosted game (the game: 4, and at 4 its lobby left the online list); [Multiplayer] MaxPlayers, the host's setting applies. The map still decides how many factions there are; extra players share them.	Порт на Unity 6, сетевая игра: до 8 игроков в игре хоста (в игре: 4, а при 4 её лобби пропадало из списка онлайн-игр); [Multiplayer] MaxPlayers, действует настройка хоста. Сколько фракций, по-прежнему решает карта; лишние игроки делят их.
+Unity 6 port: a storage's pallet animation (the second after its content changed) is worked out by Unity's animation pass on its worker threads instead of on the main thread. Off: stepped on the main thread as the game does.	Порт на Unity 6: анимация поддонов склада (секунда после изменения содержимого) рассчитывается проходом анимации Unity в рабочих потоках, а не в главном потоке. Выкл.: шагается в главном потоке, как в игре.
+Unity 6 port: multiplayer over the internet through Steam without opening a port. A hosted game is listed in the online list at once (the game waited for Castle Story's NAT server, which is gone), the list shows games from all regions, and joining one (from the list or a friend's invitation) connects over Steam's peer-to-peer networking through Valve's relays. LAN games and typed-in addresses connect directly.	Порт на Unity 6: сетевая игра через интернет по Steam без открытия порта. Игра хоста сразу появляется в списке онлайн-игр (игра ждала NAT-сервер Castle Story, которого больше нет), список показывает игры из всех регионов, а подключение (из списка или по приглашению друга) идёт через пиринговую сеть Steam и ретрансляторы Valve. Игры по локальной сети и введённые адреса подключаются напрямую.
+Unity 6 port: text boxes in the game's menus (the lobby's player name, ...) take what was typed on Enter or when left; the port's menus had lost that link, so the name could not be changed. What a player is typing in the lobby's name box is kept when the player list changes (another player's name, faction or team), so several players can rename themselves at once.	Порт на Unity 6: текстовые поля в меню игры (имя игрока в лобби и т.п.) принимают введённое по Enter или при уходе с поля; в меню порта эта связь потерялась, и имя нельзя было сменить. То, что игрок набирает в поле имени лобби, сохраняется при изменении списка игроков (имя, фракция или команда другого игрока), так что несколько игроков могут переименоваться одновременно.
+Unity 6 port: the faction vision's scan runs as a Burst job of the player on worker threads instead of on the main thread (the results are the same). Off: on the main thread.	Порт на Unity 6: проверка видимости фракции идёт Burst-задачей в рабочих потоках, а не в главном потоке (результат тот же). Выкл.: в главном потоке.
+Unity Log	Лог Unity
+Unlock	Разблокировать
+Unlocked	Разблокировано
+Unstack	Разложить
+Update	Обновить
+Update to {0}	Обновить до {0}
+Upgrade	Улучшить
+Upgrade cost with the DarkCrystals feature: dark crystals taken from the stockpiles (plus one sacrificed worker).	Цена улучшения с функцией DarkCrystals: тёмные кристаллы со складов (плюс один принесённый в жертву рабочий).
+Upgrade cost without the DarkCrystals feature: the energy of this many new bricktrons, paid from the home crystal (plus one sacrificed worker).	Цена улучшения без функции DarkCrystals: энергия стольких новых бриктронов из домашнего кристалла (плюс один принесённый в жертву рабочий).
+Upgraded: 	Улучшено: 
+Upgrades	Улучшения
+Vertical	Вертикально
+Viewport	Область вида
+Visible	Видимо
+Visuals	Внешний вид
+WAVE {0} CLEARED!	ВОЛНА {0} ОТБИТА!
+Waiting	Ожидание
+Waiting for a worker	Ждёт рабочего
+Waiting for materials	Ждёт материалов
+Waiting for support: what it rests on or hangs from has to be built first.	Ждёт опоры: сначала нужно построить то, на чём он стоит или висит.
+Waiting for the terrain engine	Ожидание движка рельефа
+Waiting in the queue.	Ждёт в очереди.
+Walk	Идти
+Walking	Ходьба
+Warded Plate	Латы с оберегом
+Warehouse	Хранилище
+Warehouse in the build menu: a 9 x 6 hall that holds 4500 resources of any kind, workers walk inside, and its brick works turns stored stone into bricks.	Хранилище в меню стройки: зал 9 × 6 на 4500 ресурсов любого вида, рабочие ходят внутри, а его кирпичная мастерская превращает хранимый камень в кирпичи.
+Warning	Предупреждение
+Wave timer: +	Таймер волн: +
+Wave timer: +{0} min.	Таймер волн: +{0} мин.
+Wave timer: freeze / resume.	Таймер волн: заморозить / продолжить.
+Waves every	Волны каждые
+Waves every 	Волны каждые 
+Waves every {0} min.	Волны каждые {0} мин.
+Wayland: your desktop sets the rate, only its own is listed	Wayland: частоту задаёт рабочий стол, в списке только она
+Weapon stand	Оружейная стойка
+Weapon upgrades for the whole team. Each tier is researched once and works for every bricktron at once.	Улучшения оружия для всей команды. Каждый уровень исследуется один раз и сразу действует на всех бриктронов.
+Weapons, props (shields, quivers...) and hats a weapon stand holds of each, all classes together; 0 = the stand's own room for one item (as many kits as before).	Сколько оружия, реквизита (щиты, колчаны…) и шапок каждого вида держит оружейная стойка, все классы вместе; 0 — своё место стойки на один предмет (столько наборов, как раньше).
+What allocates the most (average per frame since measuring or the last reset)	Что выделяет больше всего памяти (в среднем за кадр с начала замера или последнего сброса)
+What takes the time (since measuring or the last reset): one call's average, per frame, the longest frame	Что занимает время (с начала замера или последнего сброса): среднее на вызов, на кадр, самый долгий кадр
+What the market gives back. Click to choose.	Что рынок отдаёт взамен. Нажмите, чтобы выбрать.
+What the market takes from the stockpiles. Click to choose.	Что рынок берёт со складов. Нажмите, чтобы выбрать.
+When the firefly of a killed enemy or worker reaches your home crystal, the energy it brings rises above the crystal.	Когда светлячок убитого врага или рабочего долетает до вашего домашнего кристалла, над кристаллом всплывает принесённая энергия.
+When the icons over blueprints waiting for material show: Toggle (a press of Alt on its own shows and hides them), Hold (while Alt is held) or Always.	Когда показываются значки над чертежами, ждущими материала: Toggle (отдельное нажатие Alt показывает и прячет), Hold (пока Alt удерживается) или Always.
+Whether the box of missing building materials is folded to a small strip of icons with the missing counts.	Свёрнута ли таблица нехватки материалов в маленькую полоску значков с нехваткой.
+Whether the resource list in the top-right corner is shown (the "Resources" button on the right-hand bar toggles it).	Показывается ли список ресурсов в правом верхнем углу (кнопка «Ресурсы» на правой панели переключает его).
+Which of the C# menus' default changes this config has had (set by the mod; do not change).	Какие изменения умолчаний C#-меню уже применены к этому конфигу (задаётся модом; не менять).
+While a map loads, a Lua file loaded again into the same script reuses its compiled code instead of parsing it again.	Во время загрузки карты Lua-файл, загружаемый повторно в тот же скрипт, использует уже скомпилированный код, а не разбирает его заново.
+While placing one of the mod's bricks or slabs: choose the next corner of the block to place it by.	При постановке кирпичей или плит мода: выбрать следующий угол блока, по которому его ставить.
+While systems are measured, also measure each of the mod's gameplay patches on its own (several hundred more measured methods, some of them called very often).	Пока идёт замер систем, замерять отдельно и каждый игровой патч мода (ещё несколько сотен замеряемых методов, некоторые вызываются очень часто).
+While systems are measured, also measure how much memory each one allocates (every allocation leads towards a garbage collection, which stops the game).	Пока идёт замер систем, замерять и сколько памяти выделяет каждая (каждое выделение приближает сборку мусора, которая останавливает игру).
+Winch	Лебёдка
+Window	Окно
+With Ctrl held: paste the copied area as blueprints.	С зажатым Ctrl: вставить скопированную зону чертежами.
+With Ctrl held: start copying an area (drag it with the left mouse button).	С зажатым Ctrl: начать копирование зоны (протяните левой кнопкой мыши).
+With debug mode on (Castle Story Plus settings, or Options > Gameplay), F7 opens a performance window: frame rate, frame times (1% low, p95, p99), garbage collections, graphs of the last frames, what takes the time each frame, the last spikes and a switch for an FPS counter at the top of the screen; frames over 100 ms are logged with what took their time.	При включённом режиме отладки (настройки Castle Story Plus или Параметры > Игровой процесс) F7 открывает окно производительности: частота кадров, время кадров (1% худших, p95, p99), сборки мусора, графики последних кадров, что занимает время в каждом кадре, последние пики и переключатель счётчика FPS вверху экрана; кадры дольше 100 мс пишутся в лог с тем, что заняло время.
+With debug mode on (Castle Story Plus settings, or Options > Gameplay), F8 opens a debug menu (host only): instant build (what is placed is built at once), add energy, spawn builders, heal, drop resources, spawn or kill enemies, move, start or freeze the next invasion wave, change the time between waves, and draw the selected bricktrons' routes (coarse, straightened, walked), and make every hit of your bricktrons critical (100% critrate).	При включённом режиме отладки (настройки Castle Story Plus или Параметры > Игровой процесс) F8 открывает меню отладки (только хост): мгновенная стройка (поставленное строится сразу), добавить энергию, создать строителей, вылечить, выбросить ресурсы, создать или убить врагов, перенести, запустить или заморозить следующую волну вторжения, изменить время между волнами, рисовать маршруты выбранных бриктронов (грубый, выпрямленный, пройденный) и сделать каждый удар ваших бриктронов критическим (100% крит).
+With debug mode on (Castle Story Plus settings, or Options > Gameplay), F9 opens a system log window: what every bricktron is doing, problems (errors, warnings, failed bricktron tasks) and the mod's log.	При включённом режиме отладки (настройки Castle Story Plus или Параметры > Игровой процесс) F9 открывает окно системного лога: что делает каждый бриктрон, проблемы (ошибки, предупреждения, проваленные задачи бриктронов) и лог мода.
+Wood blocks and wooden slabs can be built out sideways from other wood (a slab in line with a slab walkway holds): up to 5 blocks may hang into the air from a supported wood block (see [WoodOverhang]).	Деревянные блоки и плиты можно строить вбок от другого дерева (плита в линию с настилом из плит держится): до 5 блоков могут свисать в воздух от опёртого деревянного блока (см. [WoodOverhang]).
+Wood ladder	Деревянная лестница
+Wood ladder in the build menu (wood group): bricktrons climb it straight up and down, slower than stairs ([Ladders] ClimbSpeed, RouteCost) and only with free hands or a bag.	Деревянная лестница в меню стройки (группа дерева): бриктроны лезут по ней прямо вверх и вниз, медленнее, чем по ступеням ([Ladders] ClimbSpeed, RouteCost), и только со свободными руками или с сумкой.
+Wood slab 1x1	Деревянная плита 1×1
+Wood slab 1x3	Деревянная плита 1×3
+Wood slab 1x5	Деревянная плита 1×5
+Wood slab 2x1	Деревянная плита 2×1
+Wood slab 2x2	Деревянная плита 2×2
+Wood slab 2x3	Деревянная плита 2×3
+Wood slab 2x4	Деревянная плита 2×4
+Work	Работа
+Work Methods	Методы работы
+Work and combat XP and levels (+5% per level), shown in the name tag with XP bars and a level-up effect.	Опыт и уровни работы и боя (+5% за уровень) — на табличке с именем с полосками опыта и эффектом нового уровня.
+Work to remove, compared to a tree	Работа по уборке, по сравнению с деревом
+Workbench	Верстак
+Worker trace off.	Трассировка рабочих выключена.
+Worker trace on: BepInEx/workertrace.log	Трассировка рабочих включена: BepInEx/workertrace.log
+Worker trace: off	Трассировка рабочих: выкл.
+Worker trace: on	Трассировка рабочих: вкл.
+Workers	Рабочие
+Workers at a time	Рабочих одновременно
+Workers besides the market's own who may fetch goods for its current trade at the same time.	Рабочие, кроме собственных рабочих рынка, которые могут одновременно носить товары для текущей сделки.
+Workers called when the alarm sounds. Limited by the weapon/armour sets you own. All 0 = everyone takes any kit.	Рабочие, вызываемые по тревоге. Ограничено вашими комплектами оружия/брони. Все 0 — каждый берёт любой набор.
+Workers do not stand frozen with a load nothing can store: "store or drop" stores what has room kind by kind and puts the rest down near the gather point at once; a loaded worker that idles or fails tasks for 20 seconds is sent to do that; a workshop worker whose recipe makes no progress for 90 seconds starts afresh ([LoadRelief] Seconds, RecipeSeconds, DropWalk).	Рабочие не стоят замерев с грузом, который некуда сложить: «сложить или бросить» складывает то, для чего есть место, вид за видом, а остальное сразу кладёт у точки сбора; нагруженного рабочего, который 20 секунд бездельничает или проваливает задачи, отправляют это сделать; рабочий мастерской, чей рецепт 90 секунд не продвигается, начинает заново ([LoadRelief] Seconds, RecipeSeconds, DropWalk).
+Workers find their next task faster in big task areas (mining, digging, many trees): the search uses a real-time budget per frame instead of pausing every few tasks.	Рабочие быстрее находят следующую задачу в больших зонах (добыча, копание, много деревьев): поиск использует бюджет реального времени на кадр, а не останавливается каждые несколько задач.
+Workers go on to their next task sooner: the wait after a task is 2 AI ticks instead of 10, after a failed one 10 instead of 30 ([QuickNextTask] TicksAfterTask, TicksAfterFailure).	Рабочие быстрее берутся за следующую задачу: ожидание после задачи — 2 тика ИИ вместо 10, после проваленной — 10 вместо 30 ([QuickNextTask] TicksAfterTask, TicksAfterFailure).
+Workers prefer the nearest stockpile instead of walking to fuller ones far away.	Рабочие выбирают ближайший склад, а не идут к более полным далеко.
+Workers start their next task right away, fetch materials from the stockpile that makes the shortest trip to where they are needed, and store a full bag straight after digging, felling or harvesting.	Рабочие сразу берутся за следующую задачу, берут материалы со склада, откуда путь до места назначения короче всего, и относят полную сумку сразу после копания, рубки или сбора урожая.
+Workers start work on their own, help other task groups when theirs is done, react faster, only dig, harvest or clean up what they can store all of, and pick the log, tree or loose item to go for by the walk to it, not the straight line; a quarry keeps its stair steps (never dug away) and a step's task is no longer thrown away and remade while a worker walks to it.	Рабочие сами начинают работу, помогают другим группам задач, когда их задача выполнена, быстрее реагируют, копают, собирают или убирают только то, что могут целиком сложить, и выбирают бревно, дерево или предмет по длине пути до него, а не по прямой; карьер сохраняет свои ступени (их никогда не выкапывают), а задача ступени больше не выбрасывается и не создаётся заново, пока рабочий к ней идёт.
+Workers without a soldier's gear no longer go to fight enemies that come close on their own; they leave them to the soldiers. An order to attack still sends them.	Рабочие без снаряжения солдата больше не идут сами драться с подошедшими врагами; они оставляют их солдатам. Приказ атаковать всё равно их отправляет.
+Workshop blueprints (forge, workbench, lab, smithy, armoury, market, research station) also claim the spot their worker stands on, which the finished building claims: a blueprint placed there before was blocked for good once the workshop was done.	Чертежи мастерских (кузня, верстак, лаборатория, кузница, оружейная, рынок, станция исследований) тоже занимают место, где стоит их рабочий, как и готовое здание: чертёж, поставленный туда раньше, навсегда блокировался, когда мастерскую достраивали.
+World check: 	Проверка мира: 
+World check: {0} area(s) of the world differed	Проверка мира: {0} зон(ы) мира отличались
+Write all errors and exceptions with stack traces to BepInEx/errors.log (modding aid).	Записывать все ошибки и исключения со стеком вызовов в BepInEx/errors.log (для моддинга).
+X-ray (this machine's view only)	Рентген (только на этом компьютере)
+X-ray off.	Рентген выключен.
+X-ray: only the ore	Рентген: только руда
+X-ray: the walls of mines, tunnels and caves	Рентген: стены шахт, туннелей и пещер
+Your	Ваш
+Zoom	Масштаб
+a bricktron	бриктрон
+a building or blueprint near	здание или чертёж рядом
+a door, or an obstacle the route search would avoid, in it	в нём дверь или препятствие, которое обходит поиск пути
+a felled tree	срубленное дерево
+a sapling near	саженец рядом
+a spot	место
+a stockpile's goods	товары склада
+a tree	дерево
+a worker could not get to it; left alone for 	рабочий не смог до него добраться; оставлено на 
+a worker could not get to it; left alone for {0} s more	рабочий не смог до него добраться; оставлено ещё на {0} с
+another blueprint	другой чертёж
+another station	другая станция
+another task	другая задача
+belongs to another player	принадлежит другому игроку
+blue crystal	синий кристалл
+blueprint cost	цена чертежа
+bricktron, job, building, resource ...	бриктрон, профессия, здание, ресурс ...
+chainmail {0}	кольчуга {0}
+claimed by another worker's cleanup	занято уборкой другого рабочего
+close {0}	закрыть {0}
+dark crystal	тёмный кристалл
+dark crystals	тёмные кристаллы
+dark iron	тёмное железо
+dark steel	тёмная сталь
+dark wood	тёмное дерево
+enemy killed	враг убит
+find failed	не найдено
+flying home	летит домой
+flying home, ~	летит домой, ~
+flying home, ~{0} s	летит домой, ~{0} с
+giant bricktron	бриктрон-великан
+giant bricktrons can be made	можно делать бриктронов-великанов
+giant bricktrons: 	бриктроны-великаны: 
+goal not on the mesh	цель не на навигационной сетке
+group changed	группа изменилась
+have <b>	есть <b>
+have <b>{0}</b>	есть <b>{0}</b>
+idle while work: 	без дела при наличии работы: 
+in all <color=	всего <color=
+in all <color={0}><b>{1}</b></color> → <b>{2}</b>	всего <color={0}><b>{1}</b></color> → <b>{2}</b>
+in progress	в процессе
+inside the Auto cleanup task's zone: its crew picks it up	в зоне задачи автоуборки: её бригада подберёт
+it found nothing in the task it could do (see the problems log, F9)	в задаче не нашлось ничего, что он мог бы сделать (см. лог проблем, F9)
+it is still busy with 	он ещё занят: 
+labor work: 	работа: 
+line leaves the graph at 	линия выходит из графа в 
+load finished	загрузка завершена
+load started	загрузка начата
+loose item with no place to stand by it	предмет на земле, рядом с которым негде встать
+may spawn	может появиться
+maybe reachable: 	возможно, доступно: 
+mesh not ready	сетка не готова
+moved to another task	переведён на другую задачу
+near a tree	рядом с деревом
+needs {0} energy	нужно {0} энергии
+next task	следующая задача
+next task predicted: 	предсказана следующая задача: 
+next task: 	следующая задача: 
+no navigation graph	нет навигационного графа
+no place reaches the target	ни одно место не ведёт к цели
+no plain step to it from the voxel before	к нему нет простого шага от предыдущего вокселя
+no player for the task's team	нет игрока для команды задачи
+no room	нет места
+no room above	нет места сверху
+no route	нет маршрута
+no route on the map	нет маршрута по карте
+no route on the mesh	нет маршрута по сетке
+no storage with room for it	нет склада с местом для этого
+no task area	нет зоны задачи
+no team build task	нет общей стройки команды
+not clear	не свободно
+not flat ground at the line's height and surface	земля на высоте и поверхности линии не ровная
+not loading	не загружается
+not loose	не лежит свободно
+not started	не начато
+nothing built	ничего не построено
+nothing under the mouse	под мышью ничего нет
+only the host answered	ответил только хост
+open {0}	открыть {0}
+orange crystal	оранжевый кристалл
+origin not a place of the graph	начало не является местом графа
+origin not on the mesh	начало не на навигационной сетке
+out of reach (marked unreachable)	вне досягаемости (отмечено недоступным)
+path failed: 	путь не найден: 
+plant fibre	растительное волокно
+player {0}	игрок {0}
+raw iron	сырое железо
+reachable again: 	снова доступно: 
+reserved by a task	забронировано задачей
+reserved by another worker	забронировано другим рабочим
+respawn in 	возрождение через 
+respawn in {0} s	возрождение через {0} с
+route ends at 	маршрут заканчивается в 
+route ends at {0}, not at the goal 	маршрут заканчивается в {0}, не у цели 
+route not walkable	по маршруту нельзя пройти
+route too long	маршрут слишком длинный
+search not set up	поиск не настроен
+shield blue	синий щит
+step {0} for 	шаг {0} для 
+still waiting	всё ещё ждёт
+target kind 	тип цели 
+target not reached	цель не достигнута
+target too big: 	цель слишком большая: 
+task end: 	конец задачи: 
+the ground or a block	земля или блок
+the host	хост
+the map reaches it now	теперь карта до него доходит
+the route's presence test refuses it (a unit or blocker)	проверка присутствия на маршруте не пускает (юнит или преграда)
+the task cannot take it	задача не может это взять
+the task has nothing to do right now	задаче сейчас нечего делать
+the task is paused	задача на паузе
+the task never started, let go: {0}	задача так и не началась, отпущено: {0}
+the worker cannot reach it and there is no place to stand right below it	рабочий не может до него добраться, и прямо под ним негде встать
+the worker cannot reach it, nor pick it up from the foot of it	рабочий не может до него добраться и не может подобрать его снизу
+the worker's hands are not free	у рабочего заняты руки
+the {0}	{0}
+the {0} {1} m away	{0} в {1} м
+too close	слишком близко
+under way	в процессе
+unit returns	юнит возвращается
+waited, now 	подождал, теперь 
+walk failed: 	не удалось пройти: 
+work cond: 	условие работы: 
+x as big, everything it does 	раза больше, всё делает в 
+x as fast, 	раза быстрее, 
+x as much, and it still counts as one bricktron. The other worker is sacrificed and does not come back.	раза больше и всё равно считается одним бриктроном. Второго рабочего приносят в жертву, он не вернётся.
+x health, carries 	× здоровья, несёт в 
+{0}\nClick to research it for {1}.	{0}\nНажмите, чтобы исследовать за {1}.
+{0}\nCosts {1}, after tier {2}.	{0}\nСтоит {1}, после уровня {2}.
+{0}\nCosts {1}: the stockpiles do not hold that much that is not reserved.	{0}\nСтоит {1}: на складах нет столько незабронированного.
+{0}\nTier {1} is 	{0}\nУровень {1} — 
+{0}  <color=#999999>Lv {1}/{2}</color>	{0}  <color=#999999>Ур. {1}/{2}</color>
+{0} (Autosave)	{0} (автосохранение)
+{0} (base {1}, with exclusions {2}, current {3}, holds {4})	{0} (база {1}, с исключениями {2}, сейчас {3}, держит {4})
+{0} (beast soul)	{0} (душа зверя)
+{0} (default {1})	{0} (по умолчанию {1})
+{0} (max missing support {1})	{0} (макс. нехватка опоры {1})
+{0} ({1} children)	{0} ({1} потомков)
+{0} ({1} left to build)	{0} (осталось построить: {1})
+{0} ({1} now)	{0} (сейчас {1})
+{0} Click it in the queue below to cancel it.	{0} Нажмите на него в очереди ниже, чтобы отменить.
+{0} HZ	{0} ГЦ
+{0} MB, lines every 256 MB	{0} МБ, линии каждые 256 МБ
+{0} MB, top 	{0} МБ, топ 
+{0} MIN	{0} МИН
+{0} Restart to apply.	{0} Нужен перезапуск.
+{0} Stored on weapon stands; a bricktron that equips it unpacks it.	{0} Хранится на оружейных стойках; бриктрон, взявший его, распаковывает набор.
+{0} after 	{0} после 
+{0} applies when its feature is switched on.	{0} действует, когда включена её функция.
+{0} armour {1}	{0}: броня {1}
+{0} at 	{0} в 
+{0} at the home crystal.	{0} у домашнего кристалла.
+{0} at {1}.	{0} в {1}.
+{0} blocks	{0} блоков
+{0} blueprint {1}	{0}: чертёж {1}
+{0} bricktrons (	{0} бриктронов (
+{0} bricktrons: {1} working, {2} idle, {3} fighting	{0} бриктронов: {1} работают, {2} без дела, {3} в бою
+{0} can't start {1}: {2}	{0} не может начать «{1}»: {2}
+{0} chunks read; {1} empty under the ground; ore: orange {2}, blue {3}, iron {4}, coal {5}	{0} кусков прочитано; {1} пусто под землёй; руда: оранжевая {2}, синяя {3}, железо {4}, уголь {5}
+{0} crystals. Share code: 	{0} кристаллов. Код для обмена: 
+{0} entries: {1} errors, {2} warnings. Click one for details.	{0} записей: {1} ошибок, {2} предупреждений. Нажмите на одну для подробностей.
+{0} fps   	{0} FPS   
+{0} fps, lines at 30 and 60	{0} FPS, линии на 30 и 60
+{0} frame {1}, loading {2}, frozen {3} s\n{4}\n	{0} кадр {1}, загрузка {2}, заморожено {3} с\n{4}\n
+{0} helm {1}	{0}: шлем {1}
+{0} icon	{0}: значок
+{0} is now a giant bricktron.	{0} теперь бриктрон-великан.
+{0} matches	{0} совпадений
+{0} min	{0} мин
+{0} minutes (half way). You always get less value back than you give.	{0} минут (половина). Назад всегда получаете меньше, чем отдали.
+{0} minutes), so trades further down the queue can cost a little more.	{0} минут), поэтому сделки дальше в очереди могут стоить чуть дороже.
+{0} ms	{0} мс
+{0} ms ({1}x)	{0} мс ({1}×)
+{0} ms)	{0} мс)
+{0} of 	{0} из 
+{0} of this task no bricktron can get to; what rests on them waits for them.	{0} этой задачи, до которых не добраться ни одному бриктрону; то, что на них опирается, ждёт их.
+{0} on 	{0} на 
+{0} rally point. Right click or Esc cancels.	{0}: точку сбора. ПКМ или Esc — отмена.
+{0} result={1} after 	{0} результат={1} через 
+{0} returns	{0} возвращается
+{0} s, it was stopped	{0} с, остановлено
+{0} s, yielded 	{0} с, отдал 
+{0} set to {1}.	{0}: назначен(а) роль «{1}».
+{0} sets	{0} комплектов
+{0} shield {1}	{0}: щит {1}
+{0} spawn points, {1} far enough ({2} blocks). Click a pillar, then the ground, to move it.	{0} точек появления, {1} достаточно далеко ({2} блоков). Нажмите на столб, затем на землю, чтобы передвинуть его.
+{0} starting points (numbered on the picture), {1} {2}.	{0} стартовых точек (номера на картинке), {1} {2}.
+{0} starts, 	{0} запусков, 
+{0} switched 	{0} переключено: 
+{0} tier {1} ({2})	{0}, уровень {1} ({2})
+{0} voters, {1} chunks, {2} differing once, {3} out of sync	{0} голосов, {1} кусков, {2} отличались один раз, {3} рассинхронизированы
+{0} with the blueprint at 	{0} с чертежом в 
+{0} within {1} blocks of where the camera looks.	{0} в пределах {1} блоков от точки взгляда камеры.
+{0} world differed from the other players' in {1} area(s) and was corrected ({2} voxels and blocks).	Мир {0} отличался от мира других игроков в {1} зон(ах) и был исправлен ({2} вокселей и блоков).
+{0} {1} for {2} {3} right now (the stockpiles hold {4} {5}). Every trade costs a {6}% fee, and a good gets dearer the more it is traded (back to normal over about 	{0} {1} за {2} {3} прямо сейчас (на складах {4} {5}). Каждая сделка стоит {6}% комиссии, и товар дорожает, чем больше им торгуют (возвращается к норме примерно за 
+{0} {1} s ago	{0} {1} с назад
+{0} {1}/{2} open ({3} not valid, {4} demolish, {5} stale workers, {6} blueprints not buildable), {7} crew	{0} {1}/{2} открыто ({3} недопустимо, {4} снос, {5} устаревших рабочих, {6} чертежей нельзя построить), бригада {7}
+{0} | holds 	{0} | держит 
+{0} | own stockpiles {1}, with room {2}: 	{0} | свои склады {1}, с местом {2}: 
+{0} | worker {1} can carry it: {2}, best storage: 	{0} | рабочий {1} может унести: {2}, лучший склад: 
+{0}, block {1}, centre offset 	{0}, блок {1}, смещение центра 
+{0}, cells 	{0}, клеток 
+{0}, {1} blocks away{2}	{0}, {1} блоков отсюда{2}
+{0}. Each tier is researched once and works at once.	{0}. Каждый уровень исследуется один раз и действует сразу.
+{0}.{1} not found	{0}.{1} не найдено
+{0}: click to cancel it; its price is released.	{0}: нажмите, чтобы отменить; цена возвращается.
+{0}: click to take it out of the queue	{0}: нажмите, чтобы убрать из очереди
+{0}: coarse {1} nodes, straightened {2}, walked {3} voxels	{0}: грубо {1} узлов, выпрямлено {2}, пройдено {3} вокселей
+{0}: item {1} holds 	{0}: предмет {1} держит 
+{0}: its feature is off in this session, so the mod has not read it; the value is kept as text and applies when the feature is switched on.	{0}: её функция выключена в этой сессии, поэтому мод не прочитал значение; оно хранится как текст и применится, когда функцию включат.
+{0}: its hits do Damage times its base unit's.	{0}: его удары наносят урон (Damage) × урон базового юнита.
+{0}: no route node	{0}: нет узла маршрута
+{0}: repath 	{0}: перерасчёт пути 
+{0}: route of {1} voxels	{0}: маршрут из {1} вокселей
+{0}: takes 1/Health of the damage its base unit would.	{0}: получает 1/Health от урона, который получил бы базовый юнит.
+{0}: the recipe waits while there is enough.	{0}: рецепт ждёт, пока запаса хватает.
+{0}: the stockpiles hold {1}.	{0}: на складах {1}.
+{0}: walk blocked at 	{0}: путь перекрыт в 
+{0}: walks and runs Speed times as fast as its base unit.	{0}: ходит и бегает в Speed раз быстрее базового юнита.
+{0}: {1} failed: {2}	{0}: {1} — ошибка: {2}
+{0}; no way round within {1} blocks	{0}; нет обхода в пределах {1} блоков

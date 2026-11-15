@@ -1,0 +1,173 @@
+, carries 
+, cells 
+, centre offset 
+, coal 
+, corrected for 
+, current 
+, descriptor block 
+, direction) return true end\nh.StepChanged = _m.onResourceTypeKeptChanged\n--quarry.options.limit
+, faction ready 
+, frame 
+, from 
+, from {0} ({1})
+, frozen 
+, get 
+, gives up
+, heat 
+, hidden renderers 
+, holds 
+, host ready: 
+, iron 
+, its queue entry was another object; removed by id
+, last rejects: {0}
+, left to the game
+, level ready 
+, loading 
+, looping
+, menu opened again
+, missing scripts x
+, multithreaded
+, not at the goal 
+, not one of its cells
+, not pulled:
+, paused
+, pieces 
+, pulled:
+, reachable source 
+, recipe 
+, render target 
+, terrain loaded 
+, the game searches
+, under 
+, unmeasured 
+, wait 
+, walked 
+, waves every 
+, waves every {0} min
+, which is not in its queue
+, with exclusions 
+, with room 
+, work steps 
+, {0} down
+, {0} garbage collections
+, {0} on the same task for over 2 min
+, {0} up
+---- idle log started 
+---- scene 
+---- trace started 
+---- trace stopped 
+-------\n--task.priority\n
+---is paused\ndo\n
+---menu: right bar\ndo\n
+---{0}: drawn in C# (Castle Story Plus)\n_m.{1} = {2}\n
+--panels: drawn in C# (Castle Story Plus)\n
+--quarry.options.KeepBrimstone\ndo\n
+--quarry.options.KeepIron\ndo\n
+--quarry.options.keepStone\ndo\n
+-i -selection clipboard
+-o -selection clipboard
+-{0}% arrow and bolt damage taken
+-{0}% arrow spread
+-{0}% energy for a new bricktron
+-{0}% magic and explosion damage taken
+-{0}% melee damage taken
+-{0}% reload time
+-{0}% stamina per block, +{1} degrees block arc
+. Each tier is researched once and works at once.
+/Jeu/Metadata/{0}
+1 CurrentWork
+1 match
+100% critrate: off
+100% critrate: on
+2 PendingWork
+2x damage
+3 LookForWork
+4 Autonomy
+5 VoxelPresence
+: click to cancel it; its price is released.
+: click to take it out of the queue
+: coarse 
+: connection ready 
+: drawn in C# (Castle Story Plus)\n_m.
+: item 
+: its feature is off in this session, so the mod has not read it; the value is kept as text and applies when the feature is switched on.
+: its hits do Damage times its base unit's.
+: no limit
+: no limit.
+: no route node
+: not enough sets.
+: repath 
+: route of 
+: stock 
+: takes 1/Health of the damage its base unit would.
+: the recipe waits while there is enough.
+: the stockpiles do not hold that much that is not reserved.
+: the stockpiles hold 
+: walk blocked at 
+: walks and runs Speed times as fast as its base unit.
+:Get64()
+:Get64()\nh.IconSize = ||32\nh.IconColor = ||
+:Get64())
+; also set on the home crystal's task).
+; most allocated by 
+; no way round within 
+</b>  <color=#999999>
+</b></color>\n
+</b></color> → <b>
+</color>
+</color>  
+</color> <color=
+</color></size>
+<b>{0}</b>  <color=#999999>{1}</color>  
+<color=
+<color=#999999>not researched</color>
+<color=#e0e0e0>
+<color=#e64d38>
+<color=#ffc50a><b>
+<color=#ffc50a><b>{0}</b></color>\n{1}
+<color=#ffcc40>Tier 
+<color=#ffcc40>Tier {0} {1}</color>
+<color={0}>{1} {2}/{3}</color>
+<color={0}>{1} {2}</color> <color={3}>({4})</color>
+>> EndWork 
+>> EndWork {0} result=
+A "Random World" map in the new game list, made from a seed with noise: choose archipelago, continent or highlands, small to large, forest, winter or desert, how many trees, boulders, surface and deep ore, and a seed (UUID) on the new game screen, and the map's picture shows the world. Floating islands joined by grass routes (land bridges over the sky), with forests, plants, boulders, iron and pyrite, starting points, neutral crystals and corruptron spawn points (all gamemodes).
+A 3 x 3 stockpile holding three times as much as the normal one.
+A big storage hall holding 4500 resources of any kind; workers store and fetch inside. Can turn stored stone into bricks (a switch in its menu).
+A breastplate with a warding rune against magic and blasts.
+A bricktron reserves the kit (or the free place for its kit) on the weapon stand it sets out for, so others go to another stand instead of running to the same last kit or place.
+A bricktron shut in a hole (a pit dug too deep, a closed-off pocket) digs its own way out to the nearest place on its team's routes, also while it keeps trying tasks it cannot reach from there: steps one block up or down at most, terrain only, without drops (needs UnreachableTasks for the route map).
+A build task with blueprints and workers that has not finished a block this long is reset: blueprints tried again, its workers look for work afresh (0: off).
+A cheap, weak door. Your bricktrons walk through, enemies have to break it.
+A dead worker's firefly respawns for a flat 100 energy instead of the price of a new bricktron; it carries no refund, so the respawn costs exactly that.
+A demolished or deconstructed stockpile (also the large one), warehouse, workshop or weapon stand drops what it holds on the ground instead of destroying it.
+A door in a wall. Your bricktrons walk through, enemies have to break it.
+A drag build (a row of blocks) stops when the mouse button is no longer held, also when it was let go over the interface or outside the window.
+A dying bricktron drops its gear (weapons, shields, hats, bags) on the ground instead of losing it with the corpse.
+A favourite: it stays in this list. Click to take the mark off.
+A finished order always leaves the workshop's queue: the game removed it by object, and an entry read again from the synced queue was another object, so a queue that did not loop made the same order again and again. It is now matched by recipe id.
+A frame longer than this many milliseconds is a spike: logged with what took the time.
+A geared crank on the crossbow. Faster reload between bolts.
+A giant bricktron cannot be upgraded or sacrificed.
+A halberdier's poleaxe and kettle hat in one bundle.
+A knight's sword, shield and helmet in one bundle.
+A load nothing can store is put down near the gather point when that is at most this many blocks away, else where the worker stands.
+A loaded worker that stood without work, idled or failed tasks this long without getting rid of any of its load is sent to store it or put it down (0: off).
+A looping workshop queue with several recipes takes turns: a recipe that has waited 20 seconds for an ingredient no stockpile holds goes to the back, and a recipe whose ingredients are in stock starts instead.
+A new Invasion world can have its enemy waves come every 5, 10 (default), 15, 20 or 30 minutes, chosen under the difficulty on the new game screen; saved with the world.
+A player's order always wins: while it waits or runs, the bricktron's instinct does not send it to fight and its own or its task's orders do not replace it, and a stroke or shot that may not be interrupted is broken off so the order starts at once.
+A post of its own for each unit: "Set post" in the action wheel keeps the place each selected unit stands on, "Back to post" sends them there, and a call to arms sends units with a post there instead of to their class's rally point.
+A quarry's depth can be changed at any time, also while it is being dug, with + and - over a depth button in the quarry menu; quarries can go 3 times as deep as before.
+A ranged fighter (archer, arbalist, slinger, alchemist, artificer) whose shots at an enemy in range would hit the castle or rock in between walks to a nearby place with a clear shot (the wall's edge) and shoots from there, instead of standing still or running out; holding its place, it does not climb or drop down to fight an enemy hand to hand.
+A rope bridge between two points, so bricktrons can walk across gaps.
+A stockpile holds several resources at once: each of its four columns holds one resource type.
+A strong door that holds out longest against enemies. Your bricktrons walk through.
+A task can be paused instead of deleted (pause button next to delete): no bricktron works on it until it is resumed, and it keeps its blueprints and zones; its crew are released and put back when it is resumed; saved with the task.
+A thicker helm. Soldiers have more health.
+A weapon stand can be limited to some soldier classes: select the stand and pick the classes whose gear may be put on it (knight, archer, arbalist, alchemist, artificer, halberdier). Gear of the other classes is no longer brought there; what is already on it stays. Saved with the stand and synced to the other players.
+A weapon stand holds the weapons and armour of all soldier classes at once (as many weapons, props and hats as before, any classes mixed); equipping takes one whole kit of a single class (see [MixedRacks]).
+A wooden slab is also held from the side, by a plank right next to it that the game's rule holds (one step out, no endless chains), so a slab laid beside a finished walkway can be built.
+A worker brings what you give to the market and trades it. Every trade costs a 
+A worker brings what you give to the market and trades it. Every trade costs a {0}% fee, and a resource gets more expensive the more it is traded, back to normal over about 
+A worker fetching from a stockpile takes any item of the kind there, instead of failing when the one item the game picked was taken by another worker first.
+A worker reserves the resources it sets out to fetch (a loose item, or as many items of a stockpile as it will take), so other workers fetch elsewhere instead of walking to the same ones.
