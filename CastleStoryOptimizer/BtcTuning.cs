@@ -30,7 +30,153 @@ namespace CastleStoryOptimizer
             if (_asm == null) return;
             FindNoLayoutTypes();
             Throttles(h);
+            Spikes(h);
             if (profile) Profile(h);
+        }
+
+        // ---------- 4. Переборы сцены и мусор (пики) ----------
+        private static FieldInfo _userByConn, _crystalNext;
+        private static int _sceneHandle = int.MinValue;
+        private static string _sceneKey;
+        private static readonly Dictionary<string, string[]> KeyNames = new Dictionary<string, string[]>();
+        private static readonly MethodInfo ConcatObj = AccessTools.Method(typeof(string), nameof(string.Concat), new[] { typeof(object), typeof(object) });
+
+        private static void Spikes(Harmony h)
+        {
+            // a) статистика: FindObjectsOfType<User>() раз в секунду (~50 мс) → готовый список игроков игры
+            try
+            {
+                var t = FindType("BtcMatchStatsNet");
+                var m = t == null ? null : AccessTools.Method(t, "RefreshUsers");
+                _userByConn = t == null ? null : AccessTools.Field(t, "UserByConn");
+                if (m != null && _userByConn != null)
+                {
+                    h.Patch(m, prefix: new HarmonyMethod(typeof(BtcTuning), nameof(RefreshUsersPrefix)) { priority = Priority.Last });
+                    Plugin.Log.LogInfo("BetterThanCastle: поиск игроков для статистики без перебора сцены.");
+                }
+            }
+            catch (Exception e) { Plugin.Log.LogWarning("BetterThanCastle: поиск игроков не ускорен: " + e.Message); }
+
+            // b) их сетевая диагностика: FindObjectsOfType<NetworkIdentity>() раз в 30 с (~40 мс) — только для их лога
+            try
+            {
+                var t = FindType("BtcNetId");
+                var scan = t == null ? null : AccessTools.Method(t, "Scan");
+                if (scan != null) h.Patch(scan, prefix: new HarmonyMethod(typeof(BtcTuning), nameof(SkipPrefix)));
+                var key = t == null ? null : AccessTools.Method(t, "GetSceneKey");
+                if (key != null) h.Patch(key, prefix: new HarmonyMethod(typeof(BtcTuning), nameof(SceneKeyPrefix)));
+                Plugin.Log.LogInfo("BetterThanCastle: сетевая диагностика без перебора сцены, ключ сцены без мусора.");
+            }
+            catch (Exception e) { Plugin.Log.LogWarning("BetterThanCastle: сетевая диагностика: " + e.Message); }
+
+            // c) Discord: счёт кристаллов (2 перебора сцены) раз в 6 с → раз в 60 с
+            try
+            {
+                var t = FindType("BtcDiscord");
+                var m = t == null ? null : AccessTools.Method(t, "CrystalScore");
+                _crystalNext = t == null ? null : AccessTools.Field(t, "crystalNext");
+                if (m != null && _crystalNext != null)
+                    h.Patch(m, postfix: new HarmonyMethod(typeof(BtcTuning), nameof(CrystalScorePostfix)));
+            }
+            catch (Exception e) { Plugin.Log.LogWarning("BetterThanCastle: Discord: " + e.Message); }
+
+            // d) хоткеи камеры/групп: "prefix_" + число каждый кадр → готовые строки
+            try
+            {
+                var t = FindType("CameraBookmarkHotkey");
+                int n = 0;
+                if (t != null)
+                    foreach (var m in t.GetMethods(BindingFlags.Instance | BindingFlags.Static | BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.DeclaredOnly))
+                    {
+                        if (m.IsAbstract || m.ContainsGenericParameters || m.GetMethodBody() == null || !HasBoxConcat(m)) continue;
+                        h.Patch(m, transpiler: new HarmonyMethod(typeof(BtcTuning), nameof(KeyNameTranspiler)));
+                        n++;
+                    }
+                Plugin.Log.LogInfo("BetterThanCastle: хоткеи камеры без мусора (методов: " + n + ").");
+            }
+            catch (Exception e) { Plugin.Log.LogWarning("BetterThanCastle: хоткеи камеры: " + e.Message); }
+        }
+
+        private static bool RefreshUsersPrefix()
+        {
+            try
+            {
+                var dict = _userByConn.GetValue(null) as Dictionary<int, Brix.Game.User>;
+                var mgr = Brix.Network.UNetManager.instance;
+                if (dict == null || mgr == null || mgr.UserList == null) return true;
+                dict.Clear();
+                foreach (var u in mgr.UserList)
+                {
+                    if (u == null) continue;
+                    var c = u.connectionToClient;
+                    if (c != null) dict[c.connectionId] = u;
+                }
+                return false;
+            }
+            catch { return true; }
+        }
+
+        private static bool SkipPrefix() { return false; }
+
+        private static bool SceneKeyPrefix(ref string __result)
+        {
+            var sc = UnityEngine.SceneManagement.SceneManager.GetActiveScene();
+            if (sc.GetHashCode() != _sceneHandle || _sceneKey == null)
+            {
+                _sceneHandle = sc.GetHashCode();
+                _sceneKey = sc.buildIndex + ":" + sc.name;
+            }
+            __result = _sceneKey;
+            return false;
+        }
+
+        private static void CrystalScorePostfix()
+        {
+            try
+            {
+                float next = (float)_crystalNext.GetValue(null);
+                float want = Time.unscaledTime + 60f;
+                if (next < want) _crystalNext.SetValue(null, want);
+            }
+            catch { }
+        }
+
+        private static bool HasBoxConcat(MethodBase m)
+        {
+            var ins = PatchProcessor.ReadMethodBody(m).ToList();
+            for (int i = 0; i + 1 < ins.Count; i++)
+                if (ins[i].Key == System.Reflection.Emit.OpCodes.Box && (ins[i].Value as Type) == typeof(int)
+                    && ins[i + 1].Value as MethodInfo == ConcatObj) return true;
+            return false;
+        }
+
+        /// <summary>box int32; call string.Concat(object, object) → call KeyName(object, int): строка из кэша, без мусора.</summary>
+        private static IEnumerable<CodeInstruction> KeyNameTranspiler(IEnumerable<CodeInstruction> instructions)
+        {
+            var list = instructions.ToList();
+            var keyName = AccessTools.Method(typeof(BtcTuning), nameof(KeyName));
+            for (int i = 0; i + 1 < list.Count; i++)
+            {
+                if (list[i].opcode == System.Reflection.Emit.OpCodes.Box && (list[i].operand as Type) == typeof(int)
+                    && list[i + 1].operand as MethodInfo == ConcatObj)
+                {
+                    list[i].opcode = System.Reflection.Emit.OpCodes.Nop;
+                    list[i].operand = null;
+                    list[i + 1].opcode = System.Reflection.Emit.OpCodes.Call;
+                    list[i + 1].operand = keyName;
+                }
+            }
+            return list;
+        }
+
+        public static string KeyName(object prefix, int n)
+        {
+            var p = prefix as string;
+            if (p == null) return string.Concat(prefix, n);
+            string[] arr;
+            if (!KeyNames.TryGetValue(p, out arr)) KeyNames[p] = arr = new string[64];
+            if (n < 0 || n >= arr.Length) return p + n;
+            return arr[n] ?? (arr[n] = p + n);
         }
 
         // ---------- 3. Частые дорогие вызовы их мода ----------
