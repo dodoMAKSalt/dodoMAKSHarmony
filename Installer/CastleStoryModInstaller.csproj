@@ -1,0 +1,46 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    Установщик/лаунчер мода. .NET Framework 4.8 есть на любой Windows 10/11,
+    так что другу ничего доставлять не надо — один .exe.
+  -->
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net48</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <LangVersion>latest</LangVersion>
+    <AssemblyName>CastleStoryModInstaller</AssemblyName>
+    <RootNamespace>CastleStoryModInstaller</RootNamespace>
+    <Version>0.16.4</Version>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <ModBin>..\CastleStoryOptimizer\bin\Release</ModBin>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies.net48" Version="1.0.3" PrivateAssets="all" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.IO.Compression.FileSystem" />
+  </ItemGroup>
+
+  <!-- Сначала собираем сам мод -->
+  <ItemGroup>
+    <ProjectReference Include="..\CastleStoryOptimizer\CastleStoryOptimizer.csproj">
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <SkipGetTargetFrameworkProperties>true</SkipGetTargetFrameworkProperties>
+      <SetConfiguration>Configuration=Release</SetConfiguration>
+    </ProjectReference>
+  </ItemGroup>
+
+  <!-- Вшиваем BepInEx и DLL мода внутрь exe -->
+  <ItemGroup>
+    <EmbeddedResource Include="..\BepInEx_win_x64_5.4.23.6.zip" LogicalName="BepInEx.zip" />
+    <EmbeddedResource Include="$(ModBin)\CastleStoryOptimizer.dll" LogicalName="mod/CastleStoryOptimizer.dll" />
+  </ItemGroup>
+
+  <!-- Готовый exe копируем прямо в корень clod -->
+  <Target Name="CopyToRoot" AfterTargets="Build" Condition="'$(Configuration)' == 'Release'">
+    <Copy SourceFiles="$(TargetPath)" DestinationFolder=".." />
+  </Target>
+
+</Project>

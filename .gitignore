@@ -1,0 +1,19 @@
+# Сборка
+bin/
+obj/
+*.user
+.vs/
+__pycache__/
+
+# Готовые exe/архивы (собираются из исходников)
+/CastleStoryModInstaller.exe
+/archive/*.zip
+
+# Декомпилированный код игры (авторское право Sauropod Studio) — не храним
+/decompiled/
+# Инструменты и зависимости (BepInEx zip нужен для сборки установщика — скачать отдельно, см. CLAUDE.md)
+/ILSpy_*.zip
+/BepInEx_win_x64_*.zip
+
+# Логи и отчёты из игры
+/reports/
