@@ -11,7 +11,7 @@ namespace CastleStoryOptimizer
     {
         public const string Guid = "castlestory.optimizer";
         public const string Name = "dodoMAKSharmony";
-        public const string Version = "0.19.13";
+        public const string Version = "0.19.14";
 
         internal static Plugin Instance;
         internal static BepInEx.Logging.ManualLogSource Log;
@@ -94,6 +94,12 @@ namespace CastleStoryOptimizer
             if (PortCompat.Csp && Config.Bind("Workshops", "MaxButton", true,
                     "Кнопка «МАКС» рядом с «+» в списке производства станции (Castle Story Plus): заказать рецепт на всю очередь.").Value)
                 QueueMax.Apply(_harmony);
+
+            if (Config.Bind("AI", "ThinkInTurns", true,
+                    "Под нагрузкой (тяжёлый кадр и большая армия у одной фракции) половина бриктронов думает на каждом шаге, а другая пропускает: ИИ стоит вдвое меньше.").Value)
+                AiStride.Apply(_harmony,
+                    Config.Bind("AI", "ThinkInTurnsMinUnits", 30, "С какого числа юнитов у одной фракции включать «думают по очереди».").Value,
+                    Config.Bind("AI", "ThinkInTurnsFrameMs", 22f, "Включать, когда средний кадр дольше этого числа мс (выключается при 70% от него).").Value);
 
             if (PortCompat.Csp && Config.Bind("Workshops", "CrewMenu", true,
                     "Раздел «Бригада» в меню приказов: − / + максимум бриктронов на выбранной задаче (Shift — на 5).").Value)
@@ -269,6 +275,7 @@ namespace CastleStoryOptimizer
             StepCap.Tick();
             QueueMax.Tick();
             CrewMenu.Tick();
+            AiStride.Tick();
             if (_btcTuning) BtcTuning.Tick();
             if (_stuck != null) { _stuck.Tick(); t = Stamp(MStuck, t); }
             if (_movingFix != null)
