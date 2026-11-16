@@ -126,7 +126,13 @@ namespace CastleStoryModSettings
             LoadModCfg();
             BuildUi();
             FillTree();
-            if (Array.IndexOf(args, "--shot") < 0) Shown += (s, e) => CheckModInstall(false);
+            if (Array.IndexOf(args, "--shot") < 0 && Array.IndexOf(args, "--export-presets") < 0) Shown += (s, e) => CheckModInstall(false);
+            // пресеты для панели «Моды» в лаунчере (js\dodo_presets.json): те же правила, что у кнопок этого окна
+            Shown += (s, e) =>
+            {
+                ExportPresets();
+                if (Array.IndexOf(args, "--export-presets") >= 0) Close(); // headless: выгрузить и выйти
+            };
             // проверка без экрана: --shot файл.png [--original] [--block2] — рисует окно в картинку и выходит
             int si = Array.IndexOf(args, "--shot");
             if (si >= 0 && si + 1 < args.Length)
@@ -578,6 +584,43 @@ namespace CastleStoryModSettings
             for (var p = e.Node.Parent; p != null; p = p.Parent) RefreshNode(p);
             _busy = false;
             UpdateStatus();
+        }
+
+        /// <summary>Результат каждого пресета как «файл|раздел.ключ → вкл/выкл» для JS-панели лаунчера.</summary>
+        private void ExportPresets()
+        {
+            try
+            {
+                if (!LauncherPatch.Exists(_gameDir)) return;
+                var sets = new KeyValuePair<string, Func<Feature, bool?>>[]
+                {
+                    new KeyValuePair<string, Func<Feature, bool?>>("vanilla", f => f.Group.StartsWith(Gameplay) ? false : (bool?)null),
+                    new KeyValuePair<string, Func<Feature, bool?>>("optimization", OptimizationRule),
+                    new KeyValuePair<string, Func<Feature, bool?>>("max", MaxRule),
+                    new KeyValuePair<string, Func<Feature, bool?>>("recommended", f => (bool?)f.Default),
+                };
+                var sb = new StringBuilder("{");
+                for (int i = 0; i < sets.Length; i++)
+                {
+                    if (i > 0) sb.Append(',');
+                    sb.Append('"').Append(sets[i].Key).Append("\":{");
+                    bool first = true;
+                    foreach (var f in _features)
+                    {
+                        var v = sets[i].Value(f);
+                        if (!v.HasValue) continue;
+                        if (!first) sb.Append(',');
+                        first = false;
+                        string file = f.Block == 0 ? CfgName : ModCfgName;
+                        sb.Append('"').Append(file).Append('|').Append(f.Block == 0 ? "Features" : f.Section).Append('.').Append(f.Key).Append("\":").Append(v.Value ? "true" : "false");
+                    }
+                    sb.Append('}');
+                }
+                sb.Append('}');
+                File.WriteAllText(Path.Combine(Path.Combine(Path.Combine(Path.Combine(_gameDir, "resources"), "app"), "app"), Path.Combine("js", "dodo_presets.json")),
+                    sb.ToString(), new UTF8Encoding(false));
+            }
+            catch { /* лаунчер не обязателен */ }
         }
 
         private void Preset(Func<Feature, bool?> rule)

@@ -126,6 +126,7 @@
     search.placeholder = 'Поиск по названию или описанию…';
     var counter = el('span', 'margin-left:12px;font-size:14px;color:#555;', '');
     bar.appendChild(search); bar.appendChild(counter);
+    var presetBar = el('div', 'padding:8px 16px;display:flex;flex-wrap:wrap;gap:8px;border-bottom:2px solid #ddd;background:#fafafa;');
     var list = el('div', 'overflow-y:auto;flex:1;padding:6px 16px 16px;');
     var note = el('div', 'padding:6px 16px;font-size:12px;color:#777;border-top:2px solid #ddd;',
       'Изменения записываются сразу в конфиги модов и действуют со следующего запуска игры. Остальные настройки (числа, клавиши) — в программе dodoMAKSharmony-Settings.');
@@ -175,8 +176,41 @@
       data.forEach(function (d) { if (d.cfg) d.cfg.entries.forEach(function (e) { total++; if (e.value) on++; }); });
       counter.textContent = 'включено ' + on + ' из ' + total + ' (всего функций)';
     }
+    // пресеты: файл dodo_presets.json выгружает программа настроек (те же правила, что у её кнопок)
+    var presets = null;
+    try { presets = JSON.parse(fs.readFileSync(path.join(__dirname, 'dodo_presets.json'), 'utf8')); } catch (e) { }
+    function applyPreset(name) {
+      var map = presets && presets[name];
+      if (!map) { alert('Пресеты ещё не выгружены: один раз открой программу dodoMAKSharmony-Settings, и они появятся здесь.'); return; }
+      data.forEach(function (d) {
+        if (!d.cfg) return;
+        var changed = false;
+        d.cfg.entries.forEach(function (e) {
+          var id = d.meta.file + '|' + e.section + '.' + e.key;
+          if (Object.prototype.hasOwnProperty.call(map, id) && e.value !== map[id]) {
+            e.value = map[id];
+            d.cfg.lines[e.line] = e.key + ' = ' + (e.value ? 'true' : 'false');
+            changed = true;
+          }
+        });
+        if (changed) { try { saveCfg(d.cfg); } catch (err) { alert('Не удалось сохранить: ' + err.message); } }
+      });
+      render();
+    }
+    [
+      ['vanilla', 'Как в оригинале', 'Выключить ВСЕ геймплейные изменения обоих модов. Интерфейс, ускорения и исправления остаются.'],
+      ['max', 'Оптимизация максимум', 'Всё для скорости и стабильности: оптимизации, исправления, лёгкий ИИ; остальное выключается. Мультиплеер не трогается.'],
+      ['optimization', 'Включить оптимизацию', 'Включить всё про скорость, остальное не трогать.'],
+      ['recommended', 'Рекомендуемые', 'Значения по умолчанию, как задумали авторы.']
+    ].forEach(function (p) {
+      var b = el('button', 'font-size:14px;font-weight:bold;padding:6px 12px;cursor:pointer;background:#ffc50a;border:2px solid #000;', p[1]);
+      b.title = p[2];
+      b.onclick = function () { applyPreset(p[0]); };
+      presetBar.appendChild(b);
+    });
+
     search.oninput = render;
-    box.appendChild(head); box.appendChild(bar); box.appendChild(list); box.appendChild(note);
+    box.appendChild(head); box.appendChild(presetBar); box.appendChild(bar); box.appendChild(list); box.appendChild(note);
     wrap.appendChild(box);
     document.body.appendChild(wrap);
     render();
