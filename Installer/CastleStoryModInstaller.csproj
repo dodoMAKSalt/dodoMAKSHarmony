@@ -11,7 +11,7 @@
     <LangVersion>latest</LangVersion>
     <AssemblyName>CastleStoryModInstaller</AssemblyName>
     <RootNamespace>CastleStoryModInstaller</RootNamespace>
-    <Version>0.19.19</Version>
+    <Version>0.19.20</Version>
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
     <ApplicationManifest>app.manifest</ApplicationManifest>
     <ModBin>..\CastleStoryOptimizer\bin\Release</ModBin>

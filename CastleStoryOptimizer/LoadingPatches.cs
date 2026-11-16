@@ -169,6 +169,7 @@ namespace CastleStoryOptimizer
             StationPriorities.OnLevelLoaded();
             WorldSettings.OnLevelLoaded();
             AiStride.Reset();
+            StepCap.OnLevelLoaded();
             AiFixes.OnLevelLoaded(Plugin.AiFastDecisions);
         }
     }
