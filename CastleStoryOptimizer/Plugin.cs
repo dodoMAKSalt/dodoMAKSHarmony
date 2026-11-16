@@ -11,7 +11,7 @@ namespace CastleStoryOptimizer
     {
         public const string Guid = "castlestory.optimizer";
         public const string Name = "dodoMAKSharmony";
-        public const string Version = "0.19.14";
+        public const string Version = "0.19.15";
 
         internal static Plugin Instance;
         internal static BepInEx.Logging.ManualLogSource Log;
@@ -95,7 +95,7 @@ namespace CastleStoryOptimizer
                     "Кнопка «МАКС» рядом с «+» в списке производства станции (Castle Story Plus): заказать рецепт на всю очередь.").Value)
                 QueueMax.Apply(_harmony);
 
-            if (Config.Bind("AI", "ThinkInTurns", true,
+            if (Config.Bind("AI", "ThinkInTurns2", false,
                     "Под нагрузкой (тяжёлый кадр и большая армия у одной фракции) половина бриктронов думает на каждом шаге, а другая пропускает: ИИ стоит вдвое меньше.").Value)
                 AiStride.Apply(_harmony,
                     Config.Bind("AI", "ThinkInTurnsMinUnits", 30, "С какого числа юнитов у одной фракции включать «думают по очереди».").Value,
