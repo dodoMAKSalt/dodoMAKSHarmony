@@ -1,5 +1,6 @@
 <Project Sdk="Microsoft.NET.Sdk">
-  <!-- Меню настроек Castle Story Plus: включить/выключить геймплейные изменения перед запуском игры. -->
+  <!-- Меню настроек модов: включить/выключить функции Castle Story Plus и dodoMAKSharmony перед запуском игры.
+       Мод dodoMAKSharmony вшит внутрь этой программы и ставится в папку плагинов порта одной кнопкой. -->
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
     <TargetFramework>net48</TargetFramework>
@@ -7,14 +8,22 @@
     <LangVersion>latest</LangVersion>
     <AssemblyName>dodoMAKSharmony-Settings</AssemblyName>
     <RootNamespace>CastleStoryModSettings</RootNamespace>
-    <Version>0.19.2</Version>
+    <Version>0.19.3</Version>
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
     <ApplicationManifest>..\Installer\app.manifest</ApplicationManifest>
+    <ModBin>..\CastleStoryOptimizer\bin\Release</ModBin>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies.net48" Version="1.0.3" PrivateAssets="all" />
     <Compile Include="..\Installer\GameLocator.cs" Link="GameLocator.cs" />
     <EmbeddedResource Include="..\CastleStoryOptimizer\Lang\csp_ru.txt" LogicalName="csp_ru.txt" />
+    <!-- Сначала собираем сам мод и вшиваем его DLL -->
+    <ProjectReference Include="..\CastleStoryOptimizer\CastleStoryOptimizer.csproj">
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <SkipGetTargetFrameworkProperties>true</SkipGetTargetFrameworkProperties>
+      <SetConfiguration>Configuration=Release</SetConfiguration>
+    </ProjectReference>
+    <EmbeddedResource Include="$(ModBin)\CastleStoryOptimizer.dll" LogicalName="mod/CastleStoryOptimizer.dll" />
   </ItemGroup>
   <Target Name="CopyToRoot" AfterTargets="Build" Condition="'$(Configuration)' == 'Release'">
     <Copy SourceFiles="$(TargetPath)" DestinationFolder=".." />

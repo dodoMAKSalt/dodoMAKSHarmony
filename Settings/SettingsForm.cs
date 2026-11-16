@@ -111,10 +111,17 @@ namespace CastleStoryModSettings
 
             _gameDir = GameLocator.Find();
             LoadRu();
-            if (_gameDir == null || !LoadCfg()) { BuildError(); return; }
+            if (_gameDir == null || !LoadCfg())
+            {
+                BuildError();
+                if (_gameDir != null && Directory.Exists(Path.Combine(_gameDir, "CastleStoryPlus-Unity6")))
+                    Shown += (s, e) => CheckModInstall(false);
+                return;
+            }
             LoadModCfg();
             BuildUi();
             FillTree();
+            if (Array.IndexOf(args, "--shot") < 0) Shown += (s, e) => CheckModInstall(false);
             // проверка без экрана: --shot файл.png [--original] [--block2] — рисует окно в картинку и выходит
             int si = Array.IndexOf(args, "--shot");
             if (si >= 0 && si + 1 < args.Length)
@@ -138,16 +145,67 @@ namespace CastleStoryModSettings
             }
         }
 
+        private const string CspLink = "https://github.com/Tricky12321/CastleStoryPlus/releases/latest";
+
         private void BuildError()
         {
-            var l = new Label
+            bool noPort = _gameDir != null && !Directory.Exists(Path.Combine(_gameDir, "CastleStoryPlus-Unity6"));
+            string text = _gameDir == null
+                ? "Castle Story не найден в библиотеках Steam.\n\nУстанови игру в Steam и запусти эту программу снова."
+                : noPort
+                    ? "Castle Story Plus (порт игры) ещё не установлен.\n\n1. Скачай CastleStoryPlus-<версия>-windows.zip по ссылке ниже.\n2. Распакуй и запусти install.bat.\n3. Запусти игру один раз и закрой.\n4. Открой эту программу снова."
+                    : "Не найден конфиг Castle Story Plus (" + CfgName + ").\n\nЗапусти игру через Steam один раз и закрой её — конфиг создастся. Потом открой эту программу снова.";
+            var label = new Label { Dock = DockStyle.Top, Height = 190, TextAlign = ContentAlignment.BottomCenter, Text = text, Padding = new Padding(20) };
+            var link = new LinkLabel { Dock = DockStyle.Top, Height = 40, TextAlign = ContentAlignment.TopCenter, Text = CspLink, Visible = noPort };
+            link.LinkClicked += (s, e) => { try { Process.Start(new ProcessStartInfo(CspLink) { UseShellExecute = true }); } catch { } };
+            Controls.Add(link);
+            Controls.Add(label);
+        }
+
+        private string PluginDll
+        {
+            get { return Path.Combine(_gameDir, "CastleStoryPlus-Unity6", "BepInEx", "plugins", "CastleStoryOptimizer", "CastleStoryOptimizer.dll"); }
+        }
+
+        private static byte[] EmbeddedMod()
+        {
+            using (var s = typeof(SettingsForm).Assembly.GetManifestResourceStream("mod/CastleStoryOptimizer.dll"))
             {
-                Dock = DockStyle.Fill, TextAlign = ContentAlignment.MiddleCenter,
-                Text = _gameDir == null
-                    ? "Castle Story не найден в библиотеках Steam."
-                    : "Не найден конфиг Castle Story Plus:\n" + CfgName + "\n\nЗапусти игру через порт один раз — он создастся."
-            };
-            Controls.Add(l);
+                if (s == null) return null;
+                var ms = new MemoryStream();
+                s.CopyTo(ms);
+                return ms.ToArray();
+            }
+        }
+
+        private static bool SameBytes(byte[] a, byte[] b)
+        {
+            if (a.Length != b.Length) return false;
+            for (int i = 0; i < a.Length; i++) if (a[i] != b[i]) return false;
+            return true;
+        }
+
+        /// <summary>Мод dodoMAKSharmony зашит в эту программу: ставим/обновляем его в папку плагинов порта.</summary>
+        private void CheckModInstall(bool force)
+        {
+            var emb = EmbeddedMod();
+            if (emb == null) return;
+            bool exists = File.Exists(PluginDll);
+            if (!force && exists && SameBytes(File.ReadAllBytes(PluginDll), emb)) return;
+            string q = exists
+                ? "В игре стоит другая версия мода dodoMAKSharmony. Обновить до версии " + Application.ProductVersion + "?"
+                : "Мод dodoMAKSharmony ещё не установлен в игру. Установить версию " + Application.ProductVersion + "?";
+            if (!force && MessageBox.Show(this, q, "dodoMAKSharmony", MessageBoxButtons.YesNo, MessageBoxIcon.Question) != DialogResult.Yes) return;
+            try
+            {
+                Directory.CreateDirectory(Path.GetDirectoryName(PluginDll));
+                File.WriteAllBytes(PluginDll, emb);
+                _status.Text = "Мод " + Application.ProductVersion + " установлен в игру.";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(this, "Не удалось установить мод (закрой игру?):\n" + ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void LoadRu()
@@ -251,6 +309,7 @@ namespace CastleStoryModSettings
             var top = new FlowLayoutPanel { Dock = DockStyle.Top, Height = 44, Padding = new Padding(8, 8, 8, 0), WrapContents = false };
             top.Controls.Add(Btn("Как в оригинале", "Выключить ВСЕ геймплейные изменения в обоих модах. Интерфейс, ускорения и исправления остаются.", (s, e) => Preset(f => f.Group.StartsWith(Gameplay) ? false : (bool?)null)));
             top.Controls.Add(Btn("Включить оптимизацию", "Включить всё про скорость: оптимизации и исправления обоих модов и функции ИИ Castle Story Plus, которые разгружают процессор. Остальное не трогать.", (s, e) => Preset(OptimizationRule)));
+            top.Controls.Add(Btn("Оптимизация максимум", "Всё для скорости и стабильности: оптимизации, исправления, лёгкий ИИ рабочих и управление приказами; всё остальное (контент, интерфейсные украшения, отладка, тяжёлая диагностика) выключается. Мультиплеер не трогается.", (s, e) => Preset(MaxRule)));
             top.Controls.Add(Btn("Рекомендуемые", "Как задумали авторы: значения по умолчанию.", (s, e) => Preset(f => (bool?)f.Default)));
             top.Controls.Add(Btn("Включить всё", "Включить все функции (кроме экспериментов и тяжёлой диагностики нашего мода).", (s, e) => Preset(f => (bool?)(f.Block == 0 || f.Default))));
             top.Controls.Add(Btn("Выключить всё", "Выключить вообще все функции обоих модов из списка.", (s, e) => Preset(f => (bool?)false)));
@@ -275,6 +334,7 @@ namespace CastleStoryModSettings
             bottom.Controls.Add(play);
             bottom.Controls.Add(Btn("Сохранить", "Записать выбор в конфиги (вступит в силу при следующем запуске игры).", (s, e) => Save()));
             _status.AutoSize = true; _status.Padding = new Padding(0, 8, 12, 0);
+            bottom.Controls.Add(Btn("Переустановить мод", "Записать мод dodoMAKSharmony в папку плагинов порта заново (если файл повреждён или заменён).", (s, e) => CheckModInstall(true)));
             bottom.Controls.Add(_status);
 
             var searchPanel = new Panel { Dock = DockStyle.Top, Height = 38, Padding = new Padding(8, 4, 8, 4) };
@@ -303,6 +363,29 @@ namespace CastleStoryModSettings
             string hay = (f.Key + " " + f.Ru + " " + f.Group).ToLowerInvariant();
             foreach (var word in _filter.ToLowerInvariant().Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries))
                 if (hay.IndexOf(word, StringComparison.Ordinal) < 0) return false;
+            return true;
+        }
+
+        // Ядро пресета «Оптимизация максимум»: функции ИИ и управления Castle Story Plus, которые снижают нагрузку и чинят приказы
+        private static readonly string[] MaxCspOn =
+        {
+            "AssignNow", "AutoCleanup", "AutoRepair", "BuildJobs", "StuckReset", "StuckEscape", "DirectTask", "WorkerAI",
+            "TaskReservation", "JobBoard", "LoadRelief", "PickUpAround", "FasterTaskSearch", "QuickNextTask",
+            "ResourceReservation", "StockpileChoice", "StockpilePickup", "TaskFlow", "TaskPrediction", "UnreachableTasks",
+            "Pathfinding", "PassThroughAllies", "PlayerOrdersFirst", "CsMenus", "FastQuit",
+        };
+
+        private static bool? MaxRule(Feature f)
+        {
+            if (f.Block == 0)
+            {
+                if (f.Group == "Мультиплеер") return null;
+                if (f.Group == "Производительность и исправления") return true;
+                return Array.IndexOf(MaxCspOn, f.Key) >= 0;
+            }
+            // наш мод: оптимизации, исправления, перевод, мастерские — включить; тяжёлая диагностика и эксперименты — выключить
+            if (f.Group == "Замерщик и диагностика") return f.Key == "Enabled" || f.Key == "ShowOverlayOnStart";
+            if (f.Group == "Эксперименты") return false;
             return true;
         }
 

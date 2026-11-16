@@ -19,3 +19,6 @@ __pycache__/
 /reports/
 /backup_before_port/
 /tools/csp_strings.json
+
+# Готовое меню настроек лежит в release/ (ссылка для друга), в корне — копия сборки
+/dodoMAKSharmony-Settings.exe

@@ -27,6 +27,8 @@ BepInEx 5 плагин (`CastleStoryOptimizer.dll`, GUID `castlestory.optimizer`
 
 - Меню настроек `Settings/` (`dodoMAKSharmony-Settings.exe`, ярлык на рабочем столе): два блока — функции Castle Story Plus (`[Features]` их конфига) и наши (`castlestory.optimizer.cfg`), в каждом подгруппы; пресеты «Как в оригинале» / «Включить оптимизацию». Новая опция нашего мода — добавить строку в таблицу `Ours` в `SettingsForm.cs`.
 
+- Выпуск для друга: после `dotnet build Settings/CastleStoryPlusSettings.csproj -c Release` скопировать `dodoMAKSharmony-Settings.exe` в `release/` и закоммитить (ссылка в `README.md`; DLL мода вшита в exe, меню само ставит/обновляет её в папку плагинов порта). Версия: `Plugin.Version` + `<Version>` в трёх csproj (мод, установщик, Settings).
+
 ## Пути
 - Игра: `C:\Program Files (x86)\Steam\steamapps\common\Castle Story`
   - мод: `BepInEx\plugins\CastleStoryOptimizer\`, конфиг: `BepInEx\config\castlestory.optimizer.cfg`
