@@ -11,7 +11,7 @@ namespace CastleStoryOptimizer
     {
         public const string Guid = "castlestory.optimizer";
         public const string Name = "dodoMAKSharmony";
-        public const string Version = "0.19.1";
+        public const string Version = "0.19.2";
 
         internal static Plugin Instance;
         internal static BepInEx.Logging.ManualLogSource Log;
@@ -72,6 +72,9 @@ namespace CastleStoryOptimizer
             if (PortCompat.Csp && Config.Bind("Language", "TranslateCastleStoryPlus", true,
                     "Переводить на русский мод Castle Story Plus (их меню, подсказки, настройки, новые предметы).").Value)
                 CspTranslator.Apply(_harmony);
+            if (PortCompat.Csp && Config.Bind("Fixes", "FixCspAutoCleanup", true,
+                    "Исправить ошибку Castle Story Plus: из-за уничтоженных предметов в списке уборки бриктроны застывали с песочными часами.").Value)
+                CspFixes.Apply(_harmony);
 
             _stationPriorities = Config.Bind("Workshops", "Enabled", true,
                 "Приоритеты мастерских: выделить печь/верстак и т.п. → клавиши ниже.").Value;

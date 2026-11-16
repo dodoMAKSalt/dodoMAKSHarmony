@@ -77,6 +77,7 @@ namespace CastleStoryModSettings
             new[] { "Fixes", "CollectGarbageAfterLoad", "Загрузка и выход", "Убрать мусор в конце загрузки, на экране загрузки", "true", "На порте не используется." },
             new[] { "Fixes", "FastLoadWaits", "Загрузка и выход", "Убрать паузы по 1 с и искусственное догоняние полосы прогресса", "true", "На порте не используется." },
             new[] { "Compat", "FastExit", "Загрузка и выход", "Быстрый выход по Alt+F4 и «Выход» (на порте ждёт сохранение Castle Story Plus)", "true", "" },
+            new[] { "Fixes", "FixCspAutoCleanup", "Оптимизация и мусор", "Исправление ошибки Castle Story Plus: бриктроны застывали с песочными часами из-за автоуборки", "true", "" },
             new[] { "Fixes", "DisableAnalytics", "Загрузка и выход", "Отключить мёртвую аналитику GameAnalytics (меньше лишних запросов)", "true", "" },
             new[] { "AI", "FastDecisions", Gameplay + "ИИ и мастерские", "Бриктроны быстрее выбирают работу (очередь раздумий короче)", "true", "На порте может не действовать: там это делает Castle Story Plus." },
             new[] { "Workshops", "Enabled", Gameplay + "ИИ и мастерские", "Приоритеты мастерских (клавиши Page Up / Page Down)", "true", "" },
