@@ -11,7 +11,7 @@ namespace CastleStoryOptimizer
     {
         public const string Guid = "castlestory.optimizer";
         public const string Name = "dodoMAKSharmony";
-        public const string Version = "0.19.16";
+        public const string Version = "0.19.17";
 
         internal static Plugin Instance;
         internal static BepInEx.Logging.ManualLogSource Log;
@@ -86,6 +86,10 @@ namespace CastleStoryOptimizer
             if (_stationPriorities && Config.Bind("Workshops", "PieMenuButton", true,
                     "Кнопка «Приоритет» в круговом меню мастерской (ПКМ).").Value)
                 PieMenuPriority.Apply(_harmony);
+
+            if (Config.Bind("Launcher", "Install", true,
+                    "Поставить русский перевод лаунчера игры и кнопку «Моды» в нём (правится index.html лаунчера в resources/app/app, оригинал сохраняется).").Value)
+                LauncherInstaller.Run();
 
             _world = Config.Bind("World", "Enabled", true,
                 "Кнопка «Подробные настройки мира» в лобби: число юнитов, цена и возрождение, добыча энергии, время суток, правила режима.").Value;
