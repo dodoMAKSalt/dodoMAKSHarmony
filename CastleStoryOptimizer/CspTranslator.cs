@@ -47,24 +47,34 @@ namespace CastleStoryOptimizer
 
         private static void Load()
         {
-            using (var s = typeof(CspTranslator).Assembly.GetManifestResourceStream("lang/csp_ru.txt"))
-            using (var r = new StreamReader(s, Encoding.UTF8))
+            // csp_ru.txt — переводы Castle Story Plus; game_ru.txt — английские тексты самой игры -> наш русский
+            // (страховка: на порте часть текстов обучения и справки приходит в UI.Text на английском)
+            foreach (var resource in new[] { "lang/csp_ru.txt", "lang/game_ru.txt" })
             {
-                string line;
-                while ((line = r.ReadLine()) != null)
+                bool game = resource == "lang/game_ru.txt";
+                using (var s = typeof(CspTranslator).Assembly.GetManifestResourceStream(resource))
                 {
-                    int tab = line.IndexOf('\t');
-                    if (tab <= 0) continue;
-                    string en = Unescape(line.Substring(0, tab)), ru = Unescape(line.Substring(tab + 1));
-                    if (Placeholder.IsMatch(en)) AddTemplate(en, ru);
-                    else
+                    if (s == null) continue;
+                    using (var r = new StreamReader(s, Encoding.UTF8))
                     {
-                        Exact[en] = ru;
-                        string t = en.Trim();
-                        if (t != en && !Exact.ContainsKey(t)) Exact[t] = ru.Trim();
-                        // кусок склейки: начинается/кончается пробелом или знаком, достаточно длинный
-                        if (t.Length >= 4 && (en != t || char.IsPunctuation(en[0]) || char.IsPunctuation(en[en.Length - 1])) && HasLetters(t, 3))
-                            Fragments.Add(new KeyValuePair<string, string>(en, ru));
+                        string line;
+                        while ((line = r.ReadLine()) != null)
+                        {
+                            int tab = line.IndexOf('\t');
+                            if (tab <= 0) continue;
+                            string en = Unescape(line.Substring(0, tab)), ru = Unescape(line.Substring(tab + 1));
+                            if (game && (Exact.ContainsKey(en))) continue;
+                            if (Placeholder.IsMatch(en)) AddTemplate(en, ru);
+                            else
+                            {
+                                Exact[en] = ru;
+                                string t = en.Trim();
+                                if (t != en && !Exact.ContainsKey(t)) Exact[t] = ru.Trim();
+                                // кусок склейки: начинается/кончается пробелом или знаком, достаточно длинный
+                                if (!game && t.Length >= 4 && (en != t || char.IsPunctuation(en[0]) || char.IsPunctuation(en[en.Length - 1])) && HasLetters(t, 3))
+                                    Fragments.Add(new KeyValuePair<string, string>(en, ru));
+                            }
+                        }
                     }
                 }
             }

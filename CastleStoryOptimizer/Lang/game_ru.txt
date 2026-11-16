@@ -1,0 +1,1628 @@
+#weekday, #month #monthday, #year	#weekday, #monthday #month #year
+#x has been kicked by the host.	#x был исключен хозяином комнаты.
+#x has joined the game.	#x присоединился к игре.
+#x has left the game.	#x покинул игру.
+#x1 has renamed from #x2.	#x1 сменил имя с #x2.
+#xxx Mouse Button	#xxx кнопка мыши
+(Hidden)	Информация скрыта
+- <color=#ffc50a>Select your workbench.</color> \n\n- At the bottom of your screen, with the workbench pop-up, you can select what you want to craft. \n\n- Click on the <color=#ffc50a>Halberdier Kit</color> to begin production. \n\n- You can queue multiple kits by clicking on the Halberdier kit again. \n\n<color=#ffc50a> Make sure to have an empty weapon rack to store your kits.</color> \n\nA weapon racks can only hold <color=#ffc50a>4 military kits of a single type at once.</color>	- <color=#ffc50a>Select your workbench.</color> \n\n- At the bottom of your screen, with the workbench pop-up, you can select what you want to craft. \n\n- Click on the <color=#ffc50a>Halberdier Kit</color> to begin production. \n\n- You can queue multiple kits by clicking on the Halberdier kit again. \n\n<color=#ffc50a> Make sure to have an empty weapon rack to store your kits.</color> \n\nA weapon racks can only hold <color=#ffc50a>4 military kits of a single type at once.</color>
+- Click on the <color=#ffc50a>Pickaxe</color> on the left side of your screen. \n\n- Select the <color=#ffc50a>Harvest Trees task</color>. \n\n- Place it on some trees. \n\n- Click on the <color=#00ff15>green checkmark</color> at the bottom left of your screen, or press <color=#ffc50a>"Tab"</color> to confirm. \n\nYour Bricktrons will automatically start harvesting some wood for you!	- Click on the <color=#ffc50a>Pickaxe</color> on the left side of your screen. \n\n- Select the <color=#ffc50a>Harvest Trees task</color>. \n\n- Place it on some trees. \n\n- Click on the <color=#00ff15>green checkmark</color> at the bottom left of your screen, or press <color=#ffc50a>"Tab"</color> to confirm. \n\nYour Bricktrons will automatically start harvesting some wood for you!
+- Click on the <color=#ffc50a>Pickaxe</color> on the left side of your screen. \n\n- Select the <color=#ffc50a>Quarry task</color>. \n\n- Place it on <color=##fc50a>empty ground</color>. \n\n- Click on the <color=#00ff15>green checkmark</color> at the bottom left of your screen, or press <color=#ffc50a>"Tab"</color> to confirm. \n\nWhen a stockpile is <color=#ffc50a>completely filled with stone</color>, the stone will turn into <color=#ffc50a>4 bricks</color>. \n	- Click on the <color=#ffc50a>Pickaxe</color> on the left side of your screen. \n\n- Select the <color=#ffc50a>Quarry task</color>. \n\n- Place it on <color=##fc50a>empty ground</color>. \n\n- Click on the <color=#00ff15>green checkmark</color> at the bottom left of your screen, or press <color=#ffc50a>"Tab"</color> to confirm. \n\nWhen a stockpile is <color=#ffc50a>completely filled with stone</color>, the stone will turn into <color=#ffc50a>4 bricks</color>. \n
+- Hold the <color=#ffc50a>Middle Mouse Button</color> to rotate the camera in any angle. \n\n- You can also use the <color=#ffc50a>Q, E, PgUp and PgDn</color> keys to rotate and zoom the camera.	- Hold the <color=#ffc50a>Middle Mouse Button</color> to rotate the camera in any angle. \n\n- You can also use the <color=#ffc50a>Q, E, Z and X</color> keys to rotate and zoom the camera.
+- Make sure you have planks in one of your stockpiles. \n\n- Select the <color=#ffc50a>Structures tab</color>. \n \n- In the Storage section, select the <color=#ffc50a>Weapon Rack</color>. \n\n- Place it on the ground. \n\n- <color=#00ff15>Confirm</color>. \n\nThe Bricktrons will store unused or newly crafted military equipment in the weapon rack.	- Make sure you have planks in one of your stockpiles. \n\n- Select the <color=#ffc50a>Structures tab</color>. \n \n- In the Storage section, select the <color=#ffc50a>Weapon Rack</color>. \n\n- Place it on the ground. \n\n- <color=#00ff15>Confirm</color>. \n\nThe Bricktrons will store unused or newly crafted military equipment in the weapon rack.
+- Make sure you have planks in one of your stockpiles. \n\n- Select the <color=#ffc50a>Structures</color> tab. \n \n- In the <color=#ffc50a>Crafting</color> section, select the <color=#ffc50a>Workbench</color>. \n\n- Place it on the ground. \n\n- <color=#00ff15>Confirm</color>. \n\nThe workbench will allow you to craft archer and halberdier kits.	- Make sure you have planks in one of your stockpiles. \n\n- Select the <color=#ffc50a>Structures</color> tab. \n \n- In the <color=#ffc50a>Crafting</color> section, select the <color=#ffc50a>Workbench</color>. \n\n- Place it on the ground. \n\n- <color=#00ff15>Confirm</color>. \n\nThe workbench will allow you to craft archer and halberdier kits.
+- Select a <color=#ffc50a>Bricktron</color>. \n\n- <color=#ffc50a>Right-click</color> (don't hold right-click) on the <color=#ffc50a>weapon rack containing the Archer Kit</color>. \n\nTo unequip the kit, select the Archer and right-click an empty weapon rack or one that contains 3 or less Archer kits!	- Select a <color=#ffc50a>Bricktron</color>. \n\n- <color=#ffc50a>Right-click</color> (don't hold right-click) on the <color=#ffc50a>weapon rack containing the Archer Kit</color>. \n\nTo unequip the kit, select the Archer and right-click an empty weapon rack or one that contains 3 or less Archer kits!
+- Select a <color=#ffc50a>Bricktron</color>. \n\n- <color=#ffc50a>Right-click</color> (don't hold right-click) on the <color=#ffc50a>weapon rack containing the Halberdier Kit</color>. \n\nTo unequip the kit, select the Halberdier and right-click an empty weapon stand or one that contains 3 or less Halberdier kits.	- Select a <color=#ffc50a>Bricktron</color>. \n\n- <color=#ffc50a>Right-click</color> (don't hold right-click) on the <color=#ffc50a>weapon rack containing the Halberdier Kit</color>. \n\nTo unequip the kit, select the Halberdier and right-click an empty weapon stand or one that contains 3 or less Halberdier kits.
+- Select the <color=#ffc50a>Stone Blocks</color> tab. \n\n- Select the <color=#ffc50a>Brick</color>. \n\nYou can now place them on the ground or on top of each other to start building walls! Don't hesitate to use the other blocks to make more complex structures too.	- Select the <color=#ffc50a>Stone Blocks</color> tab. \n\n- Select the <color=#ffc50a>Brick</color>. \n\nYou can now place them on the ground or on top of each other to start building walls! Don't hesitate to use the other blocks to make more complex structures too.
+- Select the <color=#ffc50a>Structures tab</color> on the left side of your screen. \n \n- In the <color=#ffc50a>Production</color> section, select the <color=#ffc50a>Chopping Block</color>. \n\n- Place it on the ground. \n\nYou can <color=#ffc50a>delete blueprints</color> by <color=#ffc50a>ctrl + clicking</color> on the blueprint when in edit mode. \n\n- Click on the <color=#00ff15>green checkmark</color> at the bottom left of your screen, or press <color=#ffc50a>"Tab"</color> to confirm. \n\nBricktrons will automatically begin to haul logs to the chopping block and <color=#ffc50a>produce planks</color>.	- Select the <color=#ffc50a>Structures tab</color> on the left side of your screen. \n \n- In the <color=#ffc50a>Production</color> section, select the <color=#ffc50a>Chopping Block</color>. \n\n- Place it on the ground. \n\nYou can <color=#ffc50a>delete blueprints</color> by <color=#ffc50a>ctrl + clicking</color> on the blueprint when in edit mode. \n\n- Click on the <color=#00ff15>green checkmark</color> at the bottom left of your screen, or press <color=#ffc50a>"Tab"</color> to confirm. \n\nBricktrons will automatically begin to haul logs to the chopping block and <color=#ffc50a>produce planks</color>.
+- Select the <color=#ffc50a>Structures tab</color> on the left side of your screen. \n \n- In the <color=#ffc50a>Storage</color> section, select the <color=#ffc50a>Stockpile</color>. \n\n- Place several on the ground by clicking several times, or dragging across a flat surface. \n\nYou can <color=#ffc50a>delete blueprints</color> by <color=#ffc50a>ctrl + clicking</color> on the blueprint when in build mode. \n\n- Click on the <color=#00ff15>green checkmark</color> at the bottom left of your screen, or press <color=#ffc50a>"Tab"</color> to confirm. \n\nIf your Bricktrons won't work, make sure you have empty stockpiles.	- Select the <color=#ffc50a>Structures tab</color> on the left side of your screen. \n \n- In the <color=#ffc50a>Storage</color> section, select the <color=#ffc50a>Stockpile</color>. \n\n- Place several on the ground by clicking several times, or dragging across a flat surface. \n\nYou can <color=#ffc50a>delete blueprints</color> by <color=#ffc50a>ctrl + clicking</color> on the blueprint when in build mode. \n\n- Click on the <color=#00ff15>green checkmark</color> at the bottom left of your screen, or press <color=#ffc50a>"Tab"</color> to confirm. \n\nIf your Bricktrons won't work, make sure you have empty stockpiles.
+- Select the <color=#ffc50a>Structures tab</color> on the left side of your screen. \n \n- Select the <color=#ffc50a>Furnace</color>. \n\n- Place one by clicking on the ground. \n\nYou can <color=#ffc50a>rotate blueprints</color> before placing them them by <color=#ffc50a>right-clicking</color>. \n\n- Click on the <color=#00ff15>green checkmark</color> at the bottom left of your screen, or press <color=#ffc50a>"Tab"</color> to confirm. \n\nWith a furnace, you can now use iron ore and brimstone to obtain iron ingots.	- Select the <color=#ffc50a>Structures tab</color> on the left side of your screen. \n \n- Select the <color=#ffc50a>Furnace</color>. \n\n- Place one by clicking on the ground. \n\nYou can <color=#ffc50a>rotate blueprints</color> before placing them them by <color=#ffc50a>right-clicking</color>. \n\n- Click on the <color=#00ff15>green checkmark</color> at the bottom left of your screen, or press <color=#ffc50a>"Tab"</color> to confirm. \n\nWith a furnace, you can now use iron ore and brimstone to obtain iron ingots.
+- Select your <color=#ffc50a>furnace</color>. \n \n- A pop-up menu will open at the bottom of your screen. \n\n- <color=#ffc50a>Click on the Iron ingot.</color> \n\n- You can queue multiple ingots. \n\n<color=#ffc50a> Make sure to have an empty stockpile to store your ingots.</color>	- Select your <color=#ffc50a>furnace</color>. \n \n- A pop-up menu will open at the bottom of your screen. \n\n- <color=#ffc50a>Click on the Iron ingot.</color> \n\n- You can queue multiple ingots. \n\n<color=#ffc50a> Make sure to have an empty stockpile to store your ingots.</color>
+- Select your workbench. \n\n- At the bottom of your screen, with the workbench pop-up, you can select what you want to craft. \n\n- Click on the <color=#ffc50a>Archer Kit</color> to begin production. \n\n- You can queue multiple kits by clicking on the Archer kit again. \n\n<color=#ffc50a> Make sure to have an empty weapon rack to store your kits.</color> \n\nA weapon racks can only hold <color=#ffc50a>4 military kits of a single type at once.</color>	- Select your workbench. \n\n- At the bottom of your screen, with the workbench pop-up, you can select what you want to craft. \n\n- Click on the <color=#ffc50a>Archer Kit</color> to begin production. \n\n- You can queue multiple kits by clicking on the Archer kit again. \n\n<color=#ffc50a> Make sure to have an empty weapon rack to store your kits.</color> \n\nA weapon racks can only hold <color=#ffc50a>4 military kits of a single type at once.</color>
+- Use the <color=#ffc50a>W, A, S and D</color> keys to move the camera around.	- Используйте клавиши <color=#ffc50a>W, A, S и D</color>, чтобы перемещать камеру.
+:( A problem occurred during loading. Please try again! If this keeps happening, you may have corrupted files. Uninstall the game, delete local files and reinstall the game. You can also contact us on support.castlestory.net	Произошла ошибка во время загрузки. Попробуй еще раз. Если это сообщение появляется вновь, возможно, файлы повреждены. Удали игру, затем удали локальные файлы и установи игру вновь. Ты так же можешь обратиться в поддержку support.castlestory.net
+<Unnamed localization>	<Безымянный перевод>
+<color=#ff0064><size=12>You have too many tasks!</size></color> Delete some of your existing tasks to place new ones.	<color=#ff0064><size=12>Слишком много задач!</size></color> Удалите часть существующих задач, чтобы поставить новые.
+<color=#ff0064><size=12>You need more empty stockpiles!</size></color> Build additionnal stockpiles to continue harvesting resources.	Не хватает хранилищ
+<color=#ffa500ff>Build walls directly around your home crystal to protect it from Corruptrons.</color>	<color=#ffa500ff>Build walls directly around your home crystal to protect it from Corruptrons. </color>
+<color=#ffc50a>Apply</color>\n\nConfirm changes	Подтвердить изменения
+<color=#ffc50a>Blocks</color>\n\nNumber of bricks, blocks and structures to build and place	<color=#ffc50a>Блоки</color>\n\n Количество блоков и объектов, которые необходимо установить в этом задании
+<color=#ffc50a>Blocks</color>\n\nNumber of bricks, blocks and structures to repair	Количество блоков и объектов, которые необходимо отремонтировать
+<color=#ffc50a>Boulders</color>\n\nNumber of boulders scheduled to be harvested in this task	Объемы щебня, которые планируется добыть в этом задании
+<color=#ffc50a>Bricktrons</color> are friendly yellow creatures that will follow your orders. You can give them direct orders, or place down tasks that they will choose to do on their own.	<color=#ffc50a>Бриктроны</color> — дружелюбные жёлтые существа, которые выполняют ваши приказы. Можно отдавать им прямые приказы или ставить задачи, которые они будут выбирать сами.
+<color=#ffc50a>Brimstone nodes</color>\n\nNumber of brimstone nodes scheduled to be harvested in this task	Объемы бриллита, которые планируется добыть в этом задании
+<color=#ffc50a>Brimstone</color>\n\nEnable or disable the harvest of brimstone in this task	Разрешить или запретить добычу бриллита в этом задании
+<color=#ffc50a>Build</color>\n\nTask for building blocks and structures.	Задание строительства блоков и объектов
+<color=#ffc50a>Cancel</color>\n\nCancel changes	Отменить изменения
+<color=#ffc50a>Chunks</color>\n\nNumber of resource chunks that litter the ground	Количество отдельных объектов на поверхностях, которые необходимо подобрать
+<color=#ffc50a>Cleanup</color>\n\nTask to pick up materials littering the ground.	Задание сбора разбросанных материалов
+<color=#ffc50a>Clear Blueprint Selection</color>\n\nClears currently selected blueprints.	Сбрасывает все текущее выделение
+<color=#ffc50a>Click on the spawn a new Bricktron button</color> in the taskbar popup. A worker should appear instantly near your Home Crystal	<color=#ffc50a>Нажмите кнопку призыва нового бриктрона</color> во всплывающей панели. Рядом с Домашним кристаллом сразу появится рабочий
+<color=#ffc50a>Copy Selected Blueprints</color>\n\nMakes a copy of current selection.	Создает копию выделенных подзадач с возможностью размещения
+<color=#ffc50a>Crystal</color>\n\nDefault task for Bricktrons who are just chilling.	Базовая категория для незанятых Брикторонов
+<color=#ffc50a>Dead Bricktrons</color>\n\nThese Bricktrons will automatically respawn near your home crystal	<color=#ffc50a>Мертвые Бриктроны</color>\n\nЭти Бриктроны будут автоматически возрождаться рядом с вашим домашним Кристаллом
+<color=#ffc50a>Delete Selected Blueprints</color>\n\nDeletes currently selected blueprints.	Удаляет ту часть чертежа, что находится в выделении
+<color=#ffc50a>Delete</color>\n\nDelete the currently selected task	Удалить выбранное задание
+<color=#ffc50a>Deselect</color>\n\nUnselects the Bricktrons associated with this task	Закрыть окно редактирования
+<color=#ffc50a>Dig Down</color>\n\nOrders the Bricktrons to dig in a downward direction	Плавно опускать туннель
+<color=#ffc50a>Dig Straight</color>\n\nOrders the Bricktrons to dig straight forward	Сохранять уровень туллеля
+<color=#ffc50a>Dig Up</color>\n\nOrders the Bricktrons to dig in an upward direction	Плавно поднимать туннель
+<color=#ffc50a>Expand Blueprint Selection</color>\n\nAllows for more blueprints to be added to the selection.	Позволяет дополнить выделение
+<color=#ffc50a>Flatten</color>\n\nTask to flatten terrain.	Задание видоизменения поверхности
+<color=#ffc50a>Goals</color>\n\nNumber of objectives in this task	Количество элементарных подзадач в этом задании
+<color=#ffc50a>Harvest</color>\n\nTask to collect materials from resource nodes.	Задание добычи наземных ресурсов
+<color=#ffc50a>Iron nodes</color>\n\nNumber of iron nodes scheduled to be harvested in this task	Количество руды, которое планируется добыть в этом задании
+<color=#ffc50a>Iron</color>\n\nEnable or disable the harvest of iron in this task	Разрешить или запретить добычу железной руды в этом задании
+<color=#ffc50a>Keep Brimstone</color>\n\nBricktrons will bring back harvested brimstone	<color=#ffc50a>Оставлять серу</color>\n\nБриктроны будут приносить добытую серу
+<color=#ffc50a>Keep Iron</color>\n\nBricktrons will bring back harvested iron	<color=#ffc50a>Оставлять железо</color>\n\nБриктроны будут приносить добытое железо
+<color=#ffc50a>Keep Stone</color>\n\nBricktrons will bring back harvested stone	<color=#ffc50a>Оставлять камень</color>\n\nБриктроны будут приносить добытый камень
+<color=#ffc50a>Lanterns are crafted in the workbench.\n\nThey require 1 brimstones and 1 iron ingot.</color>\n\nOnce crafted they will be stored in a stockpile, so make sure you have an empty stockpile in your base!\n\nOpen the structure tab, select the lantern, and place a lantern blueprint anywhere.	<color=#ffc50a>Фонари делают на верстаке.\n\nНужны 1 сера и 1 железный слиток.</color>\n\nГотовые фонари кладут на склад, так что держите в базе пустой склад!\n\nОткройте вкладку построек, выберите фонарь и поставьте его чертёж где угодно.
+<color=#ffc50a>Lower priority</color>\n\nMakes the task less urgent	Рабочие будут считать это задание менее срочным
+<color=#ffc50a>Lower</color>\n\nOrders the Bricktrons to lower the terrain at selected location	Дать задание опустить уровень поверхности в выбранной области
+<color=#ffc50a>Move Selected Blueprints</color>\n\nMove several blueprints around at once.	Позволяет переместить часть чертежа
+<color=#ffc50a>OK</color>\n\nConfirm changes and close edit mode	Подтвердить изменения и закрыть задание
+<color=#ffc50a>Plants</color>\n\nEnable or disable the harvest of plants in this task	Разрешить или запретить добычу волокна в этом задании
+<color=#ffc50a>Plants</color>\n\nNumber of plants scheduled to be harvested in this task	Количество растений, которое планируется добыть в этом задании
+<color=#ffc50a>Population</color>\n\nYour current Bricktron population over the maximum allowed	<color=#ffc50a>Население</color>\n\nВаша текущая популяция Бриктронов превышает максимально допустимую
+<color=#ffc50a>Press Tab</color> or the <color=#00ff15>Green Checkmark</color> to confirm the new blueprints and exit blueprint mode.	<color=#ffc50a>Press Enter</color> or the <color=#00ff15>Green Checkmark</color> to confirm the new blueprints and exit blueprint mode.
+<color=#ffc50a>Press Tab</color> or the <color=#00ff15>Green Checkmark</color> to confirm the new blueprints.	<color=#ffc50a>Press Enter</color> or the <color=#00ff15>Green Checkmark</color> to confirm the new blueprints.
+<color=#ffc50a>Press the Structures button</color> at the center left of the screen, and choose the <color=#ffc50a>Chopping Block</color>.\n\n<color=#ffc50a>Click on the ground</color> to place your structure. You should see the blueprint of a Chopping Block appear on the ground.\n\n<color=#ffc50a>Press Tab</color> or the <color=#00ff15>Green Checkmark</color> to apply the blueprint.\n\nOne of your Bricktrons should immediately grab a log and place it on the blueprint to create the chopping block.	<color=#ffc50a>Press the Structures button</color> at the center left of the screen, and choose the <color=#ffc50a>Chopping Block</color>.\n\n<color=#ffc50a>Click on the ground</color> to place your structure. You should see the blueprint of a Chopping Block appear on the ground.\n\n<color=#ffc50a>Press Enter</color> or the <color=#ffc50a>Green Checkmark</color> to apply the blueprint.\n\nOne of your Bricktrons should immediately grab a log and place it on the blueprint to create the chopping block.
+<color=#ffc50a>Press the Structures button</color>, and choose the <color=#ffc50a>Stockpile</color> in the storage section.\n\n<color=#ffc50a>Place some stockpiles</color> on the ground.\n\n<color=#ffc50a>Press Tab to confirm the new blueprints</color>.	<color=#ffc50a>Press the Structures button</color>, and choose the <color=#ffc50a>Stockpile</color> in the storage section.\n\n<color=#ffc50a>Place some stockpiles</color> on the ground.\n\n<color=#ffc50a>Press Enter to confirm the new blueprints</color>.
+<color=#ffc50a>Press the Tasks button</color> at the center left of the screen, and choose the <color=#ffc50a>Harvest Wood task</color>.\n\n<color=#ffc50a>Click on a patch of trees</color>. You should see a yellow circle appear, highlighting all the trees in it.\n\n<color=#ffc50a>Press Tab</color> or the <color=#00ff15>Green Checkmark</color> to activate the task.	<color=#ffc50a>Press the Tasks button</color> at the center left of the screen, and choose the <color=#ffc50a>Harvest Wood task</color>.\n\n<color=#ffc50a>Click on a patch of trees</color>. You should see a yellow circle appear, highlighting all the trees in it.\n\n<color=#ffc50a>Press Enter</color> or the <color=#ffc50a>Green Checkmark</color> to activate the task.
+<color=#ffc50a>Pro tip :</color> If you <color=#ffc50a>Double Click</color> on a Bricktron, it will select all the Bricktrons of the same class (ie: workers, archers, knights, etc.)	<color=#ffc50a>Совет:</color> <color=#ffc50a>двойной щелчок</color> по бриктрону выбирает всех бриктронов того же класса (рабочих, лучников, рыцарей и т. д.)
+<color=#ffc50a>Pro tip :</color> If you want to produce an infinite quantity of ingots, <color=#ffc50a>click on the cycle</color> button to <color=#ffc50a>loop the current queue forever</color> until you have no more resources or your stockpiles are full.	<color=#ffc50a>Совет:</color> чтобы производить слитки бесконечно, <color=#ffc50a>нажмите кнопку цикла</color> — <color=#ffc50a>очередь будет повторяться</color>, пока не кончатся ресурсы или не заполнятся склады.
+<color=#ffc50a>Pro tip :</color> If you want your workbench to face a specific direction, <color=#ffc50a>blueprints can be rotated with Right-Click</color>.	<color=#ffc50a>Совет:</color> чтобы развернуть верстак в нужную сторону, <color=#ffc50a>поворачивайте чертёж правой кнопкой мыши</color>.
+<color=#ffc50a>Pro tip :</color> Several blueprints can be placed on the groud at once by <color=#ffc50a>click-dragging</color>. This is much more efficient than clicking them individually.	<color=#ffc50a>Совет:</color> можно поставить сразу несколько чертежей, <color=#ffc50a>протянув мышь с зажатой кнопкой</color>. Это намного быстрее, чем ставить по одному.
+<color=#ffc50a>Pro tip: </color>if you do not want to see this tutorial, open the main menu and disable the tutorial in <color=#ffc50a>options / general > disable tooltips.</color>	<color=#ffc50a>Совет: </color>если не хотите видеть это обучение, откройте главное меню и отключите его в <color=#ffc50a>Настройки / Общие > Отключить подсказки.</color>
+<color=#ffc50a>Pro tip: A Furnace requires 4 bricks</color> to be built. Make sure you have filled at least one stockpile with stone.	<color=#ffc50a>Совет: для печи нужно 4 кирпича</color>. Убедитесь, что хотя бы один склад заполнен камнем.
+<color=#ffc50a>Pro tip: Don't place your quarry on an existing structure or too close to your home crystal.</color> The Bricktons will either destroy the structures, or fail to dig the ground.	<color=#ffc50a>Совет: не ставьте карьер на постройки и слишком близко к Домашнему кристаллу.</color> Бриктроны либо разрушат постройки, либо не смогут копать.
+<color=#ffc50a>Pro tip: make sure you have empty stockpiles for the plants</color>.	<color=#ffc50a>Совет: убедитесь, что для растений есть пустые склады</color>.
+<color=#ffc50a>Pro tip:</color> If you must place a door in an existing blueprint wall, <color=#ffc50a>Ctrl+Click</color> on the blueprints to create a hole and then place the door.	<color=#ffc50a>Совет:</color> если дверь нужна в уже размеченной стене, <color=#ffc50a>Ctrl + щелчок</color> по чертежам сделает проём, а потом ставьте дверь.
+<color=#ffc50a>Pro tip:</color> Lanterns can be placed directly on walls or on the ground. The choice is yours!	<color=#ffc50a>Совет:</color> фонари можно ставить прямо на стены или на землю. Выбор за вами!
+<color=#ffc50a>Pro tip:</color> Soldiers cannot be assigned to tasks, and cannot carry stuff around.	<color=#ffc50a>Совет:</color> солдатам нельзя давать задачи, и они ничего не переносят.
+<color=#ffc50a>Pro tip:</color> To allow your Bricktrons to access the military kits faster, make sure to leave enough space on <color=#ffc50a>both sides of the weapon rack</color>!	<color=#ffc50a>Pro tip:</color> To allow your Bricktrons to access the military kits faster, make sure to let them <color=#ffc50a>enough space on both sides of the weapon rack</color>!
+<color=#ffc50a>Pro tip:</color> You are in the blueprint mode while placing bricks. <color=#ffc50a>You cannot select Bricktrons or click on anything while in this mode</color>.	<color=#ffc50a>Совет:</color> пока вы ставите блоки, включён режим чертежей. <color=#ffc50a>В этом режиме нельзя выбирать бриктронов и щёлкать по объектам</color>.
+<color=#ffc50a>Pro tip:</color> You can <color=#ffc50a>capture shards around the map</color> to help generate more energy.	<color=#ffc50a>Совет:</color> <color=#ffc50a>захватывайте осколки на карте</color>, чтобы получать больше энергии.
+<color=#ffc50a>Pro tip:</color> You can <color=#ffc50a>change the radius</color> of the harvest tasks by click-dragging the yellow circle or <color=#ffc50a>move the center</color> by dragging the pin in the middle.	<color=#ffc50a>Совет:</color> можно <color=#ffc50a>изменить радиус</color> задачи добычи, перетаскивая жёлтый круг, или <color=#ffc50a>сдвинуть центр</color>, перетаскивая флажок посередине.
+<color=#ffc50a>Pro tip:</color> You can also enable screen edge nudge in options / gameplay	<color=#ffc50a>Совет:</color> можно включить сдвиг камеры у края экрана в Настройки / Игра
+<color=#ffc50a>Pro tip:</color> You can force <color=#ffc50a>auto-ground-hug by pressing #hotkeys</color>.	<color=#ffc50a>Pro tip:</color> You can enable or disable <color=#ffc50a>auto-ground-hug by pressing ~</color>.
+<color=#ffc50a>Progress Bar</color>\n\nProgress to next Bricktron	Индикатор энергии Кристалла
+<color=#ffc50a>Quarry</color>\n\nTask for digging downward and harvesting rock.	Задание добычи ресурсов из земли открытым способом
+<color=#ffc50a>Raise priority</color>\n\nMakes the task more urgent	Рабочие будут считать это задание более срочным
+<color=#ffc50a>Raise</color>\n\nOrders the Bricktrons to raise the terrain at selected location	Дать задание поднять уровень поверхности в выбранной области
+<color=#ffc50a>Repair</color>\n\nTask to repair damaged walls and structures.	Задание ремонта поврежденных стен и объектов
+<color=#ffc50a>Resources</color>\n\nNumber of resources scheduled to be harvested in this task	Объемы ресурсов, которые планируется добыть в этом задании
+<color=#ffc50a>Rotate Staircase</color>\n\nRotates the projected stairs in the quarry	Сменить точку привязки и ориентацию лестницы в карьер
+<color=#ffc50a>Select Crew</color>\n\nSelects these Bricktrons to give them orders	Взять в выделение всех Брикторонов в задании или категории
+<color=#ffc50a>Select Task</color>\n\nSelect this task	Выбрать это задание
+<color=#ffc50a>Spawn Bricktron</color>\n\nSummons a Bricktron to join your side	Призывает на твою сторону Бриктрона
+<color=#ffc50a>Split Selected Blueprints</color>\n\nSplit selected blueprints into a new build task.	Выделение будет перенаправлено в новое задание Стройки
+<color=#ffc50a>Stone</color>\n\nEnable or disable the harvest of stone in this task	Разрешить или запретить добычу щебня в этом задании
+<color=#ffc50a>The workbench</color> is the most basic crafting station, it can craft halberdier kits, archer kits and lanterns.\n\nLet's craft a halberdier kit!	<color=#ffc50a>Верстак</color> — самая простая мастерская: на нём делают наборы алебардщика, лучника и фонари.\n\nСделаем набор алебардщика!
+<color=#ffc50a>This is your Home Crystal</color>	<color=#ffc50a>Это ваш Домашний кристалл</color>
+<color=#ffc50a>This is your Home Crystal</color>. Protect it at all costs!	<color=#ffc50a>Это ваш Домашний кристалл</color>. Защищайте его любой ценой!
+<color=#ffc50a>Toggle Blueprint Management</color>\n\nActivates or deactivates blueprint management.	Доступ к дополнительным функциям обработки
+<color=#ffc50a>Trees</color>\n\nNumber of trees scheduled to be harvested in this task	Объемы древесины, которые планируется добыть в этом задании
+<color=#ffc50a>Tunnel</color>\n\nTask for digging sideways and harvesting rock.	Задание добычи ресурсов из земли закрытым способом
+<color=#ffc50a>Voxels</color>\n\nNumber of voxels projected to be removed	Количество вокселей, которые планируется обработать в этом задании
+<color=#ffc50a>Voxels</color>\n\nNumber of voxels projected to be removed or added	Количество вокселей, которые планируется обработать в этом задании
+<color=#ffc50a>Wood</color>\n\nEnable or disable the harvest of wood in this task	Разрешить или запретить добычу дерева в этом задании
+<color=#ffc50a>Your home crystal generates energy passively.</color> This energy can be used to spawn new Bricktrons. \n\nYou can see this energy in the form of <color=#3a7bff>blue wisps</color> orbiting your home crystal. Once you have enough blue wisps, they will merge together to create a <color=#ffc50a>bright yellow wisp.</color>\n\nYou can see how much energy you have and how much is needed for the next Bricktron in the taskbar to popup above your home crystal.	<color=#ffc50a>Your home crystal generates energy passively.</color> This energy can be used to spawn new Bricktrons. \n\nYou can see this energy in the form of <color=#3a7bff>blue wisps</color> orbiting your home crystal. Once you have enough blue wisps, they will merge together to create a <color=#ffc50a>bright yellow wisp.</color>\n\n You can see how much energy you have and how much is needed for the next Bricktron in the taskbar to popup above your home crystal.
+<i>To disable these help popups, go in general options by pressing F10</i>	<i>To disable these help popups, go in general options by pressing Escape</i>
+A 1 by 1 block used to patch holes in walls.	Каменный блок в 1 воксель полезен при перекрытии дыр
+A 1 by 2 brick used to build walls, curved left.	Каменный блок со скруглением для строительства плавных углов
+A 1 by 2 brick used to build walls, curved right.	Каменный блок со скруглением для строительства плавных углов
+A 1 by 2 brick used to build walls, half-curved.	Блок, скругленный с обоих сторон
+A Bricktron in its natural habitat.	Бриктрон в своей естественной среде обитания.
+A Merlon corner.	Зубец для оформления стыков на внешних углах
+A Merlon for a concave corner.	Зубец для оформления стыков на внутренних углах
+A Merlon separates crenels in fortifications.	Используется для декорирования башен и стен
+A barrel filled with brimstone that can detonated.	Бочки можно поставить на землю, чтобы хранить или подорвать
+A brace extends beam effectiveness by 4 units.	Увеличивают допустимую длинну бруска над ними на 4 вокселя
+A corner stairs brick.	Декоративный стык лестниц разных направлений
+A curved 1 by 1 block used to patch walls.	Половина круглого блока
+A fast firing but fragile long range unit\n<color=yellow> 1 fabric + 2 planks + 1 rope </color>	Заказать производство полного комплекта снаряжения
+A finely sculpted effigy of bricktron tenacity and courage.	Тонко вылепленное изображение стойкости и мужества бриктрона.
+A function was called with inappropriate parameter values.\n(NetworkError.UsageError)	Функция была вызвана с неверными параметрами.\n(NetworkError.UsageError)
+A great mountain stands tall in the center of this frozen land, looming over the bricktrons below. Will they dare to climb it and claim its peak?	Огромная гора возвышается в центре этой замерзшей земли, нависая над Бриктронами внизу. Осмелятся ли они взобраться на нее и захватить вершину?
+A roughly sculpted block of stone. Gets the job done.	Каменная колонна грубо вырезана. Это работа.
+A short range, sturdy damage dealer<color=yellow> 2 iron + 2 cogs + 1 rope + 1 fabric</color>	Заказать производство полного комплекта снаряжения
+A spiral stairs brick.	Для постройки винтовой лестницы
+A square kilometer surface to challenge the limits of your construction abilities. Requires high performance PC.	Целый квадратный километр для почти* безграничного строительства!\n* - если твой компьютер мощнее серверов NASA.
+A stairs corner brick for outward stairs	Лестничный угловой кирпич для наружной лестницы
+A trap for bears. And corrupt rocks.	Ловушка ненадолго обездвиживает любого наступившего врага
+A trap for bears. And corrupt rocks.\n<color=yellow> 1 iron ingot</color>	Заказать одну ловушку
+A wider Merlon.	Широкая версия зубца
+Abort	Прервать
+Accept any	Складировать все
+Accept only	Складировать только
+Actions	Действия
+Activates aura to heal nearby friendly units	Лечить союзников в зоне действия ауры
+Activates the spring locks on the trap.	Активировать пружину в выбранной ловушке
+Active Workers	Активные
+Active workers are listed here.\nThey choose tasks to work on automatically.	Здесь указаны пассивные рабочие\nОни автоматически ищут задания, где требуется рабочая сила
+Actively seek out work to do	Искать работу автоматически
+Add Ressources	Загрузить
+Add bag content to crafting station	Загрузить переносимые ингредиенты в станцию
+Adding doors	Двери
+Adding lanterns	Фонари
+Adds or remove island volume.	Поднимает или опускает местность
+Adds or removes Corruptron spawns.	Размещает или удаляет точки появления Коруптронов
+Adds or removes boulders.	Размещает или удаляет валуны
+Adds or removes brimstone.	Размещает или удаляет бриллит
+Adds or removes crystals	Размещает или удаляет кристаллы
+Adds or removes grass.	Высаживает или удаляет траву
+Adds or removes iron.	Размещает или удаляет железо
+Adds or removes plants.	Высаживает или удаляет растения
+Adds or removes players spawns	Размещает или удаляет стартовые точки
+Adds or removes trees.	Высаживает или удаляет деревья
+Adds, levels or removes island.	Добавляет, выравнивает или удаляет острова
+Adventure Awaits	Приключения ждут
+Aeons ago, a mysterious power created an explosion at the center of this once great landmass, leaving a crater and a few small islands orbiting each other.	Давным-давно мистические силы взорвали некогда гигантский массив земли, оставив кратер и небольшие острова, которые вращаются вокруг него.
+Aggressive Mode	Режим атаки
+Alchemist	Алхимик
+Alchemist Kit	Снаряжение алхимика
+Alchemists throw bombs that deal area of effect damage and break walls.	Алхимики бросают бомбы, которые наносят урон по площади и повреждают местность
+Alerts	Уведомления
+Alignment	Выравнивание пика
+Allows Bricktrons to smelt.	Позволяет Бриктронам расплавлять ресурсы
+Allows a transition between planks and ramps.	Оформляет переход от рамп к доскам
+Allows for height changes in wooden platforms.	Является деревянным аналогом каменной лестницы
+Aloe	Алоэ
+Already enough workers on the task	На этом задании достаточно рабочих
+Altar	Алтарь
+Alternate	Альтернативная
+Always	Всегда
+Ambient Occlusion	Затенение света
+An introduction to Castle Story	Введение в основы Castle Story
+An ornamental support block.	Декоративный блок поддержки
+Any Bricktron in this ward's radius of influence will be healed over time.	Любой Бриктрон, находящийся в радиусе действия, будет излечиваться
+Any resource can go in this stockpile	Складировать любые ресурсы в это хранилище
+Anything related to explosions can be crafted at this station, like explosive barrels, bombs and alchemist kits.	Все, что касается взрывчатки - по части этой рабочей станции
+Apply	Применить
+Apply Changes	Применить и закрыть
+Apply pending changes to current task	Подтвердить изменения и закрыть задание
+April	Апрель
+Arbalist	Арбалетчик
+Arbalist Kit	Снаряжение арбалетчика
+Arbalists are slower, but deal high damage at a very long range.	Арбалетчик наносит больший урон, чем лучник, однако имеет меньшую дальность атаки
+Arch	Блок-арка
+Archer	Лучник
+Archer Kit	Снаряжение лучника
+Archers and arbalists gain a range buff when higher. Place them on top of your walls.	Лучники и арбалетчики могут стрелять дальше, если находятся на возвышенности. Размещай их на стенах замка.
+Archers are inexpensive, versatile long range units.	Лучник - базовая дальнобойная атакующая единица
+Are you sure you want to discard all of your custom settings?	Ты уверен, что хочешь удалить все пользовательские настройки?
+Are you sure you want to exit the application?	Ты уверен, что хочешь закрыть приложение?
+Are you sure you want to quit the current game?\n<color=red>All unsaved changes will be lost.</color>	Ты уверен, что хочешь выйти из текущей игры?\n<color=red>Все не сохраненные изменения будут утеряны.</color>
+Arm Bear Trap	Перезарядить ловушку
+Artemisia	Артемизия
+Artificer	Волшебник
+Artificer Kit	Снаряжение волшебника
+Artificers can either throw ranged projectiles with their staff or heal allies.	Волшебник может либо атаковать с расстояния, либо лечить союзников
+Assign	Назначить оператора
+Assign Key Binding	Назначить клавишу
+Assign To	Назначить
+Assign a Bricktron to operate this catapult.	Назначить Бриктрона оператором этой катапульты
+Assign selected Bricktrons to this task.	Привязать выбранных Бриктронов к этому заданию
+At the center lies a plain where Bricktrons of all cultures congregate. Not all gatherings are peaceful, however.	В его центре находится равнина, на которой собираются Бриктроны всех культур. Однако все эти митинги не преследуют мирной цели.
+Attack Stance	Режим боя
+Audio	Звук
+Audio Debug	Режим исправления звука
+Audio game settings	Настройки звука
+August	Август
+Auto Convert Stone	Преобразовывать щебень
+Auto Mode	Автораспределение
+Auto Shoot	Стрелять автоматически
+Autodetect	Определять автоматически
+Automaticaly cast magic at nearby enemies.	Автоматически атаковать ближайших врагов
+Awesome!\nA backup can be found in this folder:	Отлично!\nРезервная копия располагается в этой папке:
+Back	Назад
+Back to Work	Вернуться к работе
+Back to game	Вернуться в игру
+Back to lobby	Назад в очередь
+Back to main menu	Назад в главное меню
+Beam	Горизонтальный
+Beams allow support for longer plank platforms.	Горизонтальный брус служит опорой для досок
+Bear Trap	Ловушка
+Bear traps will immobilize temporarily any enemy units that steps on it.	Ловушка ненадолго обездвиживает любого наступившего врага
+Before we create our <color=#ffc50a>halberdier kit</color>, we need a <color=#ffc50a>weapon rack</color> to store it.	Прежде чем делать <color=#ffc50a>набор алебардщика</color>, нужна <color=#ffc50a>стойка для оружия</color>, чтобы его хранить.
+Before we move on and create the halberdier kit, we'll need to create a weapon rack to store it.	Прежде чем делать набор алебардщика, нужно построить стойку для оружия, чтобы его хранить.
+Beginner's Guide	Руководство новичка
+Biftron	Бифтрон
+Big Painting	Большая Картина
+Blizzard Dunes	Снежные Дюны
+Block with a small roof section attached.	Декоративная версия блока-арки
+Blocks	Блоки
+Blue	Синий
+Blue Crystal	Кристаллит
+Blueprint	План управления
+Blueprint library	Библиотека чертежей
+Blueprint management mode	Режим управления планом
+Blueprints	Чертеж
+BoltPouch	Сумка болтов
+Bomb	Бомбы
+Bonnet	Колпак
+Bottom	Понизу
+Boulder	Валуны
+Boulder Brush	Кисть валунов
+Boulder brush	Кисть валунов
+Boulders	Щебень
+Bow	Лук
+Brace	Скоба
+Brave bricktron pioneers find themselves in unfamiliar new lands. What danger awaits them on the other side of this winding passage?	Отважные первопроходцы Бриктрона оказываются в незнакомых землях. Какие опасности их ждут на другой стороне этого извилистого прохода?
+Break Object	Сломать объект
+Break an individual voxel and collect it's ressources.	Изъять отдельно указанный воксель и собрать ресурсы
+Brick	Блоки
+Bricks Hub	Раздел блоков
+Bricks for plugging wooden beams on.	Опорный блок для горизонтального бруса и кронштейнов
+Bricktron: Hold	Приказ держать позицию
+Bricktrons bravely defend their land, but these twisted treeline are teeming with Corruptrons.	Бриктроны героически защищают свою землю, но эти проклятые леса просто изобилуют Коруптронами!
+Bricktrons don't recognize their image in a mirror.	Бриктроны не узнают сами себя в зеркале.
+Bricktrons have subtle yet refined courtship rituals.	У Бриктронов есть тонкие и изысканные ритуалы ухаживаний. Интересно.
+Bricktrons lost the ability to talk intelligibly after they built a tower a little too high.	Согласно одной легенде, Бриктроны потеряли способность говорить членораздельно после того, как построили слишком высокую башню.
+Bricktrons prefer to be called by their first name.	Бриктроны не любят, когда их называют по фамилии. Поэтому мы не знаем их фамилий.
+Bricktrons travel on arches or can cross under them.	Бриктроны могут как пройди под аркой, так и над ней
+Bricktrons will ignore this stockpile	Бриктроны будут игнорировать это хранилище
+Bricktrons will ignore this weapon rack	Бриктроны будут игнорировать эту стойку
+Brimstone	Бриллит
+Brimstone Brush	Кисть бриллита
+Brimstone brush	Кисть бриллита
+Brimstone nodes	Бриллит
+Browse	Просмотреть
+Browse public games online	Просмотреть текущие публичные игры
+Build	Стройка
+Build Blocks	Строить блоки
+Build Stockpiles	Постройте склады
+Build Structures	Строить объекты
+Build Task	Стройка
+Build Weapon Rack	Постройте стойку для оружия
+Build a Furnace	Постройте печь
+Build a Workbench	Постройте верстак
+Build a flexible bridge between two ledges.	Построить длинный гибкий мост через обрыв
+Build a furnace to continue	Постройте печь, чтобы продолжить
+Build a wall around your home crystal to protect it from Corruptrons!	Постройте стену вокруг Домашнего кристалла, чтобы защитить его от корруптронов!
+Build bear traps on chokepoints to slow enemies down and allow ranged units to take them out before they reach your castle.	Строй ловушки в узких проходах к замку, чтобы замедлить приближающихся врагов и дать больше времени своим лучникам.
+Build block variants such as stairs and pillars.	Раздел со всеми каменными блоками
+Build crafting stations.	Раздел с производственными станциями
+Build doors and catapults.	Раздел с различными игровыми объектами
+Build logs and planks.	Раздел деревянным брусом различного вида
+Build structures and place blocks.	Строительство блоков и объектов
+Building a Wall	Строим стену
+Building a furnace	Строим печь
+Building your Castle	Строим замок
+Busserole	Толокнянка
+CAPTURE THE PUMPKIN!	ЗАХВАТ ТЫКВ!
+Calculated Bounds	Расчитанные границы
+Call to Arms!	К оружию!
+Call-to-Arms	К оружию!
+Camera Free Movement	Движение мыши
+Camera Free Rotate	Вращение камеры
+Camera and selection	Камера и выбор
+Can be forged into various equipment, including weapons, armor and cogs.	Могут быть переплавлены в различное снаряжение или компоненты
+Can be loaded into catapult or used as trap.\n<color=yellow> 1 plank + 10 brimstone</color>	Заказать одну бочку взрывчатки
+Can be turned into planks at a chopping block.	Могут быть обработаны в доски на полене
+Can't aim at target	Не могу навестись на цель
+Can't cut trees	Не могу рубить деревья
+Can't find what I need	Не могу найти то, что мне нужно
+Can't reach my destination	Не могу попасть в нужное мне место
+Cancel	Отмена
+Cannot save:	Невозможно сохранить
+Cap	Шляпа
+Capture Ward	Маяк захвата
+Capture nearby crystals and shards in range\n<color=yellow> 1 iron ingot + 40 brimstone </color>	Производит захват Осколков и Кристаллов
+Capture the Pumpkins	Захват тыкв
+Capture the Pumpkins is a gamemode where, in order to win, you must be the first faction to collect #gems_to_win gems and drop them at your cooking pot.\nPick up pumpkins by selecting a worker and right-clicking a pumpkin that has appeared in its patch. Drop this delicious squash in your cooking pot by right-clicking it with the worker selected.\nConsider defending patches of pumpkins and hunting down enemy workers who are hauling them back to their base.\nHave fun and good luck!	«Захват тыкв» — режим, в котором для победы нужно первым собрать #gems_to_win тыкв и принести их в свой котёл.\nПодбирайте тыквы: выберите рабочего и щёлкните правой кнопкой по тыкве, выросшей на грядке. Отнесите эту вкусняшку в котёл — щёлкните по нему правой кнопкой, выбрав рабочего.\nНе забывайте защищать грядки и охотиться на вражеских рабочих, которые тащат тыквы к себе.\nУдачи и веселья!
+Capture the Pumpkins is a multiplayer game mode in which you must bring back pumpkins to your cooking pot. The team that brings back the most pumpkins to their cooking pot wins!	«Захват тыкв» — сетевой режим, в котором нужно приносить тыквы в свой котёл. Побеждает команда, которая принесёт больше всех тыкв!
+Carrying too much to dig	Переношу слишком много, чтобы копать
+Cast a healing aura for any friendly being close by.\n<color=yellow> 1 iron ingot + 20 brimstone </color>	Излечивает Бриктронов в радиусе действия
+Castle Story on Steam	Castle Story в Steam
+Catapult	Катапульта
+Catapults throw explosive barrels at enemies.	Тяжелый боевой механизм для атаки сооружений и существ
+Cerastium	Ясколка
+Certain tools in this Debug panel may cause a drop in performance or break the game. Use it at your own risk and consider backing up your save file first.	Особые средства для изменения игрового состояния. Использовать с осторожностью - может стать причиной зависаний и вылетов
+Changing the elevation	Изменение высоты
+Chapka	Чепчик
+Chopping Block	Полено
+Chunks	Объекты
+Cleaning	Уборка
+Cleaning Task	Задание Уборка
+Cleanup	Уборка
+Cleanup Now	Очистить территорию
+Cleanup Similar	Подобрать похожие
+Cleanup Task	Уборка
+CleanupCrew	Рабочие
+Clear	Очистить
+Clear Blueprint Selection	Очистить выделение
+Clear Crafting Queue	Очистить очередь производства
+Clear Queue	Очистить
+Clear Selected Blueprints	Очистить выбранный чертеж
+Clear Target	Сбросить подзадачи
+Click here to change the radius and choose which resources you want to harvest.	Нажми, чтобы изменить радиус действия задания и фильтр ресурсов
+Click here to change the radius of this cleanup task.	Нажми, чтобы изменить радиус действия задания
+Click here to change the size of this quarry.	Нажми, чтобы изменить размеры карьера
+Click here to change where you want to flatten the ground.	Нажми, чтобы изменить размеры области и свойства
+Click here to create new tasks.\nFor bricks and stockpiles, use the build task. \nTo gather trees, metal and brimstone, use the harvest task.	Выбрать тип нового задания и создать
+Click here to create new tunnels you want to be excavated.	Нажми, чтобы проложить туннель
+Click here to place new bricks, structures and stockpiles.	Нажми, чтобы строить блоки и объекты
+Click here to select which bricks you want to be repaired.	Нажми, чтобы изменить размеры карьера
+Click on the <color=#ffc50a>Brick menu</color> at the center left of the screen. Choose <color=#ffc50a>Standard brick.</color>Hover on the ground with your mouse will reveal a blue outline of a brick. This is a <color=#ffc50a>blueprint</color> \n<color=#ffc50a>Left-Click</color> once to place the brick. \n<color=#ffc50a>Right-Click</color> to rotate your blueprint. \n<color=#ffc50a>Drag-Click</color> to place an entire row of bricks. \n<color=#ffc50a>Ctrl-Click</color> on a blueprint to remove it.	Откройте <color=#ffc50a>меню блоков</color> слева по центру экрана. Выберите <color=#ffc50a>обычный кирпич.</color> Наведите мышь на землю — появится синий контур кирпича. Это <color=#ffc50a>чертёж</color> \n<color=#ffc50a>Левый щелчок</color> — поставить кирпич. \n<color=#ffc50a>Правый щелчок</color> — повернуть чертёж. \n<color=#ffc50a>Протянуть с зажатой кнопкой</color> — поставить целый ряд. \n<color=#ffc50a>Ctrl + щелчок</color> по чертежу — удалить его.
+Click on the iron ingot button to add it the the queue. Click on it 5 times to <color=#ffc50a>queue 6 ingots</color>.	Нажмите на кнопку железного слитка, чтобы добавить его в очередь. Нажмите ещё 5 раз, чтобы <color=#ffc50a>заказать 6 слитков</color>.
+Click on the terrain to aim this catapult.	Навести данную катапульту на цель
+Click to select workers.\nShift-Click to add new worker slots.\nCtrl-click to remove slots.	Нажми, чтобы выбрать рабочих в задании\nShift + лкм - повысить приоритет\nCtrl + лкм - понизить приоритет
+Click to select workers.\nShift-Click to raise project priority.\nCtrl-click to lower project priority.	Нажми, чтобы выбрать рабочих в задании\nShift + лкм - повысить приоритет\nCtrl + лкм - понизить приоритет
+Clicking Ok will unbind conflicting keys.	Нажатие Ок отменит назначенные конфликтующие клавиши.
+Close	Закрыть
+Clover	Луг
+Coarse Sand	Крупный Песок
+Cog	Шестерня
+Collect only items of hovered type	Подобрать только предметы определенного типа
+Collect ressources lying on target location now.	Подобрать ресурсы в указанной зоне
+Collect ressources that are lying on the ground.	Собрать расбросанные материалы
+Color	Цвет
+Color Correction	Коррекция цвета
+Coming Next	Далее
+Commit	Подтвердить
+Concave Merlon	Внутренний зубец
+Conflict	конфликт
+Connect to a specific address	Подключиться к определенному адресу
+Connection timed out.\n(NetworkError.Timeout)	Время ожидания соединения истекло.\n(NetworkError.Timeout)
+Conquest	Завоевание
+Construction Task	Задание Стройка
+Construction Tasks	Строительство
+Construction Tips	Советы по строительству
+ConstructionCrew	Рабочие
+Continually craft bombs\n<color=yellow> 15 brimstone </color>	Заказать бомбы и зациклить производство
+Continually transform iron ingots into cogs\n<color=yellow> 1 iron ingot </color>	Заказать шестерню и зациклить производство
+Continually transform plants into fabric\n<color=yellow> 10 plants </color>	Заказать ткань и зациклить производство
+Continually transform plants into rope\n<color=yellow> 10 plants </color>	Заказать веревку и зациклить производство
+Continually transform raw iron into iron ingots	Производить слитки железа из руды
+Continually transform stone into glass ingots	Производить стекло из щебня
+Continually transform wood logs into woodplanks	Производить доски из бревен
+Continue	Продолжить
+Continue a previously saved game	Продолжить с сохранения
+Continue as spectator	Продолжить в качестве наблюдателя
+Contraptions requiring mechanical components like beartraps and arbalist kits can be crafted here.	В мастерской создаются механические изделия, такие как ловушки или арбалеты
+Controlling the camera	Управление камерой
+Coop Easy	Кооп. легкий
+Coop Hard	Кооп. сложный
+Coop Normal	Кооп. средний
+Coop Normal Lights Out	Кооп. средний в кромешной тьме
+Copy	Копировать
+Copy Selected Blueprints	Создать копию из выделения
+Corbel 1	Кронштейн 1
+Corbel 2	Кронштейн 2
+Corner Brick	Срез-круглый
+Corrupted	Коруптроны
+Corruptron	Коруптрон
+Corruptron Spawn Point	Точка появления Коруптронов
+Corruptrons	Коруптроны
+Corruptrons attack your castle in waves of increasing difficulty. How long will you last? Skill and determination are your best weapons.	Коруптроны атакуют твой замок волнами, постепенно увеличивая натиск. Как долго ты продержишься? Используй навыки и смекалку!
+Could not complete the update. Please try again or contact support.	Не удалось завершить обновление. Повторите попытку или обратитесь в службу поддержки.
+Could not connect to server.	Не удалось подключиться к игре.
+Could not find storage.	Не могу найти хранилище
+Could not save game. Please try again.	Не удалось сохранить игру. Попробуй снова.
+Could not send item to Workshop.\n<b>Steam is requesting that you agree to their legal agreement (EULA).</b>\n\nIf the button below does not work, please go to:\nhttp://steamcommunity.com/workshop/workshoplegalagreement/?appid=227860	Не удалось отправить объект в Мастерскую.\n<b>Steam требует вашего согласия с условиями использования (EULA).</b>\n\nЕсли кнопка ниже не работает, перейди по ссылке:\nhttp://steamcommunity.com/workshop/workshoplegalagreement/?appid=227860
+Could not start server. Port #x already occupied.	Не удалось создать игру. Порт #x уже занят.
+Could not upload to Steam Workshop.\nReceived error: <b>#x</b>.\nCastle Story's workshop is still in beta, please send this error the the developers so we can help you.	Не удалось опубликовать в Мастерской Steam.\nПолучена ошибка: <b>#x</b>.\nМастерская Castle Story находится в бета версии, поэтому, пожалуйста, свяжись с разработчиками для устранения неисправности!
+Craft	Производство
+Craft a Lantern	Сделайте фонарь
+Crafting	Производство
+Crafting Queue Slot 1	1 Слот очереди производства
+Crafting Queue Slot 2	2 Слот очереди производства
+Crafting Queue Slot 3	3 Слот очереди производства
+Crafting Queue Slot 4	4 Слот очереди производства
+Crafting Queue Slot 5	5 Слот очереди производства
+Crafting Toggle Loop	Постоянное производство
+Crafting an Archer	Делаем лучника
+Crafting an archer	Делаем лучника
+Crafting stations related	Производственные станции
+Crafting Hub	Раздел станций
+Crank and Aim	Повернуть и навестись
+Create 6 Stockpiles to continue	Постройте 6 складов, чтобы продолжить
+Create Cleaning Task	Создать задание "Уборка"
+Create Harvest Boulder Task	Создать задание "Сбор валунов"
+Create Harvest Brimstone Task	Создать задание "Сбор бриллита"
+Create Harvest Iron Task	Создать задание "Сбор железа"
+Create Harvest Plant Task	Создать задание "Сбор растений"
+Create Harvest Task	Создать задание "Сбор"
+Create Harvest Wood Task	Создать задание "Сбор дерева"
+Create Project	Создать новое задание
+Create Repair Task	Создать задание "Ремонт"
+Create Tunnel Task	Создать задание "Тунель"
+Create a Chopping Block to continue	Постройте колоду, чтобы продолжить
+Create a Quarry to continue	Поставьте карьер, чтобы продолжить
+Create a halberdier to continue	Сделайте алебардщика, чтобы продолжить
+Create a harvest wood task to continue	Поставьте задачу рубки леса, чтобы продолжить
+Create a loom	Постройте ткацкий станок
+Create a new map from scratch	Создай собственную карту
+Create a weapon rack to continue	Постройте стойку для оружия, чтобы продолжить
+Create a workbench to continue	Постройте верстак, чтобы продолжить
+Create an archer kit	Сделайте набор лучника
+Create island brush	Кисть создающая острова
+Created on Workshop.	Создан объект в Мастерской
+Create Build Task	Создать задание "Стройка"
+Create Flatten Task	Создать задание "Сровнять"
+Create Quarry Task	Создать задание "Карьер"
+Creating a Chopping Block	Строим колоду
+Creating a Quarry	Копаем карьер
+Creating a door	Ставим дверь
+Creating a halberdier kit	Делаем набор алебардщика
+Creating a wall	Строим стену
+Creating a weapon rack	Строим стойку для оружия
+Creating a workbench	Строим верстак
+Creating lanterns	Делаем фонари
+Creating on Workshop...	Создается объект в Мастерской...
+Creating stockpiles	Строим склады
+Creating your first soldier	Ваш первый солдат
+Crenelations	Декоративные
+Crossbow	Арбалет
+Crystal	Без задания
+Crystal - Player Spawn	Кристалл (место старта)
+Crystal brush	Кисть кристалов
+Crystals	Кристаллы
+Current Time	Сейчас
+Curved Brick	Круглый блок
+Curved Left	Закругленный (Л)
+Curved Right	Закругленный (П)
+Custom	Пользовательский
+Custom Address	Пользовательский адрес
+Cut Tree	Срубить дерево
+Cut this tree into 3 usable wooden logs.	Срубить дерево и поделить его на 3 бревна
+DECORATIONS & WINTER BIOME UPDATE!\nNOW AVAILABLE!	УКРАШЕНИЯ И ОБНОВЛЕНИЕ ЗИМНЕГО БИОМА!\nТЕПЕРЬ ДОСТУПНО!
+Dead	Мертвые
+Dead Bricktrons	Мертвые Бриктроны
+Debug	Режим разработчика
+Debug Mode	Режим разработчика
+Debug mode	Режим отладки
+December	Декабрь
+Decide later - Go back to the options menu	Вернуться в меню настроек
+Decorations	Украшения
+Deep trenches scar the land of this region like the stark divides of the local bricktron settlements.	Глубокие траншеи пролегают в этих землях словно шрамы, жестко отделяя поселения друг от друга.
+Default	Стандартный
+Default preset.	Стандартный пресет.
+Defeat!	Поражение!
+Defensive Mode	Режим защиты
+Delete	Удалить
+Delete Confirmation	Подтверждение
+Delete Selected Blueprints	Удалить выделенные подзадачи
+Delete Task	Удалить задание
+Delete blueprint	Удалить чертеж
+Delete the save file from your disk.	Удалить выделенное сохранение
+Deletes the currently selected task.	Удалить это задание. Все подзадачи в нем будут потеряны
+Delicate flowers grow on the slopes of this mountain, honoring ancient warriors who once fought glorious battles here.	Нежные цветы растут на склонах этой горы, в честь древних воинов, которые когда-то вели здесь славные сражения.
+Deselect	Закрыть задание
+Deselect Group	Отменить выбор группы
+Deselect the current group.	Отмените выбор текущей группы.
+Destroy this object, RAWRRR!	Уничтожить выбранный объект
+Dig All	Опустить
+Dig Down	Копать вниз
+Dig Straight	Копать прямо
+Dig Up	Копать вверх
+Dig Voxel	Выкопать воксель
+Digging a Quarry	Копаем карьер
+Disabled	Выключено
+Display Overheads	Отображать полную информацию
+Do not fire until further notice	Не стрелять до отмены приказа
+Don't create	Не создавать
+Don't lower	Не опускать
+Don't raise	Не поднимать
+Done	Готово
+Door	Дверь
+Doors can be locked to block pathways.	Двери могут быть заперты игроком, чтобы заблокировать путь
+Double Merlon	Двойной Блок-зубец
+Double Window	двойное окно
+Down	Копать вниз
+Down Arrow	Вниз
+Download\nplayer-made maps!	Скачать\nкарты от Сообщества!
+Downloading...	Скачиваем...
+Drop Load	Бросить
+Drop Load Into	Положить в
+Drop all tools to become a builder	Снять все инструменты и стать рабочим Бриктроном
+Duplicate Selected Blueprints	Дублировать выбранный чертеж
+Easy	Легкий
+Edge distance	Расстояние до края
+Edit	Редактировать
+Editor Camera	Свободная камера
+Elevation	Подъем
+Elevation Brush	Поднимающая кисть
+Emit protective wisps to harm hostiles.\n<color=yellow> 1 iron ingot + 40 brimstone </color>	Может атаковать врагов с расстояния
+Empties the crafting station queue.	Очищает очередь производства станции
+Empty	Пустые хранилища
+Empty Map	Пустая карта
+Empty Map with a Desert Biome.	Пустая карта с пустынным биомом.
+Empty Map with a Forest Biome.	Пустая карта с лесным биомом.
+Empty Map with a Winter Biome.	Пустая карта с зимним биомом.
+Enable Debug mode	Включить режим отладки
+Enable contextual help popups	Включить контекстные подсказки
+Enable or disable HDR light bloom screen effect.	HDR эффекты свечения
+Enable or disable color remapping screen effect.	Включение или отключение постобработки
+Enabled	Включено
+End	Конец
+Enemy	Враги
+Enemy Spawns	Вражеские точки старта
+Enemy brush	Кисть врагов
+Energy:	Энергия:
+English	Английский
+Enter lobby	Войти в очередь
+Enter text...	Введи сообщение...
+Entering world...	Входим в мир
+Environment	Окружение
+Equip Archer Kit	Экипируйте набор лучника
+Equip Content	Надеть снаряжение
+Equip Halberdier Kit	Экипируйте набор алебардщика
+Equip Tools	Использовать инструменты
+Equip an archer kit to continue	Экипируйте набор лучника, чтобы продолжить
+Equip tool to gain abilities	Надеть снаряжение и получить способности
+Equip weapons and gear.	Надеть оружие и снаряжение
+Equipping the kit	Экипировка набора
+Error	Ошибка
+Error: Could not create	Ошибка: невозможно создать
+Error: Could not publish	Ошибка: невозможно опубликовать
+Exclusive to the world editor	Эксклюзивно для редактора мира
+Exit	Да, выйти на рабочий стол
+Exit to desktop	Выйти на рабочий стол
+Expand	Добавить в выделение
+Expand Blueprint Selection	Добавить подзадачи в выделение
+Expand Selected Blueprints	Развернуть выбранный чертеж
+Explosive Barrel	Взрывчатка
+Extended	Расширенный
+Fabric	Ткань
+Fabric Roll	Рулон ткани
+Fast melee unit with good damage\n<color=yellow> 1 iron ingots + 1 plank </color>	Заказать производство полного комплекта снаряжения
+February	Февраль
+Find your <color=#ffc50a>workbench</color> and <color=#ffc50a>click on it.</color>\n\nIn the taskbar popup, click on <color=#ffc50a>Halberdier Kit.</color> \n\nA Bricktron will soon start working on the kit. The worker will craft 2 pieces: <color=#ffc50a>a Halberd</color> and <color=#ffc50a>a Helmet.</color> The pieces will each be stored in the weapon rack.	Find your <color=#ffc50a>workbench</color> and <color=#ffc50a>click on it.</color>\n\nIn the taskbar popup, click on <color=#ffc50a>Halberdier Kit.</color> \n\nA Bricktron will soon start working on the kit. The worker will craft 2 pieces: <color=#ffc50a>a Halberd</color> and <color=#ffc50a>a Helmet.</color> The pieces will each be stored in the weapon rack.
+Fine Sand	Мелкий Песок
+Finished	Завершено
+Fire	Выстрелить
+Fire Once	Одиночный выстрел
+Fire at Will	Стрелять по готовности
+Fires a projectile once	Выстрелить один раз
+Flat out the area.	Видоизменить поверхность острова
+Flatten	Сровнять
+Flatten Task	Сровнять
+Flatten brush	Выравнивающая кисть
+FlattenCrew	Рабочие
+Fluted Column	Рифленая колонна
+Fog Of War	Туман войны
+Fog of War Opacity	Прозрачность тумана войны
+Forge	Плавильня
+Forged by the goodwill and generosity of nearly 30,000 souls - the legend says that digging under the crust of Credit Island will release the gentle souls trapped there for years.	Легенда гласит, что в недрах острова заточены души 30,000 игроков, пожертвовавших деньги на запуск разработки игры. И они ждут дня, когда их освободят!
+Framerate limit	Ограничение частоты кадров
+French	Французский
+Fresh Snow	Свежий Снег
+Friday	Пятница
+Friends	Для друзей
+Friends only	Только друзья
+From Camera	С камеры
+From Grid	По уровню сетки
+From Save	Из резервной копии
+Frosted Path	Ледяная дорога
+Fullscreen	На весь экран
+Fullscreen or windowed	Включение или отключение оконного режима
+Furnace	Печь
+Game Paused	Игра приостановлена
+Game Saved	Игра сохранена
+Gameplay	Геймплей
+Gameplay settings	Настройки геймплея
+Gather Iron and Brimstone to continue	Добудьте железо и серу, чтобы продолжить
+Gather some plants	Соберите растения
+Gather stone from walls and cliffs.	Добывать ресурсы из земли закрытым способом
+Gather stones from the ground to stockpile.	Добывать ресурсы из земли открытым способом
+Gathering Stuff	Сбор ресурсов
+Gathering crafting materials	Сбор материалов для ремесла
+Gems will take more time to spawn	Драгоценные камни будут требовать больше времени, чтобы появиться
+General	Основные
+General game settings	Основные настройки игры
+General options	Общие настройки
+Generate Underside	Сгенерировать
+Generates island underside.	Генерирует объемное дно острова
+Generic task actions	Общие действия с задачами
+Get grabbin'	Начать игру
+Get the catapult ready to fire.	Привести катапульту в боевую готовность
+Getting Started	С чего начать
+Glass	Стекло
+Global	Глобальный
+Go Detonate	Подорвать бочку
+Go to item on Workshop	Перейти к объекту в Мастерской
+Goals	Всего целей
+Grab Production	Забрать продукты
+Grab Ressources	Забрать ингредиенты
+Grab the Gems	Захват самоцветов
+Grab the Gems is a gamemode where, in order to win, you must be the first faction to collect #gems_to_win gems and drop them at your home crystal.\nPick up gems by selecting a worker and right-clicking a gem that has appeared in its patch. Drop the gem in your crystal by right-clicking it with the worker selected.\nConsider defending patches of gems and hunting down enemy workers who are hauling gems back to their base.\nHave fun and good luck!	В режиме <b>Захвата самоцветов</b> условие победы твоей команды - первой доставить требуемое количество самоцветов к Кристаллу.\nЭто количество для данной игры: #gems_to_win \n\nСобирай самоцветы с помощью рабочих. Их можно подобрать из специальных месторождений так же, как и любой другой ресурс. Затем прикажи рабочему доставить самоцвет, нажав правой кнопкой мыши по Кристаллу.\nГотовься напасть на вражеских рабочих, которые доставляют самоцветы, а так же защищать собственных.\n\nУдачи!
+Grab the Gems is a multiplayer game mode in which you must bring back gems to your home crystal. The team that brings back the most gems to their crystal wins!	Захват самоцветов - это многопользовательский режим, в котором игроки собирают самоцветы, и приносят их к Кристаллу. Команда, собравшая больше других, побеждает!
+Graphics	Графика
+Graphics game settings	Настройки графики
+Grass	Трава
+Grass Brush	Кисть травы
+Grass brush	Кисть травы
+Green	Зеленый
+Grid	Сетка
+Growing crystals	Выращиваем Кристаллы
+Halberdier	Алебардщик
+Halberdier Kit	Снаряжение алебардщика
+Halberdiers are inexpensive melee combatants with high speed.	Дешевые в создании легкие бойцы ближнего боя
+Half Brick	Полу-блок
+Hard	Сложный
+Hard Only	Только резкие
+Hard and Soft	Резкие и размытые
+Harvest	Сбор
+Harvest Crystals	Добывать ресурсы
+Harvest Plants	Собирать растения
+Harvest Rocks	Добывать щебень
+Harvest Task	Сбор
+Harvest Tasks	Сбор ресурсов
+Harvest ressources and bring them to stockpiles.	Добывать ресурсы, расположенные на поверхности
+Harvest these minerals to obtain crystal fragments.	Добывать выбранное месторождение
+Harvest these plants to obtain fibre.	Собирать выбранные растения
+Harvest these rocks to obtain stone fragments	Добывать выбранное месторождение
+HarvestCrew	Рабочие
+Harvesting Iron & Brimstone	Добыча железа и серы
+Harvesting Wood	Добыча древесины
+Harvesting stone	Добыча камня
+Healer <color=yellow> 1 iron + 80 brimstone + 2 fabric + 1 glass + 1 plank </color>	Заказать производство полного комплекта снаряжения
+Healing Stance	Режим лечения
+Healing Ward	Лечебный маяк
+Heavy duty door reinforced with metal hinges and supports.	Сверхмощная дверь усиленная с шарнирами и поддержками металла.
+Height	Уровень
+Height locks to camera	Привязать уровень к камере
+Helmet	Шлем
+Help	Помощь
+Help Popups	Всплывающие подсказки
+Henceforth, The once glorious lands upon which the Bricktrons thrived becometh a territory governed by the ruthless Corruptrons.	Славные земли, на которых некогда процеветали Бриктроны, отныне стали территорией безжалостных Коруптронов.
+Here are some useful construction tips. \n\nYou can <color=#ffc50a>rotate blueprints</color> before placing them them by <color=#ffc50a>right-clicking</color>. \n\nYou can <color=#ffc50a>delete blueprints</color> by <color=#ffc50a>ctrl + clicking</color> on the blueprint when in edit mode. \n\nYou can ask Bricktrons to <color=#ffc50a>destroy a construction</color> by <color=#ffc50a>ctrl + clicking</color> on it when in a build task. \n\nYou can <color=#ffc50a>duplicate, move, and manipulate blueprints</color> by using the Blueprints tool in the Plans tab on the left middle side of your screen when in a build task.	Here are some useful construction tips. \n\nYou can <color=#ffc50a>rotate blueprints</color> before placing them them by <color=#ffc50a>right-clicking</color>. \n\nYou can <color=#ffc50a>delete blueprints</color> by <color=#ffc50a>ctrl + clicking</color> on the blueprint when in edit mode. \n\nYou can ask Bricktrons to <color=#ffc50a>destroy a construction</color> by <color=#ffc50a>ctrl + clicking</color> on it when in a build task. \n\nYou can <color=#ffc50a>duplicate, move, and manipulate blueprints</color> by using the Blueprints tool in the Plans tab on the left middle side of your screen when in a build task.
+High	Высокий
+High-perched Bricktrons look down upon their inferior brethrens. Will the lowly Bricktrons revolt?	Породистые бриктроны смотрят свысока на своих примитивных собратьев. Поднимется ли крестьянский бунт?
+Hmm	Хмм...
+Hold Fire	Приостановить огонь
+Hold Position	Удержание Позиции
+Hold position and block incoming projectiles	Удерживать позицию и защищаться от снарядов врагов
+Hold right-click on various objects such as the furnace to get a contextual menu. The menu will offer different actions depending on what is selected or hovered.	Зажми правую кнопку мыши на различных объектах, чтобы отобразилось контекстное меню. С его помощью с объектом можно совершать различные действия.
+Home	Меню
+Home Crystal	Домашний кристалл
+Hordes of marauding corruptrons roam the land. Can you muster enough forces to kick them off your island?	Полчища врагов скитаются по этим землям. Сможешь ли ты навсегда изгнать их с острова?
+Host	Хозяин комнаты
+Host (Load Game)	Создать комнату (Загрузить игру)
+Host (New Game)	Создать комнату (Новая игра)
+Host a game	Создать новую комнату
+Hosta	Хоста
+Hosting Game	Размещаем игру
+Hurls bombs at the enemy. <color=yellow> 3 fabric + 30 brimstone  + 3 glass ingots</color>	Заказать производство полного комплекта снаряжения
+I can't break a block right now	Не могу разрушить блок прямо сейчас
+I can't carry any more	Не могу нести больше
+I can't collect plants right now.	Не могу сейчас собирать растения
+I can't repair this	Я не могу это починить
+I cannot transform this log	Не могу обработать это бревно
+I will not betray my friends	Я не предам своих друзей!
+I'm ready!	Я готов!
+IP Address	IP-адрес
+If needed, go back to the bricks tab and complete the wall around the door with bricks & half-bricks.\n\n<color=#ffc50a>Press Tab</color> or the <color=#00ff15>Green Checkmark</color> to confirm the new blueprints.	If needed, go back to the bricks tab and complete the wall around the door with bricks & half-bricks.\n\n<color=#ffc50a>Press Enter</color> or the <color=#00ff15>Green Checkmark</color> to confirm the new blueprints.
+If you need more help, check out the help panel by clicking on the question mark at the top right of your screen. \n\nYou can also visit the official Castle Story wiki on <color=#ffc50a>http://wiki.castlestory.net</color> \n\nYou can find other players to chat with on the official Castle Story Discord at <color=#ffc50a>http://castlestory.net/Discord</color>	If you need more help, check out the help panel by clicking on the question mark at the top right of your screen. \n\nYou can also visit the official Castle Story wiki on <color=#ffc50a>http://wiki.castlestory.net</color> \n\nYou can find other players to chat with on the official Castle Story Discord at <color=#ffc50a>http://castlestory.net/Discord</color>
+If your Bricktrons won’t work, make sure you have adequate storage ( empty stockpiles or weapon racks ).	Если Бриктроны перестали работать, проверь наличие свободных хранилищ в первую очередь.
+In Castle Story, you gather resource by placing down tasks. Left to themselves, Bricktrons will choose tasks based on priority, but you can also reassign them.\n\n<color=#ffc50a>Wood is the first resource you will want to gather</color>.\n\nLet's cut some trees!	В Castle Story ресурсы добывают с помощью задач. Сами по себе бриктроны выбирают задачи по приоритету, но вы можете их переназначать.\n\n<color=#ffc50a>Первым делом нужна древесина</color>.\n\nДавайте срубим пару деревьев!
+In honor of our backers!	В честь наших спонсоров!
+In the <color=#ffc50a>structures tab</color>, click on <color=#ffc50a>workbench</color>, and place it <color=#ffc50a>on the ground anywhere</color>.	Во <color=#ffc50a>вкладке построек</color> выберите <color=#ffc50a>верстак</color> и поставьте его <color=#ffc50a>в любом месте на земле</color>.
+In the <color=#ffc50a>structures tab</color>, click on the <color=#ffc50a>furnace</color>, and place its blueprint on the ground anywhere.\n\n<color=#ffc50a>Press Tab</color> or click on the <color=#00ff15>Green Checkmark</color> to confirm the new blueprint.	In the <color=#ffc50a>structures tab</color>, click on the <color=#ffc50a>furnace</color>, and place its blueprint on the ground anywhere.\n\n<color=#ffc50a>Press Enter</color> or click on the <color=#ffc50a>Green Checkmark</color> to confirm the new blueprint.
+In the <color=#ffc50a>stuctures tab</color>, click on the <color=#ffc50a>weapon rack</color>, and place it <color=#ffc50a>on the ground anywhere</color>.\n\nEach weapon rack can contain up to <color=#ffc50a>4 kits of the same class.</color>	In the <color=#ffc50a>stuctures tab</color>, click on the <color=#ffc50a>weapon rack</color>, and place it <color=#ffc50a>on the ground anywhere</color>.\n\n</color> Each weapon rack can contain up to <color=#ffc50a>4 kits of the same class.</color>
+In the <color=#ffc50a>tasks tab</color>, click <color=#ffc50a>harvest stone</color>, and place it <color=#ffc50a>on a nearby patch of boulders</color>.\n\nYour bricktrons should now gather all the resources needed to build your furnace and produce iron ingots. Awesome!	In the <color=#ffc50a>tasks tab</color>, click <color=#ffc50a>harvest stone</color>, and place it <color=#ffc50a>on a nearby patch of boulders</color>.\n\nYour bricktrons should now gather all the resources needed to build your furnace and produce iron ingots.Awesome!
+In the new tasks menu, <color=#ffc50a>select Quarry.</color>\n\nNow <color=#ffc50a>click on an empty patch of ground</color> to place the quarry. A yellow outline of a hole in the ground will appear.	В меню новых задач <color=#ffc50a>выберите «Карьер».</color>\n\nТеперь <color=#ffc50a>щёлкните по свободному участку земли</color>, чтобы поставить карьер. Появится жёлтый контур ямы.
+In the workbench, <color=#ffc50a>queue 1 archer kit.</color> If you have the required resources, a worker should get started immediately.	На верстаке <color=#ffc50a>закажите 1 набор лучника.</color> Если ресурсов хватает, рабочий сразу возьмётся за дело.
+In this mode, multi-threading will always be used to accelerate the processing of voxel terrain. If minimal system requirements are not met, you may experience unpredictable terrain behavior.	В этом режиме многопоточность будет использована всегда. Если системные требования не удовлетворены, местность может вести себя непредсказуемо.
+In this mode, multi-threading will be used only when optimal system requirements are met.	В этом режиме многопоточность будет использована только если оптимальные системные требования удовлетворены.
+In this mode, multi-threading will never be used to accelerate the processing of voxel terrain.	В этом режиме многопоточность не будет использована для ускорения обработки вокселей.
+In this tutorial, we will teach you the basics of playing the game.\n\nCastle Story is a complex game, so we recommend following it in it's entirety before diving deeper in other game modes. \n\n<color=#ffc50a>Let's get started!</color>\n	В этом обучении мы расскажем об основах игры.\n\nCastle Story — сложная игра, поэтому советуем пройти обучение целиком, прежде чем браться за другие режимы. \n\n<color=#ffc50a>Начнём!</color>\n
+Info	Подробности
+Initializing scripts	Инициализируем скрипты
+Instant Build Mode	Режим мгновенной постройки
+Intensity	Усилие
+Invalid title.	Неверное имя карты
+Invasion	Вторжение
+Invert mouse scroll	Инвертировать прокрутку
+Inward Corner Stairs Block	Срез-угол лестн.
+Iron	Железо
+Iron & Brimstone	Железо и сера
+Iron Brush	Кисть железа
+Iron Ingot	Слиток железа
+Iron and Brimstone are useful to produce iron ingots, wards and other items and structures. \n\nHarvest some iron AND brimstone. \n\n- Click on the <color=#ffc50a>Pickaxe</color> on the left side of your screen. \n\n- Select the <color=#ffc50a>Iron or Brimstone harvest task</color>. \n\n- Place it on a patch of iron or brimstone. \n\n- <color=#00ff15>Confirm</color>. \n\nYou need to gather <color=#ffc50a>both iron and brimstone</color> to complete this objective. \n\n<b>Make sure to have available stockpiles!</b>	Iron and Brimstone are useful to produce iron ingots, wards and other items and structures. \n\nHarvest some iron AND brimstone. \n\n- Click on the <color=#ffc50a>Pickaxe</color> on the left side of your screen. \n\n- Select the <color=#ffc50a>Iron or Brimstone harvest task</color>. \n\n- Place it on a patch of iron or brimstone. \n\n- <color=#00ff15>Confirm</color>. \n\nYou need to gather <color=#ffc50a>both iron and brimstone</color> to complete this objective. \n\n<b>Make sure to have available stockpiles!</b>
+Iron brush	Кисть железа
+Iron ingot	Слитки железа
+Iron nodes	Железная руда
+Is it making a come back??	Его что, вернули в игру?
+Is required for crafting most military equipment.	Используется для создания некоторых элементов боевого снаряжения
+Is used in the fabrication of rope bridges and bows.	Используется в производстве луков и мостов
+Island	Остров
+Island Brush	Плоская кисть
+Issuing Orders	Отдаём приказы
+It should be getting dark soon, if not already! You will want to illuminate your castle so you can keep working.	Скоро стемнеет, если уже не стемнело! Нужно осветить замок, чтобы работа не останавливалась.
+It's the return of the Halloween event! Once again, this year, Grab the Gems gets a healthy dash of spooky! Gems turned into pumpkins, your crystal is a bubbly cauldron and the moon doesn't look quite right! If you haven't tried the Grab the Gems/Capture the Pumpkin gamemode, be sure to give it a try, it's tons of fun!\n\nYou'll also notice the Bricktrons have put on their best costumes! Share a screenshot of your favorite one on social media with the tag #castlestory!\n\nHappy Halloween!\n\n-Team Sauropod	Хэллоуин возвращается! И в этом году «Захват кристаллов» снова становится жутковатым! Кристаллы превратились в тыквы, ваш кристалл — в бурлящий котёл, а с луной явно что-то не так! Если вы ещё не пробовали режим «Захват кристаллов / Захват тыкв», обязательно попробуйте — это очень весело!\n\nА ещё бриктроны надели свои лучшие костюмы! Поделитесь скриншотом любимого в соцсетях с тегом #castlestory!\n\nС Хэллоуином!\n\n— Команда Sauropod
+Item	Объект
+Items drawing from the mysterious energy emanating from crystals are built here, including wards and artificer kits.	Предметы, связанные с мистической энергией, создаются на алтаре
+January	Январь
+Join	Присоединиться
+Join Task	Присоединиться к заданию
+Join a game	Присоединиться к игре
+Join a game in your local area network	Присоединиться к игре по локальной сети
+Join the official Discord to find fellow Castle Story players! www.castlestory.net/Discord	Присоединяйся к сообществу игроков Castle Story в Discord!\nwww.castlestory.net/Discord.
+July	Июль
+Jump Off	Спрыгнуть
+June	Июнь
+Just like harvesting trees, to get raw Iron, <color=#ffc50a>go to the task tab</color>, find the <color=#ffc50a>harvest iron task</color>, and, <color=#ffc50a>place it on a nearby patch of iron</color>.\n\n<color=#ffc50a>Press Tab</color> to confirm the task placement.\n\nWe will also need to melt that metal into ingots. Brimstone is the resource we need.\n\nGo to the <color=#ffc50a>task tab</color>, click on <color=#ffc50a>harvest brimstone</color>, and <color=#ffc50a>place it on a nearby patch of brimstone</color>.\n\n<color=#ffc50a>Press Tab</color> to confirm the task placement.	Just like harvesting trees, to get raw Iron, <color=#ffc50a>go to the task tab</color>, find the <color=#ffc50a>harvest iron task</color>, and, <color=#ffc50a>place it on a nearby patch of iron</color>.\n\n<color=#ffc50a>Press Enter</color> to confirm the task placement.\n\nWe will also need to melt that metal into ingots. Brimstone is the resource we need.\n\nGo to the <color=#ffc50a>task tab</color>, click on <color=#ffc50a>harvest brimstone</color>, and <color=#ffc50a>place it on a nearby patch of brimstone</color>.\n\n<color=#ffc50a>Press Enter</color> to confirm the task placement.
+Keep Empty	Держать пустым
+Keep empty	Держать пустой
+Keep playing	Продолжить играть
+Kepi	Кепка
+Kettle Hat	Котелок
+Key Bindings	Управление
+Kills:	Убито:
+Knight	Рыцарь
+Knight Kit	Снаряжение рыцаря
+Knight Statue	Статуя Рыцаря
+Knights are slow but robust melee units, their block ability excels against projectiles.	Рыцари - это тяжелые бойцы ближнего боя
+Laboratory	Лаборатория
+Landscape painted by famous painter Bricktron Ross.	Пейзаж написан известным художником Бриктроном Россом.
+Language	Language / Язык
+Languages	Языки
+Lantern Ward	Фонарь
+Large	Большой
+Latest News	Новости
+Launch the catapult's projectile into the air.	Выпустить загруженный в катапульту предмет по цели
+Leave	Выйти
+Leave game	Выйти в главное меню
+Leaving lobby	Покинуть очередь
+Left Alt	Левый Alt
+Left Arrow	Влево
+Left Corner Stairs	Угол лестницы (Л)
+Left Ctrl	Левый Ctrl
+Left Mouse Button	Левая кнопка мыши
+Left Shift	Левый Shift
+Left Spiral Stairs	Винт. лестница (Л)
+Legend has it that these floating islands contain the lost souls of 30 000 backers. These souls, trapped within layers of solid rock, are awaiting the day where they will be set free!	Легенда гласит, что в недрах острова заточены души 30,000 игроков, пожертвовавших деньги на запуск разработки игры. И они ждут дня, когда их освободят!
+Let's craft an archer kit! <color=#ffc50a>We will need Rope, Fabric and Planks.</color>	Сделаем набор лучника! <color=#ffc50a>Понадобятся верёвка, ткань и доски.</color>
+Let's place down some blueprint to create a wall!	Поставим чертежи, чтобы построить стену!
+Lets the Bricktrons see outside their fortress.	Позволяет Бриктронам видеть за пределами своей крепости.
+Letters	Письма
+Level of Detail	Детализация
+Level override	Поверхностная подушка
+Level:	Отметка уровня
+Light Bloom	Свечение
+Lights Out	Кромешная тьма
+Like the standard stone column, but rounded at the ends.	Как и обычная каменная колонна, но закругленная на концах.
+Limit the game framerate to a specific FPS	Воспроизводить не более чем указанное число кадров
+Load Game	Загрузить игру
+Load blueprint	Загрузить чертеж
+Load with Ammo	Зарядить
+Loading	Загрузка
+Lobby	Очередь
+Lobby (As Client)	Очередь (Клиент)
+Lobby (As Host)	Очередь (Хозяин комнаты)
+Local Server List	Список местных игр
+Lock	Запереть дверь
+Lock Height	Зафиксировать высоту
+Lock mouse	Привязка курсора к окну
+Lock mouse inside game window	Не выпускать курсор за пределы окна игры
+Lock this door to protect your Bricktrons.	Блокировать эту дверь. Никто не сможет свободно пройти через нее
+Locked	Не выполнять
+Log	Бревна
+Looking for storage	Ищу хранилище
+Loom	Ткацкий станок
+Loom & Plants	Ткацкий станок и растения
+Low	Низкий
+Lower	Опустить
+Lower Task Priority	Понижение Приоритета Задачи
+Lower priority	Понизить приоритет
+Machine Shop	Мастерская
+Main Menu	Главное меню
+Main building block for castles.	Основные строительные блоки для замков
+Main resource used to build wooden structures.	Основной ресурс для постройки деревянных сооружений
+Maintenance Tasks	Обслуживание
+Make Iron Ingots	Выплавьте железные слитки
+Make the Bricktron jump off a ledge.	Заставить Бриктрона спрыгнуть с уступа
+Make workers arm themselves in a desperate gambit to fend off attackers	Приказать рабочим Бриктронам вооружиться на ближайших оружейных стойках
+Make workers hurry back to the home crystal.	Приказать всем рабочим бриктронам собраться у Кристалла
+Making Planks	Изготовление досок
+Making Rope & Fabric	Изготовление верёвки и ткани
+Making bricks	Делаем кирпичи
+Making your first wall	Ваша первая стена
+Manual Convert	Ручное преобразование
+Map	Карта
+Map Saved	Карта сохранена
+Maps made by Sauropod Studio	Карты от Sauropod Studio
+Maps made by users	Созданные тобой карты
+Maps you are subscribed to	Карты от сообщества
+March	Март
+Markers	Маркеры
+Master Volume	Общий уровень звука
+Max Players	Количество игроков
+Maximum Reached	Максимум достигнут
+May	Май
+Medium	Средний
+Meet the Bricktrons!	Знакомьтесь — бриктроны!
+Melee	Ближний бой
+Memory Collection	Очистить RAM
+Menu	Меню
+Merlon	Блок-зубец
+Merlon Corner	Внешний зубец
+Middle	Посередине
+Middle Mouse Button	Средняя кнопка мыши
+Mining Tasks	Земляные работы
+Minitron	Минитрон
+Mode	Режим
+Modes	Режимы
+Monday	Понедельник
+Monstera	Монстера
+Most resources need to be stockpiled for Bricktrons to be able to use them.\n\nStockpiles are needed to do that. In fact, <color=#ffc50a>you will need A LOT of stockpiles to run a village efficiently</color>.	Большинство ресурсов нужно складывать на склады, чтобы бриктроны могли ими пользоваться.\n\nДля этого нужны склады. На самом деле, <color=#ffc50a>для нормальной работы деревни складов нужно ОЧЕНЬ много</color>.
+Mouse Action 1	Действие мыши 1
+Mouse Action 2	Действие мыши 2
+Mouse Action Modifier 1	Побочное действие мыши
+Mouse Action Modifier 2	Вторичное действие мыши
+Mouse Input	Настройки мыши
+Mouse Wheel Down	Колесо мыши назад
+Mouse Wheel Up	Колесо мыши вперед
+Mouse screen edge nudge	Прокрутка мышью у краев экрана
+Mouse scroll factor	Масштаб прокрутки
+MouseWheel	Колесо мыши
+Move	Передвинуть
+Move Attack	Двигаться и атаковать
+Move Camera Backward	Камера назад
+Move Camera Down	Опустить камеру
+Move Camera Forward	Камера вперед
+Move Camera Left	Камера влево
+Move Camera Right	Камера вправо
+Move Camera Up	Поднять камеру
+Move Selected Blueprints	Передвинуть выделенные подзадачи
+Move To	Перейти
+Move and drop carried item at target location.	Перейти в заданную точку и положить ресурсы в хранилище
+Move to item and attempt to pick it up.	Подойти к предмету и попробовать его взять
+Move to location and engage enemies.	Перейти в указанную точку, атакуя врагов на пути
+Move to target and grab 1 item from it.	Перейти в заданную точку и взять один предмет из хранилища
+Moving the Camera	Перемещение камеры
+Moving the camera	Перемещение камеры
+Multiplayer	Сетевая игра
+Multiplayer Error	Ошибка сетевой игры
+Multiplayer port	Порт сетевой игры
+Music	Музыка
+Mute	Заглушить
+Mute all sounds	Загрушить весь звук
+My destination storage became full	Я шел к хранилищу, которое теперь заполнено
+My destination storage no longer exists	Я шел к хранилищу, которого теперь нет
+My inventory is empty	У меня нет ресурсов
+My resources got converted	Нужные мне ресурсы были переработаны
+My target is already dead	Моя цель уже мертва
+My voxel was built over	Нужный мне воксель застроен
+Name	Имя
+Need More Help?	Нужна помощь?
+Nested in the central crater of Arecibo, the enemies could come from anywhere - with no obvious chokepoints to defend. Will your castle stand this ultimate test?	Бриктроны гнездятся в кратере Аресибо, и враги могут прийти с любой стороны. Пройдет ли твой замок решающий тест?
+Neutral	Нейтральные
+Never	Никогда
+New Game	Новая игра
+New Map	Новая карта
+New Map Desert	Новая карта Пустыня
+New Map Forest	Новая карта Лес
+New Map Winter	Новая карта Зима
+New Task	Новое задание
+New save	Новое сохранение
+Next Bricktron	Энергии до следующего Бриктрона
+Next Tunnel	Режим (направление)
+Next wave starts in:	Следующая волна появится через:
+No - Cancel	Нет - Оставить все как есть
+No map	Нет карты
+No servers found.	Игр не найдено
+No space left for me to join	В этом задании для меня не осталось места
+No, discard.	Нет, оставить как было
+None	Нет
+None selected	Ничего не выбрано
+None supported	Нет режимов
+Normal	Средний
+Normal Lights Out	Средний в кромешной тьме
+Not a data message.\n(NetworkError.BadMessage)	Переданы поврежденные данные.\n(NetworkError.BadMessage)
+Not enough resources are available to process this request.\n(NetworkError.NoResources)	Не достаточно системных ресурсов чтобы обработать запрос.\n(NetworkError.NoResources)
+Not ready	Не готово
+Nothing to do	Мне нечего делать
+November	Ноябрь
+Now	Сейчас
+Now that you have plant fiber, lets make some rope and fabric. \n\n- Select the loom. \n\n- At the bottom of your screen, with the loom pop-up, you can select what you want to craft. \n\n- Click on the <color=#ffc50a>Rope</color> to craft one rope coil. \n\nOnce you have some rope, select the loom again and click on the <color=#ffc50a>Fabric</color> to craft one fabric roll. \n\n<color=#ffc50a>Make sure you have empty stockpiles to store both the fabric and the rope.</color>	Now that you have plant fiber, lets make some rope and fabric. \n\n- Select the loom. \n\n- At the bottom of your screen, with the loom pop-up, you can select what you want to craft. \n\n- Click on the <color=#ffc50a>Rope</color> to craft one rope ballot. \n\nOnce you have some rope, select the loom again and click on the <color=#ffc50a>Fabric</color> to craft one fabric roll. \n\n<color=#ffc50a>Make sure you have empty stockpiles to store your both the fabric and the rope.</color>
+Now that your village grew larger, let's create some walls to protect them. \n\n<color=#ffc50a>We will need stone to make bricks</color>, lots of them! Let's make a quarry to gather more stone.	Now that your village grew larger, let's create some walls to protect them. \n\n<color=#ffc50a>We will need stone to make bricks</color>, lots of them! Let's make a quarry to gather more stone.
+Now, you have a bunch of logs, but your Bricktrons don't know what to do with them.\n\nLet's create a <color=#ffc50a>Chopping Block</color> to transform them into <color=#ffc50a>planks</color>!	Теперь у вас куча брёвен, но бриктроны не знают, что с ними делать.\n\nПостроим <color=#ffc50a>колоду</color>, чтобы превращать их в <color=#ffc50a>доски</color>!
+October	Октябрь
+Off	Затенение отключено
+Official	Официальные
+Once those two pieces are stored in the weapon rack, <color=#ffc50a>select a Bricktron</color> and <color=#ffc50a>right-click on the rack</color>. Congratulations, you have your first soldier!	Когда обе части окажутся на стойке, <color=#ffc50a>выберите бриктрона</color> и <color=#ffc50a>щёлкните правой кнопкой по стойке</color>. Поздравляем, у вас первый солдат!
+Once two bricktrons are friends, they are friends forever, or until you reboot your computer.	Если два Бриктрона подружились - они останутся друзьями навсегда. Ну, или до того момента, пока ты не перезагрузишь компьютер.
+Once you have stockpiled one or more <color=#ffc50a>Lanterns</color>, the easiest way to place them is with the <color=#ffc50a>Structures</color> tab. \n\nPlace a lantern blueprint where you want your Bricktrons to build it. They will carry it from the stockpile to the blueprint. \n\nOptionally, link your lanterns to your home crystal with Pylons to make them shine brighter.	Once you have stockpiled one or more <color=#ffc50a>Lanterns</color>, the easiest way to place them is with the <color=#ffc50a>Structures</color> tab. \n\nPlace a lantern blueprint where you want your Bricktrons to build it. They will carry it from the stockpile to the blueprint. \n\nOptionally, link your lanterns to your home crystal with Pylons to make them shine brighter.
+Once your furnace is built, <color=#ffc50a>click on it</color>.\n\nThe furnace tab should appear in the taskbar at the bottom of your screen.	Когда печь будет построена, <color=#ffc50a>щёлкните по ней</color>.\n\nВнизу экрана на панели задач появится вкладка печи.
+Only accept blue crystal	Складировать только кристаллит
+Only accept bombs	Складировать только бомбы
+Only accept bricks	Складировать только каменные блоки
+Only accept brimstone	Складировать только бриллит
+Only accept capture wards	Складировать только маяки захвата
+Only accept cogs	Складировать только шестерни
+Only accept explosive barrel	Складировать только взрывчатку
+Only accept fabric	Складировать только ткань
+Only accept glass	Складировать только стекло
+Only accept healing wards	Складировать только лечебные маяки
+Only accept iron	Складировать только железную руду
+Only accept iron ingots	Складировать только слитки железа
+Only accept lantern wards	Складировать только фонари
+Only accept planks	Складировать только доски
+Only accept plants	Складировать только волокно
+Only accept pylon	Складировать только опорные маяки
+Only accept rope	Складировать только веревки
+Only accept sentinel wards	Складировать только боевые маяки
+Only accept stone	Складировать только щебень
+Only accept traps	Складировать только ловушки
+Only accept wood	Складировать только бревна
+Only move on player order	Двигаться только в случае указания игрока
+Only on grass	Применять только на траве
+Only store alchemist kits	Складировать только комплекты снаряжения для алхимиков
+Only store arbalest kits	Складировать только комплекты снаряжения для арбалетчиков
+Only store archer kits	Складировать только комплекты снаряжения для лучников
+Only store artificer kits	Складировать только комплекты снаряжения для волшебников
+Only store halberdier kits	Складировать только комплекты снаряжения для алебардщиков
+Only store knight kits	Складировать только комплекты снаряжения для рыцарей
+Only the stairs half of a corner stairs brick.	Часть угла со ступенями
+Only the stairs half of a stairs brick.	Часть блока-лестницы со ступенями
+Opacity	Непрозрачность
+Open Blueprint Management	Открыть панель управление
+Open Chat	Открыть чат
+Open Steam and login to your account to publish on the Workshop.	Открой Steam и войди в аккаунт для того, чтобы опубликовать в Мастерскую
+Open on Workshop	Открыть в Мастерской
+Open the EULA in Steam	Открыть EULA в Steam
+Open the item page in Steam	Открыть страницу объекта в Мастерской
+Open up the pie menu on your crystal or select the Idle task to spawn a new Bricktron.	Откройте круговое меню кристалла или выберите задачу «Безделье», чтобы призвать бриктрона.
+Operate this station	Назначить Бриктрона оператором этой станции
+Operation	Операции
+Operation is not supported.\n(NetworkError.WrongOperation)	Операция не поддерживается.\n(NetworkError.WrongOperation)
+Options	Опции
+Opuntia	Опунция
+Orange	Оранжевый
+Order Bricktrons to drop their equipment at the nearest weapon racks	Приказать снять все снаряжение и разместить его на ближайшие оружейные стойки
+Orders a Bow	Заказать один лук
+Orders a Cap	Заказать одну шляпу
+Orders a Helmet	Заказать один шлем
+Orders a Quiver	Заказать один колчан
+Orders a Shield	Заказать один щит
+Orders a Sword	Заказать один меч
+Other	Другой
+Outward Corner Stairs Block	Наруж.-угол лестн.
+PLAY THE TUTORIAL	Пройти обучение
+Packed Powder	Хрустящий Снег
+Parapet 1	Парапет 1
+Parapet 2	Парапет 2
+Parapet 3	Парапет 3
+Parched Earth	Сухая Земля
+Part of the alchemist kit.	Часть снаряжения алхимика
+Part of the arbalist kit.	Часть снаряжения арбалетчика
+Part of the archer kit.	Часть снаряжения лучника
+Part of the artificer kit.	Часть снаряжения волшебника
+Part of the halberdier kit.	Часть снаряжения алебардщика
+Part of the knight kit.	Часть снаряжения рыцаря
+Passive Workers	Пассивные рабочие
+Passive workers are listed here.\nIf you give a worker a manual order, he becomes passive. Passive workers will get back to work after a few seconds.	Здесь указаны пассивные рабочие\nЕсли отдаешь приказы вручную, рабочие ненадолго становятся пассивными и, если новых приказов не поступало, затем возвращаются к активному состоянию
+Pause	Пауза
+Pause Daytime	Заморозить время
+Pause game when window loses focus	Останавливать игру когда окно перестает быть активным
+Pause the Game	Приостановить игру
+Pause when out of focus	Не воспроизводить в фоновом режиме
+Pavement	Булыжник
+Perched on your heightened plateau, fend off attacks from three different fronts.	Расположитесь на возвышенном плато и бейтесь на три фронта сразу!
+Physicalizing landform	Загружаем воксели
+Pick Up	Подобрать
+Place a repair task on existing stone and wooden blocks to automatically have them repaired if they take damage.	Размести задание "ремонт" в своем замке, и, если блоки в зоне его действия получат урон, они будут автоматически ремонтироваться Бриктронами.
+Place ammo to be fired by the catapult.	Зарадить катапульту боеприпасами
+Place some blueprints to continue	Поставьте чертежи, чтобы продолжить
+Placing Lanterns	Установка фонарей
+Placing this ward besides a shard will ensure it's capture.	Размести рядом с Осколками или Кристаллами для их захвата. Не требуется энергия.
+Plank	Доски
+Planks	Доска
+Planks and colums make quick, solid platforms.	Формирует полы и крыши
+Plant	Волокно
+Plant Brush	Кисть растений
+Plant Type	Тип растения
+Plant brush	Кисть растений
+Planting trees	Высаживаем деревья
+Plants	Растения
+Plateau	Сровнять
+Plateau Brush	Выравнивающая кисть
+Plateau's island volume.	Выравнивает местность
+Play	Играть
+Play a game on your own	Сыграть игру одному
+Play a game with others	Сыграть игру с другими игроками
+Player	Игрок
+Player Spawns	Места старта игроков
+Player Starting Point	Место старта игрока
+Player brush	Кисть игрока
+Players	Игроки
+Players of the same color share control	Игроки одного цвета имеют общую сферу влияния
+Players of the same team are allies	Игроки из одной команды являются союзниками
+Please wait.	Пожалуйста, подождите.
+Please wait...	Пожалуйста, подождите...
+Please wait...\nYour item is being created on and published to the Steam Workshop.	Пожалуйста, подожди.\nОбъект создается и публикуется в Мастерской Steam.
+Plug	Блок-паз
+Plug H	Блок-паз H
+Plug L	Блок-паз L
+Plug T	Блок-паз T
+Plug X	Блок-паз X
+Plugs	Пазы
+Poleaxe	Секира
+Polygatum	Полигатум
+Population	Население
+Port	Порт
+Pouch	Рюкзак
+Preset	Пресет
+Press "Enter" to chat with other players.	Нажми "Enter" чтобы писать сообщения игрокам.
+Press H to toggle your Artificer between healing and attacking modes.	Ты можешь нажать H (по умолчанию), чтобы переключить стойки волшебников между атакующей и излечивающей.
+Press H to toggle your Knights between regular and defensive mode, where they can block projectiles.	Ты можешь нажать H (по умолчанию), чтобы переключить стойки рыцарей между атакующими и защитными.
+Press P to unpause	Нажми P чтобы продолжить
+Press any key to assign or press #xxx to unassign.	Нажми желаемую для действия клавишу или нажми #xxx чтобы отвязать.
+Preview	Предпросмотр
+Primary	Основная
+Priority	Приоритет
+Privacy	Приватность
+Private	Личная
+Pro tip: <color=#ffc50a>You need space in a weapon rack for the kit to be crafted.</color>	<color=#ffc50a>Pro tip: You need space in a weapon rack for the kit to be crafted.
+Produce 3 ingots to continue	Выплавьте 3 слитка, чтобы продолжить
+Produce Bombs	Делать бомбы
+Produce Cogs	Делать шестерни
+Produce Fabric	Делать ткань
+Produce Glass ingots	Плавить щебень
+Produce Iron ingots	Плавить железо
+Produce Rope	Делать веревки
+Produce planks	Обрабатывать
+Production	Переработка
+Progress Bar	Шкала
+Public	Для всех
+Public Server List	Список публичных игр
+Publish	Опубликовать
+Publish to Workshop	Опубликовать в мастерской
+Published blueprint to Workshop	Опубликованный чертеж в мастерской
+Published on Workshop.	Опубликовано в в Мастерской
+Publishing on Workshop...	Публикуется в Мастерской...
+Pylon Ward	Опорный маяк
+Quality Settings	Качество графики
+Quarry	Карьер
+Quarry Task	Карьер
+QuarryCrew	Рабочие
+Queue	Очередь
+Queue Archer Kit	Закажите набор лучника
+Queue Bow	Лук в очередь
+Queue Cap	Шляпу в очередь
+Queue Halberdier Kit	Закажите набор алебардщика
+Queue Helmet	Шлем в очередь
+Queue Quiver	Колчан в очередь
+Queue Shield	Щит в очередь
+Queue Sword	Меч в очередь
+Queue a Halberdier	Закажите алебардщика
+QuickSave	Быстрое сохранение
+Quickly! The enemy is close by! Will you overcome your foes in the forest-peppered island of Komorebi?	Быстрей, враги уже близко! Будут ли они повержены тобой на этом острове с густыми лесами?
+Quit	Выйти из игры
+Quit Game	Покинуть игру
+Quit game	Выйти из игры
+Quiver	Колчан
+Raise	Поднять
+Raise All	Поднять
+Raise Task Priority	Повышение Приоритета Задачи
+Raise brush	Поднимающая кисть
+Raise priority	Повысить приоритет
+Ramp	Рампа
+Ramp Junction	Стык рампы
+Randomness	Шум
+Ranged	Дальний бой
+Raw Iron	Железная руда
+Raw stone can be combined to form stone bricks or smelted into glass.	Щебень формирует каменные блоки или плавится в стекло
+Read more	Прочесть больше
+Ready	Готов!
+Recall Workers	Общий сбор
+Red	Красный
+Refine wood logs into planks at this station.	Позволяет обрабатывать бревна и получать доски
+Refrain from shooting arrows.	Защититься от вражеских стрел
+Reinforced Door	Усиленная Дверь
+Reload and fire every reachable barrels	Заряжать доступную взрывчатку и вести огонь
+Remove Workers	Убрать рабочих
+Remove all items in production	Очищает очередь производства станции
+Remove ammo from the catapult.	Изъять боеприпасы из катапульты
+Remove weapon rack restriction	Принимать любое снаряжение
+Repair	Ремонт
+Repair Task	Ремонт
+Repair all bricks in the area.	Производить ремонт блоков и объектов в области
+RepairCrew	Рабочие
+Replenish an Alchemist’s ammo by selecting the unit and right-clicking a stockpile with bombs.	Чтобы пополнить боезапас алхимика, выбери его и нажми по хранилищу с бомбами правой кнопкой мыши.
+Required	Требуется
+Requirements	Требования
+Requires	Ингредиенты
+Resend to Workshop	Переслать в Мастерскую
+Resource Types	Типы ресурсов
+Resources	Ресурсы
+Return to main menu	Перейти в главное меню
+Reveals the surrounding area and emits light. <color=yellow> 1 iron ingot + 5 brimstone </color>	Источник света. Ярче при соединении с Кристаллом
+Revert	Сбросить настройки
+Rickety Door	Покосившаяся Дверь
+Right Alt	Правый Alt
+Right Arrow	Вправо
+Right Corner Stairs	Угол лестницы (П)
+Right Ctlr	Правый Ctrl
+Right Mouse Button	Правая кнопка мыши
+Right Shift	Правый Shift
+Right Spiral Stairs	Винт. лестница (П)
+Right now, your village is completely defenseless. This is a problem we should fix, don't you think?\n\n<color=#ffc50a>Let's create some weapons!</color>\n\nFor that <color=#ffc50a>we'll need metal</color>.	Сейчас ваша деревня совершенно беззащитна. Надо бы это исправить, не так ли?\n\n<color=#ffc50a>Сделаем оружие!</color>\n\nДля этого <color=#ffc50a>нам понадобится металл</color>.
+Rock will be automatically converted to stone blocks.	Автоматически преобразовывать щебень в блоки
+Rope	Веревки
+Rope Bridge	Подвесной мост
+Rope Coil	Моток веревки
+Rope and fabric are made with plant fiber. Place a harvest plants task on a nerby patch of ferns.	Верёвку и ткань делают из растительного волокна. Поставьте задачу сбора растений на ближайшие заросли папоротника.
+Rotate Down	Повернуть камеру вниз
+Rotate Left	Повернуть камеру влево
+Rotate Right	Повернуть камеру вправо
+Rotate Staircase	Сменить точку начала лестницы
+Rotate Up	Повернуть камеру вверх
+Rotating the Camera	Поворот камеры
+Rotating the camera	Поворот камеры
+Roughly built door of questionable structural integrity.	Грубо сколоченная дверь сомнительной структурной целостности.
+Round Bricks	Закругленные блоки
+Round Column	Круглая колонна
+Salicornia	Саликорния
+Sand	Песок
+Sandbox	Песочница
+Satchel	Подсумок
+Saturday	Суббота
+Save	Сохранить
+Save (Overwrite)	Сохранить (Перезаписать)
+Save Failure	Ошибка сохранения
+Save and Publish	Сохранить и опубликовать
+Save current selection	Сохранить текущий выбор
+Save game	Сохранить игру
+Save your progress	Сохранить прогресс игры
+Save, Create and publish	Сохранить, создать и опубликовать
+Saved to disk.	Сохранено на диск
+Scaffolding	Строительные леса
+Score	Счет
+Screen Resolution	Разрешение
+ScreenShot	Снимок экрана
+See all raw resources	Выбери из всех ресурсов
+Seek and attack nearby enemies	Найти и атаковать ближайших врагов
+Select	Выбрать
+Select Altar	Выбрать алтарь
+Select Arch Brick	Выбрать блок Свода
+Select Bear Trap	Выбрать Медвежий Капкан
+Select Brace	Выбрать распор
+Select Capture Ward	Выбрать маяк захвата
+Select Catapult	Выбрать катапульту
+Select Chopping Block	Выбрать полено
+Select Corbel	Выбрать кронштейн
+Select Corbel2	Выбрать кронштейн 2
+Select Crew	Выбрать участников
+Select Door	Выбрать дверь
+Select Double Brick	Выбрать каменный блок
+Select Explosive Barrel	Выбрать Взрывоопасный Бочку
+Select Forge	Выбрать плавильню
+Select Furnace	Повторять производство
+Select H Plug	Выбрать Н блок-паз
+Select Half Brick	Выбрать полу-блок
+Select Half Stair	Выбрать Половину Лестницы
+Select Healing Ward	Выбрать лечебный маяк
+Select L Plug	Выбрать L блок-паз
+Select Laboratory	Выбрать лабораторию
+Select Lantern Ward	Выбрать фонарь маяк
+Select Log	Выбрать Бревно
+Select Loom	Выбрать ткацкий станок
+Select Machine Shop	Выбрать мастерскую
+Select Merlon	Выбрать зубец
+Select Merlon Concave	Выбрать вогнутый зубец
+Select Merlon Convex	Выбрать выпуклый зубец
+Select Merlon Double	Выбрать двойной зубец
+Select Parapet	Выбрать парапет
+Select Parapet2	Выбрать парапет 2
+Select Parapet3	Выбрать парапет 3
+Select Pillar	Выбрать Колонну
+Select Plank	Выбрать доску
+Select Plug Brick	Выбрать блок-паз
+Select Project 1	Выбрать задание 1
+Select Project 10	Выбрать задание 10
+Select Project 2	Выбрать задание 2
+Select Project 3	Выбрать задание 3
+Select Project 4	Выбрать задание 4
+Select Project 5	Выбрать задание 5
+Select Project 6	Выбрать задание 6
+Select Project 7	Выбрать задание 7
+Select Project 8	Выбрать задание 8
+Select Project 9	Выбрать задание 9
+Select Pylon Ward	Выбрать опорный маяк
+Select Ramp Junction	Выбрать стык рампы
+Select Rope Bridge	Выбрать подвесной мост
+Select Round Brick	Выбрать круглый блок
+Select Round Brick Half	Выбрать половину круглго блока
+Select Round Brick Left	Выбрать круглый блок слева
+Select Round Brick Right	Выбрать круглый блок справа
+Select Sentinel Ward	Выбрать боевой маяк
+Select Spiral Stair Left	Выбрать Спиральную Лестницу Слева
+Select Spiral Stair Right	Выбрать Спиральную Лестницу Справа
+Select Stair Corner Left	Выбрать Угол Лестницы Слева
+Select Stair Corner Right	Выбрать Угол Лестницы Справа
+Select Stair Corner Simple	Выбрать Лестничный Угол Просто
+Select Stairs	Выбрать Лестницу
+Select Stockpile	Выбрать хранилище
+Select T Plug	Выбрать T блок-паз
+Select Task	Выбрать задание
+Select Weaponrack	Выбрать оружейную стойку
+Select Wood Beam	Выбрать горизонтальный брус
+Select Wood Column	Выбрать вертикальный брус
+Select Wood Ramp	Выбрать рампу
+Select Workbench	Выбрать верстак
+Select Workers	Выделить рабочих
+Select X Plug	Выбрать X блок-паз
+Select a map	Выберите карту
+Select all Bricktrons doing this task.	Взять в выделение всех рабочих из этого задания
+Select game	Выбрать игру
+Select map	Выбрать карту
+Selecting Bricktrons	Выбор бриктронов
+Selecting a block	Выбор блока
+Selecting a structure	Выбор Объектов
+Selecting a task	Выбор задания
+Selection	Выделение
+Send Corruptron Wave	Послать волну Коруптронов
+Send to workshop	Отправить в Мастерскую
+Send your bricktron to detonate this barrel.	Послать Бриктрона зажечь фитиль
+Sentinel Ward	Боевой маяк
+September	Сентябрь
+Server has stopped.	Игра остановлена.
+Serves as ammunition for the alchemist.	Служит расходным боеприпасом для алхимиков
+Serves as ammunition for the catapult.	Служит расходным боеприпасом для катапульт
+Serves as fuel for the furnace and is used in the concoction of explosives.	Магическая эссенция, служащая в качестве топлива или взрывчатки
+Set Target	Задать цель
+Set the fog of war opacity	Установить прозрачность тумана (граница зоны видимости Бриктронов)
+Set the mouse scroll speed factor	Задать скорость прокрутки колесом мыши
+Set the music volume	Задать уровень громкости музыки
+Set the overall volume of all music and sounds	Задать громкость игры (применяется над комбинацией остальных уровней)
+Set the quality of shadow outlines (soft shadows are more expensive).	Задать качество обработки контуров теней (размытые тени более требовательны)
+Set the quality of volume shadows screen space effect.	Задать качество обработки объемных теней
+Set the resolution of shadow effects (higher resolution is more expensive).	Задать разрешение эффектов затенения
+Set the scale of the user interface (UI)	Задать масштаб пользовательского интерфейса
+Set the sound level for UI	Задать уровень громкости интерфейса
+Set the volume for SFX	Задать уровень громкости эффектов
+Set the volume for environmental sounds	Задать уровень громкости звуков окружения
+Set the volume for voices	Задать уровень громкости голосов
+Set your key bindings	Изменить управление
+Set your language	Сменить язык игры
+Set your multiplayer port	Указать номер порта маршрутизатора
+Set your name	Выбери себе никнейм
+Set your screen resolution	Настройки разрешения
+Settings	Опции игры
+Several slopes at varying altitude make this the perfect island to build tall, vertical castles.	Несколько склонов различной высоты делает эту карту идеальной для строительства высоких замков.
+Shadow Resolution	Разрешение теней
+Shadow Sharpness	Резкость теней
+Shard	Осколок
+Shield	Щит
+Shift + Right-Click with military units selected to order them to move-attack.	Ты можешь нажать Shift + Правая кнопка мыши для того, чтобы приказать выбранным войнам двигаться и атаковать.
+Shoot At	Выстрелить в точку
+Shoot an arrow towards target location.	Сделать выстрел по указанной цели
+Shoot at nearby enemies	Стрелять в ближайших врагов
+Show full	Показать полностью
+Show special thematic assets (eg. during the holidays)	Использовать тематическую графику во время событий или праздников
+Show unsupported game modes	Показывать игровые режимы, которые не поддерживаются картой
+Show welcome screen at game start	Показывать стартовую информацию при входе в мир
+Shows or hides servers that are full	Показывает или скрывает игры, в которых нет мест
+Siderasis	Сидерасис
+Similar	Схожий режим
+Singleplayer	Одиночная игра
+Size	Размер
+Skip	Призвать сейчас
+Slimmer version of the stone pillar.	Тонкая версия каменного столба.
+Small	Маленький
+Small Painting	Небольшая Картина
+Smelt Ingots	Выплавка слитков
+Smooth	Сглаживание
+Smooth Brush	Сглаживающая кисть
+Smooth brush	Сглаживающая кисть
+Smoothes island volume.	Сглаживает местность
+Snap Camera to Ground	Отвязать/привязать камеру к земле
+Snow	Снег
+Someone took my resource!	Кто то забрал нужные мне ресурсы
+Sound Effects	Звуковые эффекты
+Space	Пробел
+Spawn	Создано
+Spawn Bricktron	Создать Бриктрона
+Spawn Bricktrons	Создать Бриктрона
+Spawn Corruptrons	Создать Коруптрона
+Spawn Worker	Создать Бриктрона
+Spawn a new Bricktron to continue	Призовите бриктрона, чтобы продолжить
+Spawning Bricktrons	Призыв бриктронов
+Spawning New Workers	Новые рабочие
+Spawning a Bricktron	Призыв бриктрона
+Special assets	Тематическая графика
+Spectate	Наблюдать
+Spectators	Зрители
+Speed x2	Скорость x2
+Split	Разделить
+Split Selected Blueprints	Разделить чертеж по выделению
+Spooky Spooky!!!	Бууууу!
+Square Column	Квадратная колонна
+Staff	Посох
+Stairs	Лестницы
+Stairs Block	Срез-лестница
+Stairs Brick	Блок-лестница
+Standard	Стандартное
+Start	Начать
+Start Game	Начать игру
+Start the game	Начать игру
+Steam Workshop	Мастерская Steam
+Steam Workshop: Release Notes	Список изменений объекта
+Stockpile	Хранилище
+Stockpiles hold bricks and logs for construction.	В хранилищах складируются ресурсы и некоторая продукция
+Stockpiling Your Resources	Храним ресурсы
+Stone	Валуны
+Stone Blocks	Базовые блоки
+Stone Column	Каменная колонна
+Stone Pillar	Каменный столб
+Stones	Щебень
+Stop	Остановить
+Stop all Work	Сбросить
+Stop current and queued work at the station	Остановить работу и удалить очередь производства
+Storage	Хранение
+Store and equip weapons	Универсальное хранилище для комлектов снаряжения
+Straight	Копать прямо
+Structure Hub	Раздел объектов
+Structures	Объекты
+Sturdy melee unit with good defensive capabilities\n<color=yellow> 5 iron ingots </color>	Заказать производство полного комплекта снаряжения
+Sunday	Воскресенье
+Sword	Меч
+Take From	Взять из
+Take crafting production in bag	Забрать готовые продукты производства
+Take crafting resources in bag	Забрать имеющиеся ингредиенты
+Tall Painting	Высокая Картина
+Task Action 1	Задание Действия 1
+Task Action 2	Задание Действия 2
+Task Action 3	Задание Действия 3
+Task Action 4	Задание Действия 4
+Task Action 5	Задание Действия 5
+Task Action 6	Задание Действия 6
+Task Panel	Панель заданий
+Task Selected	Выбранное задание
+Tasks:	Задачи:
+Team	Команда
+Team A	Команда А
+Team B	Команда Б
+Team C	Команда В
+Team D	Команда Д
+Temper with explosive substances using this crafting station.	Все, что касается взрывчатки - по части этой рабочей станции
+Terrain	Местность
+Terrain Acceleration	Ускорение отображения местности
+Terrain Type	Тип поверхности
+Test your Might	Испытайте свою мощь
+The <color=#ffc50a>Home Crystal</color> is the heart of your civilization. You must defend it at all costs from marauding creatures or rival bricktron villages.\n\nThe Home Crystal is also <color=#ffc50a> your source of power</color>, and <color=#ffc50a>the only place to get more Bricktrons</color>.	<color=#ffc50a>Домашний кристалл</color> — сердце вашей цивилизации. Защищайте его любой ценой от бродячих чудищ и соперничающих деревень бриктронов.\n\nДомашний кристалл — это ещё и <color=#ffc50a> ваш источник энергии</color> и <color=#ffc50a>единственное место, где появляются новые бриктроны</color>.
+The Basics	Основы
+The Bricktrons	Бриктроны
+The ConnectionConfig does not match the other endpoint.\n(NetworkError.CRCMismatch)	Конфигурации соединения не совпадают.\n(NetworkError.CRCMismatch)
+The Decorations & Winter Biome update is now live, adding lots of new blocks to the game; new pillars, paintings, a statue, windows, doors AND a brand new snowy biome to play and make maps with!\n\nEnjoy!	Украшения и зимнее обновление биома теперь живут, добавляя много новых блоков в игру; новые столбы, картины, статуи, окна, двери и совершенно новый снежный биом, чтобы играть и делать карты!\n\n Наслаждайтесь!
+The Furnace	Печь
+The Loom will allow you to refine plant fiber into rope and fabric, which are useful for military kits. \n\n- Place a <color=#ffc50a>plant harvest task</color> over some plants and <color=#00ff15>confirm it</color>. \n\n<color=#ffc50a>Make sure you have empty stockpiles to store the plants.</color> \n\n- Place a <color=#ffc50a>loom blueprint</color> and <color=#00ff15>confirm it</color>. You'll find it under the structures tab under the Production section.	The Loom will allow you to refine plant fiber into rope and fabric, which are useful for military kits. \n\n- Place a <color=#ffc50a>plant harvest task</color> over some plants and <color=#00ff15>confirm it</color>. \n\n<color=#ffc50a>Make sure you have empty stockpiles to store the plants.</color> \n\n- Place a <color=#ffc50a>loom blueprint</color> and <color=#00ff15>confirm it</color>. You'll find it under the structures tab under the Production section.
+The address supplied to connect to was invalid or could not be resolved.\n(NetworkError.DNSFailure)	Невозможно подключиться по данному адресу.\n(NetworkError.DNSFailure)
+The corruptrons have made landfall on this island. In no time,\nthey will have spread their corrupting influence over all of the island's magical crystals.\nOnly you can stop their advance.\n\nAre you up to the challenge?	Враги высадились на этот остров, и желают распространить свое влияние на все его Кристаллы. Постепенно их станет все больше... Только ты можешь это остановить.\n\nГотов ли ты к испытанию?
+The crafting station will produce the selected item indefinitely.	Станция будет повторять производство всей очереди
+The crater in the middle of these twisted landmasses has served as the arena to many battles.	Кратер в центре этих переплетенных массивов земли служил полем битвы для многих сражений.
+The distance at which the game will lower terrain detail	Дистанция, на которой игра будет снижать детализацию графики
+The fiber from plants can be refined into rope or fabric.	Волокно растений может быть обработано в веревки или ткань
+The forge enables metalworking, turning iron ingots into knight kits or cogs.	С помощью плавильни слитки железа можно превратить в ценные предметы
+The full changelog on CastleStory.net	Перейти на www.castlestory.net
+The game mode for creatives and pacifists. No enemies means you can build anything you want at your own pace.	Режим для творчества и пацифистов. Нет врагов - нет проблем! Ты можешь строить в своем темпе все, что захочешь.
+The go-to block for solid stone support.	Блок для прочной каменной опоры.
+The inhabitants of Nova were masterful bridge builders. This archipelago is no welcoming place for Bricktrons afraid of heights.	Жителями Новы были мастерские мостостроители. Брикторонам со страхом высоты здесь делать нечего!
+The loom allows you to refine plants into fabric and rope.	Позволяет получать ткань и веревки из волокна
+The message is too long to fit the buffer.\n(NetworkError.MessageTooLong)	Данные не помещаются в буфер.\n(NetworkError.MessageTooLong)
+The others are doing fine	Остальные отлично справляются
+The plants will need to be transformed into rope and fabric using a Loom. In the structures tabs, <color=#ffc50a>select a Loom,</color> and place it anywhere. \n\nOnce the loom is built, click on it, and <color=#ffc50a>queue 1 fabric roll, and 1 rope coil</color> in the taskbar popup.	The plants will need to be transformed into rope and fabric using a Loom. In the structures tabs, <color=#ffc50a>select a Loom,</color> and place it anywhere. \n\n Once the loom is built, click on it, and <color=#ffc50a>queue 1 fabric roll, and 1 rope coil</color> in the taskbar popup.
+The protocol versions are not compatible. Bad library versions?\n(NetworkError.VersionMismatch)	Версия протокола несовместима, возможно библиотеки повреждены.\n(NetworkError.VersionMismatch)
+The specified channel doesn't exist.\n(NetworkError.WrongChannel)	Указанный канал не существует.\n(NetworkError.WrongChannel)
+The specified connectionId doesn't exist.\n(NetworkError.WrongConnection)	Указанное соединение не существует.\n(NetworkError.WrongConnection)
+The specified host not available.\n(NetworkError.WrongHost)	Хозяин комнаты недоступен.\n(NetworkError.WrongHost)
+The standard 1 by 2 brick used to build walls.	Стандартный строительный блок размерами 1 на 2 вокселя
+The tortuous landscape of this inhospitable island is a goulag for Bricktrons.	Извилистый пейзаж этого негостеприимного острова - страшный кошмар Бриктронов.
+The type of hats worn by bricktron archers is historically known as a bycocket. No kidding, look it up.	Шляпы, которые носят бриктроны-лучники, называются Байкокет. Это реальный исторический термин, без шуток.
+The workbench is used to craft lanterns, halberdier kits and archer kits.	Используется для создания фонарей, а также снаряжения лучников и алебардщиков
+The world of Castle Story has a <color=#ffc50a>Day / Night cycle</color>. \n\nFortunately, you can build <color=#ffc50a>Lanterns</color> to provide light and vision. \n\n- Select the <color=#ffc50a>Workbench</color> and open the pie menu.\n- Choose the <color=#ffc50a>Lantern</color>. \n\nYou will need an iron ingot and brimstone to craft a lantern.	The world of Castle Story has a <color=#ffc50a>Day / Night cycle</color>. \n\nFortunately, you can build <color=#ffc50a>Lanterns</color> to provide light and vision. \n\n- Select the <color=#ffc50a>Workbench</color> and open the pie menu.\n- Choose the <color=#ffc50a>Lantern</color>. \n\nYou will need an iron ingot and brimstone to craft a lantern.
+There is nothing here.	Тут ничего нет.
+These massive statues have puzzled bricktron archeologists for decades.	Эти массивные статуи озадачивали археологов бриктрона на протяжении десятилетий.
+Thick Grass	Густая трава
+Thickness	Толщина
+Thinking...	Думаю...
+This area is too dangerous	Эта зона слишком опасна
+This bigger window lets even more light in.	Это большое окно пропускает еще больше света.
+This castle is a testament to bricktron industriousness.	Этот замок-свидетельство трудолюбия бриктрона.
+This fluted column's style is characteristic of the hellenistic period.	Этот стиль рифленых колонн характерен для эллинистического периода.
+This is <b>Sandbox mode</b>.\n\nIn this mode, your creativity's the limit!\nThere is no time limit and no Corruptrons, so you can build without worry.\nUse this time to explore the game and practice the art of castle building. \n\nHave fun!	Это режим <b>Песочницы</b>\n\nЗдесь ты можешь делать все, что захочешь.\nОграничение по времени отсутствует, как и Коруптроны.\nИспользуй это время, чтобы исследовать игру и практиковаться в искусстве строительства замков.\n\nУспехов!
+This is the end of this tutorial! \n\nThere are undoubtedly many more things you'd like to learn; the world of Castle Story is wide, complex and full of mysteries, secrets and intricate details. We do have some external references for you to learn more about the game.\n\nCheck out (and maybe contribute to?) the official Wiki: \n <color=#ffc50a>http://wiki.castlestory.net</color> \n\nOur Youtube channel's "How To" playlist also has helpful videos: \n <color=#ffc50a>http://youtube.com/SauropodStudio</color> \n\nYou can also ask fellow players in live chat on our official Discord: \n <color=#ffc50a>http://castlestory.net/Discord</color> \n\nHave fun exploring the great world of Castle Story!	Обучение закончено! \n\nНаверняка вы хотите узнать ещё многое: мир Castle Story огромен, сложен и полон тайн, секретов и мелочей. Вот где можно узнать больше об игре.\n\nОфициальная вики (может, и вы её дополните?): \n <color=#ffc50a>http://wiki.castlestory.net</color> \n\nПлейлист «How To» на нашем YouTube-канале: \n <color=#ffc50a>http://youtube.com/SauropodStudio</color> \n\nА ещё можно спросить других игроков в чате нашего Discord: \n <color=#ffc50a>http://castlestory.net/Discord</color> \n\nПриятного исследования огромного мира Castle Story!
+This is your <color=#ffc50a>Home Crystal</color>. Protect it at all costs!	Это ваш <color=#ffc50a>Домашний кристалл</color>. Защищайте его любой ценой!
+This is your Home Crystal. Defend it at all costs!	Это ваш Домашний кристалл. Защищайте его любой ценой!
+This job is not right for me.	Это задание для меня не подходит
+This map was featured in the Kickstarter Trailer. It features a pre-built castle to explore, and several secondary build areas.	Эта карта была показана в трейлере игры для Kickstarter. Построенный замок ждет, пока ты его исследуешь.
+This map was released with 0.2 that introduced Invasion mode. It is meant to stage a central point of defense.	Эта карта была выпущена вместе с версией 0.2, в которой появился режим Вторжения. Ключ к успеху - создание центральной точки обороны.
+This next section Will show you how to craft other military units and discuss more advanced aspects of the game. \n \n<color=#ffc50a>You can end this tutorial at any moment by turning it off in the options menu (F10)</color>.	This next section Will show you how to craft other military units and discuss more advanced aspects of the game. \n \n<color=#ffc50a>You can end this tutorial at any moment by turning it off in the options menu (Escape)</color>.
+This ward emits light. It will emit more light when connected to a power source.	Служит в качестве источника света. Становится ярче при соединении с Кристаллом
+This ward relays power to other wards.	Передает энергию от Кристалла к другим маякам
+This ward will attack nearby enemies.	Может атаковать врагов с расстояния
+This will kick out all players	Все игроки будут исключены
+Thursday	Четверг
+Time	Время суток
+Time before next gem:	Время до появления самоцвета:
+Time before next pumpkin:	До следующей тыквы:
+Time of Day	Время дня
+Time x2	Скорость х2
+Timeout while creating (> #xs).	Время ожидания вышло (> #xs).
+Timeout while publishing (> #xs).	Время ожидания вышло (> #xs).
+Tips and Tricks	Полезные советы
+Title & Description	Имя карты и описание
+To Spawn additionnal Bricktrons, you need to collect <color=#ffc50a>Wisps</color>. You can see your total number of wisps in the panel on the bottom left side of your screen. \n\nOnce that bar is full, you will see a <color=#ffc50a>Yellow Wisp</color> floating around your main crystal. \n\n- To spawn a Bricktron, <color=#ffc50a>click</color> on the <color=#ffc50a>Bricktron icon</color> next to the progressing bar. \n	To Spawn additionnal Bricktrons, you need to collect <color=#ffc50a>Wisps</color>. You can see your total number of wisps in the panel on the bottom left side of your screen. \n\nOnce that bar is full, you will see a <color=#ffc50a>Yellow Wisp</color> floating around your main crystal. \n\n- To spawn a Bricktron, <color=#ffc50a>click</color> on the <color=#ffc50a>Bricktron icon</color> next to the progressing bar. \n
+To create a door, <color=#ffc50a>make sure you have Planks and Iron ingots.</color> \n\nClick on the <color=#ffc50a>structure button, choose the Door</color>, and place it where you want the castle's entrance to be.	To create a door, <color=#ffc50a>make sure you have Planks and Iron ingots.</color> \n\nClick on the <color=#ffc50a>structure button, choose the Door</color>, and place it where you want the castle's entrance to be.
+To melt the iron using brimstone, we will need to build <color=#ffc50a>a Furnace</color>. Furnaces require stone bricks.\n\nLet's harvest stone to make bricks!	Чтобы плавить железо с помощью серы, нужно построить <color=#ffc50a>печь</color>. Для печи нужны каменные кирпичи.\n\nДобудем камень на кирпичи!
+Toggle Blueprint Management	Переключить в режим обработки чертежа
+Toggle Build Mode	Переключение в режим строительства
+Toggle Debug Display	Режим разработчика
+Toggle GPU acceleration for terrain data	Ускорить обработку вокселей с помошью графического процессора
+Toggle Looping	Зациклить производство
+Toggle Stance	Переключить стойку
+Toggle grid	Переключение сетки
+Toggle grid menu	Переключение меню сетки
+Toggle inversion of mouse scroll	Переключить инверсию прокрутки
+Toggle letters menu	Переключение меню письма
+Toggle map menu	Переключение меню карты
+Toggle markers menu	Переключение меню магазина
+Toggle modes menu	Переключение меню режимов
+Toggle mouse screen edge nudge	Переключить режим прокрутки курсором у краев экрана
+Toggle mute on all music and sounds	Включить или выключить музыку и звуки
+Toggle save menu	Переключение меню сохранения
+Toggle terrain menu	Переключение меню местности
+Toggle time menu	Переключение меню времени
+Toggle workshop menu	Переключение меню Мастерской
+Top	Поверху
+Transforming raw resources	Переработка сырья
+Transmit energy from the home crystal to nearby wards. <color=yellow> 1 iron ingot + 10 brimstone </color>	Передает энергию от Кристалла к другим маякам
+Tree	Деревья
+Tree Brush	Кисть деревьев
+Tree brush	Кисть деревьев
+Trees	Бревна
+Trillium	Триллиум
+Trying to reach trees	Пытаюсь добраться до деревьев
+Tuesday	Вторник
+Tunnel	Туннель
+Tunnel Task	Туннель
+TunnelCrew	Рабочие
+Turn Towards	Повернуться
+Turn on X-Ray mode in the settings panel at the top right of your screen, then shift + scroll to see through buildings and mountains.	Включи "рентген камеру" в меню "опции игры" на правой панели, и ты сможешь видеть здания и горы в разрезе. Это поможет осмотреть закрытые зоны.
+Turn towards target location.	Развернуться в сторону цели
+Tutorial	Обучение
+Two bricktron villages in bird's eye view of each other connected by meandering paths. Thread carefully.	Две деревни Бриктронов в зоне видимости друг друга, соединенные извилистыми дорожками. Ступать осторожно!
+Two bricktron villages on the banks watch across with suspicion. Who will dare claim the center?	Две деревни Бриктронов на разных берегах с интересом наблюдают... Кто же рискнет попробовать захватить центр?
+Type in a name for your save	Введи название для сохранения
+Type in your changes to this version of the item.	Ты можешь ввести список, если обновляешь уже существующий объект
+UI Scale	Масштаб интерфейса
+Unassign all Bricktrons from this task.	Убрать всех рабочих из этого задания
+Underside	Дно острова
+Underside Actions	Возможности инструмента
+Underside Options	Настройки поддона
+Underside brush	Кисть дна острова
+Unequip Into	Снять снаряжение
+Unequip Tools	Снять снаряжение
+Unequips currently worn equipment.	Снять и положить в выбранную оружейную стойку
+Unlimited	Не ограничено
+Unload Ammo	Разрядить
+Unlock	Отпереть дверь
+Unlock this door to your Bricktrons through.	Открыть дверь, отменить ограничения
+Unrefined iron ore which can be smelted into ingots.	Руда должна быть переплавлена в слитки
+Unsaved changes	Не сохраненные изменения
+Unschedule catapult's firing orders.	Снять любые приказы на ведение огня
+Unsupported	Неподдерживаемый
+Unsupported game modes	Неподдерживаемые игровые режимы
+Untitled	Без имени
+Up Arrow	Вверх
+Update	Обновить
+Update failure	Ошибка обновления
+Update successful	Обновление завершено
+Update timed out	Срок обновления истек
+Updating	Обновляем
+Use <color=#ffc50a>#hotkeys</color> or <color=#ffc50a>Middle Mouse Button</color> to rotate the camera around the pivot.	Use <color=#ffc50a>Q&E</color> or <color=#ffc50a>Middle Mouse Button</color> to rotate the camera around the pivot.
+Use <color=#ffc50a>#hotkeys</color> or the <color=#ffc50a>Mouse Scroll Wheel</color> to zoom in and out.	Use <color=#ffc50a>PgUp & PgDn</color> or the <color=#ffc50a>Mouse Scroll Wheel</color> to zoom in and out.
+Use <color=#ffc50a>Shift + Scroll Wheel</color> or <color=#ffc50a>#hotkeys</color> to change the elevation of the camera pivot.	Use <color=#ffc50a>Shift + Scroll Wheel</color> or <color=#ffc50a>Shift + PgUp & PgDn</color> to change the elevation of the camera pivot.
+Use energy to create a Bricktron worker.	Использовать энергию Кристалла и создать рабочего Бриктрона
+Use level override	Использовать подушку
+Use stairs bricks to build higher.	Используй лестницы, чтобы подняться выше
+Use the <color=#ffc50a>#hotkeys</color> keys to move the camera horizontally.	Use the <color=#ffc50a>WASD</color> keys to move the camera horizontally.
+Use the <color=#ffc50a>Left Mouse Button</color> to select a Bricktron.\n\nYou can also <color=#ffc50a>Drag Select</color> to select multiple Bricktrons.\n\nOnce a Bricktron is selected a yellow circle will appear beneath its feet.	Нажмите <color=#ffc50a>левую кнопку мыши</color>, чтобы выбрать бриктрона.\n\nМожно также <color=#ffc50a>выделить рамкой</color> сразу нескольких.\n\nПод ногами выбранного бриктрона появится жёлтый круг.
+Use the Steam Workshop to easily share and update your maps created using the world editor.	Используй Мастерскую Steam, чтобы поделиться своими картами с Сообществом!
+Use the Workbench to queue a halberdier kit.	Закажите на верстаке набор алебардщика.
+Use the furnace to queue iron ingots.	Закажите в печи железные слитки.
+Use the pie menu on stockpiles to restrict which resources go on them.	Используй контекстное меню хранилищ, чтобы ограничить поступающий в них тип ресурсов.
+Use the workbench to queue an archer kit.	Закажите на верстаке набор лучника.
+Used to build knight's equipment.	Здесь слитки железа можно превратить в ценные предметы
+Used to craft archer and halberdier kits	Можно изготовить фонари и начальное снаряжение
+Used to craft the goods that come out of the laboratory.	Используется в работе лаборатории
+Used to create rope and fabric.	Позволяет получать ткань и веревки из волокна
+Used to make advanced apparatus like arbalist kits.	В мастерской создаются механические изделия (ловушки, арбалеты)
+Used to make artificer's tools.	Предметы, связанные с мистической энергией, создаются на алтаре
+Used to make the machine shop and crossbows.	Используется для создания некоторых сложных инструментов
+Used to transform wood into planks.	Позволяет обрабатывать бревна и получать доски
+Used to smelt raw materials into goods.	Позволяет Бриктронам расплавлять ресурсы
+User Generated	Пользовательские
+User interface	Интерфейс пользователя
+Using a furnace	Работа с печью
+Versus	Противостояние
+Very High	Очень высокое
+Victory!	Победа!
+Visibility	Настройки доступа
+Visible	Видима
+Voices	Голоса
+Void	Пусто
+Voxels	Воксели
+Waiting for download	Ожидаем загрузки
+Waiting for downloads	Игроки загружаются
+Waiting for host	Ожидаем хозяина комнаты
+Waiting for other players	Ожидаем других игроков
+Waiting for players	Ожидаем игроков
+Walk or run to target location.	Идти или бежать в заданную точку
+Walls are much better at defending your Bricktrons if you can't simply walk around them. So <color=#ffc50a>the best walls should have at least 2 bricks high,</color> and should have no holes in them. \n\nOf course, now your Bricktrons won't be able to come in and out of your castle. Let's add a door for them.	Walls are much better at defending your Bricktrons if you can't simply walk around them. So <color=#ffc50a>the best walls should have at least 2 bricks high,</color> and should have no holes in them. \n\n Of course, now your Bricktrons won't be able to come in and out of your castle. Let's add a door for them.
+Wards	Маяки
+Warlock	Магитрон
+Warning	Предупреждение
+Warnings	Предупреждения
+Wave	Волна:
+Weapon Rack	Оружейная стойка
+Weapon rack	Стойка для оружия
+Wednesday	Среда
+Welcome screen	Приветственный экран
+Welcome to Castle Story!	Добро пожаловать в Castle Story!
+What I need is in someone else's bag	То, что мне нужно, находится у кого-то другого
+Wide Painting	Широкая Картина
+Wiki	Официальная Вики
+Window	Окно
+With a selected Bricktron, <color=#ffc50a>Right Click</color> on the ground to give it a <color=#ffc50a>Move Order</color>.\n\nIf you <color=#ffc50a>Control + Right Click</color> on the ground, this will issue a <color=#ffc50a>Dig Order</color>.\n\n<color=#ffc50a>Control + Right Click</color> on bricks or structures will issue a <color=#ffc50a>Destroy Order</color>.	With a selected Bricktron, <color=#ffc50a>Right Click</color> on the ground to give it a <color=#ffc50a>Move Order</color>.\n\n If you <color=#ffc50a>Control + Right Click</color> on the ground, this will issue a <color=#ffc50a>Dig Order</color>.\n\n<color=#ffc50a>Control + Right Click</color> on bricks or structures will issue a <color=#ffc50a>Destroy Order</color>.
+Woaaahhhhh!	Ой оооой!
+Wood	Деревья
+Wood Blocks	Из дерева
+Wood Column	Вертикальный
+Wood Hub	Раздел дерева
+Wooden columns form scaffolding for structures.	Вертикальный брус для создания опор
+Wooden colums form scaffolding for structures.	Вертикальное бревно для создания опор
+Work	Выполниить
+Work on crafting production	Выполнить текущую работу на станции
+Workbench	Верстак
+Workbenches	Верстаки
+Worker	Рабочий
+Workers	Все рабочие
+Workshop	Мастерская
+World Editor	Редактор карт
+Xray	Рентген камера
+Yes - Revert to factory settings	Да - Сбросить настройки к стандартным
+Yes! Delete.	Да, удалить
+Yes, apply.	Да, применить
+You are about to delete this file forever.\nThis action cannot be undone.\nContinue?	Ты собираешься удалить этот файл навсегда.\nЭто действие не может быть отменено.\nПродолжить?
+You are about to leave.\nApply unsaved changes?	Ты пытаешься покинуть меню настроек.\nПрименить не сохраненные изменения?
+You are now free to continue to explore the game! \n\nWant to put your Bricktrons to the test? Then press the <color=#ffc50a>Send Corruptron Wave button</color> on the <color=#ffc50a>left side of your screen</color>. \n\nThis will send a wave of Corruptrons to attack your crystal. \n\nTry and see how many waves you can defeat!	You are now free to continue to explore the game! \n\nWant to put your Bricktrons to the test? Then press the <color=#ffc50a>Send Corruptron Wave button</color> on the <color=#ffc50a>left side of your screen</color>. \n\nThis will send a wave of Corruptrons to attack your crystal. \n\nTry and see how many waves you can defeat!
+You are victorious! You were the first faction to collect all the needed gems. Fabulous! Outrageous!	Одержана победа!\n\nТы находился в составе команды, которая первой собрала нужно количество самоцветов.\nПотрясающе! Невероятно!
+You are victorious! You were the first faction to collect all the needed pumpkins. Fabulous! Outrageous!	Победа! Вы первыми собрали все нужные тыквы. Потрясающе! Невероятно!
+You can <color=#ffc50a>move or change the dimensions</color> of the quarry by dragging the handles on the sides of the volume.\nYou can <color=#ffc50a>rotate the placement of the strairwell</color> in the taskbar popup.\n<color=#ffc50a>Press Tab</color> or the <color=#00ff15>Green Checkmark</color> to activate the new quarry.	You can <color=#ffc50a>move or change the dimensions</color> of the quarry by dragging the handles on the sides of the volume.\nYou can <color=#ffc50a>rotate the placement of the strairwell</color> in the taskbar popup.\n<color=#ffc50a>Press Enter</color> or the <color=#00ff15>Green Checkmark</color> to activate the new quarry.
+You can build longer wood beams if you use braces beneath the beams.	Использование деревянных скоб под креплениями горизонтальных брусков позволяет увеличить расстояние между вертикальными опорами.
+You can make tunnels go upwards or downwards with the buttons in the options panel at the bottom of your screen, when in the Tunnel task.	Ты можешь изменять направление прокладки сегментов туннеля с помощью опций на нижней панели, причем его можно менять после каждого сегмента.
+You can only change the position of a quarry’s stairs before confirming the task, by clicking the button in the options panel at the bottom of your screen.	Ты можешь сменить ориентацию лестницы в задании "карьер" только если раскопки в нем еще не начались.
+You can see that a stockpile <color=#ffc50a>requires 1 plank to build</color> and that it can <color=#ffc50a>contain up to 12 planks</color>.	Как видите, для склада <color=#ffc50a>нужна 1 доска</color>, а вмещает он <color=#ffc50a>до 12 досок</color>.
+You can use the flatten task to flatten uneven areas.	Задание "Сровнять" в основном используется чтобы создавать фундаменты на неровной местности.
+You have been defeated.\n\nAnother faction has managed to collect the needed gems before you.\n\nMay your powerless, gemless Bricktrons live in shame until you once again seize the opportunity to prove yourself!	Твоя команда потерпела поражение.\n\nКому-то другому удалось собрать нужное количество самоцветов раньше.\nПусть твоим обессилившим Бриктронам это станет уроком - в следующий раз нужно стараться усерднее!
+You have been defeated.\n\nAnother faction has managed to collect the needed pumpkins before you.\n\nMay your powerless, squashless Bricktrons live in shame until you once again seize the opportunity to prove yourself!	Вы проиграли.\n\nДругая фракция собрала нужные тыквы раньше вас.\n\nПусть ваши бессильные, оставшиеся без тыкв бриктроны живут в позоре, пока вы снова не докажете, чего стоите!
+You have crushed the opposing factions. Your masterful building and strategy have given your Bricktrons the upper hand and they now control the Islands. You will forever be remembered as a glorious leader.	Твоя команда одержала верх.\n\nМастерство стратега и строителя позволило получить Бриктронам преимущество, и теперь они контролируют эти земли.\nТебя запомнят в качестве славного лидера.
+You have demonstrated that you could withstand any reasonably sized corruptron assault. You have officially won the <b>Invasion</b> game mode. You can keep playing if you want, but the increasing number of ennemies will eventually impact the game performance and unravel the very fabric of the bricktron world.	Ты продемонстрировал, что можешь успешно справляться с многочисленными осадами Коруптронов.\n\nТебе официально присуждается победа в режиме <b>Вторжения</b>.\n\nТы можешь продолжить игру и далее, однако дальнейший рост числа врагов гарантированно приведет к серьезным проблемам с производительностью и устойчивостью игры.
+You have managed to collect #gem_count gem!	Самоцветов доставлено: #gem_count
+You have managed to collect #gem_count gems!	Самоцветов доставлено: #gem_count
+You have managed to collect #gem_count pumpkin!	Вам удалось собрать #gem_count тыкву!
+You have managed to collect #gem_count pumpkins!	Вам удалось собрать тыкв: #gem_count!
+You have survived #waves_survived wave.	Волн повержено: #waves_survived
+You have survived #waves_survived waves.	Волн повержено: #waves_survived
+You must be ready to allow the host to start the game.	Для того чтобы хозяин комнаты мог начать игру ты должен быть готов
+You must be ready to start the game or allow clients to download a map	Чтобы начать игру или позволить игрокам скачать карту ты должен быть готов
+You were kicked by the host.\n(NetworkError.PlayerKicked)	Ты был исключен.\n(NetworkError.PlayerKicked)
+Your Home Crystal	Ваш Домашний кристалл
+Your enemies have conquered your home Crystal. \nMost of your Bricktrons have been defeated and the surviving ones have been exiled. They now seek new horizons and a new island to call home.	Врагам удалось захватить твой Кристалл.\n\nБольшинство Бриктронов повержено, а те, что выжили, оказались в изгнании. Теперь они смотрят за горизонт и ищут себе новый остров, чтобы назвать его домом...
+Your melee units are listed here.	Категория для войнов ближнего боя
+Your ranged units are listed here.	Категория для войнов дальнего боя
+Your time is limited.\n\nHordes of marauding Corruptrons are at your doorstep.\nEach wave of Corruptrons will get increasingly diffcult.\nYour only option is to erect fortifications around your home crystal and brace yourself.\n\nGood luck!	В этом режиме твое время ограничено.\n\nОрды мародеров уже на твоем пороге, и тебе сложнее выстоять с каждой новой волной.\nЕдинственный выход - возвести стены и укрепления, создать армию и мужественно сражаться.\n\nУдачи!
+Your workers are listed here. \nPassive workers are on the left.\nActive workers are on the right.	Рабочие указаны в этой категории\nПассивные - слева, занятые - справа
+Zoom In	Приблизить
+Zoom Out	Отдалить
+Zooming in & out	Приближение и отдаление
+b0uGr3 waZ H3eR	b0uGr3 быЛ ТуТ
+has been kicked by the host.	был исключен хозяином.
+has left the game.	покинул игру.
