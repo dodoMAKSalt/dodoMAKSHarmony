@@ -11,7 +11,7 @@ namespace CastleStoryOptimizer
     {
         public const string Guid = "castlestory.optimizer";
         public const string Name = "dodoMAKSharmony";
-        public const string Version = "0.19.27";
+        public const string Version = "0.19.28";
 
         internal static Plugin Instance;
         internal static BepInEx.Logging.ManualLogSource Log;
@@ -199,21 +199,24 @@ namespace CastleStoryOptimizer
                 Config.Bind("Compat", "MaxRefreshRate", true,
                     "В полном экране использовать максимальную частоту монитора (Unity 5.6 может выбрать 60 Гц).").Value);
 
+            // Все пункты замерщика создаём всегда (даже при выключенном замерщике): иначе BepInEx при сохранении выбрасывает их из
+            // файла, и в панели «Моды» лаунчера и в меню настроек их потом не найти.
+            var showOnStart = Config.Bind("Profiler", "ShowOverlayOnStart", true,
+                "Показывать оверлей сразу при запуске (иначе — по клавише).");
+            var trackGarbage = Config.Bind("Profiler", "TrackGarbage", false,
+                "Считать мусор по каждому методу (раздел «Мусор» в отчёте). Дорого: +1–2 мс на кадр. Включать для расследований.");
+            var detailed = Config.Bind("Profiler", "DetailedHooks", true,
+                "Подробные замеры каждого Update/Lua/путей (~1300 перехватов за кадр, стоят ~0.5–1 мс). " +
+                "false — только FPS, рендер и фризы, почти бесплатно.");
+            // На порте подробные перехваты почти не видят кадр (его делают системы Castle Story Plus, у них своё окно F7),
+            // а 439 перехватов стоят ~1–2 мс — там остаются только FPS, этапы кадра и фризы.
+            var detOnPort = Config.Bind("Profiler", "DetailedOnPort", false,
+                "На порте всё равно ставить подробные перехваты (для поиска мусора по методам: +1–2 мс на кадр). Нужен перезапуск игры.");
             if (_enableProfiler.Value)
             {
-                var showOnStart = Config.Bind("Profiler", "ShowOverlayOnStart", true,
-                    "Показывать оверлей сразу при запуске (иначе — по клавише).");
                 _profiler = new FrameProfiler(Paths.BepInExRootPath, _autoReportSeconds.Value);
                 _profiler.ShowOverlay = showOnStart.Value;
-                ProfilerPatches.TrackGarbage = Config.Bind("Profiler", "TrackGarbage", false,
-                    "Считать мусор по каждому методу (раздел «Мусор» в отчёте). Дорого: +1–2 мс на кадр. Включать для расследований.").Value;
-                var detailed = Config.Bind("Profiler", "DetailedHooks", true,
-                    "Подробные замеры каждого Update/Lua/путей (~1300 перехватов за кадр, стоят ~0.5–1 мс). " +
-                    "false — только FPS, рендер и фризы, почти бесплатно.");
-                // На порте подробные перехваты почти не видят кадр (его делают системы Castle Story Plus, у них своё окно F7),
-                // а 439 перехватов стоят ~1–2 мс — там остаются только FPS, этапы кадра и фризы.
-                var detOnPort = Config.Bind("Profiler", "DetailedOnPort", false,
-                    "На порте всё равно ставить подробные перехваты (для поиска мусора по методам: +1–2 мс на кадр). Нужен перезапуск игры.");
+                ProfilerPatches.TrackGarbage = trackGarbage.Value;
                 bool det = PortCompat.On(detailed.Value, detOnPort.Value);
                 ProfilerPatches.Installed = det;
                 ProfilerPatches.Apply(_harmony, det);

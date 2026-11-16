@@ -8,7 +8,7 @@
     <LangVersion>latest</LangVersion>
     <AssemblyName>dodoMAKSharmony-Settings</AssemblyName>
     <RootNamespace>CastleStoryModSettings</RootNamespace>
-    <Version>0.19.27</Version>
+    <Version>0.19.28</Version>
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
     <ApplicationManifest>..\Installer\app.manifest</ApplicationManifest>
     <ModBin>..\CastleStoryOptimizer\bin\Release</ModBin>
