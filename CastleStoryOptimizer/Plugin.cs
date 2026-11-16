@@ -11,7 +11,7 @@ namespace CastleStoryOptimizer
     {
         public const string Guid = "castlestory.optimizer";
         public const string Name = "dodoMAKSharmony";
-        public const string Version = "0.19.26";
+        public const string Version = "0.19.27";
 
         internal static Plugin Instance;
         internal static BepInEx.Logging.ManualLogSource Log;
@@ -53,11 +53,10 @@ namespace CastleStoryOptimizer
                 "Убрать мусор в конце загрузки катки (на экране загрузки), чтобы первый фриз сборщика в игре был намного позже.").Value;
             if (BtcCompat.Present) LoadingPatches.CollectGarbageAfterLoad = false; // их мод сам убирает мусор в конце загрузки
             if (PortCompat.Active) LoadingPatches.CollectGarbageAfterLoad = false;
-            // Замер фаз загрузки (обёртка вокруг корутин GameLoader) нужен только для отчёта; на порте по умолчанию выключен:
-            // в сетевой игре с ней хост два раза подряд завис на «Ожидаем других игроков», без нашего мода мир запустился.
-            // Конец загрузки (настройки мира, приоритеты и т.д.) срабатывает и без неё — по сигналу игры LevelReady.
-            var measurePhases = Config.Bind("Loading", "MeasurePhases2", !PortCompat.Active,
-                "Замерять время фаз загрузки обёрткой вокруг корутин GameLoader (только отчёт). На порте выключено по умолчанию.");
+            // Замер фаз загрузки (обёртка вокруг корутин GameLoader) — только для отчёта. Проверено: в сетевой игре с выключенными
+            // галочками (обёртка при этом работала) мир запустился — обёртка не виновата, оставлена включённой.
+            var measurePhases = Config.Bind("Loading", "MeasurePhases2", true,
+                "Замерять время фаз загрузки обёрткой вокруг корутин GameLoader (только отчёт).");
             LoadingPatches.Apply(_harmony, PortCompat.On(fastLoading.Value, false), measurePhases.Value);
 
             var chunkMul = Config.Bind("Fixes", "LoadChunkMultiplier", 10,
