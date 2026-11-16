@@ -11,7 +11,7 @@ namespace CastleStoryOptimizer
     {
         public const string Guid = "castlestory.optimizer";
         public const string Name = "dodoMAKSharmony";
-        public const string Version = "0.19.4";
+        public const string Version = "0.19.5";
 
         internal static Plugin Instance;
         internal static BepInEx.Logging.ManualLogSource Log;
@@ -86,6 +86,10 @@ namespace CastleStoryOptimizer
             if (_stationPriorities && Config.Bind("Workshops", "PieMenuButton", true,
                     "Кнопка «Приоритет» в круговом меню мастерской (ПКМ).").Value)
                 PieMenuPriority.Apply(_harmony);
+
+            _world = Config.Bind("World", "Enabled", true,
+                "Кнопка «Подробные настройки мира» в лобби: число юнитов, цена и возрождение, добыча энергии, время суток, правила режима.").Value;
+            if (_world) WorldSettings.Apply(_harmony);
 
             if (!PortCompat.Active && Config.Bind("Menu", "ShowModName", true, "Надпись dodoMAKSharmony под логотипом в главном меню.").Value)
                 _branding = new MenuBranding();
@@ -205,6 +209,7 @@ namespace CastleStoryOptimizer
         private StuckWatcher _stuck;
         internal static bool AiFastDecisions;
         private bool _stationPriorities;
+        private bool _world;
 
         // Собственное время мода — отдельными строками в отчёте, чтобы его не путать с физикой игры.
         private static Entry ModEntry(string name)
@@ -247,6 +252,7 @@ namespace CastleStoryOptimizer
             GcSlicer.Tick();
             GcControl.Watchdog();
             Compat.Tick();
+            if (_world) WorldSettings.Tick();
             if (_btcTuning) BtcTuning.Tick();
             if (_stuck != null) { _stuck.Tick(); t = Stamp(MStuck, t); }
             if (_movingFix != null)
@@ -281,6 +287,7 @@ namespace CastleStoryOptimizer
             if (_branding != null) _branding.DrawFallback();
             if (_stuck != null) _stuck.DrawGUI();
             if (_stationPriorities) StationPriorities.DrawGUI();
+            if (_world) WorldSettings.DrawGUI();
             if (_profiler != null) _profiler.DrawOverlay();
             Stamp(MGui, t);
         }

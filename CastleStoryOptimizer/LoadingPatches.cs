@@ -167,6 +167,7 @@ namespace CastleStoryOptimizer
             Plugin.Log.LogInfo(LastLoadReport);
             if (Plugin.Instance != null) Plugin.Instance.OnLoadFinished(LastLoadReport);
             StationPriorities.OnLevelLoaded();
+            WorldSettings.OnLevelLoaded();
             AiFixes.OnLevelLoaded(Plugin.AiFastDecisions);
         }
     }

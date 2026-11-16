@@ -85,6 +85,7 @@ namespace CastleStoryModSettings
             new[] { "Workshops", "Enabled", Gameplay + "ИИ и мастерские", "Приоритеты мастерских (клавиши Page Up / Page Down)", "true", "" },
             new[] { "Workshops", "ShowLabels", Gameplay + "ИИ и мастерские", "Подписи приоритета над мастерскими", "true", "" },
             new[] { "Workshops", "PieMenuButton", Gameplay + "ИИ и мастерские", "Кнопка «Приоритет» в круговом меню мастерской", "true", "" },
+            new[] { "World", "Enabled", Gameplay + "Мир и юниты", "Кнопка «Подробные настройки мира» в лобби (число юнитов, энергия, возрождение, время суток…)", "true", "" },
             new[] { "Language", "ForceRussian", "Язык", "Всегда включать русский перевод при запуске", "true", "" },
             new[] { "Language", "TranslateCastleStoryPlus", "Язык", "Переводить на русский Castle Story Plus (меню, подсказки, настройки)", "true", "" },
             new[] { "Profiler", "Enabled", "Замерщик и диагностика", "Замерщик кадров и отчёты (оверлей, файлы отчётов)", "true", "" },
