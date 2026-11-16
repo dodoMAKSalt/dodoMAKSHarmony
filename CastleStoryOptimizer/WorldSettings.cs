@@ -64,10 +64,11 @@ namespace CastleStoryOptimizer
         private static Opt UBase, UStep, UFree, RMul, RFlat, EMul;
         private static readonly Opt[] ECount = new Opt[6];
         private static Opt StartTime, DayF, NightF, Pause, Relations, Dig;
+        private static Opt OreHp, OreYield;
         private static Opt PumpFirst, Pump, ToWin, PerWave;
 
         private const string GUnits = "Юниты", GEnergy = "Энергия и цена юнитов", GCrystals = "Добыча энергии по числу кристаллов",
-            GTime = "Время суток", GRules = "Правила", GGems = "Захват самоцветов";
+            GTime = "Время суток", GMining = "Добыча", GRules = "Правила", GGems = "Захват самоцветов";
 
         static WorldSettings()
         {
@@ -94,6 +95,9 @@ namespace CastleStoryOptimizer
             DayF = Add(GTime, "dayf", "daytimeFactor", "Длина дня (множитель)", "Больше — день тянется дольше.", 0.1f, 6, 0.1f, 1.4f);
             NightF = Add(GTime, "nightf", "nighttimeFactor", "Длина ночи (множитель)", "Больше — ночь тянется дольше.", 0.1f, 6, 0.1f, 0.6f);
             Pause = AddBool(GTime, "pause", "pauseTimeOfDay", "Остановить время суток", "Время суток замирает на стартовом часе.", false);
+
+            OreHp = Add(GMining, "orehp", null, "Прочность руды и камня (×)", "Во сколько раз дольше бить руду (железо, булыжник, кристаллы, бриллиты). Землю не трогает.", 0.25f, 10, 0.25f, 1);
+            OreYield = Add(GMining, "oreyield", null, "Выход ресурсов с руды и камня (×)", "Во сколько раз больше (меньше) ресурса падает с добытого блока.", 0.25f, 10, 0.25f, 1);
 
             Relations = Add(GRules, "relations", "playerRelations", "Отношения игроков", "Для сетевой игры.", 0, 2, 1, 2);
             Relations.Choices = new[] { "Союзники", "Нейтралитет", "Враги" };
@@ -128,6 +132,15 @@ namespace CastleStoryOptimizer
                 h.Patch(m, postfix: new HarmonyMethod(typeof(WorldSettings), nameof(PresetPostfix)));
             }
             catch (Exception e) { Plugin.Log.LogError("Настройки мира: правила режима не будут меняться: " + e); }
+            try
+            {
+                var hp = AccessTools.Method(typeof(Brix.Game.AI.Damage.TerrainDamageReceiver), "SetMaxHPAndOverkillFromFactory");
+                h.Patch(hp, postfix: new HarmonyMethod(typeof(WorldSettings), nameof(HpPostfix)));
+                var gv = AccessTools.Method(typeof(Brix.Engine.Voxel), "GetGarnotteValue",
+                    new[] { typeof(Brix.Engine.XYZ), typeof(System.Collections.Generic.ICollection<Brix.External.Factories.Factory.AssetKey>), typeof(System.Collections.Generic.ICollection<int>) });
+                h.Patch(gv, postfix: new HarmonyMethod(typeof(WorldSettings), nameof(YieldPostfix)));
+            }
+            catch (Exception e) { Plugin.Log.LogError("Настройки мира: прочность и выход руды не изменятся: " + e); }
             try
             {
                 var setter = AccessTools.PropertySetter(typeof(Brix.Game.AI.Project), "MaximumCrewSize");
@@ -335,6 +348,44 @@ namespace CastleStoryOptimizer
         {
             foreach (var o in ECount) if (o.On) return true;
             return false;
+        }
+
+        // ---------- добыча: прочность и выход руды ----------
+        private static bool IsOre(string name)
+        {
+            if (string.IsNullOrEmpty(name)) return false;
+            name = name.ToLowerInvariant();
+            return name.Contains("iron") || name.Contains("rock") || name.Contains("stone") || name.Contains("crystal")
+                || name.Contains("pyrite") || name.Contains("brick") || name.Contains("boulder");
+        }
+
+        private static void HpPostfix(Brix.Game.AI.Damage.TerrainDamageReceiver __instance, Brix.Engine.TerrainBlockData tbd)
+        {
+            try
+            {
+                if (!OreHp.On || Math.Abs(OreHp.Value - 1f) < 0.001f) return;
+                if (!IsOre(tbd.BlockInfo.Key.Name)) return;
+                __instance.MaxHP *= OreHp.Value;
+                __instance.OverkillThreshold *= OreHp.Value;
+            }
+            catch (Exception e) { LogOnce("прочность", e); }
+        }
+
+        private static void YieldPostfix(Brix.Engine.XYZ position, System.Collections.Generic.ICollection<Brix.External.Factories.Factory.AssetKey> resultTypes, System.Collections.Generic.ICollection<int> resultAmounts)
+        {
+            try
+            {
+                if (!OreYield.On || Math.Abs(OreYield.Value - 1f) < 0.001f) return;
+                var list = resultAmounts as System.Collections.Generic.IList<int>;
+                if (list == null || !Brix.Engine.Voxel.IsTerrain(position)) return; // построенные блоки не трогаем
+                var types = new System.Collections.Generic.List<Brix.External.Factories.Factory.AssetKey>(resultTypes);
+                for (int i = 0; i < list.Count; i++)
+                {
+                    string name = i < types.Count ? types[i].Name : null;
+                    if (IsOre(name)) list[i] = Mathf.Max(1, Mathf.RoundToInt(list[i] * OreYield.Value));
+                }
+            }
+            catch (Exception e) { LogOnce("выход", e); }
         }
 
         // ---------- размер бригады на одну работу ----------
