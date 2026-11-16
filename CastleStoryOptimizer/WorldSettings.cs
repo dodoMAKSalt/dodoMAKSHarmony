@@ -77,7 +77,7 @@ namespace CastleStoryOptimizer
             Knights = Add(GUnits, "knights", "startingKnightCount", "Стартовые рыцари", "Только Вторжение и Завоевание.", 0, 30, 1, 1);
             Archers = Add(GUnits, "archers", "startingArcherCount", "Стартовые лучники", "Только Вторжение и Завоевание.", 0, 30, 1, 1);
 
-            Crew = Add(GUnits, "crew", null, "Макс. бриктронов на одну работу", "Сколько бриктронов может работать над одной задачей (в игре 8). Кнопки +/- в списке задач.", 1, 30, 1, 8);
+            Crew = Add(GUnits, "crew", null, "Предел бригады на одну работу", "Потолок для раздела «Бригада» в меню приказов и +/- в списке задач (в игре было 8; без галочки — 30). Число ячеек в списке задач меняется только с галочкой.", 1, 30, 1, 8);
 
             UBase = Add(GEnergy, "ubase", null, "Цена нового юнита (энергия)", "Базовая цена появления нового бриктрона (в игре 100).", 10, 2000, 10, 100);
             UStep = Add(GEnergy, "ustep", null, "Надбавка за каждого следующего юнита", "Насколько дорожает следующий юнит (в игре 60; в «Захвате самоцветов» 0).", 0, 500, 5, 60);
@@ -389,7 +389,7 @@ namespace CastleStoryOptimizer
         }
 
         // ---------- размер бригады на одну работу ----------
-        public static int CrewLimit() { return Crew.On ? (int)Crew.Value : 8; }
+        public static int CrewLimit() { return Crew.On ? (int)Crew.Value : 30; }
 
         private static IEnumerable<CodeInstruction> CrewTranspiler(IEnumerable<CodeInstruction> code)
         {

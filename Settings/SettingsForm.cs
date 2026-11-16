@@ -88,6 +88,7 @@ namespace CastleStoryModSettings
             new[] { "Workshops", "PieMenuButton", Gameplay + "ИИ и мастерские", "Кнопка «Приоритет» в круговом меню мастерской", "true", "" },
             new[] { "World", "Enabled", Gameplay + "Мир и юниты", "Кнопка «Подробные настройки мира» в лобби (число юнитов, энергия, возрождение, время суток…)", "true", "" },
             new[] { "Workshops", "MaxButton", Gameplay + "ИИ и мастерские", "Кнопка «МАКС» рядом с «+» в списке производства станции", "true", "" },
+            new[] { "Workshops", "CrewMenu", Gameplay + "ИИ и мастерские", "Раздел «Бригада» в меню приказов (максимум бриктронов на задаче)", "true", "" },
             new[] { "Language", "ForceRussian", "Язык", "Всегда включать русский перевод при запуске", "true", "" },
             new[] { "Language", "TranslateCastleStoryPlus", "Язык", "Переводить на русский Castle Story Plus (меню, подсказки, настройки)", "true", "" },
             new[] { "Profiler", "Enabled", "Замерщик и диагностика", "Замерщик кадров и отчёты (оверлей, файлы отчётов)", "true", "" },

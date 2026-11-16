@@ -3,6 +3,7 @@
 Git появился на версии 0.16.4; история до неё восстановлена по ходу работы.
 
 ## 0.19.x — меню настроек, GC кусками, исправления Castle Story Plus (16.11.2026)
+- 0.19.11: `CrewMenu` — раздел «Бригада» в меню приказов Castle Story Plus (после «Приоритет»): − / сейчас/максимум / + для выбранной задачи, Shift = на 5. Через рефлексию добавляется в `GamePopupBuilder.Build`, команды игры `CmdAddProjectCapacity`/`CmdRemoveProjectCapacity`. Потолок бригады по умолчанию 30 (было 8), задаётся в настройках мира. Опция `[Workshops] CrewMenu`. Не проверено в игре.
 - 0.19.10: настройки мира, группа «Добыча»: прочность руды и камня (×, `TerrainDamageReceiver.SetMaxHPAndOverkillFromFactory`) и выход ресурсов с добытого блока (×, `Voxel.GetGarnotteValue`, только природный грунт). Руда определяется по имени блока (iron/rock/stone/crystal/pyrite/brick/boulder). Не проверено в игре.
 - 0.19.9: `QueueMax` — кнопка «МАКС» рядом с «+» в списке «Производство» окна станции (Castle Story Plus): заказывает рецепт до полной очереди. Строка `CsListRowView` перехватывается по имени типа, к ней добавляется дочерняя кнопка. Опция `[Workshops] MaxButton`. Не проверено в игре.
 - 0.19.8: `StepCap` — не больше 3 шагов физики за кадр (`Time.maximumDeltaTime` = 0,06 с вместо 0,33): по замеру со 100 бриктронами за кадр шло до 1100 вызовов `Behavior.BrixFixedUpdate`, FPS падал 200 → 10 лавиной. Опция `[Performance] CapPhysicsSteps`/`MaxFixedStepsPerFrame`. Настройки мира: «Макс. бриктронов на одну работу» (снят потолок 8 в `Project.MaximumCrewSize` + число ячеек в Lua списка задач).

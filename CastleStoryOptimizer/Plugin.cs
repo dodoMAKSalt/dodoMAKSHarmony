@@ -11,7 +11,7 @@ namespace CastleStoryOptimizer
     {
         public const string Guid = "castlestory.optimizer";
         public const string Name = "dodoMAKSharmony";
-        public const string Version = "0.19.10";
+        public const string Version = "0.19.11";
 
         internal static Plugin Instance;
         internal static BepInEx.Logging.ManualLogSource Log;
@@ -94,6 +94,10 @@ namespace CastleStoryOptimizer
             if (PortCompat.Csp && Config.Bind("Workshops", "MaxButton", true,
                     "Кнопка «МАКС» рядом с «+» в списке производства станции (Castle Story Plus): заказать рецепт на всю очередь.").Value)
                 QueueMax.Apply(_harmony);
+
+            if (PortCompat.Csp && Config.Bind("Workshops", "CrewMenu", true,
+                    "Раздел «Бригада» в меню приказов: − / + максимум бриктронов на выбранной задаче (Shift — на 5).").Value)
+                CrewMenu.Apply(_harmony);
 
             if (!PortCompat.Active && Config.Bind("Menu", "ShowModName", true, "Надпись dodoMAKSharmony под логотипом в главном меню.").Value)
                 _branding = new MenuBranding();
@@ -264,6 +268,7 @@ namespace CastleStoryOptimizer
             if (_world) WorldSettings.Tick();
             StepCap.Tick();
             QueueMax.Tick();
+            CrewMenu.Tick();
             if (_btcTuning) BtcTuning.Tick();
             if (_stuck != null) { _stuck.Tick(); t = Stamp(MStuck, t); }
             if (_movingFix != null)
