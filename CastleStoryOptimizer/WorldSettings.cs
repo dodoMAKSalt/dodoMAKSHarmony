@@ -234,7 +234,6 @@ namespace CastleStoryOptimizer
         {
             try
             {
-                Plugin.Log.LogInfo("Настройки мира: правила режима «" + __instance.codename + "» (включено пунктов: " + ActiveCount + ", сервер: " + NetworkServer.active + ")");
                 if (!(NetworkClient.active && !NetworkServer.active)) RebuildRuntime();
                 var table = script == null ? null : script.Globals["sv_Settings"] as Table;
                 if (table == null) return;
@@ -258,7 +257,6 @@ namespace CastleStoryOptimizer
 
         public static void OnLevelLoaded()
         {
-            Plugin.Log.LogInfo("Настройки мира: загрузка завершена (включено пунктов: " + ActiveCount + ")");
             CloseWindow();
             if (!(NetworkClient.active && !NetworkServer.active)) RebuildRuntime();
             RegisterNetwork();
@@ -690,7 +688,6 @@ namespace CastleStoryOptimizer
 
         private static void Open()
         {
-            Plugin.Log.LogInfo("Настройки мира: окно открыто");
             _open = true;
             RefreshRows();
             try
@@ -704,7 +701,6 @@ namespace CastleStoryOptimizer
         private static void CloseWindow()
         {
             if (!_open) return;
-            Plugin.Log.LogInfo("Настройки мира: окно закрыто (включено пунктов: " + ActiveCount + ")");
             _open = false;
             Save();
             if (!(NetworkClient.active && !NetworkServer.active)) RebuildRuntime();

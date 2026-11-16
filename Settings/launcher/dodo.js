@@ -12,36 +12,6 @@
   ];
   var FONT = 'Arial, "Segoe UI", sans-serif';
 
-  // ---------- архив логов прошлого запуска ----------
-  // BepInEx и мод затирают LogOutput.log и отчёты при каждом запуске игры, поэтому лаунчер (он открывается до игры)
-  // сохраняет копию логов прошлого запуска в BepInEx/logs-archive/<время>/ (храним последние 20).
-  function archiveLogs() {
-    try {
-      var bep = path.join(root, 'CastleStoryPlus-Unity6', 'BepInEx');
-      var mainLog = path.join(bep, 'LogOutput.log');
-      if (!fs.existsSync(mainLog)) return;
-      var st = fs.statSync(mainLog);
-      var d = st.mtime, p2 = function (n) { return (n < 10 ? '0' : '') + n; };
-      var name = d.getFullYear() + p2(d.getMonth() + 1) + p2(d.getDate()) + '-' + p2(d.getHours()) + p2(d.getMinutes()) + p2(d.getSeconds());
-      var base = path.join(bep, 'logs-archive');
-      var dir = path.join(base, name);
-      if (fs.existsSync(dir)) return;
-      fs.mkdirSync(base, { recursive: true });
-      fs.mkdirSync(dir);
-      var files = [mainLog,
-        path.join(bep, 'CastleStoryOptimizer_report.txt'), path.join(bep, 'CastleStoryOptimizer_spikes.txt'),
-        path.join(bep, 'CastleStoryOptimizer_timeline.csv'), path.join(bep, 'CastleStoryOptimizer_slowlua.txt'),
-        path.join(require('os').tmpdir(), 'Castle Story', 'logs', 'brix.log')];
-      files.forEach(function (f) { try { if (fs.existsSync(f)) fs.copyFileSync(f, path.join(dir, path.basename(f))); } catch (e) { } });
-      var dirs = fs.readdirSync(base).filter(function (n) { return /^\d{8}-\d{6}$/.test(n); }).sort();
-      while (dirs.length > 20) {
-        var old = path.join(base, dirs.shift());
-        try { fs.readdirSync(old).forEach(function (f) { fs.unlinkSync(path.join(old, f)); }); fs.rmdirSync(old); } catch (e) { }
-      }
-    } catch (e) { console.log('dodo archive', e); }
-  }
-  archiveLogs();
-
   // ---------- перевод ----------
   var RU = {
     'our latest update is': 'Последнее обновление —',
