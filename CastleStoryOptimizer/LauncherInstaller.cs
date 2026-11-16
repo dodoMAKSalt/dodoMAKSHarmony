@@ -20,9 +20,18 @@ namespace CastleStoryOptimizer
             {
                 string setting = Path.Combine(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "dodoMAKSharmony"), "launcher.txt");
                 if (File.Exists(setting) && File.ReadAllText(setting).Trim() == "0") return;
-                string app = Path.Combine(BepInEx.Paths.GameRootPath, Path.Combine("resources", Path.Combine("app", "app")));
-                string html = Path.Combine(app, "index.html");
-                if (!File.Exists(html)) return;
+                // Мод работает внутри порта: его «корень» — папка CastleStoryPlus-Unity6, а лаунчер лежит на уровень выше
+                // (в папке самой Castle Story). Ищем resources/app/app в корне и в родительской папке.
+                string app = null, html = null;
+                string root = BepInEx.Paths.GameRootPath;
+                var candidates = new[] { root, Path.GetDirectoryName(root.TrimEnd('\\', '/')) };
+                foreach (var c in candidates)
+                {
+                    if (string.IsNullOrEmpty(c)) continue;
+                    string a = Path.Combine(c, Path.Combine("resources", Path.Combine("app", "app")));
+                    if (File.Exists(Path.Combine(a, "index.html"))) { app = a; html = Path.Combine(a, "index.html"); break; }
+                }
+                if (html == null) { Plugin.Log.LogInfo("Лаунчер: resources/app/app/index.html не найден рядом с игрой — перевод не ставим."); return; }
 
                 string js = Read("launcher/dodo.js"), ru = Read("lang/csp_ru.txt");
                 if (js == null) return;
