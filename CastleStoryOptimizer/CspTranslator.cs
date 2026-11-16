@@ -126,7 +126,7 @@ namespace CastleStoryOptimizer
             if (value == null || value.Length < 2) return;
             string tr;
             try { tr = Translate(value); } catch { return; }
-            if (ReferenceEquals(tr, value) || tr == value) return;
+            if (ReferenceEquals(tr, value) || tr == value) { LogMiss(value); return; }
             // текст поля ввода (то, что печатает игрок) не трогаем
             var comp = __instance as Component;
             if (comp != null)
@@ -147,6 +147,25 @@ namespace CastleStoryOptimizer
                 if (isInput) return;
             }
             value = tr;
+        }
+
+        private static readonly HashSet<string> Missed = new HashSet<string>(StringComparer.Ordinal);
+        private static readonly Regex Digits = new Regex(@"\d+");
+
+        /// <summary>Непереведённый английский текст — в BepInEx\CastleStoryOptimizer_untranslated.txt (числа → #).</summary>
+        private static void LogMiss(string v)
+        {
+            try
+            {
+                if (Missed.Count >= 1500 || !HasLetters(v, 3)) return;
+                foreach (char c in v) if (c >= (char)0x400 && c <= (char)0x4FF) return;
+                string key = Digits.Replace(v.Trim(), "#");
+                if (!Missed.Add(key)) return;
+                key = key.Replace((char)13, ' ').Replace((char)10, '|');
+                File.AppendAllText(Path.Combine(BepInEx.Paths.BepInExRootPath, "CastleStoryOptimizer_untranslated.txt"),
+                    key + System.Environment.NewLine, Encoding.UTF8);
+            }
+            catch { }
         }
 
         public static string Translate(string s)
