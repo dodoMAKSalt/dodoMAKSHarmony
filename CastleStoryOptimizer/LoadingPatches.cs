@@ -34,7 +34,7 @@ namespace CastleStoryOptimizer
         public static bool IsLoading { get; private set; }
         private static int _loadStartFrame;
 
-        public static void Apply(Harmony h, bool fastLoading)
+        public static void Apply(Harmony h, bool fastLoading, bool wrapPhases = true)
         {
             _fastLoading = fastLoading;
             var t = AccessTools.TypeByName("Brix.Engine.GameLoader");
@@ -42,7 +42,7 @@ namespace CastleStoryOptimizer
 
             var post = new HarmonyMethod(typeof(LoadingPatches), nameof(WrapPostfix));
             int n = 0;
-            foreach (var name in Phases)
+            foreach (var name in wrapPhases ? Phases : new string[0])
             {
                 var m = AccessTools.Method(t, name);
                 if (m == null || m.ReturnType != typeof(IEnumerator)) { Plugin.Log.LogWarning("Фаза загрузки не найдена: " + name); continue; }
