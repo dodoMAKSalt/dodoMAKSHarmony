@@ -60,10 +60,10 @@ namespace CastleStoryOptimizer
             var variant = stats.GetField("Variant");
             if (peek == null || variant == null) return;
 
-            var removed = 0;
+            var removed = 0; int total = 0;
             foreach (var o in UnityEngine.Object.FindObjectsOfType(labor))
             {
-                var c = o as Component;
+                total++; var c = o as Component;
                 if (c == null || !c.gameObject.activeInHierarchy) continue;
                 var state = Member(o, "state");
                 if (state == null) continue;
@@ -77,7 +77,8 @@ namespace CastleStoryOptimizer
 
             int chests = 0;
             var findChest = AccessTools.Method(T("CastleStoryPlus.Treasure.TreasureChests"), "FindChest");
-            foreach (var pos in ChestPositions())
+            var posList = ChestPositions(); int positions = posList.Count;
+            foreach (var pos in posList)
             {
                 for (int i = 0; i < 3 && findChest != null; i++) // на одном месте мог оказаться дубль
                 {
@@ -87,6 +88,7 @@ namespace CastleStoryOptimizer
                     chests++;
                 }
             }
+            Plugin.Log.LogInfo("Проверка Treasure: юнитов " + total + ", с меткой зверя " + removed + ", мест сундуков " + positions + ".");
             if (removed > 0 || chests > 0)
                 Plugin.Log.LogInfo("Treasure убран: стражей-големов " + removed + ", сундуков " + chests + ".");
         }

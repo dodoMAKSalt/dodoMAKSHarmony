@@ -415,6 +415,7 @@ namespace CastleStoryOptimizer
 
         private Snapshot _overlayFor;
         private string _overlayText;
+        private float _overlayHeight = 100;
 
         public void DrawOverlay()
         {
@@ -426,12 +427,22 @@ namespace CastleStoryOptimizer
                 var font = Font.CreateDynamicFontFromOSFont("Consolas", 12);
                 if (font != null) _style.font = font;
             }
-            var rect = new Rect(8, 46, 560, 60 + 15 * Math.Min(TopN, _last.Rows.Count));
+            // Строку собираем раз в секунду, а не дважды за кадр (было ~0.7 МБ мусора в секунду → частые сборки мусора).
+            if (!ReferenceEquals(_overlayFor, _last))
+            {
+                _overlayFor = _last;
+                string pre = PortCompat.Active ? "Shift+" : "";
+                string t = _last.Text;
+                if (t.Length > 0 && t[t.Length - 1] != (char)10) t += (char)10;
+                _overlayText = t + pre + "F8 - скрыть, " + pre + "F9 - отчёт, " + pre + "F7 - подробный замер: " + (ProfilerPatches.Active ? "ВКЛ" : "ВЫКЛ");
+                int lines = 1;
+                foreach (char c in _overlayText) if (c == (char)10) lines++;
+                _overlayHeight = 14 + 15 * lines;
+            }
+            var rect = new Rect(8, 46, 560, _overlayHeight);
             GUI.color = new Color(0, 0, 0, 0.75f);
             GUI.DrawTexture(rect, Texture2D.whiteTexture);
             GUI.color = Color.white;
-            // Строку собираем раз в секунду, а не дважды за кадр (было ~0.7 МБ мусора в секунду → частые сборки мусора).
-            if (!ReferenceEquals(_overlayFor, _last)) { _overlayFor = _last; _overlayText = _last.Text + "F8 — скрыть, F9 — отчёт, F7 — подробный замер: " + (ProfilerPatches.Active ? "ВКЛ" : "ВЫКЛ"); }
             GUI.Label(new Rect(rect.x + 6, rect.y + 4, rect.width - 12, rect.height - 8), _overlayText, _style);
         }
     }
