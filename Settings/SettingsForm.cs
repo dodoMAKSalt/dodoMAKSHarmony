@@ -171,8 +171,8 @@ namespace CastleStoryModSettings
         {
             var top = new FlowLayoutPanel { Dock = DockStyle.Top, Height = 44, Padding = new Padding(8, 8, 8, 0), WrapContents = false };
             top.Controls.Add(Btn("Как в оригинале", "Выключить ВСЕ геймплейные изменения. Интерфейс, ускорения и исправления утечек остаются.", (s, e) => Preset(f => f.Group.StartsWith(Gameplay) ? false : (bool?)null)));
-            top.Controls.Add(Btn("Рекомендуемые", "Как задумал автор Castle Story Plus (кроме сундуков со зверями).", (s, e) => Preset(f => f.Key == "Treasure" ? false : (bool?)f.Default)));
-            top.Controls.Add(Btn("Включить всё", "Включить всё, кроме сундуков со зверями.", (s, e) => Preset(f => (bool?)(f.Key != "Treasure"))));
+            top.Controls.Add(Btn("Рекомендуемые", "Как задумал автор Castle Story Plus .", (s, e) => Preset(f => (bool?)f.Default)));
+            top.Controls.Add(Btn("Включить всё", "Включить все функции.", (s, e) => Preset(f => (bool?)true)));
             top.Controls.Add(Btn("Выключить всё", "Выключить вообще все функции Castle Story Plus из списка.", (s, e) => Preset(f => (bool?)false)));
 
             _tree.Dock = DockStyle.Fill;

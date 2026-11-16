@@ -11,7 +11,7 @@ namespace CastleStoryOptimizer
     {
         public const string Guid = "castlestory.optimizer";
         public const string Name = "dodoMAKSharmony";
-        public const string Version = "0.18.2";
+        public const string Version = "0.18.3";
 
         internal static Plugin Instance;
         internal static BepInEx.Logging.ManualLogSource Log;
@@ -72,9 +72,6 @@ namespace CastleStoryOptimizer
             if (PortCompat.Csp && Config.Bind("Language", "TranslateCastleStoryPlus", true,
                     "Переводить на русский мод Castle Story Plus (их меню, подсказки, настройки, новые предметы).").Value)
                 CspTranslator.Apply(_harmony);
-            if (PortCompat.Csp && Config.Bind("Fixes", "RemoveTreasure", true,
-                    "Убрать из мира сундуки и големов-стражей Castle Story Plus (Treasure), оставшиеся в сохранении.").Value)
-                TreasureCleanup.Enable();
 
             _stationPriorities = Config.Bind("Workshops", "Enabled", true,
                 "Приоритеты мастерских: выделить печь/верстак и т.п. → клавиши ниже.").Value;
@@ -251,7 +248,6 @@ namespace CastleStoryOptimizer
                 t = Stamp(MAnim, t);
             }
             if (_stationPriorities) { StationPriorities.Tick(); t = Stamp(MStations, t); }
-            TreasureCleanup.Tick();
             if (_profiler == null) return;
             if (PortCompat.KeyDown(_overlayKey.Value)) _profiler.ShowOverlay = !_profiler.ShowOverlay;
             if (PortCompat.KeyDown(_dumpKey.Value)) _profiler.WriteReport("ручной отчёт (F9)");

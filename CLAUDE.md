@@ -23,7 +23,7 @@ BepInEx 5 плагин (`CastleStoryOptimizer.dll`, GUID `castlestory.optimizer`
   по словам). Обновить под новую версию CSP: декомпилировать их DLL в `decompiled/csp`, `decompiled/cspui` →
   `tools/csp_strings.py` → `tools/csp_split.py` → перевести новые `tools/csp_tr/ru_NN.txt` (строка в строку, `=` — оставить)
   → `tools/csp_check.py` → `tools/csp_build.py`; проверка — `tools/csp_test.py "строка"`.
-- Сундуки/звери CSP выключены у пользователя: `[Features] Treasure = false` в их конфиге.
+- Сундуки/звери CSP (Treasure) — обычная геймплейная функция, отключается в меню Settings/ (dodoMAKSharmony-Settings.exe) или `[Features] Treasure` в их конфиге.
 
 ## Пути
 - Игра: `C:\Program Files (x86)\Steam\steamapps\common\Castle Story`
