@@ -181,6 +181,24 @@ namespace CastleStoryOptimizer
             PatchShared(h, "Brix.Game.AI.KnowledgeSpace.KnowledgeConnectedAccessFinder", "SearchStep", pathKnow, pathPre, pathPost, ref ok, ref fail);
             PatchShared(h, "Brix.Game.AI.KnowledgeSpace.KnowledgeDisjointRegionsFinder", "MapStep_Search", pathKnow, pathPre, pathPost, ref ok, ref fail);
 
+            // 2б. Подозреваемые в разовых пиках (по замерам: LodUpdater.Update до 280 мс)
+            var lodEntry = NewEntry("[Карта] LodUpdater: дальние уровни детализации", "Update");
+            foreach (var spec in new[] {
+                "Brix.Engine.FlatWorld.LodUpdater+LodBatchDrawer|GetPaddedLowerMvs",
+                "Brix.Engine.FlatWorld.LodUpdater+LodBatchDrawer|InitLodData",
+                "Brix.Engine.FlatWorld.LodUpdater+LodBatchDrawer|RenderLod",
+                "Brix.Engine.FlatWorld.LodUpdater|RenderLod",
+                "Brix.Engine.FlatWorld.LodUpdater|InitLodData",
+                "Brix.Engine.FlatWorld.LodUpdater|GetPaddedLowerMvs" })
+            {
+                var parts = spec.Split('|');
+                var tt = AccessTools.TypeByName(parts[0]);
+                var mm = tt == null ? null : AccessTools.Method(tt, parts[1]);
+                if (mm == null) continue;
+                if (PatchWith(h, mm, NewEntry("[Карта] " + parts[0].Substring(parts[0].LastIndexOf('.') + 1) + "." + parts[1], "Update"), pathPre, pathPost)) ok++; else fail++;
+            }
+            PatchShared(h, "Brix.Engine.Jardinier", "Travailler", NewEntry("[Карта] Jardinier.Travailler (природа/LOD)", "Update"), pathPre, pathPost, ref ok, ref fail);
+
             // 3. Lua (MoonSharp) — все перегрузки Script.Call и Coroutine.Resume
             var luaPre = new HarmonyMethod(typeof(ProfilerPatches), nameof(LuaPrefix));
             var luaPost = new HarmonyMethod(typeof(ProfilerPatches), nameof(LuaPostfix));
