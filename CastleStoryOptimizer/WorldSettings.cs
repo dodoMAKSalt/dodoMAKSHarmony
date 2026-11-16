@@ -777,11 +777,20 @@ namespace CastleStoryOptimizer
             }
             GUI.EndScrollView();
 
-            if (GUI.Button(new Rect(win.x + 20, win.yMax - 46, 190, 36), "Сбросить всё"))
-                foreach (var o in All) { o.On = false; o.Value = o.Def; }
+            if (GUI.Button(new Rect(win.x + 20, win.yMax - 46, 190, 36), "Сбросить всё")) ResetAll();
+            if (GUI.Button(new Rect(win.xMax - 270, win.y + 10, 250, 32), "Сбросить как в ваниле")) ResetAll();
             if (GUI.Button(new Rect(win.xMax - 210, win.yMax - 46, 190, 36), "Готово")) CloseWindow();
             if (Event.current.type == EventType.KeyDown && Event.current.keyCode == KeyCode.Escape) { CloseWindow(); Event.current.Use(); }
             GUI.matrix = old;
+        }
+
+        /// <summary>Все галочки сняты, значения — как в игре, пределы по цветам тоже: игра идёт как в ванильном режиме.</summary>
+        private static void ResetAll()
+        {
+            foreach (var o in All) { o.On = false; o.Value = o.Def; }
+            foreach (var kv in Saved) { kv.Value.On = false; kv.Value.Value = Cap.Def; }
+            Save();
+            if (!(NetworkClient.active && !NetworkServer.active)) RebuildRuntime(); // заодно вернёт лимит задач 15
         }
 
         private static void DrawRow(Opt o, Rect r)
