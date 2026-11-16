@@ -321,29 +321,32 @@ namespace CastleStoryOptimizer
             }
             catch (Exception e) { sb.Append("\n  юниты: ошибка ").Append(e.Message); }
 
-            try
-            {
-                if (UnityEngine.Networking.NetworkServer.active || UnityEngine.Networking.NetworkClient.active)
-                {
-                    long bytes = UnityEngine.Networking.NetworkTransport.GetOutgoingFullBytesCount();
-                    float now = Time.realtimeSinceStartup;
-                    float kbps = _lastNetTime > 0 ? (bytes - _lastNetBytes) / 1024f / Mathf.Max(0.1f, now - _lastNetTime) : 0;
-                    _lastNetBytes = bytes; _lastNetTime = now;
-                    sb.AppendFormat("\n  сеть: {0}, исходящих {1:0.0} КБ/с, подключений {2}",
-                        UnityEngine.Networking.NetworkServer.active ? "хост" : "клиент", kbps,
-                        UnityEngine.Networking.NetworkServer.active ? UnityEngine.Networking.NetworkServer.connections.Count : 1);
-                }
-            }
-            catch (Exception e) { sb.Append("\n  сеть: ошибка ").Append(e.Message); }
+            try { sb.Append(NetStats()); }
+            catch (Exception e) { sb.Append("\n  сеть: недоступна (").Append(e.GetType().Name).Append(")"); }
             return sb.ToString();
         }
 
+
+        // Отдельный метод: на порте (Unity 6) тип NetworkTransport не находится, и JIT падает при компиляции метода,
+        // поэтому вызов обёрнут в try выше, а остальная статистика не пропадает.
+        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.NoInlining)]
+        private string NetStats()
+        {
+            if (!(UnityEngine.Networking.NetworkServer.active || UnityEngine.Networking.NetworkClient.active)) return "";
+            long bytes = UnityEngine.Networking.NetworkTransport.GetOutgoingFullBytesCount();
+            float now = Time.realtimeSinceStartup;
+            float kbps = _lastNetTime > 0 ? (bytes - _lastNetBytes) / 1024f / Mathf.Max(0.1f, now - _lastNetTime) : 0;
+            _lastNetBytes = bytes; _lastNetTime = now;
+            return string.Format("\n  сеть: {0}, исходящих {1:0.0} КБ/с, подключений {2}",
+                UnityEngine.Networking.NetworkServer.active ? "хост" : "клиент", kbps,
+                UnityEngine.Networking.NetworkServer.active ? UnityEngine.Networking.NetworkServer.connections.Count : 1);
+        }
 
         public void WriteReport(string reason)
         {
             if (_last == null) return;
             // Статистика сцены перебирает все объекты (~100+ мс) — только по F9, не в авто-отчётах.
-            if (reason.Contains("F9") && Brix.Engine.Architecte.instance != null) CollectSceneStats(true);
+            if (reason.Contains("F9") && Brix.Engine.Architecte.instance != null) CollectSceneStats(Input.GetKey(KeyCode.LeftControl) || Input.GetKey(KeyCode.RightControl));
             try
             {
                 var sb = new StringBuilder();
