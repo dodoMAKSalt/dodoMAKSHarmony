@@ -328,9 +328,48 @@ namespace CastleStoryOptimizer
         {
             if (_luaDepth++ == 0) { MemPush(); __state = Stopwatch.GetTimestamp(); } else __state = 0;
         }
-        private static void LuaPostfix(MethodBase __originalMethod, long __state)
+        private static void LuaPostfix(MethodBase __originalMethod, long __state, object[] __args)
         {
-            if (--_luaDepth == 0 && __state != 0) Record(__originalMethod, __state);
+            if (--_luaDepth == 0 && __state != 0)
+            {
+                Record(__originalMethod, __state);
+                long ms = (Stopwatch.GetTimestamp() - __state) * 1000 / Stopwatch.Frequency;
+                if (ms >= SlowLuaMs) LogSlowLua(ms, __originalMethod, __args);
+            }
+        }
+
+        // --- журнал медленных вызовов Lua (кто и что вызвал) ---
+        private const int SlowLuaMs = 25;
+        private static int _slowLuaLogged;
+
+        private static void LogSlowLua(long ms, MethodBase m, object[] args)
+        {
+            if (_slowLuaLogged >= 150) return;
+            _slowLuaLogged++;
+            try
+            {
+                var sb = new System.Text.StringBuilder();
+                sb.Append(DateTime.Now.ToString("HH:mm:ss")).Append("  ").Append(ms).Append(" мс  ").Append(m.DeclaringType.Name).Append('.').Append(m.Name);
+                if (args != null)
+                    foreach (var a in args)
+                    {
+                        string t;
+                        try { t = a == null ? "null" : a.ToString(); } catch { t = "?"; }
+                        if (t.Length > 90) t = t.Substring(0, 90);
+                        sb.Append("\n    арг: ").Append(t.Replace('\n', ' '));
+                    }
+                var st = new System.Diagnostics.StackTrace(2, false);
+                int n = Math.Min(st.FrameCount, 14);
+                for (int i = 0; i < n; i++)
+                {
+                    var f = st.GetFrame(i).GetMethod();
+                    if (f == null) continue;
+                    sb.Append("\n    ").Append(f.DeclaringType != null ? f.DeclaringType.Name : "?").Append("::").Append(f.Name);
+                }
+                sb.Append("\n");
+                System.IO.File.AppendAllText(System.IO.Path.Combine(BepInEx.Paths.BepInExRootPath, "CastleStoryOptimizer_slowlua.txt"), sb.ToString(), System.Text.Encoding.UTF8);
+            }
+            catch { }
         }
 
         // Если Lua/путь кинул исключение, postfix не вызовется и глубина «застрянет».
