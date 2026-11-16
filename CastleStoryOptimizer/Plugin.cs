@@ -11,7 +11,7 @@ namespace CastleStoryOptimizer
     {
         public const string Guid = "castlestory.optimizer";
         public const string Name = "dodoMAKSharmony";
-        public const string Version = "0.19.7";
+        public const string Version = "0.19.8";
 
         internal static Plugin Instance;
         internal static BepInEx.Logging.ManualLogSource Log;
@@ -157,6 +157,11 @@ namespace CastleStoryOptimizer
             _movingFix = new MovingColliderFix(Config.Bind("Performance", "KinematicMovingColliders2", false,
                 "Движущимся статичным коллайдерам давать кинематическое тело. Эксперимент, пользы не показал. «-» в игре — вкл/выкл.").Value);
 
+            if (Config.Bind("Performance", "CapPhysicsSteps", true,
+                    "Не больше N шагов физики за кадр (предотвращает «лавину»: тяжёлый кадр → много шагов → ещё тяжелее; со 100 бриктронами FPS падал с 200 до 10).").Value)
+                StepCap.Init(Config.Bind("Performance", "MaxFixedStepsPerFrame", 3,
+                    "Сколько шагов физики (по 0,02 с) допускается за один кадр. Меньше — раньше включается замедление вместо лавины. 0 = как в игре (16).").Value);
+
             if (Config.Bind("Performance", "FixColliderScaler", true,
                     "Не переписывать радиус коллайдеров 50 раз в секунду без изменений (нагрузка на физику).").Value)
                 PhysicsPatches.Apply(_harmony);
@@ -253,6 +258,7 @@ namespace CastleStoryOptimizer
             GcControl.Watchdog();
             Compat.Tick();
             if (_world) WorldSettings.Tick();
+            StepCap.Tick();
             if (_btcTuning) BtcTuning.Tick();
             if (_stuck != null) { _stuck.Tick(); t = Stamp(MStuck, t); }
             if (_movingFix != null)

@@ -60,7 +60,7 @@ namespace CastleStoryOptimizer
             return o;
         }
 
-        private static Opt Cap, Workers, Knights, Archers;
+        private static Opt Cap, Workers, Knights, Archers, Crew;
         private static Opt UBase, UStep, UFree, RMul, RFlat, EMul;
         private static readonly Opt[] ECount = new Opt[6];
         private static Opt StartTime, DayF, NightF, Pause, Relations, Dig;
@@ -75,6 +75,8 @@ namespace CastleStoryOptimizer
             Workers = Add(GUnits, "workers", "startingWorkersCount", "Стартовые рабочие", "Сколько бриктронов у игрока в начале.", 0, 60, 1, 5);
             Knights = Add(GUnits, "knights", "startingKnightCount", "Стартовые рыцари", "Только Вторжение и Завоевание.", 0, 30, 1, 1);
             Archers = Add(GUnits, "archers", "startingArcherCount", "Стартовые лучники", "Только Вторжение и Завоевание.", 0, 30, 1, 1);
+
+            Crew = Add(GUnits, "crew", null, "Макс. бриктронов на одну работу", "Сколько бриктронов может работать над одной задачей (в игре 8). Кнопки +/- в списке задач.", 1, 30, 1, 8);
 
             UBase = Add(GEnergy, "ubase", null, "Цена нового юнита (энергия)", "Базовая цена появления нового бриктрона (в игре 100).", 10, 2000, 10, 100);
             UStep = Add(GEnergy, "ustep", null, "Надбавка за каждого следующего юнита", "Насколько дорожает следующий юнит (в игре 60; в «Захвате самоцветов» 0).", 0, 500, 5, 60);
@@ -126,6 +128,16 @@ namespace CastleStoryOptimizer
                 h.Patch(m, postfix: new HarmonyMethod(typeof(WorldSettings), nameof(PresetPostfix)));
             }
             catch (Exception e) { Plugin.Log.LogError("Настройки мира: правила режима не будут меняться: " + e); }
+            try
+            {
+                var setter = AccessTools.PropertySetter(typeof(Brix.Game.AI.Project), "MaximumCrewSize");
+                h.Patch(setter, transpiler: new HarmonyMethod(typeof(WorldSettings), nameof(CrewTranspiler)));
+                var load = typeof(Brix.Lua.BrixScriptLoader).GetMethod("MoonSharp.Interpreter.Loaders.IScriptLoader.LoadFile",
+                    BindingFlags.Instance | BindingFlags.NonPublic | BindingFlags.Public);
+                if (load != null) h.Patch(load, postfix: new HarmonyMethod(typeof(WorldSettings), nameof(LuaFilePostfix)));
+                else Plugin.Log.LogWarning("Настройки мира: загрузчик Lua не найден — размер бригады в списке задач не изменится.");
+            }
+            catch (Exception e) { Plugin.Log.LogError("Настройки мира: размер бригады не изменится: " + e); }
             try
             {
                 var nest = typeof(FireflyNest);
@@ -323,6 +335,36 @@ namespace CastleStoryOptimizer
         {
             foreach (var o in ECount) if (o.On) return true;
             return false;
+        }
+
+        // ---------- размер бригады на одну работу ----------
+        public static int CrewLimit() { return Crew.On ? (int)Crew.Value : 8; }
+
+        private static IEnumerable<CodeInstruction> CrewTranspiler(IEnumerable<CodeInstruction> code)
+        {
+            var ours = AccessTools.Method(typeof(WorldSettings), nameof(CrewLimit));
+            int n = 0;
+            foreach (var ins in code)
+            {
+                if (ins.opcode == OpCodes.Ldc_I4_8) { n++; yield return new CodeInstruction(OpCodes.Call, ours).MoveLabelsFrom(ins); }
+                else yield return ins;
+            }
+            if (n == 0) Plugin.Log.LogWarning("Настройки мира: в Project.MaximumCrewSize не нашли предел 8.");
+        }
+
+        /// <summary>Menu_TaskList.lua: MaxCrewMemberCount возвращает 8 — число ячеек бригады в списке задач.</summary>
+        private static void LuaFilePostfix(string file, ref object __result)
+        {
+            try
+            {
+                if (!Crew.On || file == null || !file.EndsWith("Menu_TaskList.lua", StringComparison.OrdinalIgnoreCase)) return;
+                var code = __result as string;
+                if (code == null) return;
+                var re = new System.Text.RegularExpressions.Regex(@"(archerId then return 30 end\s*return )8");
+                if (re.IsMatch(code)) __result = re.Replace(code, "${1}" + (int)Crew.Value, 1);
+                else Plugin.Log.LogWarning("Настройки мира: в Menu_TaskList.lua не нашли размер бригады.");
+            }
+            catch (Exception e) { LogOnce("lua-бригада", e); }
         }
 
         // ---------- предел юнитов по фракциям ----------
