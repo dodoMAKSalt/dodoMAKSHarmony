@@ -11,7 +11,7 @@ namespace CastleStoryOptimizer
     {
         public const string Guid = "castlestory.optimizer";
         public const string Name = "dodoMAKSharmony";
-        public const string Version = "0.19.24";
+        public const string Version = "0.19.25";
 
         internal static Plugin Instance;
         internal static BepInEx.Logging.ManualLogSource Log;
@@ -98,6 +98,10 @@ namespace CastleStoryOptimizer
             if (PortCompat.Csp && Config.Bind("Workshops", "MaxButton", true,
                     "Кнопка «МАКС» рядом с «+» в списке производства станции (Castle Story Plus): заказать рецепт на всю очередь.").Value)
                 QueueMax.Apply(_harmony);
+
+            LobbyRescue.Init(Config.Bind("Network", "LobbyRescue", true,
+                    "Страховка сетевой загрузки: если хост застрял на «Ожидаем других игроков», а у игрока соединение, фракция и рельеф готовы, хост сам отмечает его «уровень готов».").Value,
+                Config.Bind("Network", "LobbyRescueSeconds", 15f, "Через сколько секунд ожидания включать страховку.").Value);
 
             if (Config.Bind("AI", "ThinkInTurns2", false,
                     "Под нагрузкой (тяжёлый кадр и большая армия у одной фракции) половина бриктронов думает на каждом шаге, а другая пропускает: ИИ стоит вдвое меньше.").Value)
@@ -281,6 +285,7 @@ namespace CastleStoryOptimizer
             CrewMenu.Tick();
             AiStride.Tick();
             CspFixes.Tick();
+            LobbyRescue.Tick();
             if (_btcTuning) BtcTuning.Tick();
             if (_stuck != null) { _stuck.Tick(); t = Stamp(MStuck, t); }
             if (_movingFix != null)
