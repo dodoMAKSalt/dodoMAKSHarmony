@@ -41,6 +41,8 @@ namespace CastleStoryModSettings
         private readonly TextBox _desc = new TextBox();
         private readonly Label _status = new Label();
         private bool _busy;
+        private readonly TextBox _search = new TextBox();
+        private string _filter = "";
 
         // Подгруппы Castle Story Plus
         private static readonly string[][] Groups =
@@ -120,6 +122,8 @@ namespace CastleStoryModSettings
                 var path = args[si + 1];
                 if (Array.IndexOf(args, "--original") >= 0) Preset(f => f.Group.StartsWith(Gameplay) ? false : (bool?)null);
                 bool second = Array.IndexOf(args, "--block2") >= 0;
+                int qi = Array.IndexOf(args, "--search");
+                if (qi >= 0 && qi + 1 < args.Length) _search.Text = args[qi + 1];
                 Load += (s, e) =>
                 {
                     var node = _tree.Nodes[second ? 1 : 0];
@@ -273,10 +277,33 @@ namespace CastleStoryModSettings
             _status.AutoSize = true; _status.Padding = new Padding(0, 8, 12, 0);
             bottom.Controls.Add(_status);
 
+            var searchPanel = new Panel { Dock = DockStyle.Top, Height = 38, Padding = new Padding(8, 4, 8, 4) };
+            var searchLabel = new Label { Text = "Поиск:", AutoSize = true, Location = new Point(10, 10) };
+            _search.Location = new Point(70, 6);
+            _search.Width = 420;
+            _search.TextChanged += (s, e) => { _filter = _search.Text.Trim(); FillTree(); };
+            var clear = new Button { Text = "Сбросить", Location = new Point(500, 4), Size = new Size(90, 28) };
+            clear.Click += (s, e) => { _search.Text = ""; _search.Focus(); };
+            var searchHint = new Label { Text = "по названию функции или по описанию (русский и английский)", AutoSize = true, Location = new Point(600, 10), ForeColor = SystemColors.GrayText };
+            searchPanel.Controls.Add(searchLabel);
+            searchPanel.Controls.Add(_search);
+            searchPanel.Controls.Add(clear);
+            searchPanel.Controls.Add(searchHint);
+
             Controls.Add(_tree);
             Controls.Add(_desc);
             Controls.Add(bottom);
+            Controls.Add(searchPanel);
             Controls.Add(top);
+        }
+
+        private bool Matches(Feature f)
+        {
+            if (_filter.Length == 0) return true;
+            string hay = (f.Key + " " + f.Ru + " " + f.Group).ToLowerInvariant();
+            foreach (var word in _filter.ToLowerInvariant().Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries))
+                if (hay.IndexOf(word, StringComparison.Ordinal) < 0) return false;
+            return true;
         }
 
         private static bool? OptimizationRule(Feature f)
@@ -313,19 +340,22 @@ namespace CastleStoryModSettings
                     TreeNode parent = null;
                     foreach (var f in _features)
                     {
-                        if (f.Block != block || f.Group != g) continue;
+                        if (f.Block != block || f.Group != g || !Matches(f)) continue;
                         if (parent == null) parent = new TreeNode { Text = g.ToUpperInvariant() };
                         parent.Nodes.Add(new TreeNode { Text = f.Key + " — " + Short(f.Ru), Tag = f, Checked = f.Value });
                     }
                     if (parent == null) continue;
                     RefreshNode(parent);
                     root.Nodes.Add(parent);
-                    if (g.StartsWith(Gameplay) || block == 1) parent.Expand();
+                    if (_filter.Length > 0 || g.StartsWith(Gameplay) || block == 1) parent.Expand();
                 }
+                if (root.Nodes.Count == 0) continue; // при поиске пустой блок не показываем
                 RefreshNode(root);
                 _tree.Nodes.Add(root);
                 root.Expand();
             }
+            if (_filter.Length > 0 && _tree.Nodes.Count == 0)
+                _tree.Nodes.Add(new TreeNode { Text = "Ничего не найдено по запросу «" + _filter + "»" });
             _busy = false;
             UpdateStatus();
         }
