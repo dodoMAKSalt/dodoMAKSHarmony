@@ -243,6 +243,7 @@ namespace CastleStoryOptimizer
 
         public static void Tick()
         {
+            if (!_open && _disabledEs != null) RestoreEventSystem(); // страховка: окно закрыто, а меню заблокировано
             float now = Time.realtimeSinceStartup;
             if (_applyRulesAt > 0 && now >= _applyRulesAt) { _applyRulesAt = -1f; ApplyRules(); }
             if (_reapplyAt > 0 && now >= _reapplyAt) { _reapplyAt = -1f; ApplyRules(); }
@@ -561,7 +562,15 @@ namespace CastleStoryOptimizer
         // ---------- окно ----------
         private static bool _open;
         private static Vector2 _scroll;
-        private static bool _eventSystemWasOn;
+        private static UnityEngine.EventSystems.EventSystem _disabledEs;
+
+        // При отключении EventSystem Unity обнуляет EventSystem.current — включать обратно нужно сохранённый объект.
+        private static void RestoreEventSystem()
+        {
+            var es = _disabledEs;
+            _disabledEs = null;
+            if (es != null && !es.enabled) es.enabled = true;
+        }
         private static GUIStyle _title, _name, _hint, _group, _value;
 
         public static bool IsOpen { get { return _open; } }
@@ -573,7 +582,7 @@ namespace CastleStoryOptimizer
             try
             {
                 var es = UnityEngine.EventSystems.EventSystem.current;
-                if (es != null) { _eventSystemWasOn = es.enabled; es.enabled = false; } // клики не должны проходить сквозь окно в меню
+                if (es != null) { _disabledEs = es; es.enabled = false; } // клики не должны проходить сквозь окно в меню
             }
             catch { }
         }
@@ -586,8 +595,7 @@ namespace CastleStoryOptimizer
             if (!(NetworkClient.active && !NetworkServer.active)) RebuildRuntime();
             try
             {
-                var es = UnityEngine.EventSystems.EventSystem.current;
-                if (es != null) es.enabled = _eventSystemWasOn || es.enabled;
+                RestoreEventSystem();
             }
             catch { }
         }

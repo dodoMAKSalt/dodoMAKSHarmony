@@ -11,7 +11,7 @@ namespace CastleStoryOptimizer
     {
         public const string Guid = "castlestory.optimizer";
         public const string Name = "dodoMAKSharmony";
-        public const string Version = "0.19.6";
+        public const string Version = "0.19.7";
 
         internal static Plugin Instance;
         internal static BepInEx.Logging.ManualLogSource Log;
