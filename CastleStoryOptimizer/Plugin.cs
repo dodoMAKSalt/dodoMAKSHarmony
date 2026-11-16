@@ -11,7 +11,7 @@ namespace CastleStoryOptimizer
     {
         public const string Guid = "castlestory.optimizer";
         public const string Name = "dodoMAKSharmony";
-        public const string Version = "0.18.7";
+        public const string Version = "0.19.0";
 
         internal static Plugin Instance;
         internal static BepInEx.Logging.ManualLogSource Log;
@@ -111,6 +111,14 @@ namespace CastleStoryOptimizer
                     "На один блок стройки несёт материал один бриктрон (а не несколько, которые потом несут обратно).").Value,
                 AiFastDecisions);
 
+            if (PortCompat.Active && Config.Bind("Gc", "SliceGc", true,
+                    "Сборка мусора короткими кусками (порт, Unity 6): автоматическую сборку выключаем и сами делаем срезы по 1-2 мс за кадр, вместо паузы 150-200 мс раз в пару минут.").Value)
+            {
+                GcSlicer.Enabled = true;
+                GcSlicer.SliceMs = Config.Bind("Gc", "SliceMs", 2f, "Сколько миллисекунд за кадр тратить на срез сборки мусора.").Value;
+                GcSlicer.TriggerMB = Config.Bind("Gc", "TriggerMB", 150, "Начинать сборку, когда куча выросла на столько МБ с прошлой сборки.").Value;
+                GcSlicer.PanicMB = Config.Bind("Gc", "PanicMB", 700, "Если куча выросла на столько МБ — вернуть автоматическую сборку.").Value;
+            }
             GcControl.Enabled = !PortCompat.Active && Config.Bind("Performance", "PauseGcWhileLoading", true,
                 "Не запускать сборщик мусора во время загрузки мира (у нас было ~10 сборок по 1 с подряд). Снимается в конце загрузки.").Value
                 && !BtcCompat.Present; // BetterThanCastle делает то же самое сам
@@ -233,6 +241,7 @@ namespace CastleStoryOptimizer
             if (FrameSplit.FirstUpdate == 0) FrameSplit.FirstUpdate = t;
 
             LoadingPatches.Watchdog();
+            GcSlicer.Tick();
             GcControl.Watchdog();
             Compat.Tick();
             if (_btcTuning) BtcTuning.Tick();
