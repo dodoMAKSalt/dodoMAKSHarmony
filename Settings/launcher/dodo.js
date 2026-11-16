@@ -196,7 +196,24 @@
     play.parentNode.insertBefore(b, play);
   }
 
+  // ---------- оформление: без левой панели «Последнее обновление», вместо логотипа — название мода ----------
+  function applyLayout() {
+    try {
+      var st = document.createElement('style');
+      st.textContent =
+        '.left-col{display:none !important;}' +
+        'header h1{background:none !important;text-indent:0 !important;width:auto !important;height:auto !important;overflow:visible !important;' +
+        'top:4px !important;left:47px !important;font-family:"Arial Black",Arial,sans-serif !important;font-size:46px;line-height:1.1;font-weight:900;' +
+        'color:#ffc50a;-webkit-text-stroke:2px #000;text-shadow:3px 4px 0 #000;letter-spacing:1px;white-space:nowrap;}';
+      document.head.appendChild(st);
+      var h = document.querySelector('header h1');
+      if (h) h.textContent = 'dodoMAKSharmony';
+      document.title = 'dodoMAKSharmony — Castle Story';
+    } catch (e) { console.log('dodo layout', e); }
+  }
+
   function start() {
+    applyLayout();
     translateAll();
     addButton();
     try { new MutationObserver(function () { translateAll(); }).observe(document.body, { childList: true, subtree: true, characterData: true }); } catch (e) { }
