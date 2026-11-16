@@ -25,6 +25,8 @@ BepInEx 5 плагин (`CastleStoryOptimizer.dll`, GUID `castlestory.optimizer`
   → `tools/csp_check.py` → `tools/csp_build.py`; проверка — `tools/csp_test.py "строка"`.
 - Сундуки/звери CSP (Treasure) — обычная геймплейная функция, отключается в меню Settings/ (dodoMAKSharmony-Settings.exe) или `[Features] Treasure` в их конфиге.
 
+- Меню настроек `Settings/` (`dodoMAKSharmony-Settings.exe`, ярлык на рабочем столе): два блока — функции Castle Story Plus (`[Features]` их конфига) и наши (`castlestory.optimizer.cfg`), в каждом подгруппы; пресеты «Как в оригинале» / «Включить оптимизацию». Новая опция нашего мода — добавить строку в таблицу `Ours` в `SettingsForm.cs`.
+
 ## Пути
 - Игра: `C:\Program Files (x86)\Steam\steamapps\common\Castle Story`
   - мод: `BepInEx\plugins\CastleStoryOptimizer\`, конфиг: `BepInEx\config\castlestory.optimizer.cfg`

@@ -10,25 +10,31 @@ using CastleStoryModInstaller;
 namespace CastleStoryModSettings
 {
     /// <summary>
-    /// Меню перед запуском игры: список функций Castle Story Plus ([Features] в их конфиге) с русскими описаниями,
-    /// отметка = включено. Геймплейные изменения собраны по группам; кнопка «Как в оригинале» выключает их все
-    /// (интерфейс, исправления утечек и ускорения остаются). Правится только сам конфиг CSP — файлы игры не трогаем.
+    /// Меню перед запуском игры: два блока — функции Castle Story Plus ([Features] в их конфиге) и функции нашего мода
+    /// dodoMAKSharmony (castlestory.optimizer.cfg), в каждом свои подгруппы (геймплей, интерфейс, оптимизация…).
+    /// Отметка = включено. Кнопка «Как в оригинале» выключает все геймплейные изменения в обоих блоках.
+    /// Правятся только конфиги модов — файлы игры не трогаем.
     /// </summary>
     internal sealed class SettingsForm : Form
     {
         private sealed class Feature
         {
-            public string Key, Description, Ru, Group;
+            public int Block; // 0 — Castle Story Plus, 1 — наш мод
+            public string Key, Section, Description, Ru, Group;
             public bool Value, Default;
-            public int Line;
+            public int Line = -1; // строка в конфиге; -1 — записи ещё нет, допишем при сохранении
         }
 
         private const string CfgName = "com.tricky12321.castlestoryplus.cfg";
+        private const string ModCfgName = "castlestory.optimizer.cfg";
         private const string Gameplay = "Геймплей: ";
 
+        private static readonly string[] BlockTitles = { "CASTLE STORY PLUS (мод автора Tricky12321)", "DODOMAKSHARMONY (наш мод)" };
+
         private readonly string _gameDir;
-        private string _cfgPath;
+        private string _cfgPath, _modCfgPath;
         private string[] _lines;
+        private List<string> _modLines = new List<string>();
         private readonly List<Feature> _features = new List<Feature>();
         private readonly Dictionary<string, string> _ru = new Dictionary<string, string>(StringComparer.Ordinal);
         private readonly TreeView _tree = new TreeView();
@@ -36,6 +42,7 @@ namespace CastleStoryModSettings
         private readonly Label _status = new Label();
         private bool _busy;
 
+        // Подгруппы Castle Story Plus
         private static readonly string[][] Groups =
         {
             new[] { Gameplay + "рабочие и задачи",
@@ -58,10 +65,43 @@ namespace CastleStoryModSettings
                 "DebugMenu Performance SystemLog IdleLog" },
         };
 
+        // Функции нашего мода: раздел конфига, ключ, подгруппа, название, по умолчанию, пометка
+        private static readonly string[][] Ours =
+        {
+            new[] { "Performance", "LessGarbage", "Оптимизация и мусор", "Меньше мусора в частых местах игры (реже сборки мусора)", "true", "" },
+            new[] { "Performance", "OverheadSortOnlyOnChange", "Оптимизация и мусор", "Плашки над головами меняют порядок отрисовки только при изменении", "true", "" },
+            new[] { "Performance", "FixColliderScaler", "Оптимизация и мусор", "Не переписывать радиус коллайдеров 50 раз в секунду", "true", "" },
+            new[] { "Gc", "SliceGc", "Оптимизация и мусор", "Сборка мусора кусками по 2 мс за кадр вместо паузы 150–200 мс (порт, Unity 6)", "true", "" },
+            new[] { "AI", "FasterGoalCounting", "Оптимизация и мусор", "Быстрый подсчёт целей добычи без мусора", "true", "" },
+            new[] { "Fixes", "FastLoading", "Загрузка и выход", "Снять лимит FPS и vsync на время загрузки мира", "true", "На порте загрузку ускоряет Castle Story Plus, эта опция там не действует." },
+            new[] { "Fixes", "CollectGarbageAfterLoad", "Загрузка и выход", "Убрать мусор в конце загрузки, на экране загрузки", "true", "На порте не используется." },
+            new[] { "Fixes", "FastLoadWaits", "Загрузка и выход", "Убрать паузы по 1 с и искусственное догоняние полосы прогресса", "true", "На порте не используется." },
+            new[] { "Compat", "FastExit", "Загрузка и выход", "Быстрый выход по Alt+F4 и «Выход» (на порте ждёт сохранение Castle Story Plus)", "true", "" },
+            new[] { "Fixes", "DisableAnalytics", "Загрузка и выход", "Отключить мёртвую аналитику GameAnalytics (меньше лишних запросов)", "true", "" },
+            new[] { "AI", "FastDecisions", Gameplay + "ИИ и мастерские", "Бриктроны быстрее выбирают работу (очередь раздумий короче)", "true", "На порте может не действовать: там это делает Castle Story Plus." },
+            new[] { "Workshops", "Enabled", Gameplay + "ИИ и мастерские", "Приоритеты мастерских (клавиши Page Up / Page Down)", "true", "" },
+            new[] { "Workshops", "ShowLabels", Gameplay + "ИИ и мастерские", "Подписи приоритета над мастерскими", "true", "" },
+            new[] { "Workshops", "PieMenuButton", Gameplay + "ИИ и мастерские", "Кнопка «Приоритет» в круговом меню мастерской", "true", "" },
+            new[] { "Language", "ForceRussian", "Язык", "Всегда включать русский перевод при запуске", "true", "" },
+            new[] { "Language", "TranslateCastleStoryPlus", "Язык", "Переводить на русский Castle Story Plus (меню, подсказки, настройки)", "true", "" },
+            new[] { "Profiler", "Enabled", "Замерщик и диагностика", "Замерщик кадров и отчёты (оверлей, файлы отчётов)", "true", "" },
+            new[] { "Profiler", "ShowOverlayOnStart", "Замерщик и диагностика", "Показывать оверлей замерщика сразу при запуске", "true", "" },
+            new[] { "Profiler", "DetailedHooks", "Замерщик и диагностика", "Подробные замеры каждого Update, Lua и путей", "true", "" },
+            new[] { "Profiler", "DetailedOnPort", "Замерщик и диагностика", "То же на порте (стоит 1–2 мс на кадр, нужен перезапуск)", "false", "" },
+            new[] { "Profiler", "TrackGarbage", "Замерщик и диагностика", "Считать мусор по методам (дорого: +1–2 мс на кадр)", "false", "" },
+            new[] { "Performance", "KinematicMovingColliders2", "Эксперименты", "Движущимся статичным коллайдерам давать кинематическое тело (эксперимент)", "false", "" },
+        };
+
+        private static readonly string[] OptimizationKeys =
+        {
+            "FasterTaskSearch", "Pathfinding", "JobBoard", "UnreachableTasks", "TaskReservation", "ResourceReservation",
+            "LoadRelief", "StuckReset", "StuckEscape", "PassThroughAllies",
+        };
+
         public SettingsForm(string[] args)
         {
-            Text = "dodoMAKSharmony — настройки Castle Story Plus";
-            Size = new Size(980, 720);
+            Text = "dodoMAKSharmony — настройки модов";
+            Size = new Size(1000, 740);
             MinimumSize = new Size(760, 520);
             StartPosition = FormStartPosition.CenterScreen;
             Font = new Font("Segoe UI", 9.5f);
@@ -69,17 +109,22 @@ namespace CastleStoryModSettings
             _gameDir = GameLocator.Find();
             LoadRu();
             if (_gameDir == null || !LoadCfg()) { BuildError(); return; }
+            LoadModCfg();
             BuildUi();
             FillTree();
-            // проверка без экрана: --shot файл.png [--original] — рисует окно в картинку и выходит
+            // проверка без экрана: --shot файл.png [--original] [--block2] — рисует окно в картинку и выходит
             int si = Array.IndexOf(args, "--shot");
             if (si >= 0 && si + 1 < args.Length)
             {
                 var path = args[si + 1];
                 if (Array.IndexOf(args, "--original") >= 0) Preset(f => f.Group.StartsWith(Gameplay) ? false : (bool?)null);
+                bool second = Array.IndexOf(args, "--block2") >= 0;
                 Load += (s, e) =>
                 {
-                    _tree.SelectedNode = _tree.Nodes[0].Nodes[0];
+                    var node = _tree.Nodes[second ? 1 : 0];
+                    node.Expand();
+                    _tree.SelectedNode = node.Nodes[0].Nodes.Count > 0 ? node.Nodes[0].Nodes[0] : node.Nodes[0];
+                    if (second) { _tree.Nodes[0].Collapse(); node.Nodes[0].Expand(); }
                     var bmp = new Bitmap(Width, Height);
                     DrawToBitmap(bmp, new Rectangle(0, 0, Width, Height));
                     bmp.Save(path);
@@ -131,6 +176,7 @@ namespace CastleStoryModSettings
                 if (File.Exists(p)) { _cfgPath = p; break; }
             }
             if (_cfgPath == null) return false;
+            _modCfgPath = Path.Combine(Path.GetDirectoryName(_cfgPath), ModCfgName);
             _lines = File.ReadAllLines(_cfgPath, Encoding.UTF8);
             bool inFeatures = false;
             string desc = null, def = null;
@@ -148,7 +194,7 @@ namespace CastleStoryModSettings
                 string ru;
                 _features.Add(new Feature
                 {
-                    Key = key, Description = desc ?? "", Line = i,
+                    Block = 0, Key = key, Description = desc ?? "", Line = i,
                     Ru = desc != null && _ru.TryGetValue(desc, out ru) ? ru : desc ?? "",
                     Value = val.Equals("true", StringComparison.OrdinalIgnoreCase),
                     Default = def == null || def.Equals("true", StringComparison.OrdinalIgnoreCase),
@@ -157,6 +203,34 @@ namespace CastleStoryModSettings
                 desc = null; def = null;
             }
             return _features.Count > 0;
+        }
+
+        /// <summary>Конфиг нашего мода: значения читаем из файла, недостающие записи допишем при сохранении.</summary>
+        private void LoadModCfg()
+        {
+            if (File.Exists(_modCfgPath)) _modLines = new List<string>(File.ReadAllLines(_modCfgPath, Encoding.UTF8));
+            foreach (var o in Ours)
+            {
+                var f = new Feature
+                {
+                    Block = 1, Section = o[0], Key = o[1], Group = o[2], Default = o[4] == "true", Value = o[4] == "true",
+                    Ru = o[3] + (o[5].Length > 0 ? "\r\n\r\n" + o[5] : ""),
+                };
+                f.Description = f.Ru;
+                string section = null;
+                for (int i = 0; i < _modLines.Count; i++)
+                {
+                    var l = _modLines[i].Trim();
+                    if (l.StartsWith("[")) { section = l.Substring(1, l.Length - 2); continue; }
+                    if (section != f.Section || l.Length == 0 || l[0] == '#') continue;
+                    int eq = l.IndexOf('=');
+                    if (eq <= 0 || l.Substring(0, eq).Trim() != f.Key) continue;
+                    f.Line = i;
+                    f.Value = l.Substring(eq + 1).Trim().Equals("true", StringComparison.OrdinalIgnoreCase);
+                    break;
+                }
+                _features.Add(f);
+            }
         }
 
         private static string GroupOf(string key)
@@ -170,10 +244,11 @@ namespace CastleStoryModSettings
         private void BuildUi()
         {
             var top = new FlowLayoutPanel { Dock = DockStyle.Top, Height = 44, Padding = new Padding(8, 8, 8, 0), WrapContents = false };
-            top.Controls.Add(Btn("Как в оригинале", "Выключить ВСЕ геймплейные изменения. Интерфейс, ускорения и исправления утечек остаются.", (s, e) => Preset(f => f.Group.StartsWith(Gameplay) ? false : (bool?)null)));
-            top.Controls.Add(Btn("Рекомендуемые", "Как задумал автор Castle Story Plus .", (s, e) => Preset(f => (bool?)f.Default)));
-            top.Controls.Add(Btn("Включить всё", "Включить все функции.", (s, e) => Preset(f => (bool?)true)));
-            top.Controls.Add(Btn("Выключить всё", "Выключить вообще все функции Castle Story Plus из списка.", (s, e) => Preset(f => (bool?)false)));
+            top.Controls.Add(Btn("Как в оригинале", "Выключить ВСЕ геймплейные изменения в обоих модах. Интерфейс, ускорения и исправления остаются.", (s, e) => Preset(f => f.Group.StartsWith(Gameplay) ? false : (bool?)null)));
+            top.Controls.Add(Btn("Включить оптимизацию", "Включить всё про скорость: оптимизации и исправления обоих модов и функции ИИ Castle Story Plus, которые разгружают процессор. Остальное не трогать.", (s, e) => Preset(OptimizationRule)));
+            top.Controls.Add(Btn("Рекомендуемые", "Как задумали авторы: значения по умолчанию.", (s, e) => Preset(f => (bool?)f.Default)));
+            top.Controls.Add(Btn("Включить всё", "Включить все функции (кроме экспериментов и тяжёлой диагностики нашего мода).", (s, e) => Preset(f => (bool?)(f.Block == 0 || f.Default))));
+            top.Controls.Add(Btn("Выключить всё", "Выключить вообще все функции обоих модов из списка.", (s, e) => Preset(f => (bool?)false)));
 
             _tree.Dock = DockStyle.Fill;
             _tree.CheckBoxes = true;
@@ -193,7 +268,7 @@ namespace CastleStoryModSettings
             var play = Btn("Сохранить и запустить игру", null, (s, e) => { if (Save()) Launch(); });
             play.Width = 230;
             bottom.Controls.Add(play);
-            bottom.Controls.Add(Btn("Сохранить", "Записать выбор в конфиг (вступит в силу при следующем запуске игры).", (s, e) => Save()));
+            bottom.Controls.Add(Btn("Сохранить", "Записать выбор в конфиги (вступит в силу при следующем запуске игры).", (s, e) => Save()));
             _status.AutoSize = true; _status.Padding = new Padding(0, 8, 12, 0);
             bottom.Controls.Add(_status);
 
@@ -201,6 +276,17 @@ namespace CastleStoryModSettings
             Controls.Add(_desc);
             Controls.Add(bottom);
             Controls.Add(top);
+        }
+
+        private static bool? OptimizationRule(Feature f)
+        {
+            if (f.Block == 0)
+            {
+                if (f.Group == "Производительность и исправления" || Array.IndexOf(OptimizationKeys, f.Key) >= 0 || f.Key == "CsMenus") return true;
+                return null;
+            }
+            if (f.Group == "Оптимизация и мусор" || f.Group == "Загрузка и выход") return true;
+            return null;
         }
 
         private Button Btn(string text, string tip, EventHandler click)
@@ -215,22 +301,29 @@ namespace CastleStoryModSettings
         {
             _busy = true;
             _tree.Nodes.Clear();
-            var order = new List<string>();
-            foreach (var g in Groups) order.Add(g[0]);
-            order.Add("Прочее");
-            foreach (var g in order)
+            for (int block = 0; block < 2; block++)
             {
-                TreeNode parent = null;
-                foreach (var f in _features)
+                var root = new TreeNode { Text = BlockTitles[block] };
+                var order = new List<string>();
+                if (block == 0) { foreach (var g in Groups) order.Add(g[0]); order.Add("Прочее"); }
+                else foreach (var g in new[] { "Оптимизация и мусор", "Загрузка и выход", Gameplay + "ИИ и мастерские", "Язык", "Замерщик и диагностика", "Эксперименты" }) order.Add(g);
+                foreach (var g in order)
                 {
-                    if (f.Group != g) continue;
-                    if (parent == null) parent = new TreeNode { Text = "" + g.ToUpperInvariant() };
-                    parent.Nodes.Add(new TreeNode { Text = f.Key + " — " + Short(f.Ru), Tag = f, Checked = f.Value });
+                    TreeNode parent = null;
+                    foreach (var f in _features)
+                    {
+                        if (f.Block != block || f.Group != g) continue;
+                        if (parent == null) parent = new TreeNode { Text = g.ToUpperInvariant() };
+                        parent.Nodes.Add(new TreeNode { Text = f.Key + " — " + Short(f.Ru), Tag = f, Checked = f.Value });
+                    }
+                    if (parent == null) continue;
+                    RefreshNode(parent);
+                    root.Nodes.Add(parent);
+                    if (g.StartsWith(Gameplay) || block == 1) parent.Expand();
                 }
-                if (parent == null) continue;
-                RefreshParent(parent);
-                _tree.Nodes.Add(parent);
-                if (g.StartsWith(Gameplay)) parent.Expand();
+                RefreshNode(root);
+                _tree.Nodes.Add(root);
+                root.Expand();
             }
             _busy = false;
             UpdateStatus();
@@ -238,6 +331,8 @@ namespace CastleStoryModSettings
 
         private static string Short(string s)
         {
+            int nl = s.IndexOf('\r');
+            if (nl > 0) s = s.Substring(0, nl);
             int dot = s.IndexOf(". ");
             if (dot > 20 && dot < 85) return s.Substring(0, dot + 1);
             return s.Length > 85 ? s.Substring(0, 85).TrimEnd() + "…" : s;
@@ -249,20 +344,27 @@ namespace CastleStoryModSettings
             _desc.Text = f == null ? "" : f.Key + (f.Default ? "" : "   (по умолчанию выключено)") + "\r\n" + f.Ru;
         }
 
-        private static void RefreshParent(TreeNode p)
+        private static void RefreshNode(TreeNode p)
         {
             bool all = true;
             foreach (TreeNode c in p.Nodes) if (!c.Checked) { all = false; break; }
             p.Checked = all;
         }
 
+        private static void SetDown(TreeNode n, bool value)
+        {
+            n.Checked = value;
+            var f = n.Tag as Feature;
+            if (f != null) f.Value = value;
+            foreach (TreeNode c in n.Nodes) SetDown(c, value);
+        }
+
         private void TreeAfterCheck(object sender, TreeViewEventArgs e)
         {
             if (_busy) return;
             _busy = true;
-            if (e.Node.Tag is Feature) ((Feature)e.Node.Tag).Value = e.Node.Checked;
-            else foreach (TreeNode c in e.Node.Nodes) { c.Checked = e.Node.Checked; ((Feature)c.Tag).Value = e.Node.Checked; }
-            if (e.Node.Parent != null) RefreshParent(e.Node.Parent);
+            SetDown(e.Node, e.Node.Checked);
+            for (var p = e.Node.Parent; p != null; p = p.Parent) RefreshNode(p);
             _busy = false;
             UpdateStatus();
         }
@@ -289,9 +391,26 @@ namespace CastleStoryModSettings
             try
             {
                 foreach (var f in _features)
-                    _lines[f.Line] = f.Key + " = " + (f.Value ? "true" : "false");
+                    if (f.Block == 0) _lines[f.Line] = f.Key + " = " + (f.Value ? "true" : "false");
                 File.Copy(_cfgPath, _cfgPath + ".bak", true);
                 File.WriteAllLines(_cfgPath, _lines, new UTF8Encoding(false));
+
+                foreach (var f in _features)
+                {
+                    if (f.Block != 1) continue;
+                    string text = f.Key + " = " + (f.Value ? "true" : "false");
+                    if (f.Line >= 0) { _modLines[f.Line] = text; continue; }
+                    int at = _modLines.FindIndex(l => l.Trim() == "[" + f.Section + "]");
+                    if (at < 0) { _modLines.Add(""); _modLines.Add("[" + f.Section + "]"); _modLines.Add(text); f.Line = _modLines.Count - 1; }
+                    else
+                    {
+                        _modLines.Insert(at + 1, text);
+                        foreach (var g in _features) if (g.Block == 1 && g.Line > at) g.Line++;
+                        f.Line = at + 1;
+                    }
+                }
+                if (File.Exists(_modCfgPath)) File.Copy(_modCfgPath, _modCfgPath + ".bak", true);
+                File.WriteAllLines(_modCfgPath, _modLines, new UTF8Encoding(false));
                 _status.Text = "Сохранено. Действует со следующего запуска игры.";
                 return true;
             }
