@@ -23,7 +23,7 @@ namespace CastleStoryOptimizer
         private static bool _enabled;
         private static float _graceSeconds = 15f;
         private static float _sinceStuck = -1f;
-        private static float _next;
+        private static float _next, _lastDump;
         private static int _forced;
 
         public static void Init(bool enabled, float graceSeconds)
@@ -53,6 +53,19 @@ namespace CastleStoryOptimizer
                     if (u != null && !u.LevelReady) { waiting = true; break; }
                 if (!waiting) { _sinceStuck = -1f; return; }
                 if (_sinceStuck < 0f) { _sinceStuck = now; return; }
+                if (now - _lastDump > 10f)
+                {
+                    _lastDump = now;
+                    var d = new System.Text.StringBuilder();
+                    foreach (var u in net.UserList)
+                    {
+                        if (u == null) { d.Append(" null;"); continue; }
+                        var c = u.connectionToClient;
+                        d.Append(' ').Append(u.name).Append(": соединение ").Append(c == null ? "локальное" : (c.isReady ? "готово" : "НЕ готово"))
+                         .Append(", фракция ").Append(u.FactionReady).Append(", рельеф ").Append(u.TerrainLoaded).Append(", уровень ").Append(u.LevelReady).Append(';');
+                    }
+                    Plugin.Log.LogInfo("Ожидание хоста (" + (int)(now - _sinceStuck) + " с):" + d);
+                }
                 if (now - _sinceStuck < _graceSeconds) return;
 
                 var sb = new System.Text.StringBuilder();
