@@ -60,7 +60,7 @@ namespace CastleStoryOptimizer
             return o;
         }
 
-        private static Opt Cap, Workers, Knights, Archers, Crew;
+        private static Opt Cap, Workers, Knights, Archers, Crew, Tasks;
         private static Opt UBase, UStep, UFree, RMul, RFlat, EMul;
         private static readonly Opt[] ECount = new Opt[6];
         private static Opt StartTime, DayF, NightF, Pause, Relations, Dig;
@@ -78,6 +78,8 @@ namespace CastleStoryOptimizer
             Archers = Add(GUnits, "archers", "startingArcherCount", "Стартовые лучники", "Только Вторжение и Завоевание.", 0, 30, 1, 1);
 
             Crew = Add(GUnits, "crew", null, "Предел бригады на одну работу", "Потолок для раздела «Бригада» в меню приказов и +/- в списке задач (в игре было 8; без галочки — 30). Число ячеек в списке задач меняется только с галочкой.", 1, 30, 1, 8);
+
+            Tasks = Add(GUnits, "tasks", null, "Макс. число задач", "Сколько задач (чертежи, копание, сбор…) можно создать одновременно (в игре 15). В сети значение хоста.", 5, 200, 1, 15);
 
             UBase = Add(GEnergy, "ubase", null, "Цена нового юнита (энергия)", "Базовая цена появления нового бриктрона (в игре 100).", 10, 2000, 10, 100);
             UStep = Add(GEnergy, "ustep", null, "Надбавка за каждого следующего юнита", "Насколько дорожает следующий юнит (в игре 60; в «Захвате самоцветов» 0).", 0, 500, 5, 60);
@@ -478,7 +480,22 @@ namespace CastleStoryOptimizer
         {
             var d = new Dictionary<string, int>();
             foreach (var kv in Saved) if (kv.Value.On) d[kv.Key] = (int)Mathf.Round(kv.Value.Value);
+            if (Tasks.On) d[TasksKey] = (int)Tasks.Value;
             Runtime = d;
+            ApplyTaskCap();
+        }
+
+        private const string TasksKey = "#tasks";
+
+        /// <summary>Лимит задач: статическое поле Project.projectCap (в игре 16, на экране 15 — одна служебная «безработные»).</summary>
+        private static void ApplyTaskCap()
+        {
+            try
+            {
+                int v;
+                Brix.Game.AI.Project.projectCap = Runtime.TryGetValue(TasksKey, out v) ? v + 1 : 16;
+            }
+            catch (Exception e) { LogOnce("лимит задач", e); }
         }
 
         private class CapsMsg : MessageBase
@@ -505,6 +522,7 @@ namespace CastleStoryOptimizer
                 if (kv.Length == 2 && int.TryParse(kv[1], out v)) d[kv[0]] = v;
             }
             Runtime = d;
+            ApplyTaskCap();
         }
 
         private static void RegisterNetwork()
