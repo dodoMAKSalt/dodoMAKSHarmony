@@ -8,7 +8,7 @@
     <LangVersion>latest</LangVersion>
     <AssemblyName>dodoMAKSharmony-Settings</AssemblyName>
     <RootNamespace>CastleStoryModSettings</RootNamespace>
-    <Version>0.19.15</Version>
+    <Version>0.19.16</Version>
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
     <ApplicationManifest>..\Installer\app.manifest</ApplicationManifest>
     <ModBin>..\CastleStoryOptimizer\bin\Release</ModBin>
@@ -17,6 +17,7 @@
     <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies.net48" Version="1.0.3" PrivateAssets="all" />
     <Compile Include="..\Installer\GameLocator.cs" Link="GameLocator.cs" />
     <EmbeddedResource Include="..\CastleStoryOptimizer\Lang\csp_ru.txt" LogicalName="csp_ru.txt" />
+    <EmbeddedResource Include="launcher\dodo.js" LogicalName="launcher/dodo.js" />
     <!-- Сначала собираем сам мод и вшиваем его DLL -->
     <ProjectReference Include="..\CastleStoryOptimizer\CastleStoryOptimizer.csproj">
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>

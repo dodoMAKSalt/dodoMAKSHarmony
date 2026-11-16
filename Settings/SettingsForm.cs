@@ -278,6 +278,20 @@ namespace CastleStoryModSettings
             }
         }
 
+        private void ApplyLauncher(bool on)
+        {
+            try
+            {
+                LauncherPatch.SaveWanted(on);
+                string r = on ? LauncherPatch.Install(_gameDir) : LauncherPatch.Remove(_gameDir);
+                _status.Text = "Лаунчер: " + r + ".";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(this, "Не удалось изменить лаунчер (закрой его и игру):\n" + ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
         private void LoadRu()
         {
             try
@@ -407,6 +421,18 @@ namespace CastleStoryModSettings
             bottom.Controls.Add(Btn("Папка игры…", "Указать, где установлена Castle Story, если она лежит не в обычной библиотеке Steam. Сейчас: " + _gameDir, (s, e) => ChangeGameDir()));
             bottom.Controls.Add(Btn("Переустановить мод", "Записать мод dodoMAKSharmony в папку плагинов порта заново (если файл повреждён или заменён).", (s, e) => CheckModInstall(true)));
             bottom.Controls.Add(_status);
+            if (LauncherPatch.Exists(_gameDir))
+            {
+                var cb = new CheckBox
+                {
+                    Text = "Русский лаунчер + кнопка «Моды»", AutoSize = true, Checked = LauncherPatch.WantedByUser(), Padding = new Padding(0, 6, 8, 0)
+                };
+                new ToolTip().SetToolTip(cb, "Переводит окно запуска игры (Play/Settings…) и добавляет в него кнопку «Моды» с переключателями функций. " +
+                    "Правится только resources\\app\\app\\index.html лаунчера (оригинал сохраняется), снятие галочки возвращает как было.");
+                cb.CheckedChanged += (s, e) => ApplyLauncher(cb.Checked);
+                bottom.Controls.Add(cb);
+                Shown += (s, e) => { if (cb.Checked) ApplyLauncher(true); };
+            }
 
             var searchPanel = new Panel { Dock = DockStyle.Top, Height = 38, Padding = new Padding(8, 4, 8, 4) };
             var searchLabel = new Label { Text = "Поиск:", AutoSize = true, Location = new Point(10, 10) };
