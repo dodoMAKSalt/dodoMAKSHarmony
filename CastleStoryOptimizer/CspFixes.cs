@@ -15,17 +15,44 @@ namespace CastleStoryOptimizer
     {
         private static int _removed;
 
+        private static Harmony _h;
+        private static bool _done;
+        private static float _next;
+        private static int _tries;
+
         public static void Apply(Harmony h)
         {
+            _h = h;
+            TryPatch();
+        }
+
+        /// <summary>Тип Castle Story Plus может загрузиться позже нашего Awake — повторяем попытку раз в 2 с (до 15 раз).</summary>
+        public static void Tick()
+        {
+            if (_done || _h == null || _tries > 15) return;
+            float now = Time.realtimeSinceStartup;
+            if (now < _next) return;
+            _next = now + 2f;
+            TryPatch();
+        }
+
+        private static void TryPatch()
+        {
+            _tries++;
             try
             {
                 var t = AccessTools.TypeByName("CastleStoryPlus.WorkerAI.AutoCleanup");
                 var m = t == null ? null : AccessTools.Method(t, "BaseCandidates");
-                if (m == null) { Plugin.Log.LogWarning("Исправление AutoCleanup: метод BaseCandidates не найден."); return; }
-                h.Patch(m, postfix: new HarmonyMethod(typeof(CspFixes), nameof(CandidatesPostfix)));
+                if (m == null)
+                {
+                    if (_tries == 16) Plugin.Log.LogWarning("Исправление AutoCleanup: метод BaseCandidates не найден.");
+                    return;
+                }
+                _h.Patch(m, postfix: new HarmonyMethod(typeof(CspFixes), nameof(CandidatesPostfix)));
+                _done = true;
                 Plugin.Log.LogInfo("Исправление AutoCleanup (застывшие бриктроны): установлено.");
             }
-            catch (Exception e) { Plugin.Log.LogWarning("Исправление AutoCleanup: " + e.Message); }
+            catch (Exception e) { _tries = 99; Plugin.Log.LogWarning("Исправление AutoCleanup: " + e.Message); }
         }
 
         private static void CandidatesPostfix(List<GameObject> __result)

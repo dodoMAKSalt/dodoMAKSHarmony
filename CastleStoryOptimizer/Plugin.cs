@@ -11,7 +11,7 @@ namespace CastleStoryOptimizer
     {
         public const string Guid = "castlestory.optimizer";
         public const string Name = "dodoMAKSharmony";
-        public const string Version = "0.19.20";
+        public const string Version = "0.19.21";
 
         internal static Plugin Instance;
         internal static BepInEx.Logging.ManualLogSource Log;
@@ -280,6 +280,7 @@ namespace CastleStoryOptimizer
             QueueMax.Tick();
             CrewMenu.Tick();
             AiStride.Tick();
+            CspFixes.Tick();
             if (_btcTuning) BtcTuning.Tick();
             if (_stuck != null) { _stuck.Tick(); t = Stamp(MStuck, t); }
             if (_movingFix != null)
