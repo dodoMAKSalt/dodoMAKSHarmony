@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
 using System.Reflection;
+using System.Reflection.Emit;
 using System.Text;
 using Brix.Assets;
 using Brix.Game;
@@ -15,6 +16,7 @@ using HarmonyLib;
 using MoonSharp.Interpreter;
 using UnityEngine;
 using UnityEngine.Networking;
+using UnityEngine.Networking.NetworkSystem;
 
 namespace CastleStoryOptimizer
 {
@@ -134,6 +136,14 @@ namespace CastleStoryOptimizer
                 h.Patch(AccessTools.Method(nest, "OnRequested"), postfix: new HarmonyMethod(typeof(WorldSettings), nameof(NestAdd)));
                 h.Patch(AccessTools.Method(nest, "OnDestroy"), postfix: new HarmonyMethod(typeof(WorldSettings), nameof(NestRemove)));
                 h.Patch(AccessTools.Method(nest, "ResetComponent"), postfix: new HarmonyMethod(typeof(WorldSettings), nameof(NestRemove)));
+                // предел юнитов по фракциям: заменяем чтение GeneralRules.bricktronCap в двух местах игры
+                _capGetter = AccessTools.PropertyGetter(typeof(GeneralRules), "bricktronCap");
+                _capField = AccessTools.Field(typeof(GeneralRules), "_bricktronCap");
+                _nestField = _breweryNest;
+                var tr = new HarmonyMethod(typeof(WorldSettings), nameof(CapTranspiler));
+                h.Patch(AccessTools.Method(brew, "CanBrew"), transpiler: tr);
+                h.Patch(AccessTools.Method(nest, "SpawnNamedFireflies"), transpiler: tr);
+                h.Patch(_capGetter, postfix: new HarmonyMethod(typeof(WorldSettings), nameof(CapGetterPostfix)));
                 var feed = AccessTools.Method(nest, "FeedQueuedFireflies");
                 h.Patch(feed, prefix: new HarmonyMethod(typeof(WorldSettings), nameof(FeedPrefix)) { priority = Priority.First });
                 _getFirefly = AccessTools.Method(nest, "GetFireflyOfCondition");
@@ -197,6 +207,7 @@ namespace CastleStoryOptimizer
         {
             try
             {
+                if (!(NetworkClient.active && !NetworkServer.active)) RebuildRuntime();
                 var table = script == null ? null : script.Globals["sv_Settings"] as Table;
                 if (table == null) return;
                 int n = 0;
@@ -220,6 +231,10 @@ namespace CastleStoryOptimizer
         public static void OnLevelLoaded()
         {
             CloseWindow();
+            if (!(NetworkClient.active && !NetworkServer.active)) RebuildRuntime();
+            RegisterNetwork();
+            if (NetworkServer.active && Brix.Engine.Neo.IsMultiplayer)
+                try { NetworkServer.SendToAll(MsgCaps, new CapsMsg { Data = Pack() }); } catch { }
             _applyRulesAt = Time.realtimeSinceStartup + 0.1f;
             _reapplyAt = Time.realtimeSinceStartup + 4f; // Lua режима мог дописать правила позже конца загрузки
         }
@@ -309,6 +324,158 @@ namespace CastleStoryOptimizer
             return false;
         }
 
+        // ---------- предел юнитов по фракциям ----------
+        internal sealed class FCap { public bool On; public float Value = 15; }
+        private sealed class FRow { public string Name, Title; public Color Color; }
+
+        private static readonly Dictionary<string, FCap> Saved = new Dictionary<string, FCap>();   // по имени фракции, хранится в файле
+        private static Dictionary<string, int> Runtime = new Dictionary<string, int>();            // действующие пределы (хост: свои, клиент: от хоста)
+        private static readonly List<FRow> Rows = new List<FRow>();
+        private static MethodInfo _capGetter;
+        private static FieldInfo _capField, _nestField;
+        private const short MsgCaps = 31339, MsgReq = 31340;
+
+        private static IEnumerable<CodeInstruction> CapTranspiler(IEnumerable<CodeInstruction> code, MethodBase original)
+        {
+            var ours = AccessTools.Method(typeof(WorldSettings), nameof(CapFor));
+            bool inBrewery = original.DeclaringType != typeof(FireflyNest);
+            int n = 0;
+            foreach (var ins in code)
+            {
+                if (ins.Calls(_capGetter))
+                {
+                    yield return new CodeInstruction(OpCodes.Ldarg_0);
+                    if (inBrewery) yield return new CodeInstruction(OpCodes.Ldfld, _nestField);
+                    yield return new CodeInstruction(OpCodes.Call, ours);
+                    n++;
+                }
+                else yield return ins;
+            }
+            if (n == 0) Plugin.Log.LogWarning("Настройки мира: в " + original.Name + " не нашли чтение предела юнитов.");
+        }
+
+        /// <summary>Предел юнитов для фракции этого гнезда: свой (по цвету), иначе общий из правил.</summary>
+        public static int CapFor(GeneralRules rules, FireflyNest nest)
+        {
+            int cap = (int)_capField.GetValue(rules);
+            try
+            {
+                int v;
+                if (nest != null && nest.faction != null && Runtime.TryGetValue(nest.faction.name ?? "", out v)) return v;
+            }
+            catch { }
+            return cap;
+        }
+
+        /// <summary>Lua (счётчик «юниты / предел», кнопка создания) читает Rules.bricktronCap — показываем предел своей фракции.</summary>
+        private static void CapGetterPostfix(ref int __result)
+        {
+            try
+            {
+                if (Runtime.Count == 0) return;
+                var u = User.LocalUser;
+                int v;
+                if (u != null && u.faction != null && Runtime.TryGetValue(u.faction.name ?? "", out v)) __result = v;
+            }
+            catch { }
+        }
+
+        private static void RebuildRuntime()
+        {
+            var d = new Dictionary<string, int>();
+            foreach (var kv in Saved) if (kv.Value.On) d[kv.Key] = (int)Mathf.Round(kv.Value.Value);
+            Runtime = d;
+        }
+
+        private class CapsMsg : MessageBase
+        {
+            public string Data = "";
+            public override void Serialize(NetworkWriter w) { w.Write(Data ?? ""); }
+            public override void Deserialize(NetworkReader r) { Data = r.ReadString(); }
+        }
+
+        private static string Pack()
+        {
+            var sb = new StringBuilder();
+            foreach (var kv in Runtime) sb.Append(kv.Key).Append('=').Append(kv.Value).Append(';');
+            return sb.ToString();
+        }
+
+        private static void Unpack(string s)
+        {
+            var d = new Dictionary<string, int>();
+            foreach (var part in (s ?? "").Split(new[] { ';' }, StringSplitOptions.RemoveEmptyEntries))
+            {
+                var kv = part.Split('=');
+                int v;
+                if (kv.Length == 2 && int.TryParse(kv[1], out v)) d[kv[0]] = v;
+            }
+            Runtime = d;
+        }
+
+        private static void RegisterNetwork()
+        {
+            try
+            {
+                if (NetworkServer.active)
+                {
+                    NetworkServer.RegisterHandler(MsgReq, delegate (NetworkMessage m)
+                    {
+                        NetworkServer.SendToAll(MsgCaps, new CapsMsg { Data = Pack() });
+                    });
+                }
+                var client = NetworkManager.singleton != null ? NetworkManager.singleton.client : null;
+                if (client != null && !NetworkServer.active)
+                {
+                    client.RegisterHandler(MsgCaps, delegate (NetworkMessage m)
+                    {
+                        if (NetworkServer.active) return;
+                        Unpack(m.ReadMessage<CapsMsg>().Data);
+                    });
+                    if (client.isConnected) client.Send(MsgReq, new EmptyMessage()); // попросить пределы у хоста
+                }
+            }
+            catch (Exception e) { Plugin.Log.LogWarning("Настройки мира: сеть: " + e.Message); }
+        }
+
+        /// <summary>Строки окна: фракции выбранного режима (цвет из режима, как флаги в лобби).</summary>
+        private static void RefreshRows()
+        {
+            Rows.Clear();
+            try
+            {
+                var mode = GameParam.Gamemode;
+                if (mode == null) return;
+                foreach (var f in mode.Disk_ReadFactionPrototypes())
+                {
+                    if (f.isAI || f.isDefault || f.isSpectator) continue;
+                    uint c = f.colour;
+                    var col = new Color(((c >> 24) & 255) / 255f, ((c >> 16) & 255) / 255f, ((c >> 8) & 255) / 255f, 1f);
+                    Rows.Add(new FRow { Name = f.name, Title = ColorName(f.name), Color = col });
+                    if (!Saved.ContainsKey(f.name)) Saved[f.name] = new FCap { Value = Cap.On ? Cap.Value : Cap.Def };
+                }
+            }
+            catch (Exception e) { Plugin.Log.LogWarning("Настройки мира: фракции режима не прочитаны: " + e.Message); }
+        }
+
+        private static string ColorName(string n)
+        {
+            switch ((n ?? "").ToLowerInvariant())
+            {
+                case "blue": return "Синий";
+                case "red": return "Красный";
+                case "green": return "Зелёный";
+                case "yellow": return "Жёлтый";
+                case "purple": return "Фиолетовый";
+                case "orange": return "Оранжевый";
+                case "pink": return "Розовый";
+                case "cyan": return "Голубой";
+                case "white": return "Белый";
+                case "black": return "Чёрный";
+                default: return n;
+            }
+        }
+
         // ---------- возрождение погибших ----------
         private static MethodInfo _getFirefly, _consume, _spawn;
 
@@ -358,6 +525,13 @@ namespace CastleStoryOptimizer
                 {
                     var p = line.Split('|');
                     if (p.Length < 3) continue;
+                    if (p[0].StartsWith("fcap:"))
+                    {
+                        float fv;
+                        float.TryParse(p[2], NumberStyles.Float, CultureInfo.InvariantCulture, out fv);
+                        Saved[p[0].Substring(5)] = new FCap { On = p[1] == "1", Value = Mathf.Clamp(fv < 1 ? 15 : fv, 1, 300) };
+                        continue;
+                    }
                     foreach (var o in All)
                     {
                         if (o.Id != p[0]) continue;
@@ -377,6 +551,8 @@ namespace CastleStoryOptimizer
                 var sb = new StringBuilder();
                 foreach (var o in All)
                     sb.Append(o.Id).Append('|').Append(o.On ? "1" : "0").Append('|').Append(o.Value.ToString("0.###", CultureInfo.InvariantCulture)).Append('\n');
+                foreach (var kv in Saved)
+                    sb.Append("fcap:").Append(kv.Key).Append('|').Append(kv.Value.On ? "1" : "0").Append('|').Append(kv.Value.Value.ToString("0", CultureInfo.InvariantCulture)).Append('\n');
                 File.WriteAllText(FilePath, sb.ToString());
             }
             catch (Exception e) { Plugin.Log.LogWarning("Настройки мира: файл не записан: " + e.Message); }
@@ -393,6 +569,7 @@ namespace CastleStoryOptimizer
         private static void Open()
         {
             _open = true;
+            RefreshRows();
             try
             {
                 var es = UnityEngine.EventSystems.EventSystem.current;
@@ -406,6 +583,7 @@ namespace CastleStoryOptimizer
             if (!_open) return;
             _open = false;
             Save();
+            if (!(NetworkClient.active && !NetworkServer.active)) RebuildRuntime();
             try
             {
                 var es = UnityEngine.EventSystems.EventSystem.current;
@@ -452,6 +630,7 @@ namespace CastleStoryOptimizer
             float rowH = 58f, groupH = 34f;
             float total = 0; string last = null;
             foreach (var o in All) { if (o.Group != last) { total += groupH; last = o.Group; } total += rowH; }
+            total += groupH + (Rows.Count == 0 ? rowH : Rows.Count * 40f);
             _scroll = GUI.BeginScrollView(view, _scroll, new Rect(0, 0, view.width - 20, total));
             float y = 0; last = null;
             foreach (var o in All)
@@ -459,6 +638,23 @@ namespace CastleStoryOptimizer
                 if (o.Group != last) { GUI.Label(new Rect(8, y + 4, view.width - 40, 26), o.Group.ToUpper(), _group); y += groupH; last = o.Group; }
                 DrawRow(o, new Rect(8, y, view.width - 40, rowH));
                 y += rowH;
+            }
+            GUI.Label(new Rect(8, y + 4, view.width - 40, 26), "МАКС. ЮНИТОВ ПО ЦВЕТАМ ИГРОКОВ", _group); y += groupH;
+            if (Rows.Count == 0) { GUI.Label(new Rect(8, y, view.width - 40, rowH), "Выбери карту и режим — здесь появятся цвета игроков.", _hint); y += rowH; }
+            foreach (var fr in Rows)
+            {
+                var fc = Saved[fr.Name];
+                fc.On = GUI.Toggle(new Rect(8, y + 6, 24, 24), fc.On, GUIContent.none);
+                GUI.color = fr.Color;
+                GUI.DrawTexture(new Rect(38, y + 6, 24, 24), Texture2D.whiteTexture);
+                GUI.color = Color.white;
+                GUI.Label(new Rect(68, y, view.width * 0.3f, 34), fr.Title, _name);
+                bool en0 = GUI.enabled; GUI.enabled = fc.On;
+                float fx = 68 + view.width * 0.3f + 8, fw = view.width - 40 - fx - 70;
+                fc.Value = Mathf.Round(GUI.HorizontalSlider(new Rect(fx, y + 12, fw, 16), fc.Value, 1, 300));
+                GUI.Label(new Rect(fx + fw + 6, y, 64, 34), ((int)fc.Value).ToString(), _value);
+                GUI.enabled = en0;
+                y += 40f;
             }
             GUI.EndScrollView();
 
