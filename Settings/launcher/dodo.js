@@ -182,6 +182,9 @@
     function applyPreset(name) {
       var map = presets && presets[name];
       if (!map) { alert('Пресеты ещё не выгружены: один раз открой программу dodoMAKSharmony-Settings, и они появятся здесь.'); return; }
+      applyMap(map);
+    }
+    function applyMap(map) {
       data.forEach(function (d) {
         if (!d.cfg) return;
         var changed = false;
@@ -209,8 +212,62 @@
       presetBar.appendChild(b);
     });
 
+    // ---------- свои пресеты: имя + снимок всех включённых/выключенных функций ----------
+    var userFile = path.join(cfgDir, 'dodoMAKSharmony-presets.json');
+    var userPresets = {};
+    try { userPresets = JSON.parse(fs.readFileSync(userFile, 'utf8')) || {}; } catch (e) { userPresets = {}; }
+    function saveUser() {
+      try { fs.writeFileSync(userFile, JSON.stringify(userPresets, null, 1), 'utf8'); }
+      catch (e) { alert('Не удалось сохранить пресет: ' + e.message); }
+    }
+    function snapshot() {
+      var map = {};
+      data.forEach(function (d) {
+        if (!d.cfg) return;
+        d.cfg.entries.forEach(function (e) { map[d.meta.file + '|' + e.section + '.' + e.key] = e.value; });
+      });
+      return map;
+    }
+    var userBar = el('div', 'padding:6px 16px;display:flex;flex-wrap:wrap;align-items:center;gap:8px;border-bottom:2px solid #ddd;background:#f3f3f3;');
+    function renderUser() {
+      userBar.innerHTML = '';
+      userBar.appendChild(el('span', 'font-size:14px;font-weight:bold;color:#555;', 'Мои пресеты:'));
+      var names = Object.keys(userPresets);
+      if (!names.length) userBar.appendChild(el('span', 'font-size:13px;color:#888;', 'пока нет — настрой галочки и нажми «Сохранить текущие…»'));
+      names.forEach(function (n) {
+        var group = el('span', 'display:inline-flex;border:2px solid #000;background:#fff;');
+        var apply = el('button', 'font-size:14px;font-weight:bold;padding:5px 10px;cursor:pointer;border:0;background:#fff;', n);
+        apply.title = 'Применить пресет «' + n + '» (включено функций: ' + countOn(userPresets[n]) + ')';
+        apply.onclick = function () { applyMap(userPresets[n]); };
+        var del = el('button', 'font-size:14px;padding:5px 8px;cursor:pointer;border:0;border-left:2px solid #000;background:#eee;color:#a00;', '×');
+        del.title = 'Удалить пресет «' + n + '»';
+        del.onclick = function () { delete userPresets[n]; saveUser(); renderUser(); };
+        group.appendChild(apply); group.appendChild(del);
+        userBar.appendChild(group);
+      });
+      var nameInput = el('input', 'font-size:14px;padding:5px 8px;width:200px;display:none;');
+      nameInput.placeholder = 'Название пресета';
+      var okBtn = el('button', 'font-size:14px;font-weight:bold;padding:5px 10px;cursor:pointer;display:none;background:#8f8;border:2px solid #000;', 'Сохранить');
+      var saveBtn = el('button', 'font-size:14px;font-weight:bold;padding:6px 12px;cursor:pointer;background:#ffc50a;border:2px solid #000;', 'Сохранить текущие…');
+      saveBtn.title = 'Запомнить текущий набор включённых функций под своим названием';
+      function commit() {
+        var n = nameInput.value.replace(/^\s+|\s+$/g, '');
+        if (!n) { nameInput.focus(); return; }
+        if (userPresets[n] && !confirm('Пресет «' + n + '» уже есть. Заменить?')) return;
+        userPresets[n] = snapshot();
+        saveUser();
+        renderUser();
+      }
+      saveBtn.onclick = function () { nameInput.style.display = ''; okBtn.style.display = ''; saveBtn.style.display = 'none'; nameInput.focus(); };
+      okBtn.onclick = commit;
+      nameInput.onkeydown = function (ev) { if (ev.keyCode === 13) commit(); };
+      userBar.appendChild(nameInput); userBar.appendChild(okBtn); userBar.appendChild(saveBtn);
+    }
+    function countOn(map) { var n = 0; for (var k in map) if (map[k]) n++; return n; }
+    renderUser();
+
     search.oninput = render;
-    box.appendChild(head); box.appendChild(presetBar); box.appendChild(bar); box.appendChild(list); box.appendChild(note);
+    box.appendChild(head); box.appendChild(presetBar); box.appendChild(userBar); box.appendChild(bar); box.appendChild(list); box.appendChild(note);
     wrap.appendChild(box);
     document.body.appendChild(wrap);
     render();
