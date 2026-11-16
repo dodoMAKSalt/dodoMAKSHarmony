@@ -170,6 +170,7 @@ namespace CastleStoryOptimizer
             WorldSettings.OnLevelLoaded();
             AiStride.Reset();
             StepCap.OnLevelLoaded();
+            NetPing.Register();
             AiFixes.OnLevelLoaded(Plugin.AiFastDecisions);
         }
     }

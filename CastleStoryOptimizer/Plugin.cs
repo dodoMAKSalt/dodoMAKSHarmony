@@ -11,7 +11,7 @@ namespace CastleStoryOptimizer
     {
         public const string Guid = "castlestory.optimizer";
         public const string Name = "dodoMAKSharmony";
-        public const string Version = "0.19.28";
+        public const string Version = "0.19.29";
 
         internal static Plugin Instance;
         internal static BepInEx.Logging.ManualLogSource Log;
@@ -103,6 +103,8 @@ namespace CastleStoryOptimizer
                     "Кнопка «МАКС» рядом с «+» в списке производства станции (Castle Story Plus): заказать рецепт на всю очередь.").Value)
                 QueueMax.Apply(_harmony);
 
+            NetPing.Init(Config.Bind("Network", "PingMeasure", true,
+                "Измерять задержку сетевой игры: хост каждые 2 с шлёт клиентам пинг (строка «Сеть (круговая задержка…)» в логе и отчёте).").Value);
             LobbyRescue.Init(Config.Bind("Network", "LobbyRescue", true,
                     "Страховка сетевой загрузки: если хост застрял на «Ожидаем других игроков», а у игрока соединение, фракция и рельеф готовы, хост сам отмечает его «уровень готов».").Value,
                 Config.Bind("Network", "LobbyRescueSeconds", 15f, "Через сколько секунд ожидания включать страховку.").Value);
@@ -293,6 +295,7 @@ namespace CastleStoryOptimizer
             AiStride.Tick();
             CspFixes.Tick();
             LobbyRescue.Tick();
+            NetPing.Tick();
             if (_btcTuning) BtcTuning.Tick();
             if (_stuck != null) { _stuck.Tick(); t = Stamp(MStuck, t); }
             if (_movingFix != null)

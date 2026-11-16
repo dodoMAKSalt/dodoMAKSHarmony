@@ -246,6 +246,8 @@ namespace CastleStoryOptimizer
             if (clock > 0 || coro > 0)
                 sb.AppendFormat("  подписчики GameClock (внутри «Скриптов») {0:0.0} мс   корутины ≈ {1:0.0} мс (вложенные могут считаться дважды)\n", clock, coro);
             sb.Append("  юнитов сейчас (по фракциям, живой счёт): ").Append(LiveUnits()).Append('\n');
+            var ping = NetPing.Summary();
+            if (ping.Length > 0) sb.Append("  ").Append(ping).Append('\n');
             var turns = AiStride.Summary();
             if (turns.Length > 0) sb.Append("  ").Append(turns).Append('\n');
             if (!string.IsNullOrEmpty(SceneStats))
