@@ -224,7 +224,7 @@ namespace CastleStoryModSettings
                 foreach (var f in _features)
                 {
                     if (f.Group != g) continue;
-                    if (parent == null) parent = new TreeNode { Text = "25A0 " + g.ToUpperInvariant() };
+                    if (parent == null) parent = new TreeNode { Text = "" + g.ToUpperInvariant() };
                     parent.Nodes.Add(new TreeNode { Text = f.Key + " — " + Short(f.Ru), Tag = f, Checked = f.Value });
                 }
                 if (parent == null) continue;
