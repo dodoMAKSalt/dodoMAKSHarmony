@@ -109,7 +109,7 @@ namespace CastleStoryModSettings
             StartPosition = FormStartPosition.CenterScreen;
             Font = new Font("Segoe UI", 9.5f);
 
-            _gameDir = GameLocator.Find();
+            _gameDir = ResolveGameDir(Array.IndexOf(args, "--shot") < 0);
             LoadRu();
             if (_gameDir == null || !LoadCfg())
             {
@@ -145,7 +145,69 @@ namespace CastleStoryModSettings
             }
         }
 
-        private const string CspLink = "https://github.com/Tricky12321/CastleStoryPlus/releases/latest";
+        private static string SavedPathFile
+        {
+            get { return Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "dodoMAKSharmony", "gamedir.txt"); }
+        }
+
+        /// <summary>Папка игры: запомненная вручную, иначе автопоиск по библиотекам Steam, иначе спросить.</summary>
+        private static string ResolveGameDir(bool interactive)
+        {
+            try
+            {
+                var f = SavedPathFile;
+                if (File.Exists(f))
+                {
+                    var saved = File.ReadAllText(f).Trim();
+                    if (GameLocator.IsGameDir(saved)) return saved;
+                }
+            }
+            catch { }
+            var found = GameLocator.Find();
+            if (found != null) return found;
+            if (!interactive) return null;
+            if (MessageBox.Show("Не удалось автоматически найти Castle Story.\n\nЕсли игра лежит в другом месте (например, в перенесённой библиотеке Steam), укажи её папку вручную.\n\nУказать папку?",
+                    "dodoMAKSharmony", MessageBoxButtons.YesNo, MessageBoxIcon.Question) != DialogResult.Yes) return null;
+            return PickGameDir(null);
+        }
+
+        /// <summary>Диалог выбора папки: принимаем только папку, где есть Castle Story.exe и Castle Story_Data.</summary>
+        private static string PickGameDir(string start)
+        {
+            using (var d = new FolderBrowserDialog
+            {
+                Description = "Выбери папку Castle Story: ту, где лежит файл «Castle Story.exe»",
+                ShowNewFolderButton = false,
+                SelectedPath = start ?? "",
+            })
+            {
+                while (d.ShowDialog() == DialogResult.OK)
+                {
+                    if (GameLocator.IsGameDir(d.SelectedPath))
+                    {
+                        try
+                        {
+                            Directory.CreateDirectory(Path.GetDirectoryName(SavedPathFile));
+                            File.WriteAllText(SavedPathFile, d.SelectedPath);
+                        }
+                        catch { }
+                        return d.SelectedPath;
+                    }
+                    MessageBox.Show("В этой папке нет «Castle Story.exe» и папки «Castle Story_Data». Выбери папку, где установлена игра.",
+                        "dodoMAKSharmony", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+            return null;
+        }
+
+        private void ChangeGameDir()
+        {
+            var p = PickGameDir(_gameDir);
+            if (p == null || p == _gameDir) return;
+            Application.Restart(); // перечитать конфиги из новой папки
+        }
+
+        private const string CspLink ="https://github.com/Tricky12321/CastleStoryPlus/releases/latest";
 
         private void BuildError()
         {
@@ -155,9 +217,12 @@ namespace CastleStoryModSettings
                 : noPort
                     ? "Castle Story Plus (порт игры) ещё не установлен.\n\n1. Скачай CastleStoryPlus-<версия>-windows.zip по ссылке ниже.\n2. Распакуй и запусти install.bat.\n3. Запусти игру один раз и закрой.\n4. Открой эту программу снова."
                     : "Не найден конфиг Castle Story Plus (" + CfgName + ").\n\nЗапусти игру через Steam один раз и закрой её — конфиг создастся. Потом открой эту программу снова.";
+            var pick = new Button { Text = "Указать папку игры…", Dock = DockStyle.Top, Height = 36 };
+            pick.Click += (s, e) => ChangeGameDir();
             var label = new Label { Dock = DockStyle.Top, Height = 190, TextAlign = ContentAlignment.BottomCenter, Text = text, Padding = new Padding(20) };
             var link = new LinkLabel { Dock = DockStyle.Top, Height = 40, TextAlign = ContentAlignment.TopCenter, Text = CspLink, Visible = noPort };
             link.LinkClicked += (s, e) => { try { Process.Start(new ProcessStartInfo(CspLink) { UseShellExecute = true }); } catch { } };
+            Controls.Add(pick);
             Controls.Add(link);
             Controls.Add(label);
         }
@@ -334,6 +399,7 @@ namespace CastleStoryModSettings
             bottom.Controls.Add(play);
             bottom.Controls.Add(Btn("Сохранить", "Записать выбор в конфиги (вступит в силу при следующем запуске игры).", (s, e) => Save()));
             _status.AutoSize = true; _status.Padding = new Padding(0, 8, 12, 0);
+            bottom.Controls.Add(Btn("Папка игры…", "Указать, где установлена Castle Story, если она лежит не в обычной библиотеке Steam. Сейчас: " + _gameDir, (s, e) => ChangeGameDir()));
             bottom.Controls.Add(Btn("Переустановить мод", "Записать мод dodoMAKSharmony в папку плагинов порта заново (если файл повреждён или заменён).", (s, e) => CheckModInstall(true)));
             bottom.Controls.Add(_status);
 
