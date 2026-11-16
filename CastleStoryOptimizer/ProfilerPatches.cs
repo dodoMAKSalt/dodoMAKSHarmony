@@ -45,6 +45,8 @@ namespace CastleStoryOptimizer
 
         /// <summary>F7: подробный замер вкл/выкл без перезапуска (выкл — перехваты почти ничего не делают).</summary>
         public static bool Active = true;
+        /// <summary>Подробные перехваты реально установлены (на порте по умолчанию нет).</summary>
+        public static bool Installed;
         /// <summary>Подсчёт мусора по методам (2 вызова GC.GetTotalMemory на каждый перехват — дорого). Конфиг TrackGarbage.</summary>
         public static bool TrackGarbage;
 

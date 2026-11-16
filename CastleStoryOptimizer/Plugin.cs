@@ -11,7 +11,7 @@ namespace CastleStoryOptimizer
     {
         public const string Guid = "castlestory.optimizer";
         public const string Name = "dodoMAKSharmony";
-        public const string Version = "0.18.4";
+        public const string Version = "0.18.5";
 
         internal static Plugin Instance;
         internal static BepInEx.Logging.ManualLogSource Log;
@@ -166,7 +166,10 @@ namespace CastleStoryOptimizer
                     "false — только FPS, рендер и фризы, почти бесплатно.");
                 // На порте подробные перехваты почти не видят кадр (его делают системы Castle Story Plus, у них своё окно F7),
                 // а 439 перехватов стоят ~1–2 мс — там остаются только FPS, этапы кадра и фризы.
-                bool det = PortCompat.On(detailed.Value, false);
+                var detOnPort = Config.Bind("Profiler", "DetailedOnPort", false,
+                    "На порте всё равно ставить подробные перехваты (для поиска мусора по методам: +1–2 мс на кадр). Нужен перезапуск игры.");
+                bool det = PortCompat.On(detailed.Value, detOnPort.Value);
+                ProfilerPatches.Installed = det;
                 ProfilerPatches.Apply(_harmony, det);
                 if (det) { TerrainColliderPatches.Profile(_harmony); PhysicsWatch.Apply(_harmony); AiPerf.Profile(_harmony); }
                 StartCoroutine(FrameSplit.Loop());

@@ -437,7 +437,7 @@ namespace CastleStoryOptimizer
                 string pre = PortCompat.Active ? "Shift+" : "";
                 string t = _last.Text;
                 if (t.Length > 0 && t[t.Length - 1] != (char)10) t += (char)10;
-                _overlayText = t + pre + "F8 - скрыть, " + pre + "F9 - отчёт, " + pre + "F7 - подробный замер: " + (ProfilerPatches.Active ? "ВКЛ" : "ВЫКЛ");
+                _overlayText = t + pre + "F8 - скрыть, " + pre + "F9 - отчёт, " + pre + "F7 - подробный замер: " + (!ProfilerPatches.Installed ? "НЕТ (перехваты не установлены)" : ProfilerPatches.Active ? "ВКЛ" : "ВЫКЛ");
                 int lines = 1;
                 foreach (char c in _overlayText) if (c == (char)10) lines++;
                 _overlayHeight = 14 + 15 * lines;
