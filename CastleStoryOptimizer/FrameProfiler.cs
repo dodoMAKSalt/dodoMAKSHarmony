@@ -245,7 +245,9 @@ namespace CastleStoryOptimizer
                 render, scripts, path, lua, Math.Max(0, (busy > 0 ? busy : s.AvgFrameMs) - render - scripts));
             if (clock > 0 || coro > 0)
                 sb.AppendFormat("  подписчики GameClock (внутри «Скриптов») {0:0.0} мс   корутины ≈ {1:0.0} мс (вложенные могут считаться дважды)\n", clock, coro);
-            if (!string.IsNullOrEmpty(SceneStats)) sb.Append("  сцена: ").Append(SceneStats).Append('\n');
+            sb.Append("  юнитов сейчас (по фракциям, живой счёт): ").Append(LiveUnits()).Append('\n');
+            if (!string.IsNullOrEmpty(SceneStats))
+                sb.Append("  сцена (снято в ").Append(SceneStatsTime ?? "?").Append(", обновляется только по ручному F9): ").Append(SceneStats).Append('\n');
             sb.Append("--------------------------------------------------------------\n");
             foreach (var r in s.Rows.Take(top))
                 sb.AppendFormat("{0,7:0.00}  {1,6:0.#}x  {2,6:0.0}  {3}\n", r.MsPerFrame, r.CallsPerFrame, r.MaxMs, r.Name);
@@ -254,6 +256,28 @@ namespace CastleStoryOptimizer
 
         // ---------- статистика сцены ----------
         private static string SceneStats;
+        private static string SceneStatsTime;
+
+        /// <summary>Живой счёт юнитов: сумма Faction.UnitCount по фракциям (без FindObjectsOfType — почти бесплатно).</summary>
+        private static string LiveUnits()
+        {
+            try
+            {
+                var list = Brix.Game.Faction.GetAllFactions();
+                if (list == null) return "нет данных";
+                int total = 0;
+                var sb = new StringBuilder();
+                foreach (var f in list)
+                {
+                    if (f == null || f.UnitCount <= 0) continue;
+                    total += f.UnitCount;
+                    if (sb.Length > 0) sb.Append(", ");
+                    sb.Append(f.name).Append(' ').Append(f.UnitCount);
+                }
+                return total + (sb.Length > 0 ? " (" + sb + ")" : "");
+            }
+            catch (Exception e) { return "ошибка " + e.Message; }
+        }
 
         /// <summary>Сколько в сцене аниматоров, частиц, анимированных мешей и сколько из них видно.
         /// full = ещё и все рендереры (дорого, только по F9).</summary>
@@ -290,6 +314,7 @@ namespace CastleStoryOptimizer
                 sb.Append(ExtraStats()).Append(PhysicsWatch.AiSummary());
                 if (!string.IsNullOrEmpty(MovingColliderFix.LastReport)) sb.Append("\n  ").Append(MovingColliderFix.LastReport);
                 SceneStats = sb.ToString();
+                SceneStatsTime = DateTime.Now.ToString("HH:mm:ss");
             }
             catch (Exception e) { SceneStats = "ошибка: " + e.Message; }
         }
